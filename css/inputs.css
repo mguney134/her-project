@@ -1,0 +1,39 @@
+.dropdown-content li>span {
+    color: #52585f;
+}
+
+.select-wrapper {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.md-form {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.md-form input[type="text"]:focus:not([readonly]) {
+    box-shadow: 0 1px 0 0 #febb33 !important;
+    border-bottom: 1px solid #febb33 !important;
+}
+
+.md-form label {
+    color: #485057;
+}
+
+.md-form input[type="text"]:focus:not([readonly])+label {
+    color: #febb33 !important;
+}
+
+.md-form input[type="email"]:focus:not([readonly]) {
+    box-shadow: 0 1px 0 0 #febb33 !important;
+    border-bottom: 1px solid #febb33 !important;
+}
+
+.md-form input[type="email"]:focus:not([readonly])+label {
+    color: #febb33 !important;
+}
+
+.btn-secondary {
+    border-color: #febb33;
+}

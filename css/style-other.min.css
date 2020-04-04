@@ -1,0 +1,11 @@
+.top-nav-collapse {
+    width: 100%;
+    background-color: #4EB9E9 !important;
+
+}
+html {
+    overflow-x: hidden; 
+}
+.dropdown .dropdown-menu.dropdown-default .dropdown-item:hover {
+    background-color: #F57C01 !important;
+}
