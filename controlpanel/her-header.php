@@ -58,9 +58,9 @@ $moppinfo=$moppcheck->fetch(PDO::FETCH_ASSOC);
   <!-- Bootstrap core CSS -->
   <link href="../css/bootstrap.min.css" rel="stylesheet" />
   <!-- Material Design Bootstrap -->
-  <link href="../css/style-other.min.css" rel="stylesheet" />
   <link href="../css/mdb.min.css" rel="stylesheet" />
-    <link href="../css/inputs.css" rel="stylesheet" />
+  <link href="../css/style-other.min.css" rel="stylesheet" />
+  <link href="../css/inputs.css" rel="stylesheet" />
 
 </head>
 
