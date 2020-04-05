@@ -1,106 +1,136 @@
-<div class="modal fade" id="addBackground" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header text-center">
-                    <h4 class="modal-title w-100 font-weight-bold">Add New Studies & Experience</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+<div class="modal fade" id="addBackground" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+              <h4 class="modal-title w-100 font-weight-bold">Add New Studies & Experience</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <form action="../settings/action.php" method="POST">
+
+              <div class="col-md-12 mb-4">
+                <!-- Card content -->
+                <div class="card-body">
+                    <p><i class="fas fa-list-alt fa-3x text-warning"></i></p>
+                    <div class="form-row">
+                        <div class="col select-outline">
+                            <select class="mdb-select md-form md-outline Her my-2"
+                                id="background" name="type">
+                                <option disabled selected></option>
+                                <option value="Study">Study</option>
+                                <option value="Course">Course</option>
+                                <option value="Job">Job</option>
+                                <option value="Internship">Internship</option>
+                                <option value="Volunteering">Volunteering</option>
+                            </select>
+                            <label for="background">New Background</label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-6 select-outline">
+                            <select class="mdb-select md-form md-outline Her my-2"
+                                id="sLevel" name="levelStudy">
+                                <option disabled selected></option>
+                                <option value="Bachelor">Bachelor</option>
+                                <option value="Master">Master</option>
+                                <option value="PHD">PHD</option>
+                            </select>
+                            <label for="sLevel">Level of Study</label>
+                        </div>
+                        <div class="col-md-6 select-outline">
+                            <select class="mdb-select md-form md-outline Her my-2"
+                                id="equi" name="diploma">
+                                <option disabled selected></option>
+                                <option value="Level Equivalence">Level Equivalence
+                                </option>
+                                <option value="Specific Equivalence">Specific
+                                    Equivalence</option>
+
+                            </select>
+                            <label for="equi">Diploma Equivalence</label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <div class="md-form md-outline my-2 Her">
+                                <input type="text" id="Instution/University/Company"
+                                    class="form-control" name="institution" />
+                                <label
+                                    for="Instution/University/Company">Instution/University/Company</label>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-row">
+                        <div class="col select-outline">
+                            <select class="mdb-select md-form md-outline Her my-2"
+                                id="getCou" searchable="Search here..">
+                                <option disabled selected></option>
+                                <?php 
+                                $countrycheck=$db->prepare("SELECT country_name FROM countries");
+                                $countrycheck->execute();
+                                $countcountry=0;
+                                while($countryinfo=$countrycheck->fetch(PDO::FETCH_ASSOC)) { $countcountry++?>
+
+                              <option value="<?php echo $countryinfo['country_name'] ?>"><?php echo $countryinfo['country_name'] ?></option>
+
+                              <?php } ?>
+                            </select>
+                            <label for="getCou">Country</label>
+                        </div>
+                    </div>
+                    <div class="form-row my-2">
+                        <div class="md-form col-md-6">
+                            <input placeholder="Selected date" type="text" id="from"
+                                class="form-control datepicker" name="start_year">
+                            <label for="from" id="fromDate">From</label>
+                        </div>
+                        <div class="md-form col-md-6">
+                            <input placeholder="Selected date" type="text" id="to"
+                                class="form-control datepicker" name="end_year">
+                            <label for="to" id="toDate">To</label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col select-outline">
+                          <select class="mdb-select md-form md-outline Her my-2"
+                              id="sec2" multiple name="sector">
+                              <option disabled selected></option>
+                              <?php 
+                                $sectorcheck=$db->prepare("SELECT sectors_name FROM sectors");
+                                $sectorcheck->execute();
+                                $countsector=0;
+                                while($sectorinfo=$sectorcheck->fetch(PDO::FETCH_ASSOC)) { $countsector++?>
+
+                              <option value="<?php echo $sectorinfo['sectors_name'] ?>"><?php echo $sectorinfo['sectors_name'] ?></option>
+                              <?php } ?>
+                          </select>
+                          <label for="sec2">Sector</label>
+                          <button class="btn-save btn btn-warning btn-sm">Save</button>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <div class="md-form md-outline my-2 Her">
+                                <input type="text" id="title-function" class="form-control" name="title" />
+                                <label for="title-function">Title - Function</label>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                        <div class="text-right" style="margin:0; padding:0">
+                          <input class="btn btn-warning" type="submit" name="backgroundadd" value="Submit">
+                        </div>
+                        </div>
+                    </div>
                 </div>
-
-              
-                <form action="../settings/action.php" method="POST">
-
-                                        <div class="col-md-12 mb-4">
-                                            <!-- Card -->
-                                            
-                                                <!-- Card content -->
-                                                <div class="card-body">
-                                                    <p>
-                                                        <i class="fas fa-list-alt fa-3x text-warning"></i>
-                                                    </p>
-                                                    <select class="mdb-select md-form  dropdown-warning" name="type">
-                                                        <option disabled selected>Background</option>
-                                                        <option value="Study">Study</option>
-                                                        <option value="Course">Course</option>
-                                                        <option value="Job">Job</option>
-                                                        <option value="Internship">Internship</option>
-                                                        <option value="Volunteering">Volunteering</option>
-                                                    </select>
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                            <select class="mdb-select md-form  dropdown-warning" name="levelStudy">
-                                                                <option disabled selected>Level Study</option>
-                                                                <option value="Bachelor">Bachelor</option>
-                                                                <option value="Master">Master</option>
-                                                                <option value="PHD">PHD</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <select class="mdb-select md-form  dropdown-warning" name="diploma">
-                                                                <option disabled selected>Diploma Equivalence</option>
-                                                                <option value="Level Equivalence">Level Equivalence</option>
-                                                                <option value="Specific Equivalence">Specific Equivalence</option>
-
-                                                            </select>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="md-form">
-                                                        <input type="text" id="Instution/University/Company" class="form-control" name="institution" />
-                                                        <label for="Instution/University/Company" class="font-weight-normal">Instution/University/Company</label>
-                                                    </div>
-
-                                                    <select class="mdb-select md-form  dropdown-warning" name="country">
-                                                      <option disabled selected>Country</option>
-                                                      <?php 
-                                                          $countrycheck=$db->prepare("SELECT country_name FROM countries");
-                                                          $countrycheck->execute();
-                                                          $countcountry=0;
-                                                          while($countryinfo=$countrycheck->fetch(PDO::FETCH_ASSOC)) { $countcountry++?>
-
-                                                        <option value="<?php echo $countryinfo['country_name'] ?>"><?php echo $countryinfo['country_name'] ?></option>
-
-                                                        <?php } ?>
-                                                    </select>
-                                                    <div class="row">
-                                                        <div class="md-form col-md-5 ml-3 mt-3">
-                                                            <input placeholder="Selected date" type="text" id="from" class="form-control datepicker" name="start_year">
-                                                            <label for="from">From</label>
-                                                        </div>
-                                                        <div class="md-form col-md-6 pl-3 mt-3 mb-2">
-                                                            <input placeholder="Selected date" type="text" id="to" class="form-control datepicker" name="end_year">
-                                                            <label for="to">To</label>
-                                                        </div>
-                                                    </div>
-
-                                                    <select class="mdb-select md-form  dropdown-warning" name="sector">
-                                                        <option disabled selected>Sector</option>
-                                                        <?php 
-                                                          $sectorcheck=$db->prepare("SELECT sectors_name FROM sectors");
-                                                          $sectorcheck->execute();
-                                                          $countsector=0;
-                                                          while($sectorinfo=$sectorcheck->fetch(PDO::FETCH_ASSOC)) { $countsector++?>
-
-                                                        <option value="<?php echo $sectorinfo['sectors_name'] ?>"><?php echo $sectorinfo['sectors_name'] ?></option>
-                                                        <?php } ?>
-                                                    </select>
-
-                                                    <div class="md-form">
-                                                        <input type="text" id="title-function" class="form-control" name="title" />
-                                                        <label for="title-function" class="font-weight-normal">Title - Function
-                                                        </label>
-                                                    </div>
-                                                    <div class="text-right" style="margin:0; padding:0">
-                                                         <input class="btn btn-warning" type="submit" name="backgroundadd" value="Submit">
-                                                    </div>
-                                                </div>
-                                            
-                                        </div>
-                                    </form>
-</div>
-</div>
+              </div>
+          </form>
+        </div>
+    </div>
 </div>
 
 
@@ -120,38 +150,35 @@
               <?php if (!isset($moppinfo['her_id'])) { ?>
                 <form action="../settings/action.php" method="POST">
                     <div class="mx-5 my-3">
-                              <div class="md-form">
-                              <select class="mdb-select colorful-select dropdown-primary md-form" name="organisation_name[]" multiple>
-
-                                  <option disabled selected>Member of Pilot Practice</option>
-                                  <option value="VDAB Limburg">VDAB Limburg</option>
-                                  <option value="FEDASIL">FEDASIL</option>
-                                  <option value="Agentschap Integratie & Inburgering Leuven">Agentschap Integratie & Inburgering Leuven</option>
-                                  <option value="Motivation United">Motivation United</option>
-                                  <option value="All-in-one4HER">All-in-one4HER Mentoring/Coaching</option>
-                                  
-                            
-                              </select>
-                              </div>
-                               <small id="passwordHelpBlockMD" class="form-text text-muted">
-                                If you are part of a pilot practice(s) and registered through these organizations, please tick one or more of them. Then you give your consent that your data is visible to the responsible person from those organizations and they can validate your data. This will strengthen your CV for employers.
-                              </small>
+                                <div class="form-row">
+                                    <div class="col select-outline" data-toggle="popover-hover" data-placement="right" 
+                                    data-content="If you are part of a pilot practice(s) and registered through these organizations, please tick one or more of them. Then you give your consent that your data is visible to the responsible person from those organizations and they can validate your data. This will strengthen your CV for employers.">
+                                        <select  class="mdb-select md-form md-outline Her my-2" name="organisation_name[]" multiple id="orgname">
+                                            <option disabled selected></option>
+                                            <option value="VDAB Limburg">VDAB Limburg</option>
+                                            <option value="FEDASIL">FEDASIL</option>
+                                            <option value="Agentschap Integratie & Inburgering Leuven">Agentschap Integratie & Inburgering Leuven</option>
+                                            <option value="Motivation United">Motivation United</option>
+                                            <option value="All-in-one4HER">All-in-one4HER Mentoring/Coaching</option>
+                                        </select>
+                                        <label for="orgname">Member of Pilot Practice</label>
+                                    </div>
+                                </div>
+                               
                               <div class="text-left">
-                                <div class="form-check">
+                                <div class="form-check" data-toggle="popover-hover"
+                                    data-content="You are matched with a mentor in your sector for 3-6 months">
                                   <input type="hidden" value="0" name="mentoring" >
                                   <input type="checkbox" class="form-check-input" id="mentoringsupport" value="1" name="mentoring" <?php echo $moppinfo['mentoring'] ? 'checked' : ''?>>
                                   <label class="form-check-label" for="mentoringsupport">I want mentoring support. </label>
-                                  <small id="mentoringsupport" class="form-text text-muted">
-                                    You are matched with a mentor in your sector for 3-6 months
-                                  </small>
+                                  
                               </div>
-                              <div class="form-check">
+                              <div class="form-check" data-toggle="popover-hover"
+                                    data-content="You have 4 sessions of professional career coaching within 2-3 months">
                                 <input type="hidden" value="0" name="coaching" >
                                 <input type="checkbox" class="form-check-input" id="career-coaching" value="1" name="coaching" <?php echo $moppinfo['coaching'] ? 'checked' : ''?>>
                                 <label class="form-check-label" for="career-coaching">I want career coaching support. </label>
-                                <small id="career-coaching" class="form-text text-muted">
-                                  You have 4 sessions of professional career coaching within 2-3 months
-                                </small>
+                                
                             </div>
                               </div>
                               <input type="text" name="her_id" hidden="" value="<?php echo $herinfo['her_id'] ?>">
@@ -165,9 +192,10 @@
 <?php if (isset($moppinfo['her_id'])) { ?>
                  <form action="../settings/action.php" method="POST">
                     <div class="mx-5 my-3">
-                              <div class="md-form">
-                              <select class="mdb-select colorful-select dropdown-primary md-form" name="organisation_name[]" multiple>
-
+                        <div class="form-row my-1 mt-4">
+                          <div class="col select-outline" data-toggle="popover-hover" data-placement="right" 
+                          data-content="If you are part of a pilot practice(s) and registered through these organizations, please tick one or more of them. Then you give your consent that your data is visible to the responsible person from those organizations and they can validate your data. This will strengthen your CV for employers.">
+                              <select  class="mdb-select md-form md-outline Her my-2" name="organisation_name[]" multiple id="orgname">
                               <?php 
                                   $allorg=array("VDAB Limburg", "FEDASIL", "Agentschap Integratie & Inburgering Leuven", "Motivation United", "All-in-one4HER");
                                   if (isset($moppinfo['organisation_name'])) {
@@ -188,34 +216,31 @@
                                      
                                 <?php } ?>
                                 <?php if (!isset($motivationinfo['study'])) { ?>
-                                  <option selected>Member of Pilot Practice</option>
-                                  <option value="VDAB Limburg">VDAB Limburg</option>
-                                  <option value="FEDASIL">FEDASIL</option>
-                                  <option value="Agentschap Integratie & Inburgering Leuven">Agentschap Integratie & Inburgering Leuven</option>
-                                  <option value="Motivation United">Motivation United</option>
-                                  <option value="All-in-one4HER">All-in-one4HER Mentoring/Coaching</option>
+                                            
+                                            <option value="VDAB Limburg">VDAB Limburg</option>
+                                            <option value="FEDASIL">FEDASIL</option>
+                                            <option value="Agentschap Integratie & Inburgering Leuven">Agentschap Integratie & Inburgering Leuven</option>
+                                            <option value="Motivation United">Motivation United</option>
+                                            <option value="All-in-one4HER">All-in-one4HER Mentoring/Coaching</option>
                                 <?php } ?>
-                            
-                              </select>
-                              </div>
-                               <small id="passwordHelpBlockMD" class="form-text text-muted">
-                                If you are part of a pilot practice(s) and registered through these organizations, please tick one or more of them. Then you give your consent that your data is visible to the responsible person from those organizations and they can validate your data. This will strengthen your CV for employers.
-                              </small>
+                                </select>
+                                <label for="orgname">Member of Pilot Practice</label>
+                            </div>
+                        </div>
+                              
                               <div class="text-left">
-                                <div class="form-check">
+                                <div class="form-check my-1" data-toggle="popover-hover"
+                                    data-content="You have 4 sessions of professional career coaching within 2-3 months">
                                   <input type="checkbox" class="form-check-input" id="mentoringsupport" value="1" name="mentoring" <?php echo $moppinfo['mentoring'] ? 'checked' : ''?>>
                                   <label class="form-check-label" for="mentoringsupport">I want mentoring support. </label>
-                                  <small id="mentoringsupport" class="form-text text-muted">
-                                    You are matched with a mentor in your sector for 3-6 months
-                                  </small>
+                                  
                               </div>
-                              <div class="form-check">
+                              <div class="form-check my-1" data-toggle="popover-hover"
+                                    data-content="You have 4 sessions of professional career coaching within 2-3 months">
 
                                 <input type="checkbox" class="form-check-input" id="career-coaching" value="1" name="coaching" <?php echo $moppinfo['coaching'] ? 'checked' : ''?>>
                                 <label class="form-check-label" for="career-coaching">I want career coaching support. </label>
-                                <small id="career-coaching" class="form-text text-muted">
-                                  You have 4 sessions of professional career coaching within 2-3 months
-                                </small>
+                                
                             </div>
                               </div>
                               <input type="text" name="her_id" hidden="" value="<?php echo $herinfo['her_id'] ?>">
@@ -289,21 +314,8 @@
                                 </div>
                               
                               
-                              <div class="text-left">
-                                <div class="form-check">
-                                  <input type="hidden" value="0" name="mentoring" >
-                                  <input type="checkbox" class="form-check-input" id="mentoringsupport" value="1" name="mentoring" >
-                                  <label class="form-check-label" for="mentoringsupport" data-toggle="popover-hover"
-                                            data-content="You are matched with a mentor in your sector for 3-6 months">I want mentoring support. </label>
-                                  
-                              </div>
-                              <div class="form-check">
-                                <input type="hidden"  value="0" name="coaching" >
-                                <input type="checkbox" class="form-check-input" id="career-coaching" value="1" name="coaching" >
-                                <label class="form-check-label" for="career-coaching"  data-toggle="popover-hover"
-                                            data-content="You have 4 sessions of professional career coaching within 2-3 months">I want career coaching support. </label>
-                                
-                            </div>
+                              
+                              
                               </div>
 
                               <input type="text" name="her_id" hidden="" value="<?php echo $herinfo['her_id'] ?>">
@@ -317,11 +329,10 @@
                <?php if (isset($motivationinfo['her_id'])) { ?>
                 <form action="../settings/action.php" method="POST">
                     <div class="mx-5 my-3">
-                              <div class="md-form">
-
-                              <select class="mdb-select colorful-select dropdown-primary md-form" multiple name="study[]">
-
-                                  <?php 
+                                <div class="form-row">
+                                    <div class="col select-outline">
+                                        <select class="mdb-select md-form md-outline Her my-2" id="studyseeker" name="study[]">
+                                        <?php 
                                   $allStudies=array("Language", "Vocational Training", "Bachelor", "Master");
                                   if (isset($motivationinfo['study'])) {
                                   $studies=explode(",", $motivationinfo['study']);
@@ -342,20 +353,21 @@
                                 <?php } ?>
 
                                 <?php if (!isset($motivationinfo['study'])) { ?>
-                                  <option disabled selected></option>
+                                  
                                   <option value="Language">Language</option>
                                   <option value="Vocational Training">Vocational Training</option>
                                   <option value="Bachelor">Bachelor</option>
                                   <option value="Master">Master</option>
                                   <?php } ?>
-                              </select>
-                              
-                              </div>
-                              <div class="md-form">
-                              <select class="mdb-select colorful-select dropdown-primary md-form" multiple name="work[]" >
+                                        </select>
+                                        <label for="studyseeker">Study - (Studyseeker)</label>
+                                    </div>
+                                </div>
 
-                                
-                                <?php 
+                                <div class="form-row">
+                                    <div class="col select-outline">
+                                        <select class="mdb-select md-form md-outline Her my-2" id="workseeker" name="work">
+                                        <?php 
                                   $allWork=array("Parttime", "Fulltime", "Volunteer", "Internship");
                                   if (isset($motivationinfo['work'])) {
                                   $works=explode(",", $motivationinfo['work']);
@@ -377,19 +389,23 @@
 
 
                                 <?php if (!isset($motivationinfo['work'])) { ?>
-                                  <option disabled selected></option>
+                                  
                                   <option value="Parttime">Part time</option>
                                   <option value="Fulltime">Full time</option>
                                   <option value="Volunteer">Volunteer</option>
                                   <option value="Internship">Internship</option>
                                   <?php } ?>
-                              </select>
-                              </div>
+                                        </select>
+                                        <label for="workseeker">Work - (jobseeker)</label>
+                                    </div>
 
-                              <div class="md-form">
-                                <select class="mdb-select md-form  dropdown-warning" multiple name="sector[]">
-
-                                <?php 
+                                </div>
+                              
+                                <div class="form-row">
+                                    <div class="col select-outline">
+                                        <select class="mdb-select md-form md-outline Her my-2" id="sec1" multiple name="sector">
+                                            
+                                        <?php 
                                   $sectorcheck=$db->prepare("SELECT sectors_name FROM sectors");
                                   $sectorcheck->execute();
                                   $sectorinfo=$sectorcheck->fetch(PDO::FETCH_ASSOC);
@@ -429,8 +445,13 @@
 
                                     <?php }
                                     } ?>
-                              </select>
-                              </div>
+                                        </select>
+                                        <label for="sec1">Sector</label>
+                                        <button class="btn-save btn btn-warning btn-sm">Save</button>
+                                    </div>
+
+                                </div>
+                              
                               
                               <input type="text" name="her_id" hidden="" value="<?php echo $herinfo['her_id'] ?>">
                               <div class="text-right">
@@ -462,7 +483,7 @@
              $('[data-toggle="popover-hover"]').popover({
             html: true,
             trigger: 'hover',
-            placement: 'bottom',
+            placement: 'right',
             //content: function () { return '<img src="' + $(this).data('img') + '" />'; }
         });
         $(document).ready(function() {
@@ -474,7 +495,8 @@
             format: ' mmm, yyyy',
             formatSubmit: 'mmm/yyyy',
             hiddenPrefix: 'prefix__',
-            hiddenSuffix: '__suffix'
+            hiddenSuffix: '__suffix',
+            selectYears:60
         });
     </script>
   <div class="drag-target" style="left: 0px;"></div>

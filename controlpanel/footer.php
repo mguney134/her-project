@@ -119,23 +119,23 @@
 
               <?php if (!isset($moppinfo['her_id'])) { ?>
                 <form action="../settings/action.php" method="POST">
-                    <div class="mx-5 my-3">
-                              <div class="md-form">
-                              <select class="mdb-select colorful-select dropdown-primary md-form" name="organisation_name[]" multiple>
-
-                                  <option disabled selected>Member of Pilot Practice</option>
-                                  <option value="VDAB Limburg">VDAB Limburg</option>
-                                  <option value="FEDASIL">FEDASIL</option>
-                                  <option value="Agentschap Integratie & Inburgering Leuven">Agentschap Integratie & Inburgering Leuven</option>
-                                  <option value="Motivation United">Motivation United</option>
-                                  <option value="All-in-one4HER">All-in-one4HER Mentoring/Coaching</option>
-                                  
-                            
-                              </select>
-                              </div>
-                               <small id="passwordHelpBlockMD" class="form-text text-muted">
-                                If you are part of a pilot practice(s) and registered through these organizations, please tick one or more of them. Then you give your consent that your data is visible to the responsible person from those organizations and they can validate your data. This will strengthen your CV for employers.
-                              </small>
+                    <div class="mx-5 my-3" >
+                                <div class="form-row">
+                                    <div class="col select-outline" data-toggle="popover-hover"
+                                    data-content="If you are part of a pilot practice(s) and registered through these organizations, please tick one or more of them. Then you give your consent that your data is visible to the responsible person from those organizations and they can validate your data. This will strengthen your CV for employers.">
+                                        <select  class="mdb-select md-form md-outline Her my-2" name="organisation_name[]" multiple id="orgname">
+                                            <option disabled selected></option>
+                                            <option value="VDAB Limburg">VDAB Limburg</option>
+                                            <option value="FEDASIL">FEDASIL</option>
+                                            <option value="Agentschap Integratie & Inburgering Leuven">Agentschap Integratie & Inburgering Leuven</option>
+                                            <option value="Motivation United">Motivation United</option>
+                                            <option value="All-in-one4HER">All-in-one4HER Mentoring/Coaching</option>
+                                        </select>
+                                        <label for="orgname">Member of Pilot Practice</label>
+                                    </div>
+                                </div>
+                              
+                               
                               <div class="text-left">
                                 <div class="form-check">
                                   <input type="hidden" value="0" name="mentoring" >
@@ -244,27 +244,37 @@
               <?php if (!isset($motivationinfo['her_id'])) { ?>
                 <form action="../settings/action.php" method="POST">
                     <div class="mx-5 my-3">
+                              <div class="form-row">
+                                    <div class="col select-outline">
+                                        <select class="mdb-select md-form md-outline Her my-2" id="studyseeker" name="study[]">
+                                            <option disabled selected></option>
+                                            <option value="Language">Language</option>
+                                            <option value="Vocational Training">Vocational Training</option>
+                                            <option value="Bachelor">Bachelor</option>
+                                            <option value="Master">Master</option>
+                                        </select>
+                                        <label for="studyseeker">Study - (Studyseeker)</label>
+                                    </div>
+                                </div>
                               <div class="md-form">
-                              <select class="mdb-select colorful-select dropdown-primary md-form" multiple name="study[]">
-                                  <option disabled selected>Study - (Studyseeker)</option>
-                                  <option value="Language">Language</option>
-                                  <option value="Vocational Training">Vocational Training</option>
-                                  <option value="Bachelor">Bachelor</option>
-                                  <option value="Master">Master</option>
-                              </select>
+                              <div class="form-row">
+                                    <div class="col select-outline">
+                                        <select class="mdb-select md-form md-outline Her my-2" id="workseeker" name="work">
+                                            <option disabled selected></option>
+                                            <option value="Parttime/Fulltime">Part time/Full time</option>
+                                            <option value="Volunteer">Volunteer</option>
+                                            <option value="Internship">Internship</option>
+                                        </select>
+                                        <label for="workseeker">Work - (jobseeker)</label>
+                                    </div>
+
+                                </div>
                               </div>
-                              <div class="md-form">
-                              <select class="mdb-select colorful-select dropdown-primary md-form" multiple name="work" >
-                                  <option disabled selected>WORK - (jobseeker)</option>
-                                  <option value="Parttime/Fulltime">Part time/Full time</option>
-                                  <option value="Volunteer">Volunteer</option>
-                                  <option value="Internship">Internship</option>
-                              </select>
-                              </div>
-                              <div class="md-form">
-                                <select class="mdb-select md-form  dropdown-warning" name="sector">
-                                  <option disabled selected>Sector</option>
-                                  <?php 
+                              <div class="form-row">
+                                    <div class="col select-outline">
+                                        <select class="mdb-select md-form md-outline Her my-2" id="sec1" multiple name="sector">
+                                            
+                                            <?php 
                                     $sectorcheck=$db->prepare("SELECT sectors_name FROM sectors");
                                     $sectorcheck->execute();
                                     $countlang=0;
@@ -273,8 +283,12 @@
                                      <option value="<?php echo $sectorinfo['sectors_name'] ?>"><?php echo $sectorinfo['sectors_name'] ?></option>
 
                                     <?php } ?>
-                              </select>
-                              </div>
+                                        </select>
+                                        <label for="sec1">Sector</label>
+                                        <button class="btn-save btn btn-warning btn-sm">Save</button>
+                                    </div>
+
+                                </div>
                               <div class="text-left">
                                 <div class="form-check">
                                   <input type="hidden" value="0" name="mentoring" >

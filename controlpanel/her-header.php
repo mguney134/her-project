@@ -93,7 +93,7 @@ $moppinfo=$moppcheck->fetch(PDO::FETCH_ASSOC);
                     <div class="card profile-card mt-4">
                         <!-- Avatar -->
                         <div class="avatar mt-n5 mb-4">
-                            <img src="https://pngimage.net/wp-content/uploads/2018/06/flat-user-icon-png-2.png" class="rounded-circle" alt="First sample avatar image" />
+                            <img src="../images/icons/user-woman.png" class="rounded-circle" alt="First sample avatar image" />
                         </div>
 
                         <div class="card-body pt-0 mt-0">
@@ -104,11 +104,11 @@ $moppinfo=$moppcheck->fetch(PDO::FETCH_ASSOC);
                             <br>
                             <br>
                             
-                            <div class="form-check form-check-inline">
-                              <input type="hidden" name="publish_cv" value="0">
-                                <input type="checkbox" class="form-check-input" id="materialInline1" data-toggle="popover-hover"
+                            <div class="form-check form-check-inline" data-toggle="popover-hover"
                                     data-content="By ticking this box, you give your consent that your CV can be seen by registered
-                                employers. Otherwise it will not be visible." name="publish_cv" value="1" <?php echo $herinfo['publish_cv'] ? 'checked' : ''?>>
+                                employers. Otherwise it will not be visible.">
+                              <input type="hidden" name="publish_cv" value="0">
+                                <input type="checkbox" class="form-check-input" id="materialInline1"  name="publish_cv" value="1" <?php echo $herinfo['publish_cv'] ? 'checked' : ''?>>
                                 <label class="form-check-label" for="materialInline1">Publish my CV for employers</label>
                             </div>
                             
