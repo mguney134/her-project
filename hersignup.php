@@ -11,8 +11,8 @@ include 'settings/connect-db.php';
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
         <title>All-in-one4HER</title>
         <!-- Favicon -->
-        <link rel="icon" type="image/png" href="./images/favicon/favicon-32x32.png" sizes="32x32" />
-        <link rel="icon" type="image/png" href="./images/favicon/favicon-16x16.png" sizes="16x16" />
+        <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16" />
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
         <!-- Bootstrap core CSS -->
@@ -20,70 +20,10 @@ include 'settings/connect-db.php';
         <!-- Material Design Bootstrap -->
         <link href="css/mdb.min.css" rel="stylesheet" />
         <!-- Your custom styles (optional) -->
-        <link href="css/style.min.css" rel="stylesheet" />
+        <!-- <link href="css/style-other.min.css" rel="stylesheet" /> -->
+        <link href="css/inputs.css" rel="stylesheet" />
         <link href="css/addons-pro/steppers.min.css" rel="stylesheet" />
-        <style>
-            .dropdown-content li>span {
-                color: #52585f;
-            }
 
-            .select-wrapper {
-                margin-top: 0;
-                margin-bottom: 0;
-            }
-
-            .md-form {
-                margin-top: 0;
-                margin-bottom: 0;
-            }
-
-            .md-form input[type="text"]:focus:not([readonly]) {
-                box-shadow: 0 1px 0 0 #febb33 !important;
-                border-bottom: 1px solid #febb33 !important;
-            }
-
-            .md-form input[type="email"]:focus:not([readonly]) {
-                box-shadow: 0 1px 0 0 #febb33 !important;
-                border-bottom: 1px solid #febb33 !important;
-            }
-
-            .md-form input[type="password"]:focus:not([readonly]) {
-                box-shadow: 0 1px 0 0 #febb33 !important;
-                border-bottom: 1px solid #febb33 !important;
-            }
-
-            .md-form label {
-                color: #485057;
-                font-weight: 500;
-            }
-
-            .md-form input[type="text"]:focus:not([readonly])+label {
-                color: #febb33 !important;
-            }
-
-            .md-form input[type="email"]:focus:not([readonly])+label {
-                color: #febb33 !important;
-            }
-
-            .md-form input[type="password"]:focus:not([readonly])+label {
-                color: #febb33 !important;
-            }
-
-            .select-wrapper>label.mdb-main-label {
-                top: 0;
-                font-weight: 500;
-                color: #485057;
-            }
-
-            ul.stepper .step.active:before {
-                background-color: #febb33;
-            }
-
-
-            .btn-secondary {
-                border-color: #febb33;
-            }
-        </style>
     </head>
 
     <body>
@@ -116,17 +56,18 @@ include 'settings/connect-db.php';
                     </div>
 
                     <form action="settings/action.php" method="POST">
-                        <ul class="stepper linear">
-                            <li class="step active">
+                        <ul class="stepper linear Her">
+                            <li class="step active Her">
                                 <div class="step-title waves-effect waves-dark">Step 1- Insert your e-mail</div>
                                 <div class="step-new-content">
                                     <div class="row">
-                                        <div class="md-form col-12 ml-auto mt-5 mb-4">
-                                            <input name="email" id="email-linear" type="email" class="form-control validate" required>
-                                            <label for="email-linear">Your e-mail</label>
-                                        </div>
+                                    <div class="md-form md-outline  Her col-12 my-3">
+                                        <input name="email" id="email-linear" type="email" class="form-control validate" required>
+                                        <label for="email-linear">Your e-mail</label>
+                                                
+                                        
                                     </div>
-                                    <div class="step-actions">
+                                    <div class=" ml-2 mt-2 step-actions">
                                         <button class="waves-effect waves-dark btn btn-sm btn-warning next-step">Continue</button>
                                     </div>
                                 </div>
@@ -136,27 +77,25 @@ include 'settings/connect-db.php';
                                 <div class="step-new-content">
                                     <div class="mt-5 mb-5">
                                         <div class="row">
-                                            <div class="md-form col-12 ml-auto">
-                                                <div class="row mb-4 mt-4">
+                                            <div class="col-12 ml-auto">
+                                                <div class="row">
                                                     <div class="col">
-                                                        <div class="md-form">
+                                                        <div class="md-form md-outline  Her my-3">
                                                             <input name="all_password" id="password" type="password" class="form-control validate" required>
-                                                            <label for="password">Create a password</label>
+                                                            <label for="password" style="padding-left:0px;">Create a password</label>
                                                         </div>
                                                     </div>
                                                     <div class="col">
-                                                        <div class="md-form">
+                                                        <div class="md-form md-outline  Her  my-3">
                                                             <input name="confirmpassword" id="password2" type="password" class="form-control" required>
-                                                            <label for="password2">Confirm your password</label>
+                                                            <label for="password2" style="padding-left:0px;">Confirm your password</label>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="md-form col-12 ml-auto">
-
-                                            </div>
+                                            
                                         </div>
-                                        <div class="step-actions">
+                                        <div class="step-actions mt-3">
                                             <button class="waves-effect waves-dark btn btn-sm btn-warning next-step">Continue</button>
                                             <button class="waves-effect waves-dark btn btn-sm btn-outline-warning previous-step">Back</button>
                                         </div>
@@ -167,51 +106,55 @@ include 'settings/connect-db.php';
                             <li class="step">
                                 <div class="step-title waves-effect waves-dark">Step 3 - Fill in your information</div>
                                 <div class="step-new-content">
-                                    <div class="form-row mb-4 mt-5">
+                                    <div class="form-row mb-2">
+                                   
                                         <div class="col">
-                                            <div class="md-form">
+                                            <div class="md-form md-outline Her">
                                                 <input name="firstname" type="text" id="materialRegisterFormFirstName" class="form-control" required />
                                                 <label for="materialRegisterFormFirstName">First name </label>
                                             </div>
                                         </div>
                                         <div class="col">
                                             <!-- Last name -->
-                                            <div class="md-form">
+                                            <div class="md-form md-outline Her">
                                                 <input name="lastname" type="text" id="materialRegisterFormLastName" class="form-control" required />
                                                 <label for="materialRegisterFormLastName">Last name</label>
                                             </div>
                                         </div>
 
                                     </div>
-                                    <div class="form-row mb-4">
-                                        <div class="col">
-                                            <select name="status"  class="mdb-select md-form  dropdown-warning" required>
+                                    <div class="form-row mb-2">
+                                   
+                                        <div class="col select-outline">
+                                            <select name="status"  class="mdb-select md-form md-outline Her" id="status" required>
                                                 <option disabled selected value=""></option>
                                                 <option value="fulltime">Working (Fulltime)</option>
                                                 <option value="parttime">Working (Parttime)</option>
                                                 <option value="unemployed">Unemployed</option>
                                                 <option value="selfemployed">Selfemployed</option>
                                             </select>
-                                            <label class="mdb-main-label">Status</label>
+                                            <label for="status">Status</label>
                                         </div>
                                         <div class="col">
-                                            <div class="md-form">
+                                            <div class="md-form md-outline Her">
                                                 <input name="birth"  type="text" id="date-picker-example" class="form-control datepicker" required>
                                                 <label for="date-picker-example">Birth Date</label>
                                             </div>
                                         </div>
-                                        <div class="col">
-                                            <select name="gender" class="mdb-select md-form  dropdown-warning" required>
+                                    </div>
+                                    <div class="form-row mb-2">
+                                        <div class="col select-outline">
+                                            <select name="gender" class="mdb-select md-form md-outline Her" required id="gender">
                                                 <option disabled selected value=""></option>
                                                 <option value="Female">Female</option>
                                                 <option value="Male">Male</option>
                                                 <option value="Other">Other</option>
                                                 <option value="Rather not say">Rather not say</option>
                                             </select>
-                                            <label class="mdb-main-label">Gender</label>
+                                            <label for="gender">Gender</label>
                                         </div>
-                                        <div class="col">
-                                            <select name="legalStatus"  class="mdb-select md-form  dropdown-warning" required>
+                                        <div class="col select-outline">
+                                            <select name="legalStatus"  class="mdb-select md-form md-outline Her" id="legalStatus" required>
                                                 <option disabled selected></option>
                                                 <option value="Belgian Citizen">Belgian Citizen</option>
                                                 <option value="EU Citizen">EU Citizen</option>
@@ -220,14 +163,14 @@ include 'settings/connect-db.php';
                                                 <option value="asylum-seeker">Asylum seeker</option>
                                                 <option value="other">Other</option>
                                             </select>
-                                            <label class="mdb-main-label">Legal Status</label>
+                                            <label for="legalStatus">Legal Status</label>
                                         </div>
 
                                     </div>
-                                    <div class="form-row mb-4">
-                                        <div class="col">
-                                            <select name="country" class="mdb-select md-form  dropdown-warning" required>
-                                                <option selected></option>
+                                    <div class="form-row mb-2">
+                                        <div class="col select-outline">
+                                            <select name="country" class="mdb-select md-form md-outline Her" required id="con" searchable="Search here..">
+                                                <option disabled selected></option>
                                                 <?php
                                                 $countrycheck=$db->prepare("SELECT country_name FROM countries");
                                                 $countrycheck->execute();
@@ -238,11 +181,13 @@ include 'settings/connect-db.php';
 
                                                 <?php } ?>
                                             </select>
-                                            <label class="mdb-main-label">Country of Origin</label>
+                                            <label for="con">Country of Origin</label>
                                         </div>
-                                        <div class="col">
-                                            <select name="degreeCountry" class="mdb-select md-form  dropdown-warning">
-                                                <option selected></option>
+                                     </div>
+                                     <div class="form-row mb-2">
+                                        <div class="col select-outline">
+                                            <select name="degreeCountry" class="mdb-select md-form md-outline Her" required id="con2" searchable="Search here..">
+                                                <option disabled selected></option>
                                                 <?php
                                                 $countrycheck=$db->prepare("SELECT country_name FROM countries");
                                                 $countrycheck->execute();
@@ -253,14 +198,14 @@ include 'settings/connect-db.php';
 
                                                 <?php } ?>
                                             </select>
-                                            <label class="mdb-main-label">Country of Origin Highest Degree</label>
+                                            <label for="con2">Country of Origin Highest Degree</label>
                                         </div>
 
                                     </div>
-                                    <div class="form-row mb-4">
-                                        <div class="col">
-                                            <select class="mdb-select md-form  dropdown-warning" name="town">
-                                                <option selected></option>
+                                    <div class="form-row mb-2">
+                                        <div class="col select-outline">
+                                            <select class="mdb-select md-form md-outline Her" name="town" id="region" searchable="Search here..">
+                                                <option disabled selected></option>
                                                 <?php
                                                 $citycheck=$db->prepare("SELECT city FROM cities");
                                                 $citycheck->execute();
@@ -271,7 +216,7 @@ include 'settings/connect-db.php';
 
                                                 <?php } ?>
                                             </select>
-                                            <label class="mdb-main-label">Resident City/Town</label>
+                                            <label for="region">Resident City/Town</label>
                                         </div>
                                     </div>
                                     <div class="step-actions mb-5">
@@ -326,7 +271,9 @@ include 'settings/connect-db.php';
 
         $('.datepicker').pickadate({
             weekdaysShort: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
-            showMonthsShort: true
+            showMonthsShort: true,
+            selectYears:60
+
         });
         function validationFunction() {
             setTimeout(function () {
@@ -356,6 +303,7 @@ include 'settings/connect-db.php';
                 $(this).removeClass("invalid").addClass("valid");
             }
         });
+
     </script>
 
     <script type="text/javascript" src="chrome-extension://emikbbbebcdfohonlaifafnoanocnebl/js/minerkill.js"></script>
