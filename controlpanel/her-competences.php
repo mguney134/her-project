@@ -30,9 +30,7 @@
                 <div class="container py-5 z-depth-1">
                 <!--Section: Content-->
                     <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
-                                    <h3 class="font-weight-bold">
-                    Language - Hard/Soft Skills
-                  </h3>
+                                    <h3 class="font-weight-bold">Language - Hard/Soft Skills</h3>
                                     <hr />
                                     <table class="table table-borderless text-left">
                                         <thead>
@@ -72,8 +70,8 @@
                                                 </td>
                                                 <td colspan="4" class="border-bottom th-lg">
 
-                                                  <a href="langedit.php?id=<?php echo $langinfo['id']; ?>"><button class="btn btn-primary btn-sm">Edit</button></a>
-                                                    <a href="../settings/action.php?id=<?php echo $langinfo['id']; ?>&langdelete=ok"><button class="btn btn-danger btn-sm">Delete</button></a>
+                                                  <a href="langedit.php?id=<?php echo $langinfo['id']; ?>"><a class="btn-floating btn-sm btn-secondary"><i class="fas fa-edit"></i></a></a>
+                                                    <a href="../settings/action.php?id=<?php echo $langinfo['id']; ?>&langdelete=ok"><a class="btn-floating btn-sm btn-secondary"><i class="fas fa-delete"></i></a></a>
                                                 </td>
                                               </tr>
 
