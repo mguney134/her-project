@@ -244,7 +244,7 @@
                                     <div class="card-body p-0">
                                         <div class="row mx-0">
                                             <div class="col-md-12 grey lighten-4 rounded-left pt-4">
-                                                <h5 class="font-weight-bold mb-4">Something</h5>
+                                                <h5 class="font-weight-bold mb-4">Volunteering</h5>
                                                 <div class="row mx-2 ">
                                                 <?php 
                                                 $bgcheck5=$db->prepare("SELECT * FROM background where user_id=:user_id");
