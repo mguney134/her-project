@@ -71,7 +71,7 @@
                                                 <td colspan="4" class="border-bottom th-lg">
 
                                                   <a href="langedit.php?id=<?php echo $langinfo['id']; ?>"><a class="btn-floating btn-sm btn-secondary"><i class="fas fa-edit"></i></a></a>
-                                                    <a href="../settings/action.php?id=<?php echo $langinfo['id']; ?>&langdelete=ok"><a class="btn-floating btn-sm btn-secondary"><i class="fas fa-delete"></i></a></a>
+                                                    <a href="../settings/action.php?id=<?php echo $langinfo['id']; ?>&langdelete=ok"><a class="btn-floating btn-sm btn-secondary"><i class="fas fa-trash-alt"></i></a></a>
                                                 </td>
                                               </tr>
 
