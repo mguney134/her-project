@@ -65,7 +65,7 @@
                     <div class="form-row">
                         <div class="col select-outline">
                             <select class="mdb-select md-form md-outline Her my-2"
-                                id="getCou" searchable="Search here..">
+                                id="getCou" searchable="Search here.." name="country">
                                 <option disabled selected></option>
                                 <?php 
                                 $countrycheck=$db->prepare("SELECT country_name FROM countries");
