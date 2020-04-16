@@ -190,3 +190,8 @@ ul.stepper.Her .step.active:before {
   background-color: #febb33;
 }
 /* HER- Orange Ends */
+
+/* Mentor- Blue Starts */
+.md-form.md-outline label.active {
+  z-index: 5 !important;
+}
