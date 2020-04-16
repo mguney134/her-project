@@ -93,7 +93,7 @@ $moppinfo=$moppcheck->fetch(PDO::FETCH_ASSOC);
                     <div class="card profile-card mt-4">
                         <!-- Avatar -->
                         <div class="avatar mt-n5 mb-4">
-                            <img src="../images/icons/user-woman.png" class="rounded-circle" alt="First sample avatar image" />
+                            <img src="../images/icons/user-her.png" class="rounded-circle" alt="First sample avatar image" />
                         </div>
 
                         <div class="card-body pt-0 mt-0">

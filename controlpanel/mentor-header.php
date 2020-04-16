@@ -129,7 +129,7 @@ $count1=$mentorcheck->rowCount();
                     <div class="card profile-card mt-4">
                         <!-- Avatar -->
                         <div class="avatar mt-n5 mb-4">
-                            <img src="https://cdn2.iconfinder.com/data/icons/crystalproject/crystal_project_256x256/apps/personal.png" class="rounded-circle" alt="First sample avatar image" />
+                            <img src="../images/icons/user-mentor.png" class="rounded-circle" alt="First sample avatar image" />
                         </div>
 
                         <div class="card-body pt-0 mt-0">
