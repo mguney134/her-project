@@ -1,3 +1,4 @@
+<!-- Add New Studies & Experience -->
 <div class="modal fade" id="addBackground" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -131,6 +132,162 @@
           </form>
         </div>
     </div>
+</div>
+<!-- Edit Study & Experience -->
+<div class="modal fade" id="editBackground" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+              <h4 class="modal-title w-100 font-weight-bold">Edit Study & Experience</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <form action="../settings/action.php" method="POST">
+
+              <div class="col-md-12 mb-4">
+                <!-- Card content -->
+                <div class="card-body">
+                    <p><i class="fas fa-list-alt fa-3x text-warning"></i></p>
+                    <div class="form-row">
+                        <div class="col select-outline">
+                            <select class="mdb-select md-form md-outline Her my-2"
+                                id="background" name="type">
+                                <option disabled selected></option>
+                                <option value="Study">Study</option>
+                                <option value="Course">Course</option>
+                                <option value="Job">Job</option>
+                                <option value="Internship">Internship</option>
+                                <option value="Volunteering">Volunteering</option>
+                            </select>
+                            <label for="background">New Background</label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-6 select-outline">
+                            <select class="mdb-select md-form md-outline Her my-2"
+                                id="sLevel" name="levelStudy">
+                                <option disabled selected></option>
+                                <option value="Bachelor">Bachelor</option>
+                                <option value="Master">Master</option>
+                                <option value="PHD">PHD</option>
+                            </select>
+                            <label for="sLevel">Level of Study</label>
+                        </div>
+                        <div class="col-md-6 select-outline">
+                            <select class="mdb-select md-form md-outline Her my-2"
+                                id="equi" name="diploma">
+                                <option disabled selected></option>
+                                <option value="Level Equivalence">Level Equivalence
+                                </option>
+                                <option value="Specific Equivalence">Specific
+                                    Equivalence</option>
+
+                            </select>
+                            <label for="equi">Diploma Equivalence</label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <div class="md-form md-outline my-2 Her">
+                                <input type="text" id="Instution/University/Company"
+                                    class="form-control" name="institution" />
+                                <label
+                                    for="Instution/University/Company">Instution/University/Company</label>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-row">
+                        <div class="col select-outline">
+                            <select class="mdb-select md-form md-outline Her my-2"
+                                id="getCou" searchable="Search here..">
+                                <option disabled selected></option>
+                                <?php 
+                                $countrycheck=$db->prepare("SELECT country_name FROM countries");
+                                $countrycheck->execute();
+                                $countcountry=0;
+                                while($countryinfo=$countrycheck->fetch(PDO::FETCH_ASSOC)) { $countcountry++?>
+
+                              <option value="<?php echo $countryinfo['country_name'] ?>"><?php echo $countryinfo['country_name'] ?></option>
+
+                              <?php } ?>
+                            </select>
+                            <label for="getCou">Country</label>
+                        </div>
+                    </div>
+                    <div class="form-row my-2">
+                        <div class="md-form col-md-6">
+                            <input placeholder="Selected date" type="text" id="from"
+                                class="form-control datepicker" name="start_year">
+                            <label for="from" id="fromDate">From</label>
+                        </div>
+                        <div class="md-form col-md-6">
+                            <input placeholder="Selected date" type="text" id="to"
+                                class="form-control datepicker" name="end_year">
+                            <label for="to" id="toDate">To</label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col select-outline">
+                          <select class="mdb-select md-form md-outline Her my-2"
+                              id="sec2" multiple name="sector">
+                              <option disabled selected></option>
+                              <?php 
+                                $sectorcheck=$db->prepare("SELECT sectors_name FROM sectors");
+                                $sectorcheck->execute();
+                                $countsector=0;
+                                while($sectorinfo=$sectorcheck->fetch(PDO::FETCH_ASSOC)) { $countsector++?>
+
+                              <option value="<?php echo $sectorinfo['sectors_name'] ?>"><?php echo $sectorinfo['sectors_name'] ?></option>
+                              <?php } ?>
+                          </select>
+                          <label for="sec2">Sector</label>
+                          <button class="btn-save btn btn-warning btn-sm">Save</button>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <div class="md-form md-outline my-2 Her">
+                                <input type="text" id="title-function" class="form-control" name="title" />
+                                <label for="title-function">Title - Function</label>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                        <div class="text-right" style="margin:0; padding:0">
+                          <input class="btn btn-warning" type="submit" name="backgroundadd" value="Submit">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+          </form>
+        </div>
+    </div>
+</div>
+<!-- Delete Background -->
+<div class="modal fade" id="deleteBackground" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Warning</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to delete a background?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary">Yes</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 
