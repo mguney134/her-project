@@ -66,10 +66,8 @@
                                                                         <p class="ml-3 mb-1"><small><?php echo $bginfo['start_year'] ?>- <?php echo $bginfo['end_year'] ?> / <?php echo $bginfo['levelStudy'] ?></small></p>
                                                                     </div>
                                                                     <div>
-                                                                            <a><i
-                                                                                    class="fas fa-trash-alt m-1 "></i></a><br>
-                                                                            <a><i class="fas fa-pen m-1 "></i></a>
-                                                                        </div>
+                                                                        <a data-toggle="modal" data-target="#editBackground"><i class="fas fa-trash-alt m-1 "></i></a><br>
+                                                                        <a data-toggle="modal" data-target="#deleteBackground"><i class="fas fa-pen m-1 "></i></a>
                                                                 </div>
                                                             </div>
                                                     <?php } ?>
@@ -122,10 +120,8 @@
                                                                     <p class="ml-3 mb-1"><small><?php echo $bginfo2['start_year'] ?>- <?php echo $bginfo2['end_year'] ?> / <?php echo $bginfo2['levelStudy'] ?></small></p>
                                                                 </div>
                                                                 <div>
-                                                                            <a><i
-                                                                                    class="fas fa-trash-alt m-1 "></i></a><br>
-                                                                            <a><i class="fas fa-pen m-1 "></i></a>
-                                                                        </div>
+                                                                    <a data-toggle="modal" data-target="#editBackground"><i class="fas fa-trash-alt m-1 "></i></a><br>
+                                                                    <a data-toggle="modal" data-target="#deleteBackground"><i class="fas fa-pen m-1 "></i></a>
                                                             </div>
                                                         </div>
                                                 <?php } ?>
@@ -183,10 +179,8 @@
                                                                     <p class="ml-3 mb-1"><small><?php echo $bginfo4['start_year'] ?>- <?php echo $bginfo4['end_year'] ?> / <?php echo $bginfo4['levelStudy'] ?></small></p>
                                                                 </div>
                                                                 <div>
-                                                                            <a><i
-                                                                                    class="fas fa-trash-alt m-1 "></i></a><br>
-                                                                            <a><i class="fas fa-pen m-1 "></i></a>
-                                                                        </div>
+                                                                    <a data-toggle="modal" data-target="#editBackground"><i class="fas fa-trash-alt m-1 "></i></a><br>
+                                                                    <a data-toggle="modal" data-target="#deleteBackground"><i class="fas fa-pen m-1 "></i></a>
                                                             </div>
                                                         </div>
                                                 <?php } ?>
@@ -239,10 +233,9 @@
                                                                         <p class="ml-3 mb-1"><small><?php echo $bginfo3['start_year'] ?>- <?php echo $bginfo3['end_year'] ?> / <?php echo $bginfo3['levelStudy'] ?></small></p>
                                                                     </div>
                                                                     <div>
-                                                                            <a><i
-                                                                                    class="fas fa-trash-alt m-1 "></i></a><br>
-                                                                            <a><i class="fas fa-pen m-1 "></i></a>
-                                                                        </div>
+                                                                        <a data-toggle="modal" data-target="#editBackground"><i class="fas fa-trash-alt m-1 "></i></a><br>
+                                                                        <a data-toggle="modal" data-target="#deleteBackground"><i class="fas fa-pen m-1 "></i></a>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                     <?php } ?>
@@ -296,10 +289,9 @@
                                                                     <p class="ml-3 mb-1"><small><?php echo $bginfo5['start_year'] ?>- <?php echo $bginfo5['end_year'] ?> / <?php echo $bginfo5['levelStudy'] ?></small></p>
                                                                 </div>
                                                                 <div>
-                                                                            <a><i
-                                                                                    class="fas fa-trash-alt m-1 "></i></a><br>
-                                                                            <a><i class="fas fa-pen m-1 "></i></a>
-                                                                        </div>
+                                                                    <a data-toggle="modal" data-target="#editBackground"><i class="fas fa-trash-alt m-1 "></i></a><br>
+                                                                    <a data-toggle="modal" data-target="#deleteBackground"><i class="fas fa-pen m-1 "></i></a>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                 <?php } ?>
@@ -315,6 +307,7 @@
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                         <div class="row">
                             <div class="col">

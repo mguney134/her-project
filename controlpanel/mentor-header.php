@@ -56,47 +56,8 @@ $count1=$mentorcheck->rowCount();
     <link href="../css/mdb.min.css" rel="stylesheet" />
     <!-- Your custom styles (optional) -->
     <link href="../css/style.min.css" rel="stylesheet" />
-    <style>
-        .dropdown-content li > span {
-            color: #52585f;
-        }
-        
-        .select-wrapper {
-            margin-top: 0;
-            margin-bottom: 0;
-        }
-        
-        .md-form {
-            margin-top: 0;
-            margin-bottom: 0;
-        }
-        
-        .md-form label {
-            color: #485057;
-        }
-        
-        .form-check-input[type="checkbox"] + label,
-        label.btn input[type="checkbox"] + label {
-            padding-left: 25px;
-            margin-right: 20px;
-            height: auto;
-        }
-        
-        @media only screen and (max-width: 768px) {
-            /* For mobile phones: */
-            .form-check-input[type="checkbox"] + label,
-            label.btn input[type="checkbox"] + label {
-                padding-left: 25px;
-                margin-right: 20px;
-                height: auto;
-                text-align: left;
-            }
-        }
-        
-        .select-dropdown li.optgroup>span {
-            color: #366AC4;
-            font-weight: bold;
-        }
+    <link href="../css/inputs.css" rel="stylesheet" />
+
     </style>
 </head>
 
@@ -129,7 +90,7 @@ $count1=$mentorcheck->rowCount();
                     <div class="card profile-card mt-4">
                         <!-- Avatar -->
                         <div class="avatar mt-n5 mb-4">
-                            <img src="https://cdn2.iconfinder.com/data/icons/crystalproject/crystal_project_256x256/apps/personal.png" class="rounded-circle" alt="First sample avatar image" />
+                            <img src="../images/icons/user-mentor.png" class="rounded-circle" alt="First sample avatar image" />
                         </div>
 
                         <div class="card-body pt-0 mt-0">

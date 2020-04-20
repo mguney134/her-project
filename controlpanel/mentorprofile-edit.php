@@ -33,173 +33,143 @@ $mentorinfo=$mentorcheck->fetch(PDO::FETCH_ASSOC);
 You are editing your information
 </h3>
 <hr />
-<form action="../settings/action.php" method="POST">
-    <table class="table table-borderless text-left">
-        <thead>
-            <tr>
-                <th scope="row" class="text-right th-sm" style="width: 25%"></th>
-                <th colspan="4" class="">
-                    <div class="form-row">
-                        <div class="col">
-                            <!-- First name -->
-                            <div class="md-form">
-                                <input type="text" id="materialRegisterFormFirstName" class="form-control" value="<?php echo $mentorinfo['firstname'] ?>" name="firstname" />
-                                <label for="materialRegisterFormFirstName">First name</label>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <!-- Last name -->
-                            <div class="md-form">
-                                <input type="text" id="materialRegisterFormLastName" class="form-control" value="<?php echo $mentorinfo['lastname'] ?>" name="lastname"/>
-                                <label for="materialRegisterFormLastName">Last name</label>
-                            </div>
-                        </div>
-                    </div>
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row" class="text-right"></th>
-                <td colspan="" class="">
-                    <div class="form-row">
-                        <div class="col">
-                            <select class="mdb-select md-form  dropdown-primary" name="gender">
-                                <option selected><?php echo $mentorinfo['gender'] ?></option>
-                                <option value="Female">Female</option>
-                                <option value="Male">Male</option>
-                                <option value="Other">Other</option>
-                                <option value="Rather not say">Rather not say
-                                </option>
-                            </select>
-                        </div>
-                        <div class="col">
-                                <label for="materialRegisterFormBirth" >Birth Date</label>
-                            <div class="md-form">
-                                
-                                <input placeholder="Selected date" type="text" class="form-control datepicker" name="birth" value="<?php echo $mentorinfo['birth'] ?>">
-                            </div>
-                        </div>
-                    </div>
-                </td>
-            </tr>
+    <form action="../settings/action.php" method="POST" class="mx-5">
+        <div class="form-row">
+            <div class="col">
+                <!-- First name -->
+                <div class="md-form md-outline my-2">
+                        <input type="text" id="firstName" class="form-control" value="<?php echo $mentorinfo['firstname'] ?>" name="firstname" />
+                    <label for="firstName">First name</label>
+                </div>
+            </div>
+            <div class="col">
+                <!-- Last name -->
+                <div class="md-form md-outline my-2">
+                        <input type="text" id="lastName" class="form-control" value="<?php echo $mentorinfo['lastname'] ?>" name="lastname"/>
+                    <label for="lastName">Last name</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col select-outline">
+                <select class="mdb-select md-form md-outline my-2" id="gender" name="gender">
+                    <option selected><?php echo $mentorinfo['gender'] ?></option>
+                    <option value="Female">Female</option>
+                    <option value="Male">Male</option>
+                    <option value="Other">Other</option>
+                    <option value="Rather not say">Rather not say</option>
+                </select>
+            <label for="gender">Gender</label>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col">
+                <div class="md-form md-outline">
+                    <input placeholder="Selected date" id="date-picker-example" type="text" class="form-control datepicker" name="birth" value="<?php echo $mentorinfo['birth'] ?>">
+                    <label for="date-picker-example">Birth Date</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col select-outline">
+                <select class="mdb-select md-form md-outline my-2" id="cont"
+                    searchable="Search here.." name="country">
+                    <option selected><?php echo $mentorinfo['country'] ?></option>
+                    <?php 
+                    $countrycheck=$db->prepare("SELECT country_name FROM countries");
+                    $countrycheck->execute();
+                    $countcountry=0;
+                    while($countryinfo=$countrycheck->fetch(PDO::FETCH_ASSOC)) { $countcountry++?>
 
-            <tr>
-                <th scope="row" class="text-right"></th>
-                <td>
-                    <div class="form-row">
-                        <div class="col">
-                            <select class="mdb-select md-form  dropdown-warning" name="country">
+                    <option value="<?php echo $countryinfo['country_name'] ?>"><?php echo $countryinfo['country_name'] ?></option>
 
-                            <option selected><?php echo $mentorinfo['country'] ?></option>
-                            <?php 
-                            $countrycheck=$db->prepare("SELECT country_name FROM countries");
-                            $countrycheck->execute();
-                            $countcountry=0;
-                            while($countryinfo=$countrycheck->fetch(PDO::FETCH_ASSOC)) { $countcountry++?>
+                    <?php } ?>
 
-                            <option value="<?php echo $countryinfo['country_name'] ?>"><?php echo $countryinfo['country_name'] ?></option>
-
-                            <?php } ?>
-
-                        </select>
-                        </div>
-                        <div class="col">
-                            <select class="mdb-select md-form  dropdown-primary" name="legalStatus">
-                                <option selected><?php echo $mentorinfo['legalStatus'] ?></option>
-                                <option value="Citizen">Citizen </option>
-                                <option value="recognized-refugee">Recognised refugee
-                                </option>
-                                <option value="subsidary-protection">Subsidiary protection
-                                </option>
-                                <option value="asylum-seeker">Asylum seeker</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row" class="text-right th-sm"></th>
-                <td colspan="4" class="">
-                    <div class="md-form">
-                            
-                        <select class="mdb-select md-form  dropdown-warning" name="levelofStudy">
-                            <option selected><?php echo $mentorinfo['levelofStudy'] ?></option>
-                            <option value="Bachelor">Bachelor</option>
-                            <option value="Master">Master</option>
-                            <option value="PHD">PHD</option>
-                        </select>
+                </select>
+                <label for="cont">Country</label>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col select-outline">
+                <select class="mdb-select md-form md-outline my-2" id="stat"
+                    searchable="Search here.." name="legalStatus">
+                    <option selected><?php echo $mentorinfo['legalStatus'] ?></option>
+                    <option value="Citizen">Citizen </option>
+                    <option value="recognized-refugee">Recognised refugee
+                    </option>
+                    <option value="subsidary-protection">Subsidiary protection
+                    </option>
+                    <option value="asylum-seeker">Asylum seeker</option>
+                    <option value="other">Other</option>
+                </select>
+                <label for="stat">Legal Status</label>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col select-outline">
+                <select class="mdb-select md-form md-outline my-2" id="levStu"
+                    searchable="Search here.." name="evelofStudy">
+                    <option selected><?php echo $mentorinfo['levelofStudy'] ?></option>
+                    <option value="Bachelor">Bachelor</option>
+                    <option value="Master">Master</option>
+                    <option value="PHD">PHD</option>
+                </select>
+                <label for="levStu">Level of Study</label>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col">
+                
+                <div class="md-form md-outline my-2">
+                    <input type="text" id="currentJob" class="form-control" value="<?php echo $mentorinfo['job'] ?>" name="job"/>
+                    <label for="currentJob">Current Job</label>
+                </div>
+            </div>
+            <div class="col">
+                
+                <div class="md-form md-outline my-2">
+                    <input type="number" id="workEx" class="form-control" value="<?php echo $mentorinfo['experience'] ?>" name="experience" />
+                    <label for="workEx">Working Experience</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col select-outline">
+                <select class="mdb-select md-form md-outline my-2" id="worSec"
+                    searchable="Search here.." name="sector">
+                    <option selected><?php echo $mentorinfo['sector'] ?></option>
+                    <?php 
+                    $sectorcheck=$db->prepare("SELECT sectors_name FROM sectors");
+                    $sectorcheck->execute();
                     
-                        
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row" class="text-right th-sm"></th>
-                <td colspan="4" class="">
-                    <div class="md-form">
-                        <input type="text" id="materialRegisterFormJob" class="form-control" value="<?php echo $mentorinfo['job'] ?>" name="job"/>
-                        <label for="materialRegisterFormJob" class="font-weight-normal">Current Job
-                        </label>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <th></th>
-                <td>
-                    <div class="form-row">
-                        <div class="col">
-                            <div class="md-form">
-                                <select name="sector" class="mdb-select md-form  dropdown-warning">
-                                <option selected><?php echo $mentorinfo['sector'] ?></option>
-                                <?php 
-                                $sectorcheck=$db->prepare("SELECT sectors_name FROM sectors");
-                                $sectorcheck->execute();
-                                
-                                while($sectorinfo=$sectorcheck->fetch(PDO::FETCH_ASSOC)) { ?>
+                    while($sectorinfo=$sectorcheck->fetch(PDO::FETCH_ASSOC)) { ?>
 
-                                <option value="<?php echo $sectorinfo['sectors_name'] ?>"><?php echo $sectorinfo['sectors_name'] ?></option>
+                    <option value="<?php echo $sectorinfo['sectors_name'] ?>"><?php echo $sectorinfo['sectors_name'] ?></option>
 
-                                <?php } ?>
-                            </select>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="md-form">
-                                <input type="number" id="materialRegisterFormExp" class="form-control" value="<?php echo $mentorinfo['experience'] ?>" name="experience" />
-                                <label for="materialRegisterFormExp" class="font-weight-normal">Working Experience
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-
-            <tr>
-                <th scope="row" class="text-right th-sm"></th>
-                <td colspan="4" class="">
-                    <div class="md-form">
-                        <input type="text" id="form1" class="form-control" value="<?php echo $mentorinfo['tel'] ?>" name="tel"/>
-                        <input type="text" id="form2" class="form-control" style="display: none;" />
-                        <label for="form1" class="font-weight-normal">Type your phone number</label>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row" class="text-right th-sm"></th>
-                <td colspan="4" class="">
-                    <div class="md-form">
-                        <input type="text" name="user_id" id="materialRegisterFormLastName" class="form-control" value="<?php echo $_SESSION['user_id'] ?>" hidden="" />
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <div class="text-right">
-        <input class="btn btn-primary" type="submit" name="mentorupdate" value="Update">
-    </div>
-</form>
+                    <?php } ?>
+                </select>
+                <label for="worSec">Sector</label>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col">
+                
+                <div class="md-form md-outline my-2">
+                    <input type="text" id="phone" class="form-control" value="<?php echo $mentorinfo['tel'] ?>" name="tel"/>    
+                    <label for="phone">Phone Number</label>
+                </div>
+            </div>
+            
+        </div>
+        <div class="form-row">
+            <div class="md-form">
+                <input type="text" name="user_id" id="materialRegisterFormLastName" class="form-control" value="<?php echo $_SESSION['user_id'] ?>" hidden="" />
+            </div>
+        </div>
+        <div class="text-right">
+            <input class="btn btn-primary" type="submit" name="mentorupdate" value="Update">
+        </div>
+    </form>
 
 <!--Your info Edit mode-->
 <?php
