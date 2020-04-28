@@ -11,35 +11,48 @@
                     </button>
                 </div>
                 <form action="settings/action.php" method="POST">
-                    <div class="modal-body mx-3">
-                                            <div class="md-form mb-5">
+                    <div class="modal-body mx-5">
+                        <div class="md-form mb-4">
 
 
-                                                <div class="md-form md-outline">
-                                                    <i class="fas fa-envelope prefix grey-text"></i>
-                                                    <input type="email" id="defaultForm-email"
-                                                        class="form-control validate" name="email">
-                                                    <label data-error="wrong" data-success="right"
-                                                        for="defaultForm-email">Your email</label>
-                                                </div>
-                                            </div>
+                            <div class="md-form md-outline">
+                                <i class="fas fa-envelope prefix grey-text"></i>
+                                <input type="email" id="defaultForm-email"
+                                    class="form-control validate" name="email">
+                                <label data-error="wrong" data-success="right"
+                                    for="defaultForm-email">Your email</label>
+                            </div>
+                        </div>
 
-                                            <div class="md-form mb-4">
+                        <div class="md-form mb-4">
 
-                                                <div class="md-form md-outline">
-                                                    <i class="fas fa-lock prefix grey-text"></i>
-                                                    <input type="password" id="defaultForm-pass"
-                                                        class="form-control validate" name="all_password">
-                                                    <label data-error="wrong" data-success="right"
-                                                        for="defaultForm-pass">Your password</label>
-                                                </div>
+                            <div class="md-form md-outline" style="margin-bottom:10px;">
+                                <i class="fas fa-lock prefix grey-text"></i>
+                                <input type="password" id="defaultForm-pass"
+                                    class="form-control validate" name="all_password">
+                                <label data-error="wrong" data-success="right"
+                                    for="defaultForm-pass">Your password</label>
+                            </div>
+                            <div class="text-center mb-1">
+                            <!-- Forgot password -->
+                            <a href="">Forgot password?</a>
+                        </div>
 
-                                            </div>
+                        </div>
 
-                                        </div>
-                    <div class="modal-footer d-flex justify-content-center">
-                        <button class="btn btn-outline-primary" type="submit" name="login">Login</button>
+                        
+
                     </div>
+                    <div class=" d-flex justify-content-center mx-4">
+                        <button class="btn btn-primary btn-block" type="submit" name="login">Login</button>
+                    </div>
+                    <div class="text-center my-4">
+                            <p>Not a member?
+                            <a href="" data-toggle="modal"
+                                data-target="#modalSubscriptionForm">Register</a>
+                            </p>
+                    </div>
+                    
                 </form>
             </div>
         </div>

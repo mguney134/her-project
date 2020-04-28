@@ -8,24 +8,21 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-
-              
-                <form action="../settings/action.php" method="POST">
-                    <div class="mx-5 my-3">
-                              <div class="md-form">
-                               <input type="number" id="materialRegisterFormFirstName" class="form-control" max="5" name="mentees" />
-                                <label for="materialRegisterFormFirstName"><?php echo $mentorinfo['mentees'] ?>
+                <form action="../settings/action.php" method="POST" class="mx-5">
+                        <div class="col">
+                            
+                            <div class="md-form md-outline my-3">
+                                 <input type="number" id="menteeNumber" class="form-control" max="5" name="mentees" />
+                                <label for="menteeNumber"><?php echo $mentorinfo['mentees'] ?>
                                 </label>
-                              </div>
-                               
-                              
-                              <div class="text-right">
-                                   <input class="btn btn-primary" type="submit" name="addMentees" value="Save">
-                              </div>
-                          </div>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <input class="btn btn-primary" type="submit" name="addMentees" value="Save">
+                            </div>
+                        </div>
                 </form>
               
-
             </div>
         </div>
     </div>
