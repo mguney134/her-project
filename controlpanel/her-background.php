@@ -65,6 +65,11 @@
 
                                                                         <p class="ml-3 mb-1"><small><?php echo $bginfo['start_year'] ?>- <?php echo $bginfo['end_year'] ?> / <?php echo $bginfo['levelStudy'] ?></small></p>
                                                                     </div>
+                                                                    <div>
+                                                                            <a><i
+                                                                                    class="fas fa-trash-alt m-1 "></i></a><br>
+                                                                            <a><i class="fas fa-pen m-1 "></i></a>
+                                                                        </div>
                                                                 </div>
                                                             </div>
                                                     <?php } ?>
@@ -116,6 +121,11 @@
 
                                                                     <p class="ml-3 mb-1"><small><?php echo $bginfo2['start_year'] ?>- <?php echo $bginfo2['end_year'] ?> / <?php echo $bginfo2['levelStudy'] ?></small></p>
                                                                 </div>
+                                                                <div>
+                                                                            <a><i
+                                                                                    class="fas fa-trash-alt m-1 "></i></a><br>
+                                                                            <a><i class="fas fa-pen m-1 "></i></a>
+                                                                        </div>
                                                             </div>
                                                         </div>
                                                 <?php } ?>
@@ -172,6 +182,11 @@
 
                                                                     <p class="ml-3 mb-1"><small><?php echo $bginfo4['start_year'] ?>- <?php echo $bginfo4['end_year'] ?> / <?php echo $bginfo4['levelStudy'] ?></small></p>
                                                                 </div>
+                                                                <div>
+                                                                            <a><i
+                                                                                    class="fas fa-trash-alt m-1 "></i></a><br>
+                                                                            <a><i class="fas fa-pen m-1 "></i></a>
+                                                                        </div>
                                                             </div>
                                                         </div>
                                                 <?php } ?>
@@ -223,6 +238,11 @@
 
                                                                         <p class="ml-3 mb-1"><small><?php echo $bginfo3['start_year'] ?>- <?php echo $bginfo3['end_year'] ?> / <?php echo $bginfo3['levelStudy'] ?></small></p>
                                                                     </div>
+                                                                    <div>
+                                                                            <a><i
+                                                                                    class="fas fa-trash-alt m-1 "></i></a><br>
+                                                                            <a><i class="fas fa-pen m-1 "></i></a>
+                                                                        </div>
                                                                 </div>
                                                             </div>
                                                     <?php } ?>
@@ -244,7 +264,7 @@
                                     <div class="card-body p-0">
                                         <div class="row mx-0">
                                             <div class="col-md-12 grey lighten-4 rounded-left pt-4">
-                                                <h5 class="font-weight-bold mb-4">Something</h5>
+                                                <h5 class="font-weight-bold mb-4">Volunteering</h5>
                                                 <div class="row mx-2 ">
                                                 <?php 
                                                 $bgcheck5=$db->prepare("SELECT * FROM background where user_id=:user_id");
@@ -275,6 +295,11 @@
 
                                                                     <p class="ml-3 mb-1"><small><?php echo $bginfo5['start_year'] ?>- <?php echo $bginfo5['end_year'] ?> / <?php echo $bginfo5['levelStudy'] ?></small></p>
                                                                 </div>
+                                                                <div>
+                                                                            <a><i
+                                                                                    class="fas fa-trash-alt m-1 "></i></a><br>
+                                                                            <a><i class="fas fa-pen m-1 "></i></a>
+                                                                        </div>
                                                             </div>
                                                         </div>
                                                 <?php } ?>

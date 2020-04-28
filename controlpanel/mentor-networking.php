@@ -7,7 +7,7 @@ $eventscheck->execute( );
 $eventsinfo=$eventscheck->fetch(PDO::FETCH_ASSOC);
 
 ?>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
     </script>
     <script type="text/javascript">
         $(document).ready(function()
@@ -168,7 +168,7 @@ $eventsinfo=$eventscheck->fetch(PDO::FETCH_ASSOC);
                                 <tr>
                                     <th scope="row" class="text-right th-sm"></th>
                                     <td colspan="4" class="">
-                                        <select class="mdb-select md-form  dropdown-primary" name="sector">
+                                        <select class="mdb-select md-form  dropdown-primary" name="sector" multiple="">
                                             <option disabled selected>Sector</option>
                                             <?php
                                             $sectorcheck=$db->prepare("SELECT sectors_name FROM sectors");
@@ -180,6 +180,7 @@ $eventsinfo=$eventscheck->fetch(PDO::FETCH_ASSOC);
 
                                             <?php } ?>
                                         </select>
+                                        
                                     </td>
                                 </tr>
                                 <tr>
