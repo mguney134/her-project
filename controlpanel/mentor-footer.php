@@ -59,7 +59,8 @@
             format: 'dd mmm, yyyy',
             formatSubmit: 'yyyy/mm/dd',
             hiddenPrefix: 'prefix__',
-            hiddenSuffix: '__suffix'
+            hiddenSuffix: '__suffix',
+            selectYears:30
         });
     </script>
     
