@@ -71,7 +71,7 @@ $eventsinfo=$eventscheck->fetch(PDO::FETCH_ASSOC);
 
                             </p>
                         </blockquote>
-                        <p class="note note-primary"><strong>EVENT:</strong>  A supporting event on a specific date like job fair, matchmaking event, conference, workshop, etc.</p>
+                        <p class="note note-warning"><strong>EVENT:</strong>  A supporting event on a specific date like job fair, matchmaking event, conference, workshop, etc.</p>
 
                         <p class="note note-secondary"><strong>PROJECT:</strong>  A project supporting a target group during a time frame like mentoring, buddying, coaching, etc.
                         </p>
@@ -80,7 +80,7 @@ $eventsinfo=$eventscheck->fetch(PDO::FETCH_ASSOC);
 
                         <p class="note note-danger"><strong>VACANCY:</strong>  A specific job vacancy, vacancy websites, company vacancy webpage links, etc.</p>
 
-                        <p class="note note-warning"><strong>TOOL:</strong>  A supporting tool like handbook, manual, digital platform, survey, etc.</p>
+                        <p class="note note-primary"><strong>TOOL:</strong>  A supporting tool like handbook, manual, digital platform, survey, etc.</p>
 
 
                     </section>
@@ -89,6 +89,104 @@ $eventsinfo=$eventscheck->fetch(PDO::FETCH_ASSOC);
 
                         <hr />
                         <form  action="../settings/action.php" method="POST" enctype="multipart/form-data" data-parsley-validate>
+                            <div class="form-row">
+                                <div class="col"><h5 class="pb-2">You are creating a/an</h5></div>
+                                <div class="col select-outline">
+                                    <?php
+                                        //Get all event type data
+                                        $typecheck=$db->prepare("SELECT * FROM eventstype");
+                                        $typecheck->execute( );
+
+                                        //Count total number of rows
+                                        $rowCount = $typecheck->rowCount();
+                                        ?>
+                                    <select class="mdb-select md-form md-outline my-2" name="type" id="typeEvent">
+                                        <option disabled selected></option>
+                                        <?php
+                                            if($rowCount > 0){
+                                                while($typeinfo=$typecheck->fetch(PDO::FETCH_ASSOC)){
+                                                    echo '<option value="'.$typeinfo['type_id'].'">'.$typeinfo['type_name'].'</option>';
+                                                }
+                                            }else{
+                                                echo '<option value="">Type not available</option>';
+                                            }
+                                            ?>
+                                    </select>
+                                <label for="typeEvent">Type of Event</label>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col select-outline">
+                                    <select class="mdb-select md-form md-outline my-2" name="info" id="group">
+                                        <option disabled selected></option>
+                                        <optgroup class="text-primary" label="Event / Project">
+                                            <option value="Mentoring">Mentoring</option>
+                                            <option value="Job Coaching">Job Coaching</option>
+                                            <option value="Job matching/ Job fair">Job matching/ Job
+                                                fair</option>
+                                            <option value="Orientation">Orientation</option>
+                                            <option value="Information">Information</option>
+                                            <option value="Digital">Digital</option>
+                                        </optgroup>
+                                        <optgroup label="Training / Study">
+                                            <option value="Language (NL)">Language (NL)</option>
+                                            <option value="Vocational training">Vocational training
+                                            </option>
+                                            <option value="High school bachelor">High school
+                                                bachelor</option>
+                                            <option value="University bachelor">University bachelor
+                                            </option>
+                                            <option value="Master / MaNaMa">Master / MaNaMa</option>
+                                            <option value="Preparation program">Preparation program
+                                            </option>
+                                        </optgroup>
+                                        <optgroup label="Vacancies">
+                                            <option value="Job">Job</option>
+                                            <option value="Internship">Internship</option>
+                                            <option value="Volunteer Job">Volunteer Job</option>
+                                        </optgroup>
+                                        <optgroup label="Tool">
+                                            <option value="Digital platform">Digital platform
+                                            </option>
+                                            <option value="Manual">Manual</option>
+                                            <option value="Checklist">Checklist</option>
+                                            <option value="Application">Application</option>
+                                        </optgroup>
+                                    </select>
+                                <label for="group">Description of Event</label>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col">
+                                    <!-- First name -->
+                                    <div class="md-form md-outline my-2">
+                                        <input type="text" id="event-title" class="form-control" name="title" />
+                                        <label for="event-title">Title</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <!-- Last name -->
+                                    <div class="md-form md-outline my-2">
+                                        <input type="text" id="Organizer(s)" class="form-control" name="organizer" />
+                                        <label for="Organizer(s)">Organizer(s)</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="md-form md-outline my-2 col">
+                                <div class="file-field">
+                                    <div class="btn btn-primary btn-sm float-left">
+                                        <span>Choose image</span>
+                                        <input type="file" name="img_link">
+                                    </div>
+                                    <div class="file-path-wrapper">
+                                        <input class="file-path validate" type="text" placeholder="Upload your cover image" >
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+
+
                             <table class="table table-borderless text-left">
                                 <thead>
                                 <tr>
@@ -124,7 +222,7 @@ $eventsinfo=$eventscheck->fetch(PDO::FETCH_ASSOC);
                                     <th scope="row" class="text-right">
                                     </th>
                                     <td colspan="" class="">
-                                        <select class="mdb-select md-form  dropdown-info" name="info" id="group"  >
+                                        <select class="mdb-select md-form  dropdown-info" name="info" id="groupp"  >
                                             <option value="">Select Event Type First</option>
                                         </select>
                                     </td>

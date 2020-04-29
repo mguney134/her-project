@@ -95,7 +95,9 @@ input::placeholder {
   border-color: #ff8a65;
   box-shadow: 0 0 0 1px #ff8a65;
 }
-.select-wrapper.active span.caret,
+.select-wrapper.active span.caret {
+  color: #495057;
+}
 .select-wrapper.active .Her label.mdb-main-label {
   color: #ff8a65;
 }
@@ -194,4 +196,7 @@ ul.stepper.Her .step.active:before {
 /* Mentor- Blue Starts */
 .md-form.md-outline label.active {
   z-index: 5 !important;
+}
+optgroup label {
+  color: #007bff !important;
 }
