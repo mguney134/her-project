@@ -1,0 +1,46 @@
+.testimonial-card .avatar {
+  width: 60px;
+  margin-top: -30px;
+}
+
+.card-up {
+  position: relative;
+  display: inline-block;
+}
+
+.icon {
+  position: absolute;
+}
+
+.icon-heart {
+  left: 15px;
+  /* Move pin1 50px left */
+  top: 15px;
+  /* Move pin1 100px down */
+}
+
+.icon-bookmark {
+  right: 15px;
+  /* Move pin2 350px left */
+  top: 15px;
+  /* Move pin2 30px down */
+}
+.input-group.md-form.form-sm.form-1 input {
+  border: 1px solid #bdbdbd;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+.input-group.md-form.form-sm.form-2 input {
+  border: 1px solid #bdbdbd;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+.input-group.md-form.form-sm.form-2 input.red-border {
+  border: 1px solid #ef9a9a;
+}
+.input-group.md-form.form-sm.form-2 input.lime-border {
+  border: 1px solid #cddc39;
+}
+.input-group.md-form.form-sm.form-2 input.amber-border {
+  border: 1px solid #ffca28;
+}
