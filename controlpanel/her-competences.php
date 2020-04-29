@@ -70,10 +70,10 @@
                                   </td>
                                   <td colspan="4" class="border-bottom th-lg">
 
-                                    <a href="langedit.php?id=<?php echo $langinfo['id']; ?>"><a class="btn-floating btn-sm btn-secondary"><i class="fas fa-edit"></i></a></a>
-                                      <a href="../settings/action.php?id=<?php echo $langinfo['id']; ?>&langdelete=ok"><a class="btn-floating btn-sm btn-secondary"><i class="fas fa-trash-alt"></i></a></a>
-                                  </td>
-                                </tr>
+                                                  <a class="btn-floating btn-sm btn-secondary" href="langedit.php?id=<?php echo $langinfo['id']; ?>"><i class="fas fa-edit"></i></a>
+                                                  <a class="btn-floating btn-sm btn-secondary" href="../settings/action.php?id=<?php echo $langinfo['id']; ?>&langdelete=ok"><i class="fas fa-trash-alt"></i></a>
+                                                </td>
+                                              </tr>
 
                                 <?php } ?>
 
