@@ -57,6 +57,7 @@ $count1=$mentorcheck->rowCount();
     <!-- Your custom styles (optional) -->
     <link href="../css/style.min.css" rel="stylesheet" />
     <link href="../css/inputs.css" rel="stylesheet" />
+    <link href="../css/events.css" rel="stylesheet" />
 
     </style>
 </head>
