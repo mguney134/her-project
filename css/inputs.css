@@ -19,10 +19,7 @@
 .dropdown-content.select-dropdown.w-100.active {
   max-height: 300px !important;
 }
-.md-outline .select-wrapper + label {
-  top: 0.5em !important;
-  z-index: 5 !important;
-}
+
 @media only screen and (max-width: 700px) {
   .md-form label {
     font-size: 13px !important;
@@ -88,7 +85,6 @@ input::placeholder {
 /* HER- Orange Start */
 .md-form.md-outline.Her input[type="text"].valid {
   border-color: #ff8a65;
-
   box-shadow: inset 0 0 0 1px #ff8a65;
 }
 .select-wrapper.md-form.md-outline.Her input.select-dropdown:focus {
@@ -217,19 +213,13 @@ optgroup label {
   border-color: #ba68c8;
   box-shadow: 0 0 0 1px #ba68c8;
 }
-.select-wrapper.active span.caret {
-  color: #495057;
-}
+
 .select-wrapper.active .Employer label.mdb-main-label {
   color: #ba68c8;
 }
 .md-form.Employer input[type="text"]:focus:not([readonly]) {
   box-shadow: 0 1px 0 0 #ba68c8 !important;
   border: 1px solid #ba68c8 !important;
-}
-
-.md-form.Employer label {
-  color: #485057;
 }
 
 .md-form.Employer input[type="text"]:focus:not([readonly]) + label {
@@ -256,12 +246,6 @@ optgroup label {
 
 .btn-secondary.Employer {
   border-color: #ba68c8;
-}
-
-.select-wrapper > label.Employer.mdb-main-label {
-  top: 0;
-  font-weight: 200;
-  color: #485057;
 }
 
 .white-skin.Employer textarea.md-textarea:focus:not([readonly]) + label {
@@ -313,7 +297,7 @@ input:focus.Employer {
   color: #ba68c8;
 }
 ul.stepper.Employer .step.active:before {
-  background-color: #ba68c8;
+  background-color: #febb33;
 }
 /* Employer- Purple Ends */
 
@@ -333,10 +317,6 @@ ul.stepper.Employer .step.active:before {
 .md-form.Org input[type="text"]:focus:not([readonly]) {
   box-shadow: 0 1px 0 0 #4dd0e0 !important;
   border: 1px solid #4dd0e0 !important;
-}
-
-.md-form.Org label {
-  color: #485057;
 }
 
 .md-form.Org input[type="text"]:focus:not([readonly]) + label {
@@ -365,12 +345,6 @@ ul.stepper.Employer .step.active:before {
   border-color: #4dd0e0;
 }
 
-.select-wrapper > label.Org.mdb-main-label {
-  top: 0;
-  font-weight: 200;
-  color: #485057;
-}
-
 .white-skin.Org textarea.md-textarea:focus:not([readonly]) + label {
   color: #4dd0e0;
 }
@@ -397,7 +371,6 @@ input:focus.Org {
 }
 
 .md-form.md-outline.Org label.active {
-  z-index: 5 !important;
   color: #4dd0e0;
   /* margin-left: 11px; */
 }

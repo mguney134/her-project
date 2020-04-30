@@ -428,7 +428,7 @@
                     <div class="mx-5 my-3">
                                 <div class="form-row">
                                     <div class="col select-outline">
-                                        <select class="mdb-select md-form md-outline Her my-2" id="studyseeker" name="study[]">
+                                        <select class="mdb-select md-form md-outline Her  multiple my-2" id="studyseeker" name="study[]">
                                             <option disabled selected></option>
                                             <option value="Language">Language</option>
                                             <option value="Vocational Training">Vocational Training</option>
@@ -436,17 +436,19 @@
                                             <option value="Master">Master</option>
                                         </select>
                                         <label for="studyseeker">Study - (Studyseeker)</label>
+                                        <button class="btn-save btn btn-warning btn-sm">Save</button>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="col select-outline">
-                                        <select class="mdb-select md-form md-outline Her my-2" id="workseeker" name="work">
+                                        <select class="mdb-select md-form md-outline Her my-2" multiple id="workseeker" name="work">
                                             <option disabled selected></option>
                                             <option value="Parttime/Fulltime">Part time/Full time</option>
                                             <option value="Volunteer">Volunteer</option>
                                             <option value="Internship">Internship</option>
                                         </select>
                                         <label for="workseeker">Work - (jobseeker)</label>
+                                        <button class="btn-save btn btn-warning btn-sm">Save</button>
                                     </div>
 
                                 </div>

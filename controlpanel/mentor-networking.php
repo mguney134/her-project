@@ -84,7 +84,7 @@ $eventsinfo=$eventscheck->fetch(PDO::FETCH_ASSOC);
                                     </p>
                                 </div>
                                 <div class="col-lg-4 col-md-6 mb-md-0 mb-5">
-                                <img src="../images/icons/events/training-icon.png" width="80px">
+                                <img src="../images/icons/events/study-icon.png" width="80px">
                                     <h4 class="font-weight-bold mb-4">Training</h4>
                                     <p class="text-muted px-2 mb-md-0">
                                     A training, learning or academic programme like language course, vocational training, online course, academic training, etc.
@@ -277,7 +277,7 @@ $eventsinfo=$eventscheck->fetch(PDO::FETCH_ASSOC);
                               
                                 
                                     <input class="btn btn-primary" type="submit" name="eventadd" value="Create">
-                                
+                                </div>  
                                 
 
                             </div>
