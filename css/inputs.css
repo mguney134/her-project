@@ -197,6 +197,13 @@ ul.stepper.Her .step.active:before {
 .md-form.md-outline label.active {
   z-index: 5 !important;
 }
+.md-form.md-outline.input[type="email"]:focus:not([readonly]) label.active {
+  left: 20px;
+}
+.md-form.input[type="email"]:focus:not([readonly]) + label.active {
+  left: 20px;
+}
+
 optgroup label {
   color: #007bff !important;
 }
