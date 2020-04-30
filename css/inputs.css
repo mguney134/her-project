@@ -315,4 +315,109 @@ input:focus.Employer {
 ul.stepper.Employer .step.active:before {
   background-color: #ba68c8;
 }
-/* Employer- Orange Ends */
+/* Employer- Purple Ends */
+
+/* Org- Aqua Start */
+.md-form.md-outline.Org input[type="text"].valid {
+  border-color: #4dd0e0;
+  box-shadow: inset 0 0 0 1px #4dd0e0;
+}
+.select-wrapper.md-form.md-outline.Org input.select-dropdown:focus {
+  border-color: #4dd0e0;
+  box-shadow: 0 0 0 1px #4dd0e0;
+}
+
+.select-wrapper.active .Org label.mdb-main-label {
+  color: #4dd0e0;
+}
+.md-form.Org input[type="text"]:focus:not([readonly]) {
+  box-shadow: 0 1px 0 0 #4dd0e0 !important;
+  border: 1px solid #4dd0e0 !important;
+}
+
+.md-form.Org label {
+  color: #485057;
+}
+
+.md-form.Org input[type="text"]:focus:not([readonly]) + label {
+  color: #4dd0e0 !important;
+}
+
+.md-form.Org input[type="email"]:focus:not([readonly]) {
+  box-shadow: 0 1px 0 0 #4dd0e0 !important;
+  border: 1px solid #4dd0e0 !important;
+}
+
+.md-form.Org input[type="email"]:focus:not([readonly]) + label {
+  color: #4dd0e0 !important;
+  margin-left: 11px;
+}
+.md-form.Org input[type="password"]:focus:not([readonly]) {
+  box-shadow: 0 1px 0 0 #4dd0e0 !important;
+  border: 1px solid #4dd0e0 !important;
+}
+
+.md-form.Org input[type="password"]:focus:not([readonly]) + label {
+  color: #4dd0e0 !important;
+}
+
+.btn-secondary.Org {
+  border-color: #4dd0e0;
+}
+
+.select-wrapper > label.Org.mdb-main-label {
+  top: 0;
+  font-weight: 200;
+  color: #485057;
+}
+
+.white-skin.Org textarea.md-textarea:focus:not([readonly]) + label {
+  color: #4dd0e0;
+}
+
+.white-skin.Org textarea.md-textarea:focus:not([readonly]) {
+  border: 1px solid #4dd0e0;
+  border-color: #4dd0e0;
+  -webkit-box-shadow: 0 1px 0 0 #4dd0e0;
+  box-shadow: 0 1px 0 0 #4dd0e0;
+}
+
+.file-field.Org input.file-path {
+  border-style: none;
+  border: 1px solid #4dd0e0;
+}
+
+input:focus.Org {
+  outline: none;
+  color: #4dd0e0;
+  border-color: #4dd0e0;
+  border-style: none;
+
+  border: 1px solid #4dd0e0;
+}
+
+.md-form.md-outline.Org label.active {
+  z-index: 5 !important;
+  color: #4dd0e0;
+  /* margin-left: 11px; */
+}
+
+.white-skin.Org
+  .select-wrapper.colorful-select.md-form.md-outline
+  input.select-dropdown:focus {
+  border-color: #4dd0e0;
+  box-shadow: 0 0 0 1px #4dd0e0;
+}
+
+.md-form.md-outline.Org textarea.md-textarea:focus:not([readonly]) {
+  border-color: #4dd0e0;
+  box-shadow: 0 0 0 1px #4dd0e0;
+}
+
+.md-form.md-outline.Org textarea.md-textarea:focus:not([readonly]) + label {
+  color: #4dd0e0;
+}
+ul.stepper.Org .step.active:before {
+  background-color: #4dd0e0;
+}
+/* Org- Aqua Ends */
