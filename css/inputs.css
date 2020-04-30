@@ -207,3 +207,112 @@ ul.stepper.Her .step.active:before {
 optgroup label {
   color: #007bff !important;
 }
+
+/* Employer- Purple Start */
+.md-form.md-outline.Employer input[type="text"].valid {
+  border-color: #ba68c8;
+  box-shadow: inset 0 0 0 1px #ba68c8;
+}
+.select-wrapper.md-form.md-outline.Employer input.select-dropdown:focus {
+  border-color: #ba68c8;
+  box-shadow: 0 0 0 1px #ba68c8;
+}
+.select-wrapper.active span.caret {
+  color: #495057;
+}
+.select-wrapper.active .Employer label.mdb-main-label {
+  color: #ba68c8;
+}
+.md-form.Employer input[type="text"]:focus:not([readonly]) {
+  box-shadow: 0 1px 0 0 #ba68c8 !important;
+  border: 1px solid #ba68c8 !important;
+}
+
+.md-form.Employer label {
+  color: #485057;
+}
+
+.md-form.Employer input[type="text"]:focus:not([readonly]) + label {
+  color: #ba68c8 !important;
+}
+
+.md-form.Employer input[type="email"]:focus:not([readonly]) {
+  box-shadow: 0 1px 0 0 #ba68c8 !important;
+  border: 1px solid #ba68c8 !important;
+}
+
+.md-form.Employer input[type="email"]:focus:not([readonly]) + label {
+  color: #ba68c8 !important;
+  margin-left: 11px;
+}
+.md-form.Employer input[type="password"]:focus:not([readonly]) {
+  box-shadow: 0 1px 0 0 #ba68c8 !important;
+  border: 1px solid #ba68c8 !important;
+}
+
+.md-form.Employer input[type="password"]:focus:not([readonly]) + label {
+  color: #ba68c8 !important;
+}
+
+.btn-secondary.Employer {
+  border-color: #ba68c8;
+}
+
+.select-wrapper > label.Employer.mdb-main-label {
+  top: 0;
+  font-weight: 200;
+  color: #485057;
+}
+
+.white-skin.Employer textarea.md-textarea:focus:not([readonly]) + label {
+  color: #ba68c8;
+}
+
+.white-skin.Employer textarea.md-textarea:focus:not([readonly]) {
+  border: 1px solid #ba68c8;
+  border-color: #ba68c8;
+  -webkit-box-shadow: 0 1px 0 0 #ba68c8;
+  box-shadow: 0 1px 0 0 #ba68c8;
+}
+
+.file-field.Employer input.file-path {
+  border-style: none;
+  border: 1px solid #ba68c8;
+}
+
+input:focus.Employer {
+  outline: none;
+  color: #ba68c8;
+  border-color: #ba68c8;
+  border-style: none;
+
+  border: 1px solid #ba68c8;
+}
+
+.md-form.md-outline.Employer label.active {
+  z-index: 5 !important;
+  color: #ba68c8;
+  /* margin-left: 11px; */
+}
+
+.white-skin.Employer
+  .select-wrapper.colorful-select.md-form.md-outline
+  input.select-dropdown:focus {
+  border-color: #ba68c8;
+  box-shadow: 0 0 0 1px #ba68c8;
+}
+
+.md-form.md-outline.Employer textarea.md-textarea:focus:not([readonly]) {
+  border-color: #ba68c8;
+  box-shadow: 0 0 0 1px #ba68c8;
+}
+
+.md-form.md-outline.Employer
+  textarea.md-textarea:focus:not([readonly])
+  + label {
+  color: #ba68c8;
+}
+ul.stepper.Employer .step.active:before {
+  background-color: #ba68c8;
+}
+/* Employer- Orange Ends */
