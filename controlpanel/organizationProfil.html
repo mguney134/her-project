@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Welcome User</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./images/favicon/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./images/favicon/favicon-16x16.png" sizes="16x16" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet" />
+    <!-- Your custom styles (optional) -->
+    <style>
+        .dropdown-content li>span {
+            color: #52585f;
+        }
+
+        .select-wrapper {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .md-form {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .md-form input[type="text"]:focus:not([readonly]) {
+            box-shadow: 0 1px 0 0 #4DD0E0 !important;
+            border: 1px solid #4DD0E0 !important;
+        }
+
+        .md-form input[type="number"]:focus:not([readonly]) {
+            box-shadow: 0 1px 0 0 #4DD0E0 !important;
+            border: 1px solid #4DD0E0 !important;
+        }
+
+        .md-form label {
+            color: #485057;
+        }
+
+        .md-form input[type="text"]:focus:not([readonly])+label {
+            color: #4DD0E0 !important;
+        }
+
+        .md-form input[type="email"]:focus:not([readonly]) {
+            box-shadow: 0 1px 0 0 #4DD0E0 !important;
+            border: 1px solid #4DD0E0 !important;
+        }
+
+        .md-form input[type="email"]:focus:not([readonly])+label {
+            color: #4DD0E0 !important;
+            font-weight: 200;
+        }
+
+        .md-form input[type="number"]:focus:not([readonly])+label {
+            color: #4DD0E0 !important;
+        }
+
+        .select-wrapper>label.mdb-main-label {
+            top: 0;
+            font-weight: 200;
+            color: #485057;
+        }
+
+        .white-skin textarea.md-textarea:focus:not([readonly])+label {
+            color: #4DD0E0;
+        }
+
+        .white-skin textarea.md-textarea:focus:not([readonly]) {
+            border: 1px solid #4DD0E0;
+            border-color: #4DD0E0;
+            -webkit-box-shadow: 0 1px 0 0 #4DD0E0;
+            box-shadow: 0 1px 0 0 #4DD0E0;
+        }
+
+        .file-field input.file-path {
+            border-style: none;
+            border: 1px solid #4DD0E0;
+        }
+
+        input:focus {
+            outline: none;
+            color: #4DD0E0;
+            border-color: #4DD0E0;
+            border-style: none;
+
+            border-bottom: 1px solid #4DD0E0;
+        }
+
+        .testimonial-card .card-up {
+            height: 170px;
+        }
+
+        .md-outline.select-wrapper+label {
+            top: .5em !important;
+            z-index: 5 !important;
+        }
+
+        .md-form.md-outline label.active {
+            z-index: 5 !important;
+            color: #4DD0E0;
+        }
+
+        .white-skin .select-wrapper.colorful-select.md-form.md-outline input.select-dropdown:focus {
+            border-color: #4DD0E0;
+            box-shadow: 0 0 0 1px #4DD0E0;
+        }
+
+        .md-form.md-outline textarea.md-textarea:focus:not([readonly]) {
+            border-color: #4DD0E0;
+            box-shadow: 0 0 0 1px #4DD0E0;
+        }
+
+        .md-form.md-outline textarea.md-textarea:focus:not([readonly])+label {
+            color: #4DD0E0;
+        }
+    </style>
+</head>
+
+<body class="fixed-sn white-skin" cz-shortcut-listen="true">
+    <!-- NAVBAR STARTS -->
+    <header>
+        <!-- Navbar -->
+        <nav class="mb-1 navbar navbar-expand-lg navbar-dark aqua-gradient">
+            <a class="navbar-brand" href="../home.html">
+                <img src="images/logos/logo.png" height="30" alt="all-in-one-4-her logo" />
+            </a>
+            <ul class="navbar-nav ml-auto nav-flex-icons">
+                <i class="nav-item fas fa-user mr-3 text-white pt-1"></i>
+                <a class="nav-item text-white" href="#">Log Out</a>
+            </ul>
+        </nav>
+        <!-- Navbar -->
+    </header>
+    <!-- NAVBAR ENDS -->
+
+    <!-- CONTAINER STARTS-->
+    <div class="container-fluid">
+        <!-- Section: Team v.1 starts-->
+        <section class="section team-section mt-5">
+            <!-- Grid row -->
+            <div class="row text-center">
+                <!-- Profile Starts -->
+                <div class="col-md-3 mb-4">
+                    <!-- Card -->
+                    <div class="card profile-card mt-4">
+                        <!-- Avatar -->
+                        <div class="avatar mt-n5 mb-4">
+                            <img src="./images/icons/user-organization.png" class="rounded-circle"
+                                alt="First sample avatar image" />
+                        </div>
+
+                        <div class="card-body pt-0 mt-0">
+                            <!-- Name -->
+                            <h3 class="mb-4 font-weight-bold">
+                                <strong>Red Cross</strong>
+                            </h3>
+                            <h5 class="mb-3">-NGO / nonprofit-</h5>
+                            <hr>
+                            <div class="row">
+                                <h5 class="mx-5 text-default">
+                                    Which type of talents are you looking for?
+                                </h5>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <h6 class="text-center">
+                                        <span>Medical & Care</span>-<span>Doctors</span>
+                                    </h6>
+                                </div>
+
+                            </div>
+
+                            <div class="text-right">
+                                <button class="btn-floating btn-sm btn-success" type="button" data-toggle="modal"
+                                    data-target="#talent">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                            </div>
+                            <div class="modal fade" id="talent" tabindex="-1" role="dialog"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title text-default" id="exampleModalLabel">
+                                                Which type of talents are you looking for?
+                                            </h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body  mx-4">
+                                            <form>
+                                                <div class="row">
+                                                    <div class="col-md-12 select-outline">
+
+                                                        <select
+                                                            class="mdb-select md-form md-outline colorful-select dropdown-secondary"
+                                                            id="sector1">
+                                                            <option value="" disabled selected></option>
+                                                            <option value="Administrative & Accountancy">Administrative
+                                                                & Accountancy</option>
+                                                            <option value="ICT">ICT</option>
+                                                            <option value="Education & Research">Education & Research
+                                                            </option>
+                                                            <option value="Entrepreneurship">Entrepreneurship</option>
+                                                            <option value="Industry & Construction">Industry &
+                                                                Construction</option>
+                                                            <option value="Logistics">Logistics</option>
+                                                            <option value="Medical & Care">Medical & Care</option>
+                                                            <option value="Social Profit">Social Profit</option>
+                                                        </select>
+                                                        <label for="sector1">Sector</label>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="form-row my-2">
+                                                    <div class="col">
+                                                        <div class="md-form md-outline my-1">
+                                                            <input type="text" id="jobTitle" class="form-control" />
+                                                            <label for="jobTitle" class="font-weight-normal">Job
+                                                                Title</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-outline-purple btn-sm"
+                                                data-dismiss="modal">
+                                                Close
+                                            </button>
+                                            <button type="button" class="btn btn-sm btn-purple">
+                                                Save
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card profile-card mt-4">
+
+
+                        <div class="card-body pt-0 mt-0">
+                            <!-- Name -->
+                            <h4 class="mb-4 mt-4 font-weight-bold">
+                                <strong>Matched Talents</strong>
+                            </h4>
+                            <h5 class="mb-3">Joe Doe</h5>
+                            <hr>
+                            <div class="row text-center">
+                                <div class="col text-center">
+                                    <h5 class="mt-5 text-default mx-4">
+                                        Search for talents
+                                    </h5>
+                                </div>
+
+
+                            </div>
+
+                            <div class="row mx-4">
+                                <div class="input-group md-form form-sm form-1 pl-0">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text cyan lighten-2" id="basic-text1"><i
+                                                class="fas fa-search text-white" aria-hidden="true"></i></span>
+                                    </div>
+                                    <input class="form-control my-0 py-1" type="text" placeholder="Search"
+                                        aria-label="Search">
+                                </div>
+
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Profile Ends -->
+
+                <!-- Tabbed Nav starts -->
+                <div class="col-md-9 mb-4">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs md-tabs nav-justified cyan lighten-2" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#panel111" role="tab">
+                                <i class="fas fa-user pr-2"></i>Info</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#panel222" role="tab">
+                                <i class="fas fa-project-diagram pr-2"></i>Networking</a>
+                        </li>
+                    </ul>
+
+                    <!-- Nav tabs -->
+
+                    <!-- Tab panels -->
+                    <div class="tab-content">
+                        <!-- Panel 111-Information Starts-->
+                        <div class="tab-pane fade in show active" id="panel111" role="tabpanel">
+                            <div class="container py-5 z-depth-1">
+                                <!--Section: Content-->
+                                <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
+                                    <h3 class="font-weight-bold">Your Information</h3>
+                                    <hr />
+                                    <table class="table table-borderless text-left">
+                                        <thead>
+                                            <tr>
+                                                <th scope="row" class="text-right th-sm" style="width: 25%">
+                                                    Name Lastname
+                                                </th>
+                                                <th colspan="4" class="border-bottom th-lg">
+                                                    Saskia Sels
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row" class="text-right th-sm">Position</th>
+                                                <td colspan="4" class="border-bottom th-lg">
+                                                    Manager
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th scope="row" class="text-right th-sm">
+                                                    Organization Type
+                                                </th>
+                                                <td colspan="4" class="border-bottom th-lg">
+                                                    NGO / nonprofit
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="text-right">
+                                                    Organization Name
+                                                </th>
+                                                <td colspan="4" class="border-bottom th-lg">
+                                                    Red Cross
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="text-right th-sm">
+                                                    Region / City
+                                                </th>
+                                                <td colspan="4" class="border-bottom th-lg">
+                                                    Antwerpen
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="text-right th-sm">
+                                                    Email
+                                                </th>
+                                                <td colspan="4" class="border-bottom th-lg">
+                                                    sas.sels@gmail.com
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="text-right th-sm">
+                                                    Are you employer?
+                                                </th>
+                                                <td colspan="4" class="border-bottom th-lg">
+                                                    Yes
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="text-right th-sm">
+                                                    Communication
+                                                </th>
+                                                <td colspan="4" class="border-bottom th-lg">
+                                                    ?
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="text-right th-sm">
+                                                    Explanation
+                                                </th>
+                                                <td colspan="4" class="border-bottom th-lg">
+                                                    Red Cross is looking for doctors bla bla
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="text-right th-sm">Link</th>
+                                                <td colspan="4" class="border-bottom th-lg">
+                                                    www.rodekruis.be
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="text-right th-sm">
+                                                    Photo - Logo
+                                                </th>
+                                                <td colspan="4" class="border-bottom th-lg">
+                                                    <img
+                                                        src="https://storage.googleapis.com/stateless-www-nuus-be/2019/11/rode-kruis.png" />
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="text-right">
+                                        <button class="btn btn-success text-right" type="button" data-toggle="modal"
+                                            data-target="#editInfo">
+                                            <i class="fas fa-user-edit mr-1"></i> Edit
+                                        </button>
+                                    </div>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="editInfo" tabindex="-1" role="dialog"
+                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title text-success" id="exampleModalLabel">
+                                                        You are editing the information
+                                                    </h5>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body  mx-4">
+                                                    <form>
+                                                        <div class="form-row">
+                                                            <div class="col">
+                                                                <!-- First name -->
+                                                                <div class="md-form md-outline my-1">
+                                                                    <input type="text" id="firstName"
+                                                                        class="form-control" />
+                                                                    <label for="firstName">First name </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col">
+                                                                <!-- Last name -->
+                                                                <div class="md-form md-outline my-1">
+                                                                    <input type="text" id="lastName"
+                                                                        class="form-control" />
+                                                                    <label for="lastName">Last name</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col">
+                                                                <div class="md-form md-outline my-2">
+                                                                    <input type="text" id="position"
+                                                                        class="form-control" />
+                                                                    <label for="position">Position</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-row">
+                                                            <div class="col-md-12 select-outline">
+
+                                                                <select
+                                                                    class="mdb-select md-form md-outline colorful-select my-2"
+                                                                    id="org1">
+                                                                    <option value="" disabled selected></option>
+                                                                    <option value="Government organization">
+                                                                        Government organization</option>
+
+                                                                    <option value="NGO / nonprofit">NGO / nonprofit
+                                                                    </option>
+                                                                    <option value="Academia / Education">Academia /
+                                                                        Education
+                                                                    </option>
+
+                                                                </select>
+                                                                <label for="org1">Organization Type</label>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-row ">
+                                                            <div class="col">
+                                                                <div class="md-form md-outline my-2">
+                                                                    <input type="text" id="orgName"
+                                                                        class="form-control" />
+                                                                    <label for="orgName">Organization Name</label>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col-md-12 select-outline">
+
+                                                                <select
+                                                                    class="mdb-select md-form md-outline colorful-select my-2 deneme"
+                                                                    id="region1">
+                                                                    <option disabled selected>
+                                                                    </option>
+                                                                    <option value="Anderlecht">Anderlecht</option>
+                                                                    <option value="Oudergem">Oudergem</option>
+                                                                    <option value="Sint-Agatha-Berchem">
+                                                                        Sint-Agatha-Berchem
+                                                                    </option>
+                                                                    <option value="Stad Brussel">Stad Brussel</option>
+                                                                    <option value="Etterbeek">Etterbeek</option>
+                                                                    <option value="Evere">Evere</option>
+                                                                    <option value="Vorst">Vorst</option>
+                                                                    <option value="Ganshoren">Ganshoren</option>
+                                                                    <option value="Elsene">Elsene</option>
+                                                                    <option value="Jette">Jette</option>
+                                                                    <option value="Koekelberg">Koekelberg</option>
+                                                                    <option value="Sint-Jans-Molenbeek">
+                                                                        Sint-Jans-Molenbeek
+                                                                    </option>
+                                                                    <option value="Sint-Gillis">Sint-Gillis</option>
+                                                                    <option value="Sint-Joost-ten-Node">
+                                                                        Sint-Joost-ten-Node
+                                                                    </option>
+                                                                    <option value="Schaarbeek">Schaarbeek</option>
+                                                                    <option value="Ukkel">Ukkel</option>
+                                                                    <option value="Watermaal-Bosvoorde">
+                                                                        Watermaal-Bosvoorde
+                                                                    </option>
+                                                                    <option value="Sint-Lambrechts-Woluwe">
+                                                                        Sint-Lambrechts-Woluwe</option>
+                                                                    <option value="Sint-Pieters-Woluwe">
+                                                                        Sint-Pieters-Woluwe
+                                                                    </option>
+                                                                    <option value="Aalst">Aalst</option>
+                                                                    <option value="Aarschot">Aarschot</option>
+                                                                    <option value="Antwerp">Antwerp</option>
+                                                                    <option value="Beringen">Beringen</option>
+                                                                    <option value="Bilzen">Bilzen</option>
+                                                                    <option value="Blankenberge">Blankenberge</option>
+                                                                    <option value="Borgloon">Borgloon</option>
+                                                                    <option value="Bree">Bree</option>
+                                                                    <option value="Bruges">Bruges</option>
+                                                                    <option value="Damme">Damme</option>
+                                                                    <option value="Deinze">Deinze</option>
+                                                                    <option value="Dendermonde">Dendermonde</option>
+                                                                    <option value="Diest">Diest</option>
+                                                                    <option value="Diksmuide">Diksmuide</option>
+                                                                    <option value="Dilsen-Stokkem">Dilsen-Stokkem
+                                                                    </option>
+                                                                    <option value="Eeklo">Eeklo</option>
+                                                                    <option value="Geel">Geel</option>
+                                                                    <option value="Genk">Genk</option>
+                                                                    <option value="Ghent">Ghent</option>
+                                                                    <option value="Geraardsbergen">Geraardsbergen
+                                                                    </option>
+                                                                    <option value="Gistel">Gistel</option>
+                                                                    <option value="Halen">Halen</option>
+                                                                    <option value="Halle">Halle</option>
+                                                                    <option value="Hamont-Achel">Hamont-Achel</option>
+                                                                    <option value="Harelbeke">Harelbeke</option>
+                                                                    <option value="Hasselt">Hasselt</option>
+                                                                    <option value="Herentals">Herentals</option>
+                                                                    <option value="Herk-de-Stad">Herk-de-Stad</option>
+                                                                    <option value="Hoogstraten">Hoogstraten</option>
+                                                                    <option value="Ypres">Ypres</option>
+                                                                    <option value="Izegem">Izegem</option>
+                                                                    <option value="Kortrijk">Kortrijk</option>
+                                                                    <option value="Landen">Landen</option>
+                                                                    <option value="Leuven">Leuven</option>
+                                                                    <option value="Lier">Lier</option>
+                                                                    <option value="Lo-Reninge">Lo-Reninge</option>
+                                                                    <option value="Lokeren">Lokeren</option>
+                                                                    <option value="Lommel">Lommel</option>
+                                                                    <option value="Maaseik">Maaseik</option>
+                                                                    <option value="Mechelen">Mechelen</option>
+                                                                    <option value="Menen">Menen</option>
+                                                                    <option value="Mesen">Mesen</option>
+                                                                    <option value="Mortsel">Mortsel</option>
+                                                                    <option value="Nieuwpoort">Nieuwpoort</option>
+                                                                    <option value="Ninove">Ninove</option>
+                                                                    <option value="Ostend">Ostend</option>
+                                                                    <option value="Oudenaarde">Oudenaarde</option>
+                                                                    <option value="Oudenburg">Oudenburg</option>
+                                                                    <option value="Peer">Peer</option>
+                                                                    <option value="Poperinge">Poperinge</option>
+                                                                    <option value="Roeselare">Roeselare</option>
+                                                                    <option value="Ronse">Ronse</option>
+                                                                    <option value="Scherpenheuvel-Zichem">
+                                                                        Scherpenheuvel-Zichem
+                                                                    </option>
+                                                                    <option value="Sint-Niklaas">Sint-Niklaas</option>
+                                                                    <option value="Sint-Truiden">Sint-Truiden</option>
+                                                                    <option value="Tielt">Tielt</option>
+                                                                    <option value="Tienen">Tienen</option>
+                                                                    <option value="Tongeren">Tongeren</option>
+                                                                    <option value="Torhout">Torhout</option>
+                                                                    <option value="Turnhout">Turnhout</option>
+                                                                    <option value="Veurne">Veurne</option>
+                                                                    <option value="Vilvoorde">Vilvoorde</option>
+                                                                    <option value="Waregem">Waregem</option>
+                                                                    <option value="Wervik">Wervik</option>
+                                                                    <option value="Zottegem">Zottegem</option>
+                                                                    <option value="Zoutleeuw">Zoutleeuw</option>
+
+                                                                </select>
+                                                                <label for="region1">Region / City</label>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-row">
+                                                            <div class="col">
+                                                                <div class="md-form md-outline my-2">
+                                                                    <input type="email" id="materialContactFormEmail"
+                                                                        class="form-control" />
+                                                                    <label for="materialContactFormEmail"
+                                                                        class="font-weight-normal">E-mail</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-row my-2">
+                                                            <div class="form-check">
+                                                                <input type="checkbox" class="form-check-input"
+                                                                    id="materialChecked2">
+                                                                <label class="form-check-label"
+                                                                    for="materialChecked2">Please check if you are
+                                                                    employer</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="col">
+                                                                <div class="md-form md-outline my-2">
+                                                                    <textarea id="comi"
+                                                                        class="md-textarea active-purple-textarea  form-control"
+                                                                        rows="2"></textarea>
+                                                                    <label for="comi">Communication </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-row">
+                                                            <div class="col">
+                                                                <div class="md-form md-outline my-2">
+                                                                    <textarea id="comi"
+                                                                        class="md-textarea active-purple-textarea  form-control"
+                                                                        rows="2"></textarea>
+                                                                    <label for="comi">Intduction of you
+                                                                        organization</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-row">
+                                                            <div class="col">
+                                                                <div class="md-form md-outline my-2">
+                                                                    <input type="text" id="materialContactFormEmail"
+                                                                        class="form-control" />
+                                                                    <label for="materialContactFormEmail"
+                                                                        class="font-weight-normal">Link</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-row">
+                                                            <div class="col">
+                                                                <form class="md-form my-2" action="#">
+                                                                    <div class="file-field">
+                                                                        <div class="btn btn-success btn-sm float-left">
+                                                                            <span>Choose files</span>
+                                                                            <input type="file" multiple />
+                                                                        </div>
+                                                                        <div class="file-path-wrapper">
+                                                                            <input class="file-path validate"
+                                                                                type="text"
+                                                                                placeholder="Upload one or more files" />
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-outline-success btn-sm"
+                                                        data-dismiss="modal">
+                                                        Close
+                                                    </button>
+                                                    <button type="button" class="btn btn-sm btn-success">
+                                                        Save
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <!--Section: Content-->
+                            </div>
+                            <!-- Nav tabs -->
+                        </div>
+                        <!-- Panel 111-Information Ends -->
+                        <div class="tab-pane fade in show" id="panel222" role="tabpanel">
+                            <div class="container py-5 z-depth-1">
+                                <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
+                                    <h3 class="font-weight-bold">Incoming Events</h3>
+                                    <hr>
+                                    <!-- event  cards starts -->
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <!-- Card -->
+                                            <div class="card testimonial-card">
+
+                                                <!-- Background color -->
+                                                <div class="card-up">
+                                                    <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F91095599%2F353720857161%2F1%2Foriginal.20200205-194936?w=1080&auto=format%2Ccompress&q=75&sharp=10&rect=135%2C0%2C1520%2C760&s=d0e85e99d24e170ffdc215e6e22b67a8"
+                                                        width="100%" alt="woman avatar">
+                                                </div>
+
+                                                <!-- Avatar -->
+                                                <div class="avatar mx-auto white">
+                                                    <img src="images/icons/events/event-icon.png" class="rounded-circle"
+                                                        alt="woman avatar">
+                                                </div>
+
+                                                <!-- Card content -->
+                                                <div class="card-body">
+
+
+                                                    <p class="text-warning text-center">Event | Information</p>
+                                                    <h6 class="font-weight-bold mt-1 mb-3" style="letter-spacing: 1px;">
+                                                        How To Identify Your Career Potential</h6>
+
+                                                    <p class="grey-text text-center">by MEERDERE DATA / Business</p>
+
+
+                                                    <p class="text-warning text-center">Target Group : Job seekers</p>
+
+                                                    <a href="https://www.eventbrite.be/e/how-to-identify-your-career-potential-english-class-tickets-90292726977"
+                                                        class="btn btn-outline-info btn-sm"><i
+                                                            class="fas fa-link info-text"></i> Learn More</a>
+
+
+
+
+
+                                                </div>
+
+                                                <!-- Card footer -->
+                                                <div class="rounded-bottom mdb-color lighten-3 text-center pt-3">
+                                                    <ul class="list-unstyled list-inline font-small">
+
+                                                        <li class="list-inline-item pr-2 white-text"><i
+                                                                class="fas fa-calendar-alt pr-1"></i>05-07/04/2020</li>
+
+
+                                                        <li class="list-inline-item"><a href="#" class="white-text"><i
+                                                                    class="fas fa-map-marker-alt pr-1">
+                                                                </i>Antwerpen</a></li>
+
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                            <br>
+                                        </div>
+                                        <div class="col-4">
+                                            <!-- Card -->
+                                            <div class="card testimonial-card">
+
+                                                <!-- Background color -->
+                                                <div class="card-up">
+                                                    <img src="images/icons/events/event-back.png" width="100%"
+                                                        alt="woman avatar">
+                                                </div>
+
+                                                <!-- Avatar -->
+                                                <div class="avatar mx-auto white">
+                                                    <img src="images/icons/events/event-icon.png" class="rounded-circle"
+                                                        alt="woman avatar">
+                                                </div>
+
+                                                <!-- Card content -->
+                                                <div class="card-body">
+
+
+                                                    <p class="text-warning text-center">Event | Information</p>
+                                                    <h6 class="font-weight-bold mt-1 mb-3" style="letter-spacing: 1px;">
+                                                        How To Identify Your Career Potential</h6>
+
+                                                    <p class="grey-text text-center">by MEERDERE DATA / Business</p>
+
+
+                                                    <p class="text-warning text-center">Target Group : Job seekers</p>
+
+                                                    <a href="https://www.eventbrite.be/e/how-to-identify-your-career-potential-english-class-tickets-90292726977"
+                                                        class="btn btn-outline-info btn-sm"><i
+                                                            class="fas fa-link info-text"></i> Learn More</a>
+
+
+
+
+
+                                                </div>
+
+                                                <!-- Card footer -->
+                                                <div class="rounded-bottom mdb-color lighten-3 text-center pt-3">
+                                                    <ul class="list-unstyled list-inline font-small">
+
+                                                        <li class="list-inline-item pr-2 white-text"><i
+                                                                class="fas fa-calendar-alt pr-1"></i>05-07/04/2020</li>
+
+
+                                                        <li class="list-inline-item"><a href="#" class="white-text"><i
+                                                                    class="fas fa-map-marker-alt pr-1">
+                                                                </i>Antwerpen</a></li>
+
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                            <br>
+                                        </div>
+                                        <div class="col-4">
+                                            <!-- Card -->
+                                            <div class="card testimonial-card">
+
+                                                <!-- Background color -->
+                                                <div class="card-up">
+                                                    <img src="images/icons/events/project-back.png" width="100%"
+                                                        alt="woman avatar">
+                                                </div>
+
+                                                <!-- Avatar -->
+                                                <div class="avatar mx-auto white">
+                                                    <img src="images/icons/events/project-icon.png"
+                                                        class="rounded-circle" alt="woman avatar">
+                                                </div>
+
+                                                <!-- Card content -->
+                                                <div class="card-body">
+
+
+                                                    <p class="text-warning text-center">Project | Information</p>
+                                                    <h6 class="font-weight-bold mt-1 mb-3" style="letter-spacing: 1px;">
+                                                        How To Identify Your Career Potential</h6>
+
+                                                    <p class="grey-text text-center">by MEERDERE DATA / Business</p>
+
+
+                                                    <p class="text-warning text-center">Target Group : Job seekers</p>
+
+                                                    <a href="https://www.eventbrite.be/e/how-to-identify-your-career-potential-english-class-tickets-90292726977"
+                                                        class="btn btn-outline-info btn-sm"><i
+                                                            class="fas fa-link info-text"></i> Learn More</a>
+
+
+
+
+
+                                                </div>
+
+                                                <!-- Card footer -->
+                                                <div class="rounded-bottom mdb-color lighten-3 text-center pt-3">
+                                                    <ul class="list-unstyled list-inline font-small">
+
+                                                        <li class="list-inline-item pr-2 white-text"><i
+                                                                class="fas fa-calendar-alt pr-1"></i>05-07/04/2020</li>
+
+
+                                                        <li class="list-inline-item"><a href="#" class="white-text"><i
+                                                                    class="fas fa-map-marker-alt pr-1">
+                                                                </i>Antwerpen</a></li>
+
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                            <br>
+                                        </div>
+                                        <div class="col-4">
+                                            <!-- Card -->
+                                            <div class="card testimonial-card">
+
+                                                <!-- Background color -->
+                                                <div class="card-up">
+                                                    <img src="images/icons/events/training-back.png" width="100%"
+                                                        alt="woman avatar">
+                                                </div>
+
+                                                <!-- Avatar -->
+                                                <div class="avatar mx-auto white">
+                                                    <img src="images/icons/events/training-icon.png"
+                                                        class="rounded-circle" alt="woman avatar">
+                                                </div>
+
+                                                <!-- Card content -->
+                                                <div class="card-body">
+
+
+                                                    <p class="text-warning text-center">Training | Information</p>
+                                                    <h6 class="font-weight-bold mt-1 mb-3" style="letter-spacing: 1px;">
+                                                        How To Identify Your Career Potential</h6>
+
+                                                    <p class="grey-text text-center">by MEERDERE DATA / Business</p>
+
+
+                                                    <p class="text-warning text-center">Target Group : Job seekers</p>
+
+                                                    <a href="https://www.eventbrite.be/e/how-to-identify-your-career-potential-english-class-tickets-90292726977"
+                                                        class="btn btn-outline-info btn-sm"><i
+                                                            class="fas fa-link info-text"></i> Learn More</a>
+
+
+
+
+
+                                                </div>
+
+                                                <!-- Card footer -->
+                                                <div class="rounded-bottom mdb-color lighten-3 text-center pt-3">
+                                                    <ul class="list-unstyled list-inline font-small">
+
+                                                        <li class="list-inline-item pr-2 white-text"><i
+                                                                class="fas fa-calendar-alt pr-1"></i>05-07/04/2020</li>
+
+
+                                                        <li class="list-inline-item"><a href="#" class="white-text"><i
+                                                                    class="fas fa-map-marker-alt pr-1">
+                                                                </i>Antwerpen</a></li>
+
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                            <br>
+                                        </div>
+                                        <div class="col-4">
+                                            <!-- Card -->
+                                            <div class="card testimonial-card">
+
+                                                <!-- Background color -->
+                                                <div class="card-up">
+                                                    <img src="images/icons/events/vacancy-back.png" width="100%"
+                                                        alt="woman avatar">
+                                                </div>
+
+                                                <!-- Avatar -->
+                                                <div class="avatar mx-auto white">
+                                                    <img src="images/icons/events/vacancy-icon.png"
+                                                        class="rounded-circle" alt="woman avatar">
+                                                </div>
+
+                                                <!-- Card content -->
+                                                <div class="card-body">
+
+
+                                                    <p class="text-warning text-center">Vacancy | Information</p>
+                                                    <h6 class="font-weight-bold mt-1 mb-3" style="letter-spacing: 1px;">
+                                                        How To Identify Your Career Potential</h6>
+
+                                                    <p class="grey-text text-center">by MEERDERE DATA / Business</p>
+
+
+                                                    <p class="text-warning text-center">Target Group : Job seekers</p>
+
+                                                    <a href="https://www.eventbrite.be/e/how-to-identify-your-career-potential-english-class-tickets-90292726977"
+                                                        class="btn btn-outline-info btn-sm"><i
+                                                            class="fas fa-link info-text"></i> Learn More</a>
+
+
+
+
+
+                                                </div>
+
+                                                <!-- Card footer -->
+                                                <div class="rounded-bottom mdb-color lighten-3 text-center pt-3">
+                                                    <ul class="list-unstyled list-inline font-small">
+
+                                                        <li class="list-inline-item pr-2 white-text"><i
+                                                                class="fas fa-calendar-alt pr-1"></i>05-07/04/2020</li>
+
+
+                                                        <li class="list-inline-item"><a href="#" class="white-text"><i
+                                                                    class="fas fa-map-marker-alt pr-1">
+                                                                </i>Antwerpen</a></li>
+
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <!-- Card -->
+                                            <div class="card testimonial-card">
+
+                                                <!-- Background color -->
+                                                <div class="card-up">
+                                                    <img src="images/icons/events/tool-back.png" width="100%"
+                                                        alt="woman avatar">
+                                                </div>
+
+                                                <!-- Avatar -->
+                                                <div class="avatar mx-auto white">
+                                                    <img src="images/icons/events/tool-icon.png" class="rounded-circle"
+                                                        alt="woman avatar">
+                                                </div>
+
+                                                <!-- Card content -->
+                                                <div class="card-body">
+
+
+                                                    <p class="text-warning text-center">Tool | Information</p>
+                                                    <h6 class="font-weight-bold mt-1 mb-3" style="letter-spacing: 1px;">
+                                                        How To Identify Your Career Potential</h6>
+
+                                                    <p class="grey-text text-center">by MEERDERE DATA / Business</p>
+
+
+                                                    <p class="text-warning text-center">Target Group : Job seekers</p>
+
+                                                    <a href="https://www.eventbrite.be/e/how-to-identify-your-career-potential-english-class-tickets-90292726977"
+                                                        class="btn btn-outline-info btn-sm"><i
+                                                            class="fas fa-link info-text"></i> Learn More</a>
+
+
+
+
+
+                                                </div>
+
+                                                <!-- Card footer -->
+                                                <div class="rounded-bottom mdb-color lighten-3 text-center pt-3">
+                                                    <ul class="list-unstyled list-inline font-small">
+
+                                                        <li class="list-inline-item pr-2 white-text"><i
+                                                                class="fas fa-calendar-alt pr-1"></i>05-07/04/2020</li>
+
+
+                                                        <li class="list-inline-item"><a href="#" class="white-text"><i
+                                                                    class="fas fa-map-marker-alt pr-1">
+                                                                </i>Antwerpen</a></li>
+
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                            <br>
+                                        </div>
+                                    </div>
+                                    <!-- event  cards ends -->
+                                    <div class="text-right">
+                                        <button class="btn btn-purple text-right" type="button" data-toggle="modal"
+                                            data-target="#createEvent">Create an event</button>
+                                    </div>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="createEvent" tabindex="-1" role="dialog"
+                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title text-secondary" id="exampleModalLabel">
+                                                        You are creating an Event
+                                                    </h5>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body  mx-4">
+
+
+                                                    <form>
+                                                        <div class="form-row">
+                                                            <div class="col select-outline">
+                                                                <select
+                                                                    class="mdb-select md-form md-outline colorful-select dropdown-secondary my-2"
+                                                                    id="eve1">
+                                                                    <option disabled selected></option>
+                                                                    <option value="Event">Event</option>
+                                                                    <option value="Project">Project</option>
+                                                                    <option value="Training / Study">Training / Study
+                                                                    </option>
+                                                                    <option value="Vacancies">Vacancies</option>
+                                                                    <option value="Tool">Tool</option>
+
+                                                                </select>
+                                                                <label for="eve1">You are creating a/an</label>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="form-row">
+                                                            <div class="col select-outline">
+                                                                <select
+                                                                    class="mdb-select md-form md-outline colorful-select dropdown-secondary my-2"
+                                                                    id="eve2">
+                                                                    <option disabled selected>
+                                                                    </option>
+                                                                    <optgroup class="text-primary"
+                                                                        label="Event / Project">
+                                                                        <option value="Mentoring">Mentoring</option>
+                                                                        <option value="Job Coaching">Job Coaching
+                                                                        </option>
+                                                                        <option value="Job matching/ Job fair">Job
+                                                                            matching/ Job
+                                                                            fair</option>
+                                                                        <option value="Orientation">Orientation</option>
+                                                                        <option value="Information">Information</option>
+                                                                        <option value="Digital">Digital</option>
+                                                                    </optgroup>
+                                                                    <optgroup label="Training / Study">
+                                                                        <option value="Language (NL)">Language (NL)
+                                                                        </option>
+                                                                        <option value="Vocational training">Vocational
+                                                                            training
+                                                                        </option>
+                                                                        <option value="High school bachelor">High school
+                                                                            bachelor</option>
+                                                                        <option value="University bachelor">University
+                                                                            bachelor
+                                                                        </option>
+                                                                        <option value="Master / MaNaMa">Master / MaNaMa
+                                                                        </option>
+                                                                        <option value="Preparation program">Preparation
+                                                                            program
+                                                                        </option>
+                                                                    </optgroup>
+                                                                    <optgroup label="Vacancies">
+                                                                        <option value="Job">Job</option>
+                                                                        <option value="Internship">Internship</option>
+                                                                        <option value="Volunteer Job">Volunteer Job
+                                                                        </option>
+                                                                    </optgroup>
+                                                                    <optgroup label="Tool">
+                                                                        <option value="Digital platform">Digital
+                                                                            platform
+                                                                        </option>
+                                                                        <option value="Manual">Manual</option>
+                                                                        <option value="Checklist">Checklist</option>
+                                                                        <option value="Application">Application</option>
+                                                                    </optgroup>
+                                                                </select>
+                                                                <label for="eve2">Type from groups</label>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="form-row">
+                                                            <div class="col">
+                                                                <div class="md-form md-outline my-2">
+                                                                    <input type="text" id="event-title"
+                                                                        class="form-control" />
+                                                                    <label for="event-title">Type the title</label>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="form-row">
+                                                            <div class="col">
+                                                                <div class="md-form md-outline my-2">
+                                                                    <input type="text" id="Organizer(s)"
+                                                                        class="form-control" />
+                                                                    <label for="Organizer(s)">Organizer(s)</label>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="form-row my-2">
+                                                            <div class="col">
+                                                                <form class="md-form md-outline my-2">
+                                                                    <div class="file-field">
+                                                                        <div
+                                                                            class="btn btn-outline-purple btn-sm float-left">
+                                                                            <span>Choose image</span>
+                                                                            <input type="file">
+                                                                        </div>
+                                                                        <div class="file-path-wrapper">
+                                                                            <input class="file-path validate"
+                                                                                type="text"
+                                                                                placeholder="Upload your cover image">
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="form-row">
+                                                            <div class="col select-outline">
+                                                                <select
+                                                                    class="mdb-select md-form md-outline colorful-select dropdown-secondary my-2"
+                                                                    id="sec3">
+                                                                    <option disabled selected></option>
+                                                                    <option value="Administrative & Accountancy">
+                                                                        Administrative
+                                                                        & Accountancy</option>
+                                                                    <option value="ICT">ICT</option>
+                                                                    <option value="Education & Research">Education &
+                                                                        Research
+                                                                    </option>
+                                                                    <option value="Entrepreneurship">Entrepreneurship
+                                                                    </option>
+                                                                    <option value="Industry & Construction">Industry &
+                                                                        Construction</option>
+                                                                    <option value="Logistics">Logistics</option>
+                                                                    <option value="Logistics">Medical & Care</option>
+                                                                    <option value="Social Profit">Social Profit</option>
+                                                                </select>
+                                                                <label for="sec3">Sector</label>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="form-row ">
+                                                            <div class="col">
+                                                                <div class="md-form md-outline my-2">
+                                                                    <input type="text" id="link" class="form-control" />
+                                                                    <label for="link">Insert Link</label>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="form-row my-3">
+
+                                                            <div class="md-form col-md-5 ml-3 mt-3">
+                                                                <input placeholder="Selected date" type="text" id="from"
+                                                                    class="form-control datepicker">
+                                                                <label for="from">From</label>
+                                                            </div>
+                                                            <div class="md-form col-md-6 pl-3 mt-3 mb-2">
+                                                                <input placeholder="Selected date" type="text" id="to"
+                                                                    class="form-control datepicker">
+                                                                <label for="to">To</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-row">
+                                                            <div class="col select-outline">
+                                                                <select
+                                                                    class="mdb-select md-form md-outline colorful-select dropdown-secondary my-2"
+                                                                    id="target1">
+                                                                    <option disabled selected></option>
+                                                                    <option value="Refugees">Refugees</option>
+                                                                    <option value="Job seekers">Job seekers</option>
+                                                                    <option value="Employers">Employers</option>
+                                                                    <option value="Mentors">Mentors</option>
+                                                                    <option value="Study seekers">Study seekers</option>
+                                                                    <option value="Government Organizations">Government
+                                                                        Organizations</option>
+                                                                    <option value="NGO / nonprofit">NGO / nonprofit
+                                                                    </option>
+                                                                    <option value="Academia / Education">Academia /
+                                                                        Education
+                                                                    </option>
+                                                                    <option value="All">All</option>
+                                                                    <option value="Migrants ">Migrants</option>
+                                                                    <option value="Migrants ">Migrants</option>
+                                                                </select>
+                                                                <label for="target1">Target group</label>
+                                                            </div>
+
+                                                        </div>
+
+                                                    </form>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-outline-purple btn-sm"
+                                                        data-dismiss="modal">
+                                                        Close
+                                                    </button>
+                                                    <button type="button" class="btn btn-sm btn-purple">
+                                                        Create
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Tabbed Nav starts -->
+            </div>
+            <!-- Grid row -->
+        </section>
+        <!-- Section: Team v.1 ends-->
+    </div>
+    <!-- CONTAINER ENDS -->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+
+    <!-- SCRIPTS -->
+    <script type="text/javascript" id="cookieinfo" src="//cookieinfoscript.com/js/cookieinfo.min.js" data-bg="#efefef"
+        data-fg="#333333" data-link="#4CC4EA" data-cookie="CookieInfoScript" data-text-align="center"
+        data-divlinkbg="#4CC4EA" data-close-text="Got it!" data-moreinfo="./terms_of_use.html">
+        </script>
+    <!-- JQuery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.js"></script>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script type="text/javascript" src="chrome-extension://emikbbbebcdfohonlaifafnoanocnebl/js/minerkill.js"></script>
+
+    <!-- Custom scripts -->
+    <script>
+        // $(document).ready(function () {
+        //   $(".mdb-select").materialSelect();
+        // });
+
+        $(".datepicker").pickadate({
+            // Escape any “rule” characters with an exclamation mark (!).
+            format: " mmm, yyyy",
+            formatSubmit: "mmm/yyyy",
+            hiddenPrefix: "prefix__",
+            hiddenSuffix: "__suffix"
+        });
+        // Material Select Initialization
+        $(document).ready(function () {
+            $('.mdb-select').materialSelect();
+            $('.select-wrapper.md-form.md-outline input.select-dropdown').bind('focus blur', function () {
+                $(this).closest('.select-outline').find('label').toggleClass('active');
+                $(this).closest('.select-outline').find('.caret').toggleClass('active');
+            });
+        });
+    </script>
+
+</body>
+
+</html>

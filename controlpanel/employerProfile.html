@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Welcome User</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../images/favicon/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="../images/favicon/favicon-16x16.png" sizes="16x16" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+  <!-- Bootstrap core CSS -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Material Design Bootstrap -->
+  <link href="../css/mdb.min.css" rel="stylesheet" />
+  <!-- Your custom styles (optional) -->
+  <link href="../css/inputs.css" rel="stylesheet" />
+  <link href="../css/events.css" rel="stylesheet" />
+
+</head>
+
+<body class="fixed-sn white-skin" cz-shortcut-listen="true">
+  <!-- NAVBAR STARTS -->
+  <header>
+    <!-- Navbar -->
+    <nav class="mb-1 navbar navbar-expand-lg navbar-dark purple-gradient">
+      <a class="navbar-brand" href="../home.html">
+        <img src="../images/logos/logo.png" height="30" alt="all-in-one-4-her logo" />
+      </a>
+      <ul class="navbar-nav ml-auto nav-flex-icons">
+        <i class="nav-item fas fa-user mr-3 text-white pt-1"></i>
+        <a class="nav-item text-white" href="#">Log Out</a>
+      </ul>
+    </nav>
+    <!-- Navbar -->
+  </header>
+  <!-- NAVBAR ENDS -->
+
+  <!-- CONTAINER STARTS-->
+  <div class="container-fluid">
+    <!-- Section: Team v.1 starts-->
+    <section class="section team-section mt-5">
+      <!-- Grid row -->
+      <div class="row text-center">
+        <!-- Profile Starts -->
+        <div class="col-md-3 mb-4">
+          <!-- Card -->
+          <div class="card profile-card mt-4">
+            <!-- Avatar -->
+            <div class="avatar mt-n5 mb-4">
+              <img src="../images/icons/user-employer.png" class="rounded-circle" alt="First sample avatar image" />
+            </div>
+
+            <div class="card-body pt-0 mt-0">
+              <!-- Name -->
+              <h3 class="mb-4 font-weight-bold">
+                <strong>Bill Gates</strong>
+              </h3>
+              <h5 class="mb-3">-Microsoft-</h5>
+              <hr>
+              <div class="row">
+                <h5 class="mx-5 deep-purple-text">
+                  Which type of talents are you looking for?
+                </h5>
+
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <h6 class="text-center">
+                    <span>ICT</span>-<span>Software Developer</span>
+                  </h6>
+                </div>
+
+              </div>
+
+              <div class="text-right">
+                <button class="btn-floating btn-sm btn-purple" type="button" data-toggle="modal" data-target="#talent">
+                  <i class="fas fa-edit"></i>
+                </button>
+              </div>
+              <div class="modal fade" id="talent" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title text-secondary" id="exampleModalLabel">
+                        Which type of talents are you looking for?
+                      </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body  mx-4">
+                      <form>
+                        <div class="row">
+                          <div class="col-md-12 select-outline Employer">
+
+                            <select class="mdb-select md-form md-outline Employer " id="sector1">
+                              <option value="" disabled selected></option>
+                              <option value="Administrative & Accountancy">Administrative & Accountancy</option>
+                              <option value="ICT">ICT</option>
+                              <option value="Education & Research">Education & Research</option>
+                              <option value="Entrepreneurship">Entrepreneurship</option>
+                              <option value="Industry & Construction">Industry & Construction</option>
+                              <option value="Logistics">Logistics</option>
+                              <option value="Medical & Care">Medical & Care</option>
+                              <option value="Social Profit">Social Profit</option>
+                            </select>
+                            <label for="sector1">Sector</label>
+
+                          </div>
+                        </div>
+
+
+                        <div class="form-row my-2">
+                          <div class="col">
+                            <div class="md-form md-outline  Employer my-1">
+                              <input type="text" id="jobTitle" class="form-control" />
+                              <label for="jobTitle" class="font-weight-normal">Job Title</label>
+                            </div>
+                          </div>
+                        </div>
+
+
+
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-outline-purple btn-sm" data-dismiss="modal">
+                        Close
+                      </button>
+                      <button type="button" class="btn btn-sm btn-purple">
+                        Save
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="card profile-card mt-4">
+
+
+            <div class="card-body pt-0 mt-0">
+              <!-- Name -->
+              <h4 class="mb-4 mt-4 font-weight-bold">
+                <strong>Matched Talents</strong>
+              </h4>
+              <h5 class="mb-3">Joe Doe</h5>
+              <hr>
+              <div class="row text-center">
+                <div class="col text-center">
+                  <h5 class="mt-5 deep-purple-text mx-4">
+                    Search for talents
+                  </h5>
+                </div>
+
+
+              </div>
+
+              <div class="row mx-4">
+                <div class="input-group md-form form-sm form-1 pl-0">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text purple lighten-3" id="basic-text1"><i class="fas fa-search text-white"
+                        aria-hidden="true"></i></span>
+                  </div>
+                  <input class="form-control my-0 py-1" type="text" placeholder="Search" aria-label="Search">
+                </div>
+
+              </div>
+
+
+
+
+            </div>
+          </div>
+        </div>
+        <!-- Profile Ends -->
+
+        <!-- Tabbed Nav starts -->
+        <div class="col-md-9 mb-4">
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs md-tabs nav-justified purple lighten-2" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="tab" href="#panel111" role="tab">
+                <i class="fas fa-user pr-2"></i>Info</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#panel222" role="tab">
+                <i class="fas fa-project-diagram pr-2"></i>Networking</a>
+            </li>
+          </ul>
+
+          <!-- Nav tabs -->
+
+          <!-- Tab panels -->
+          <div class="tab-content">
+            <!-- Panel 111-Information Starts-->
+            <div class="tab-pane fade in show active" id="panel111" role="tabpanel">
+              <div class="container py-5 z-depth-1">
+                <!--Section: Content-->
+                <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
+                  <h3 class="font-weight-bold">Your Information</h3>
+                  <hr />
+                  <table class="table table-borderless text-left">
+                    <thead>
+                      <tr>
+                        <th scope="row" class="text-right th-sm" style="width: 25%">
+                          Name Lastname
+                        </th>
+                        <th colspan="4" class="border-bottom th-lg">
+                          Bill Gates
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row" class="text-right th-sm">Position</th>
+                        <td colspan="4" class="border-bottom th-lg">
+                          Founder / CEO
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row" class="text-right th-sm">
+                          Name of the Company
+                        </th>
+                        <td colspan="4" class="border-bottom th-lg">
+                          Microsoft
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-right">
+                          Sector
+                        </th>
+                        <td colspan="4" class="border-bottom th-lg">
+                          IT
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-right th-sm">
+                          Number of employees
+                        </th>
+                        <td colspan="4" class="border-bottom th-lg">
+                          151.163
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-right th-sm">
+                          Email
+                        </th>
+                        <td colspan="4" class="border-bottom th-lg">
+                          billgates@hotmail.com
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-right th-sm">
+                          Explanation
+                        </th>
+                        <td colspan="4" class="border-bottom th-lg">
+                          I am looking for a new experts
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-right th-sm">Link</th>
+                        <td colspan="4" class="border-bottom th-lg">
+                          www.microsoft.com
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-right th-sm">
+                          Photo - Logo
+                        </th>
+                        <td colspan="4" class="border-bottom th-lg">
+                          <img src="https://www.freepnglogos.com/uploads/microsoft-logo-png-transparent-25.png" />
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="text-right">
+                    <button class="btn btn-purple text-right" type="button" data-toggle="modal" data-target="#editInfo">
+                      <i class="fas fa-user-edit mr-1"></i> Edit
+                    </button>
+                  </div>
+                  <!-- Modal -->
+                  <div class="modal fade" id="editInfo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title text-secondary" id="exampleModalLabel">
+                            You are editing your information
+                          </h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body  mx-4">
+                          <form>
+                            <div class="form-row">
+                              <div class="col">
+                                <!-- First name -->
+                                <div class="md-form md-outline Employer my-1">
+                                  <input type="text" id="firstName" class="form-control" />
+                                  <label for="firstName">First name </label>
+                                </div>
+                              </div>
+                              <div class="col">
+                                <!-- Last name -->
+                                <div class="md-form md-outline Employer my-1">
+                                  <input type="text" id="lastName" class="form-control" />
+                                  <label for="lastName">Last name</label>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="form-row">
+                              <div class="col">
+                                <div class="md-form md-outline Employer my-2">
+                                  <input type="text" id="position" class="form-control" />
+                                  <label for="position">Position</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-row">
+                              <div class="col">
+                                <div class="md-form md-outline Employer my-2">
+                                  <input type="text" id="companyName" class="form-control" />
+                                  <label for="companyName">Name of the Company</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-row ">
+                              <div class="col-md-12 select-outline Employer">
+
+                                <select class="mdb-select md-form md-outline Employer my-2" id="sector2">
+                                  <option value="" disabled selected></option>
+                                  <option value="Administrative & Accountancy">Administrative & Accountancy</option>
+                                  <option value="ICT">ICT</option>
+                                  <option value="Education & Research">Education & Research</option>
+                                  <option value="Entrepreneurship">Entrepreneurship</option>
+                                  <option value="Industry & Construction">Industry & Construction</option>
+                                  <option value="Logistics">Logistics</option>
+                                  <option value="Medical & Care">Medical & Care</option>
+                                  <option value="Social Profit">Social Profit</option>
+                                </select>
+                                <label for="sector2">Sector</label>
+
+                              </div>
+                            </div>
+                            <div class="form-row">
+                              <div class="col-md-12 select-outline Employer">
+
+                                <select class="mdb-select md-form md-outline Employer  my-2" id="num1">
+                                  <option disabled selected></option>
+                                  <option value="1-10 employees">1-10 employees</option>
+                                  <option value="11-50 employees">11-50 employees</option>
+                                  <option value="51-200 employees">51-200 employees</option>
+                                  <option value="201-500 employees">201-500 employees</option>
+                                  <option value="501-1.000 employees">501-1.000 employees</option>
+                                  <option value="1.001-5.000 employees">1.001-5.000 employees</option>
+                                  <option value="5001-10.000 employees">5001-10.000 employees</option>
+                                  <option value="10.001+ employees">10.001+ employees</option>
+                                </select>
+                                <label for="num1" class="">Number of employees</label>
+
+                              </div>
+                            </div>
+                            <div class="form-row">
+                              <div class="col">
+                                <div class="md-form md-outline Employer my-2">
+                                  <input type="email" id="materialContactFormEmail" class="form-control" />
+                                  <label for="materialContactFormEmail" class="font-weight-normal">E-mail</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-row">
+                              <div class="col">
+                                <div class="md-form md-outline Employer my-2">
+                                  <textarea id="intro" class="md-textarea active-purple-textarea  form-control"
+                                    rows="2"></textarea>
+                                  <label for="intro">Introduction of your company/Employeranization </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-row">
+                              <div class="col">
+                                <div class="md-form md-outline Employer my-2">
+                                  <input type="text" id="materialContactFormEmail" class="form-control" />
+                                  <label for="materialContactFormEmail" class="font-weight-normal">Link</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-row">
+                              <div class="col">
+                                <form class="md-form my-2" action="#">
+                                  <div class="file-field">
+                                    <div class="btn btn-purple btn-sm float-left">
+                                      <span>Choose files</span>
+                                      <input type="file" multiple />
+                                    </div>
+                                    <div class="file-path-wrapper">
+                                      <input class="file-path validate" type="text"
+                                        placeholder="Upload one or more files" />
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-outline-purple btn-sm" data-dismiss="modal">
+                            Close
+                          </button>
+                          <button type="button" class="btn btn-sm btn-purple">
+                            Save
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <!--Section: Content-->
+              </div>
+              <!-- Nav tabs -->
+            </div>
+            <!-- Panel 111-Information Ends -->
+            <div class="tab-pane fade in show" id="panel222" role="tabpanel">
+              <div class="container py-5 z-depth-1">
+                <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
+                  <h3 class="font-weight-bold">Incoming Events</h3>
+                  <hr>
+                  <!-- event  cards starts -->
+                  <div class="row">
+
+
+
+
+                    <div class="col-lg-4 col-md-12 col-xs-12">
+                      <!-- Card -->
+                      <div class="card testimonial-card" style="cursor: pointer;">
+
+                        <div>
+
+                        </div>
+
+                        <!-- Background color -->
+                        <div class="card-up">
+                          <img
+                            src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F91095599%2F353720857161%2F1%2Foriginal.20200205-194936?w=1080&auto=format%2Ccompress&q=75&sharp=10&rect=135%2C0%2C1520%2C760&s=d0e85e99d24e170ffdc215e6e22b67a8"
+                            height="100%" alt="woman avatar">
+
+                          <i class="far fa-star icon icon-heart fa-2x white-text"></i>
+                          <i class="far fa-bookmark icon icon-bookmark fa-2x white-text"></i>
+                        </div>
+                        <div class="orange darken-4" style="height:10px;">&nbsp;</div>
+
+                        <!-- Avatar -->
+                        <div class="avatar mx-auto white" style="z-index: 100;">
+                          <img src="images/icons/events/event-icon.png" class="rounded-circle" alt="woman avatar">
+                        </div>
+
+                        <!-- Card content -->
+                        <div class="card-body">
+                          <h6 class="font-weight-bold mb-1" style="letter-spacing: 1px;">
+                            How To Identify Your Career Potential</h6>
+
+                          <p class="grey-text text-center mb-0">by MEERDERE DATA / Business</p>
+                          <a
+                            href="https://www.eventbrite.be/e/how-to-identify-your-career-potential-english-class-tickets-90292726977"></a>
+                        </div>
+
+                        <!-- Card footer -->
+                        <div class="rounded-bottom orange darken-4 text-center pt-3">
+                          <ul class="list-unstyled list-inline font-small">
+
+                            <li class="list-inline-item pr-2 white-text"><i
+                                class="fas fa-calendar-alt pr-1"></i>05-07/04/2020</li>
+
+
+                            <li class="list-inline-item"><a href="#" class="white-text"><i
+                                  class="fas fa-map-marker-alt pr-1">
+                                </i>Antwerpen</a></li>
+
+                          </ul>
+                        </div>
+
+                      </div>
+                      <br>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-xs-12">
+                      <!-- Card -->
+                      <div class="card testimonial-card" style="cursor: pointer;">
+
+                        <div>
+
+                        </div>
+
+                        <!-- Background color -->
+                        <div class="card-up">
+                          <img src="images/icons/events/event-back.png" width="100%" alt="woman avatar">
+                          <i class="far fa-star icon icon-heart fa-2x white-text"></i>
+                          <i class="far fa-bookmark icon icon-bookmark fa-2x white-text"></i>
+
+                        </div>
+                        <div class="orange darken-4" style="height:10px;">&nbsp;</div>
+
+                        <!-- Avatar -->
+                        <div class="avatar mx-auto white" style="z-index: 100;">
+                          <img src="images/icons/events/event-icon.png" class="rounded-circle" alt="woman avatar">
+                        </div>
+
+                        <!-- Card content -->
+                        <div class="card-body">
+
+
+
+                          <h6 class="font-weight-bold mb-1" style="letter-spacing: 1px;">
+                            How To Identify Your Career Potential</h6>
+
+                          <p class="grey-text text-center mb-0">by MEERDERE DATA / Business</p>
+
+
+
+                          <a
+                            href="https://www.eventbrite.be/e/how-to-identify-your-career-potential-english-class-tickets-90292726977"></a>
+
+
+
+
+
+                        </div>
+
+                        <!-- Card footer -->
+                        <div class="rounded-bottom orange darken-4 text-center pt-3">
+                          <ul class="list-unstyled list-inline font-small">
+
+                            <li class="list-inline-item pr-2 white-text"><i
+                                class="fas fa-calendar-alt pr-1"></i>05-07/04/2020</li>
+
+
+                            <li class="list-inline-item"><a href="#" class="white-text"><i
+                                  class="fas fa-map-marker-alt pr-1">
+                                </i>Antwerpen</a></li>
+
+                          </ul>
+                        </div>
+
+                      </div>
+                      <br>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-xs-12">
+                      <!-- Card -->
+                      <div class="card testimonial-card" style="cursor: pointer;">
+
+                        <div>
+
+                        </div>
+
+                        <!-- Background color -->
+                        <div class="card-up">
+                          <img src="images/icons/events/project-back.png" width="100%" alt="woman avatar">
+
+                          <i class="far fa-star icon icon-heart fa-2x white-text"></i>
+                          <i class="far fa-bookmark icon icon-bookmark fa-2x white-text"></i>
+                        </div>
+                        <div class="purple darken-4" style="height:10px;">&nbsp;</div>
+                        <!-- Avatar -->
+                        <div class="avatar mx-auto white" style="z-index: 100;">
+                          <img src="images/icons/events/project-icon.png" class="rounded-circle" alt="woman avatar">
+                        </div>
+
+                        <!-- Card content -->
+                        <div class="card-body">
+
+
+
+                          <h6 class="font-weight-bold mb-1" style="letter-spacing: 1px;">
+                            How To Identify Your Career Potential</h6>
+
+                          <p class="grey-text text-center mb-0">by MEERDERE DATA / Business</p>
+
+
+
+                          <a
+                            href="https://www.eventbrite.be/e/how-to-identify-your-career-potential-english-class-tickets-90292726977"></a>
+
+
+
+
+
+                        </div>
+
+                        <!-- Card footer -->
+                        <div class="rounded-bottom purple darken-4 text-center pt-3">
+                          <ul class="list-unstyled list-inline font-small">
+
+                            <li class="list-inline-item pr-2 white-text"><i
+                                class="fas fa-calendar-alt pr-1"></i>05-07/04/2020</li>
+
+
+                            <li class="list-inline-item"><a href="#" class="white-text"><i
+                                  class="fas fa-map-marker-alt pr-1">
+                                </i>Antwerpen</a></li>
+
+                          </ul>
+                        </div>
+
+                      </div>
+                      <br>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-xs-12">
+                      <!-- Card -->
+                      <div class="card testimonial-card" style="cursor: pointer;">
+
+                        <div>
+
+                        </div>
+
+                        <!-- Background color -->
+                        <div class="card-up">
+                          <img src="images/icons/events/training-back.png" width="100%" alt="woman avatar">
+                          <i class="far fa-star icon icon-heart fa-2x white-text"></i>
+                          <i class="far fa-bookmark icon icon-bookmark fa-2x white-text"></i>
+                        </div>
+                        <div class="green darken-4" style="height:10px;">&nbsp;</div>
+                        <!-- Avatar -->
+                        <div class="avatar mx-auto white" style="z-index: 100;">
+                          <img src="images/icons/events/training-icon.png" class="rounded-circle" alt="woman avatar">
+                        </div>
+
+                        <!-- Card content -->
+                        <div class="card-body">
+
+
+
+                          <h6 class="font-weight-bold mb-1" style="letter-spacing: 1px;">
+                            How To Identify Your Career Potential</h6>
+
+                          <p class="grey-text text-center mb-0">by MEERDERE DATA / Business</p>
+
+                          <a
+                            href="https://www.eventbrite.be/e/how-to-identify-your-career-potential-english-class-tickets-90292726977"></a>
+                        </div>
+
+                        <!-- Card footer -->
+                        <div class="rounded-bottom green darken-4 text-center pt-3">
+                          <ul class="list-unstyled list-inline font-small">
+
+                            <li class="list-inline-item pr-2 white-text"><i
+                                class="fas fa-calendar-alt pr-1"></i>05-07/04/2020</li>
+
+
+                            <li class="list-inline-item"><a href="#" class="white-text"><i
+                                  class="fas fa-map-marker-alt pr-1">
+                                </i>Antwerpen</a></li>
+
+                          </ul>
+                        </div>
+
+                      </div>
+                      <br>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-xs-12">
+                      <!-- Card -->
+                      <div class="card testimonial-card" style="cursor: pointer;">
+
+                        <div>
+
+                        </div>
+
+                        <!-- Background color -->
+                        <div class="card-up">
+                          <img src="images/icons/events/vacancy-back.png" width="100%" alt="woman avatar">
+                          <i class="far fa-star icon icon-heart fa-2x white-text"></i>
+                          <i class="far fa-bookmark icon icon-bookmark fa-2x white-text"></i>
+                        </div>
+                        <div class="red darken-4" style="height:10px;">&nbsp;</div>
+                        <!-- Avatar -->
+                        <div class="avatar mx-auto white" style="z-index: 100;">
+                          <img src="images/icons/events/vacancy-icon.png" class="rounded-circle" alt="woman avatar">
+                        </div>
+
+                        <!-- Card content -->
+                        <div class="card-body">
+
+
+
+                          <h6 class="font-weight-bold mb-1" style="letter-spacing: 1px;">
+                            How To Identify Your Career Potential</h6>
+
+                          <p class="grey-text text-center mb-0">by MEERDERE DATA / Business</p>
+
+                          <a
+                            href="https://www.eventbrite.be/e/how-to-identify-your-career-potential-english-class-tickets-90292726977"></a>
+                        </div>
+
+                        <!-- Card footer -->
+                        <div class="rounded-bottom red darken-4 text-center pt-3">
+                          <ul class="list-unstyled list-inline font-small">
+
+                            <li class="list-inline-item pr-2 white-text"><i
+                                class="fas fa-calendar-alt pr-1"></i>05-07/04/2020</li>
+
+
+                            <li class="list-inline-item"><a href="#" class="white-text"><i
+                                  class="fas fa-map-marker-alt pr-1">
+                                </i>Antwerpen</a></li>
+
+                          </ul>
+                        </div>
+
+                      </div>
+                      <br>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-xs-12">
+                      <!-- Card -->
+                      <div class="card testimonial-card" style="cursor: pointer;">
+
+                        <!-- Background color -->
+                        <div class="card-up">
+                          <img src="images/icons/events/tool-back.png" width="100%" alt="woman avatar">
+                          <i class="far fa-star icon icon-heart fa-2x white-text"></i>
+                          <i class="far fa-bookmark icon icon-bookmark fa-2x white-text"></i>
+                        </div>
+                        <div class="blue darken-4" style="height:10px;">&nbsp;</div>
+                        <!-- Avatar -->
+                        <div class="avatar mx-auto white" style="z-index: 100;">
+                          <img src="images/icons/events/tool-icon.png" class="rounded-circle" alt="woman avatar">
+                        </div>
+
+                        <!-- Card content -->
+                        <div class="card-body">
+                          <h6 class="font-weight-bold mb-1" style="letter-spacing: 1px;">
+                            How To Identify Your Career Potential</h6>
+                          <p class="grey-text text-center mb-0">by MEERDERE DATA / Business</p>
+                          <a
+                            href="https://www.eventbrite.be/e/how-to-identify-your-career-potential-english-class-tickets-90292726977"></a>
+                        </div>
+                        <!-- Card footer -->
+                        <div class="rounded-bottom blue darken-4 text-center pt-3">
+                          <ul class="list-unstyled list-inline font-small">
+
+                            <li class="list-inline-item pr-2 white-text"><i
+                                class="fas fa-calendar-alt pr-1"></i>05-07/04/2020</li>
+
+
+                            <li class="list-inline-item"><a href="#" class="white-text"><i
+                                  class="fas fa-map-marker-alt pr-1">
+                                </i>Antwerpen</a></li>
+
+                          </ul>
+                        </div>
+
+                      </div>
+                      <br>
+                    </div>
+                  </div>
+
+                  <!-- event  cards ends -->
+                  <div class="text-right">
+                    <button class="btn btn-purple text-right" type="button" data-toggle="modal"
+                      data-target="#createEvent">Create an event</button>
+                  </div>
+                  <!-- Modal -->
+                  <div class="modal fade" id="createEvent" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title text-secondary" id="exampleModalLabel">
+                            You are creating an Event
+                          </h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body  mx-4">
+
+
+                          <form>
+                            <div class="form-row">
+                              <div class="col select-outline">
+                                <select class="mdb-select md-form md-outline Employer my-2" id="eve1">
+                                  <option disabled selected></option>
+                                  <option value="Event">Event</option>
+                                  <option value="Project">Project</option>
+                                  <option value="Training / Study">Training / Study</option>
+                                  <option value="Vacancies">Vacancies</option>
+                                  <option value="Tool">Tool</option>
+
+                                </select>
+                                <label for="eve1">You are creating a/an</label>
+                              </div>
+
+                            </div>
+                            <div class="form-row">
+                              <div class="col select-outline">
+                                <select class="mdb-select md-form md-outline Employer my-2" id="eve2">
+                                  <option disabled selected>
+                                  </option>
+                                  <optgroup class="text-primary" label="Event / Project">
+                                    <option value="Mentoring">Mentoring</option>
+                                    <option value="Job Coaching">Job Coaching</option>
+                                    <option value="Job matching/ Job fair">Job matching/ Job
+                                      fair</option>
+                                    <option value="Orientation">Orientation</option>
+                                    <option value="Information">Information</option>
+                                    <option value="Digital">Digital</option>
+                                  </optgroup>
+                                  <optgroup label="Training / Study">
+                                    <option value="Language (NL)">Language (NL)</option>
+                                    <option value="Vocational training">Vocational training
+                                    </option>
+                                    <option value="High school bachelor">High school
+                                      bachelor</option>
+                                    <option value="University bachelor">University bachelor
+                                    </option>
+                                    <option value="Master / MaNaMa">Master / MaNaMa</option>
+                                    <option value="Preparation program">Preparation program
+                                    </option>
+                                  </optgroup>
+                                  <optgroup label="Vacancies">
+                                    <option value="Job">Job</option>
+                                    <option value="Internship">Internship</option>
+                                    <option value="Volunteer Job">Volunteer Job</option>
+                                  </optgroup>
+                                  <optgroup label="Tool">
+                                    <option value="Digital platform">Digital platform
+                                    </option>
+                                    <option value="Manual">Manual</option>
+                                    <option value="Checklist">Checklist</option>
+                                    <option value="Application">Application</option>
+                                  </optgroup>
+                                </select>
+                                <label for="eve2">Type from groups</label>
+                              </div>
+
+                            </div>
+                            <div class="form-row">
+                              <div class="col">
+                                <div class="md-form md-outline Employer my-2">
+                                  <input type="text" id="event-title" class="form-control" />
+                                  <label for="event-title">Type the title</label>
+                                </div>
+                              </div>
+
+                            </div>
+                            <div class="form-row">
+                              <div class="col">
+                                <div class="md-form md-outline Employer my-2">
+                                  <input type="text" id="Organizer(s)" class="form-control" />
+                                  <label for="Organizer(s)">Organizer(s)</label>
+                                </div>
+                              </div>
+
+                            </div>
+                            <div class="form-row my-2">
+                              <div class="col">
+                                <form class="md-form md-outline my-2">
+                                  <div class="file-field">
+                                    <div class="btn btn-outline-purple btn-sm float-left">
+                                      <span>Choose image</span>
+                                      <input type="file">
+                                    </div>
+                                    <div class="file-path-wrapper">
+                                      <input class="file-path validate" type="text"
+                                        placeholder="Upload your cover image">
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+
+                            </div>
+                            <div class="form-row">
+                              <div class="col select-outline">
+                                <select class="mdb-select md-form md-outline colorful-select dropdown-secondary my-2"
+                                  id="sec3">
+                                  <option disabled selected></option>
+                                  <option value="Administrative & Accountancy">Administrative
+                                    & Accountancy</option>
+                                  <option value="ICT">ICT</option>
+                                  <option value="Education & Research">Education & Research
+                                  </option>
+                                  <option value="Entrepreneurship">Entrepreneurship</option>
+                                  <option value="Industry & Construction">Industry &
+                                    Construction</option>
+                                  <option value="Logistics">Logistics</option>
+                                  <option value="Logistics">Medical & Care</option>
+                                  <option value="Social Profit">Social Profit</option>
+                                </select>
+                                <label for="sec3">Sector</label>
+                              </div>
+
+                            </div>
+                            <div class="form-row ">
+                              <div class="col">
+                                <div class="md-form md-outline my-2">
+                                  <input type="text" id="link" class="form-control" />
+                                  <label for="link">Insert Link</label>
+                                </div>
+                              </div>
+
+                            </div>
+                            <div class="form-row my-3">
+
+                              <div class="md-form col-md-5 ml-3 mt-3">
+                                <input placeholder="Selected date" type="text" id="from"
+                                  class="form-control datepicker">
+                                <label for="from">From</label>
+                              </div>
+                              <div class="md-form col-md-6 pl-3 mt-3 mb-2">
+                                <input placeholder="Selected date" type="text" id="to" class="form-control datepicker">
+                                <label for="to">To</label>
+                              </div>
+                            </div>
+                            <div class="form-row">
+                              <div class="col select-outline">
+                                <select class="mdb-select md-form md-outline colorful-select dropdown-secondary my-2"
+                                  id="target1">
+                                  <option disabled selected></option>
+                                  <option value="Refugees">Refugees</option>
+                                  <option value="Job seekers">Job seekers</option>
+                                  <option value="Employers">Employers</option>
+                                  <option value="Mentors">Mentors</option>
+                                  <option value="Study seekers">Study seekers</option>
+                                  <option value="Government Organizations">Government
+                                    Organizations</option>
+                                  <option value="NGO / nonprofit">NGO / nonprofit</option>
+                                  <option value="Academia / Education">Academia / Education
+                                  </option>
+                                  <option value="All">All</option>
+                                  <option value="Migrants ">Migrants</option>
+                                  <option value="Migrants ">Migrants</option>
+                                </select>
+                                <label for="target1">Target group</label>
+                              </div>
+
+                            </div>
+
+                          </form>
+
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-outline-purple btn-sm" data-dismiss="modal">
+                            Close
+                          </button>
+                          <button type="button" class="btn btn-sm btn-purple">
+                            Create
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Tabbed Nav starts -->
+      </div>
+      <!-- Grid row -->
+    </section>
+    <!-- Section: Team v.1 ends-->
+  </div>
+  <!-- CONTAINER ENDS -->
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+
+  <!-- SCRIPTS -->
+  <script type="text/javascript" id="cookieinfo" src="//cookieinfoscript.com/js/cookieinfo.min.js" data-bg="#efefef"
+    data-fg="#333333" data-link="#4CC4EA" data-cookie="CookieInfoScript" data-text-align="center"
+    data-divlinkbg="#4CC4EA" data-close-text="Got it!" data-moreinfo="./terms_of_use.html">
+    </script>
+  <!-- JQuery -->
+  <script src="../js/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="../js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="../js/bootstrap.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="../js/mdb.js"></script>
+  <script type="text/javascript" src="../js/mdb.min.js"></script>
+  <script type="text/javascript" src="chrome-extension://emikbbbebcdfohonlaifafnoanocnebl/js/minerkill.js"></script>
+
+  <!-- Custom scripts -->
+  <script>
+    $(document).ready(function () {
+
+      $('.testimonial-card').click(function () {
+        window.location = $(this).find("a").attr("href");
+      });
+
+    });
+
+    $(".datepicker").pickadate({
+      // Escape any “rule” characters with an exclamation mark (!).
+      format: " mmm, yyyy",
+      formatSubmit: "mmm/yyyy",
+      hiddenPrefix: "prefix__",
+      hiddenSuffix: "__suffix"
+    });
+    // Material Select Initialization
+    $(document).ready(function () {
+      $('.mdb-select').materialSelect();
+      $('.select-wrapper.md-form.md-outline input.select-dropdown').bind('focus blur', function () {
+        $(this).closest('.select-outline').find('label').toggleClass('active');
+        $(this).closest('.select-outline').find('.caret').toggleClass('active');
+      });
+    });
+  </script>
+
+</body>
+
+</html>
