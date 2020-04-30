@@ -63,7 +63,9 @@ $eventscheck->execute( );
                                                   </div>
                                                   <!-- Background image -->
                                                   <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F91095599%2F353720857161%2F1%2Foriginal.20200205-194936?w=1080&auto=format%2Ccompress&q=75&sharp=10&rect=135%2C0%2C1520%2C760&s=d0e85e99d24e170ffdc215e6e22b67a8" width="100%" height="100%">
-                                                  <!-- Bookmark icon -->
+                                                  <!-- icons-->
+                                                  <i class="far fa-clone icon icon-post fa-2x yellow-text mt-2" data-toggle="tooltip" title="Post it to Homepage"></i>
+                                                  
                                                   <i class="fas fa-bookmark icon icon-bookmark fa-2x yellow-text mt-2"></i>
                                               </div>
                                               <!-- Middle Ribbon -->
@@ -116,6 +118,7 @@ $eventscheck->execute( );
                                                   <!-- Background image -->
                                                   <img src="../images/icons/events/event-back.png" width="100%" >
                                                   <!-- Bookmark icon -->
+                                                  <i class="far fa-clone icon icon-post fa-2x yellow-text mt-2" data-toggle="tooltip" title="Post it to Homepage"></i>
                                                   <i class="fas fa-bookmark icon icon-bookmark fa-2x yellow-text mt-2"></i>
                                               </div>
                                               <!-- Middle Ribbon -->
@@ -186,6 +189,7 @@ $eventscheck->execute( );
                                                     <!-- Background image -->
                                                     <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F91095599%2F353720857161%2F1%2Foriginal.20200205-194936?w=1080&auto=format%2Ccompress&q=75&sharp=10&rect=135%2C0%2C1520%2C760&s=d0e85e99d24e170ffdc215e6e22b67a8" width="100%" height="100%">
                                                     <!-- Bookmark icon -->
+                                                    <i class="far fa-clone icon icon-post fa-2x yellow-text mt-2" data-toggle="tooltip" title="Post it to Homepage"></i>
                                                     <i class="fas fa-bookmark icon icon-bookmark fa-2x yellow-text mt-2"></i>
                                                 </div>
                                                 <!-- Middle Ribbon -->
@@ -238,6 +242,7 @@ $eventscheck->execute( );
                                                     <!-- Background image -->
                                                     <img src="../images/icons/events/event-back.png" width="100%" >
                                                     <!-- Bookmark icon -->
+                                                    <i class="far fa-clone icon icon-post fa-2x yellow-text mt-2" data-toggle="tooltip" title="Post it to Homepage"></i>
                                                     <i class="fas fa-bookmark icon icon-bookmark fa-2x yellow-text mt-2"></i>
                                                 </div>
                                                 <!-- Middle Ribbon -->
@@ -292,7 +297,7 @@ $eventscheck->execute( );
                                                     <!-- Background image -->
                                                     <img src="../images/icons/events/project-back.png" width="100%" >
                                                     <!--  icons fas-full far-empty -->
-                                                    <i class="fas fa-star icon icon-heart fa-2x yellow-text mt-2"></i>
+                                                    <i class="far fa-clone icon icon-post fa-2x yellow-text mt-2" data-toggle="tooltip" title="Post it to Homepage"></i>
                                                     <i class="far fa-bookmark icon icon-bookmark fa-2x yellow-text mt-2"></i>
                                                 </div>
                                                 <!-- Middle Ribbon -->
@@ -334,19 +339,19 @@ $eventscheck->execute( );
                                           </div>
                                           <!-- Event-PROJECT Sample with default image ends-->
 
-                                          <!-- Event-TRAINING Sample with default image starts-->
+                                          <!-- Event-STUDY Sample with default image starts-->
                                           <div class="col-lg-4 col-md-12 col-xs-12">
                                             <div class="card testimonial-card" style="cursor: pointer;">
                                                 <div class="card-up">
                                                     <!-- Event Type -->
                                                     <div class="green darken-4 text-center" style="height:16px;">
-                                                        <p class="font-weight-bold white-text" style="font-size:12px">TRAINING</p>
+                                                        <p class="font-weight-bold white-text" style="font-size:12px">STUDY</p>
                                                     </div>
                                                     
                                                     <!-- Background image -->
-                                                    <img src="../images/icons/events/training-back.png" width="100%" >
+                                                    <img src="../images/icons/events/study-back.png" width="100%" >
                                                     <!--  icons fas-full far-empty -->
-                                                    <i class="fas fa-star icon icon-heart fa-2x yellow-text mt-2"></i>
+                                                    <i class="far fa-clone icon icon-post fa-2x yellow-text mt-2" data-toggle="tooltip" title="Post it to Homepage"></i>
                                                     <i class="far fa-bookmark icon icon-bookmark fa-2x yellow-text mt-2"></i>
                                                 </div>
                                                 <!-- Middle Ribbon -->
@@ -354,7 +359,7 @@ $eventscheck->execute( );
 
                                                 <!-- Circle Icon -->
                                                 <div class="avatar mx-auto white" style="z-index: 100;">
-                                                    <img src="../images/icons/events/training-icon.png" class="rounded-circle">
+                                                    <img src="../images/icons/events/study-icon.png" class="rounded-circle">
                                                 </div>
 
                                                 <!-- Card content -->
@@ -386,7 +391,7 @@ $eventscheck->execute( );
                                             </div>
                                             <br>
                                           </div>
-                                          <!-- Event-TRAINING Sample with default image ends-->
+                                          <!-- Event-STUDY Sample with default image ends-->
 
 
                                         <!-- Event-VACANCY Sample with default image starts-->
@@ -401,7 +406,7 @@ $eventscheck->execute( );
                                                     <!-- Background image -->
                                                     <img src="../images/icons/events/vacancy-back.png" width="100%" >
                                                     <!--  icons fas-full far-empty -->
-                                                    
+                                                    <i class="fas fa-clone icon icon-post fa-2x yellow-text mt-2" data-toggle="tooltip" title="Posted to Homepage"></i>
                                                     <i class="far fa-bookmark icon icon-bookmark fa-2x yellow-text mt-2"></i>
                                                 </div>
                                                 <!-- Middle Ribbon -->
@@ -455,7 +460,7 @@ $eventscheck->execute( );
                                                     <!-- Background image -->
                                                     <img src="../images/icons/events/tool-back.png" width="100%" >
                                                     <!--  icons fas-full far-empty -->
-                                                    
+                                                    <i class="far fa-clone icon icon-post fa-2x yellow-text mt-2" data-toggle="tooltip" title="Post it to Homepage"></i>
                                                     <i class="far fa-bookmark icon icon-bookmark fa-2x yellow-text mt-2"></i>
                                                 </div>
                                                 <!-- Middle Ribbon -->

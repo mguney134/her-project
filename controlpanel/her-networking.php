@@ -453,17 +453,17 @@ $eventscheck->execute( );
                               </div>
                               <!-- Event-PROJECT Sample with default image ends-->
 
-                              <!-- Event-TRAINING Sample with default image starts-->
+                              <!-- Event-STUDY Sample with default image starts-->
                               <div class="col-lg-4 col-md-12 col-xs-12">
                                 <div class="card testimonial-card" style="cursor: pointer;">
                                     <div class="card-up">
                                         <!-- Event Type -->
                                         <div class="green darken-4 text-center" style="height:16px;">
-                                            <p class="font-weight-bold white-text" style="font-size:12px">TRAINING</p>
+                                            <p class="font-weight-bold white-text" style="font-size:12px">STUDY</p>
                                         </div>
                                         
                                         <!-- Background image -->
-                                        <img src="../images/icons/events/training-back.png" width="100%" >
+                                        <img src="../images/icons/events/study-back.png" width="100%" >
                                         <!--  icons fas-full far-empty -->
                                         <i class="fas fa-star icon icon-heart fa-2x yellow-text mt-2"></i>
                                         <i class="far fa-bookmark icon icon-bookmark fa-2x yellow-text mt-2"></i>
@@ -473,7 +473,7 @@ $eventscheck->execute( );
 
                                     <!-- Circle Icon -->
                                     <div class="avatar mx-auto white" style="z-index: 100;">
-                                        <img src="../images/icons/events/training-icon.png" class="rounded-circle">
+                                        <img src="../images/icons/events/study-icon.png" class="rounded-circle">
                                     </div>
 
                                     <!-- Card content -->
@@ -505,7 +505,7 @@ $eventscheck->execute( );
                                 </div>
                                 <br>
                               </div>
-                              <!-- Event-TRAINING Sample with default image ends-->
+                              <!-- Event-STUDY Sample with default image ends-->
 
 
                              <!-- Event-VACANCY Sample with default image starts-->

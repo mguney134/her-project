@@ -62,6 +62,10 @@
             hiddenSuffix: '__suffix',
             selectYears:30
         });
+        // Tooltips Initialization
+        $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+        });
     </script>
     
 

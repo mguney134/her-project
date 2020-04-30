@@ -12,7 +12,31 @@
   position: absolute;
 }
 
+.icon-star {
+  left: 15px;
+  /* Move pin1 50px left */
+  top: 15px;
+  /* Move pin1 100px down */
+}
+.icon-star {
+  left: 15px;
+  /* Move pin1 50px left */
+  top: 15px;
+  /* Move pin1 100px down */
+}
 .icon-heart {
+  left: 15px;
+  /* Move pin1 50px left */
+  top: 15px;
+  /* Move pin1 100px down */
+}
+.icon-heart {
+  left: 15px;
+  /* Move pin1 50px left */
+  top: 15px;
+  /* Move pin1 100px down */
+}
+.icon-post {
   left: 15px;
   /* Move pin1 50px left */
   top: 15px;
