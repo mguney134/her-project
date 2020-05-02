@@ -142,11 +142,10 @@
 
             </div>
           </div>
-          <div class="card profile-card mt-4">
-
-
+          <!-- Search for Talent card starts -->
+          <!-- <div class="card profile-card mt-4">
             <div class="card-body pt-0 mt-0">
-              <!-- Name -->
+              
               <h4 class="mb-4 mt-4 font-weight-bold">
                 <strong>Matched Talents</strong>
               </h4>
@@ -158,10 +157,7 @@
                     Search for talents
                   </h5>
                 </div>
-
-
               </div>
-
               <div class="row mx-4">
                 <div class="input-group md-form form-sm form-1 pl-0">
                   <div class="input-group-prepend">
@@ -172,12 +168,9 @@
                 </div>
 
               </div>
-
-
-
-
             </div>
-          </div>
+          </div> -->
+          <!-- Search for Talent card ends -->
         </div>
         <!-- Profile Ends -->
 
@@ -196,7 +189,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" data-toggle="tab" href="#panel333" role="tab">
-                <i class="fas fa-calendar-alt pr-2"></i>Event List</a>
+                <i class="fas fa-search pr-2"></i>Search</a>
             </li>
           </ul>
 
@@ -494,272 +487,23 @@
             <div class="tab-pane fade in show" id="panel222" role="tabpanel">
               <div class="container py-5 z-depth-1 ">
                 <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
-                  <h3 class="font-weight-bold">
-                    Create an Event
-                  </h3>
-                  <hr />
-
-                  <section class="p-md-3 mx-md-5 text-lg-left">
-                    <h5 class="text-center mb-5 pb-3">You can create and share 5 different kind of EVENTS here for
-                      supporting any kind of the target group (HER, Mentor, Employer, Organisation -GO, NGO, Academia-)
-                    </h5>
-                    <div class="row text-center d-flex justify-content-center">
-                      <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
-                        <img src="../images/icons/events/event-icon.png" width="80px">
-                        <h4 class="font-weight-bold mb-4">Event</h4>
-                        <p class="text-muted px-2 mb-lg-0">
-                          A supporting event on a specific date like job fair, matchmaking event, conference, workshop,
-                          etc.
-                        </p>
-                      </div>
-                      <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
-                        <img src="../images/icons/events/project-icon.png" width="80px">
-                        <h4 class="font-weight-bold mb-4">Project</h4>
-                        <p class="text-muted px-2 mb-lg-0">
-                          A project supporting a target group during a time frame like mentoring, buddying, coaching,
-                          etc.
-                        </p>
-                      </div>
-                      <div class="col-lg-4 col-md-6 mb-md-0 mb-5">
-                        <img src="../images/icons/events/study-icon.png" width="80px">
-                        <h4 class="font-weight-bold mb-4">Training</h4>
-                        <p class="text-muted px-2 mb-md-0">
-                          A training, learning or academic programme like language course, vocational training, online
-                          course, academic training, etc.
-                        </p>
-                      </div>
-                      <div class="col-lg-4 col-md-6 mb-md-0 mb-5">
-                        <img src="../images/icons/events/vacancy-icon.png" width="80px">
-                        <h4 class="font-weight-bold mb-4">Vacancy</h4>
-                        <p class="text-muted px-2 mb-md-0">
-                          A specific job vacancy, vacancy websites, company vacancy webpage links, etc.
-                        </p>
-                      </div>
-                      <div class="col-lg-4 col-md-6 mb-md-0 mb-5">
-                        <img src="../images/icons/events/tool-icon.png" width="80px">
-                        <h4 class="font-weight-bold mb-4">Tool</h4>
-                        <p class="text-muted px-2 mb-md-0">
-                          A supporting tool like handbook, manual, digital platform, survey, etc.
-                        </p>
-                      </div>
-                    </div>
-                  </section>
-
-
-
-
-                </section>
-
-                <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
-
-                  <hr />
-                  <form action="../settings/action.php" method="POST" enctype="multipart/form-data"
-                    data-parsley-validate>
-                    <div class="form-row">
-                      <div class="col">
-                        <h5 class="pb-2">You are creating a/an</h5>
-                      </div>
-                      <div class="col select-outline Employer">
-                        <?php
-                                    //Get all event type data
-                                    $typecheck=$db->prepare("SELECT * FROM eventstype");
-                                    $typecheck->execute( );
-
-                                    //Count total number of rows
-                                    $rowCount = $typecheck->rowCount();
-                                    ?>
-                        <select class="mdb-select md-form md-outline Employer my-2" name="type" id="typeEvent">
-                          <option disabled selected></option>
-                          <?php
-                                        if($rowCount > 0){
-                                            while($typeinfo=$typecheck->fetch(PDO::FETCH_ASSOC)){
-                                                echo '<option value="'.$typeinfo['type_id'].'">'.$typeinfo['type_name'].'</option>';
-                                            }
-                                        }else{
-                                            echo '<option value="">Type not available</option>';
-                                        }
-                                        ?>
-                        </select>
-                        <label for="typeEvent">Type of Event</label>
-                      </div>
-                    </div>
-                    <div class="form-row">
-                      <div class="col select-outline Employer">
-                        <select class="mdb-select md-form md-outline Employer my-2" name="info" id="group">
-                          <option disabled selected></option>
-                          <optgroup class="text-primary" label="Event / Project">
-                            <option value="Mentoring">Mentoring</option>
-                            <option value="Job Coaching">Job Coaching</option>
-                            <option value="Job matching/ Job fair">Job matching/ Job
-                              fair</option>
-                            <option value="Orientation">Orientation</option>
-                            <option value="Information">Information</option>
-                            <option value="Digital">Digital</option>
-                          </optgroup>
-                          <optgroup label="Training / Study">
-                            <option value="Language (NL)">Language (NL)</option>
-                            <option value="Vocational training">Vocational training
-                            </option>
-                            <option value="High school bachelor">High school
-                              bachelor</option>
-                            <option value="University bachelor">University bachelor
-                            </option>
-                            <option value="Master / MaNaMa">Master / MaNaMa</option>
-                            <option value="Preparation program">Preparation program
-                            </option>
-                          </optgroup>
-                          <optgroup label="Vacancies">
-                            <option value="Job">Job</option>
-                            <option value="Internship">Internship</option>
-                            <option value="Volunteer Job">Volunteer Job</option>
-                          </optgroup>
-                          <optgroup label="Tool">
-                            <option value="Digital platform">Digital platform
-                            </option>
-                            <option value="Manual">Manual</option>
-                            <option value="Checklist">Checklist</option>
-                            <option value="Application">Application</option>
-                          </optgroup>
-                        </select>
-                        <label for="group">Description of Event</label>
-                      </div>
-                    </div>
-                    <div class="form-row">
-                      <div class="col">
-                        <!-- First name -->
-                        <div class="md-form md-outline Employer my-2">
-                          <input type="text" id="event-title" class="form-control" name="title" />
-                          <label for="event-title">Title</label>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <!-- Last name -->
-                        <div class="md-form md-outline Employer my-2">
-                          <input type="text" id="Organizer(s)" class="form-control" name="organizer" />
-                          <label for="Organizer(s)">Organizer(s)</label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-row">
-                      <div class="md-form md-outline Employer my-2 col">
-                        <div class="file-field">
-                          <div class="btn btn-purple btn-sm float-left">
-                            <span>Choose image</span>
-                            <input type="file" name="img_link">
-                          </div>
-                          <div class="file-path-wrapper">
-                            <input class="file-path validate" type="text" placeholder="Upload your cover image">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-row">
-                      <div class="col select-outline Employer">
-                        <select class="mdb-select md-form md-outline Employer my-2" id="sec11" multiple name="sector">
-
-                          <?php
-                                    $sectorcheck=$db->prepare("SELECT sectors_name FROM sectors");
-                                    $sectorcheck->execute();
-
-                                    while($sectorinfo=$sectorcheck->fetch(PDO::FETCH_ASSOC)) { ?>
-
-                          <option value="<?php echo $sectorinfo['sectors_name'] ?>">
-                            <?php echo $sectorinfo['sectors_name'] ?></option>
-
-                          <?php } ?>
-
-                        </select>
-                        <label for="sec11">Sector</label>
-                        <button class="btn-save btn btn-purple btn-sm">Save</button>
-                      </div>
-                    </div>
-                    <div class="form-row">
-                      <div class="col">
-
-                        <div class="md-form md-outline Employer my-2">
-                          <input type="text" id="link" class="form-control" name="link" />
-                          <label for="link">Insert Link</label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row my-2">
-                      <div class="md-form col-md-6">
-                        <input placeholder="Selected date" type="text" id="from" class="form-control datepicker"
-                          name="start_date">
-                        <label for="from" id="fromDate">From</label>
-                      </div>
-                      <div class="md-form col-md-6">
-                        <input placeholder="Selected date" type="text" id="to" class="form-control datepicker"
-                          name="end_date">
-                        <label for="to" id="toDate">To</label>
-                      </div>
-                    </div>
-                    <div class="form-row">
-                      <div class="col select-outline">
-                        <select class="mdb-select md-form md-outline Employer my-2" id="tar1" multiple
-                          name="target_group">
-                          <option disabled selected></option>
-                          <option value="Refugees">Refugees</option>
-                          <option value="Job seekers">Job seekers</option>
-                          <option value="Employers">Employers</option>
-                          <option value="Mentors">Mentors</option>
-                          <option value="Study seekers">Study seekers</option>
-                          <option value="Government Organizations">Government Organizations</option>
-                          <option value="NGO / nonprofit">NGO / nonprofit</option>
-                          <option value="Academia / Education">Academia / Education</option>
-                          <option value="All">All</option>
-                          <option value="Migrants ">Migrants</option>
-
-                        </select>
-                        <label for="tar1">Target Group</label>
-                        <button class="btn-save btn btn-purple btn-sm">Save</button>
-                      </div>
-                      <div class="col">
-
-                        <div class="md-form md-outline Employer my-2">
-                          <input type="text" id="link" class="form-control" name="link" />
-                          <label for="link">Insert Link</label>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="row text-right">
-                      <input type="text" id="link" class="form-control" name="mentor_id"
-                        value="<?php echo $mentorinfo['mentor_id'] ?>" hidden="" />
-
-
-                      <input class="btn btn-purple" type="submit" name="eventadd" value="Create">
-
-
-
-                    </div>
-                  </form>
-                </section>
-              </div>
-            </div>
-            <!-- Panel 222-Networking Starts-->
-
-
-            <!-- Panel 333-Event List Starts-->
-            <div class="tab-pane fade in show" id="panel333" role="tabpanel">
-              <div class="container py-5 z-depth-1">
-                <!--Section: Content-->
-                <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
-                  <h3 class="font-weight-bold">Incoming Events</h3>
-                  <hr>
-                  <!-- event  TABS starts -->
                   <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item">
-                      <a class="nav-link active" id="saved-tab" data-toggle="tab" href="#saved" role="tab">Saved</a>
+                      <a class="nav-link active Employer" id="saved-tab" data-toggle="tab" href="#saved"
+                        role="tab">Saved</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item Employer">
                       <a class="nav-link" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="contact"
                         aria-selected="false">All</a>
+                    </li>
+                    <li class="nav-item Employer">
+                      <a class="nav-link" id="all-tab" data-toggle="tab" href="#create" role="tab"
+                        aria-controls="contact" aria-selected="false">Create</a>
                     </li>
                   </ul>
 
                   <div class="tab-content" id="myTabContent">
-                    <!-- SAVED EVENTS STARTS-->
+                    <!-- SAVED SVEPT POSTS STARTS-->
                     <div class="tab-pane fade show active" id="saved" role="tabpanel">
                       <div class="row">
                         <!-- Event-EVENT Sample with given image starts-->
@@ -775,8 +519,7 @@
                                 src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F91095599%2F353720857161%2F1%2Foriginal.20200205-194936?w=1080&auto=format%2Ccompress&q=75&sharp=10&rect=135%2C0%2C1520%2C760&s=d0e85e99d24e170ffdc215e6e22b67a8"
                                 width="100%" height="100%">
                               <!-- icons-->
-                              <i class="far fa-clone icon icon-post fa-2x yellow-text mt-2" data-toggle="tooltip"
-                                title="Post it to Homepage"></i>
+
 
                               <i class="fas fa-bookmark icon icon-bookmark fa-2x yellow-text mt-2"></i>
                             </div>
@@ -795,7 +538,8 @@
                                 How To Identify Your Career Potential</h6>
                               <!-- Organized By -->
                               <!-- Sector -->
-                              <p class="grey-text text-center mb-0">by MEERDERE DATA / Business</p>
+                              <p class="grey-text text-center mb-0">by MEERDERE DATA /
+                                Business</p>
                               <!-- External Link -->
                               <a
                                 href="https://www.eventbrite.be/e/how-to-identify-your-career-potential-english-class-tickets-90292726977"></a>
@@ -831,8 +575,7 @@
                               <!-- Background image -->
                               <img src="../images/icons/events/event-back.png" width="100%">
                               <!-- Bookmark icon -->
-                              <i class="far fa-clone icon icon-post fa-2x yellow-text mt-2" data-toggle="tooltip"
-                                title="Post it to Homepage"></i>
+
                               <i class="fas fa-bookmark icon icon-bookmark fa-2x yellow-text mt-2"></i>
                             </div>
                             <!-- Middle Ribbon -->
@@ -850,7 +593,8 @@
                                 How To Identify Your Career Potential</h6>
                               <!-- Organized By -->
                               <!-- Sector -->
-                              <p class="grey-text text-center mb-0">by MEERDERE DATA / Business</p>
+                              <p class="grey-text text-center mb-0">by MEERDERE DATA /
+                                Business</p>
                               <!-- External Link -->
                               <a
                                 href="https://www.eventbrite.be/e/how-to-identify-your-career-potential-english-class-tickets-90292726977"></a>
@@ -876,20 +620,20 @@
                         <!-- Event-EVENT Sample with default image ends-->
                       </div>
                     </div>
-                    <!-- SAVED EVENTS ENDS-->
+                    <!-- SAVED SVEPT POSTS  ENDS-->
 
 
 
-                    <!-- ALL EVENTS STARTS-->
+                    <!-- ALL SVEPT POSTS  STARTS-->
                     <div class="tab-pane fade" id="all" role="tabpanel">
                       <div class="row">
                         <!-- SEARCH IN ALL EVENTS STARTS-->
                         <div class="input-group md-form form-sm form-2 pl-0 mx-3 mb-4">
-                          <input class="form-control my-0 py-1 purple-border" type="text"
+                          <input class="form-control my-0 py-1 border-info" type="text"
                             placeholder="Search in all the events" aria-label="Search">
                           <div class="input-group-append">
-                            <span class="input-group-text purple lighten-3" id="basic-text1"><i
-                                class="fas fa-search text-grey" aria-hidden="true"></i></span>
+                            <span class="input-group-text teal accent-4" id="basic-text1"><i
+                                class="fas fa-search white-text" aria-hidden="true"></i></span>
                           </div>
                         </div>
                         <!-- SEARCH IN ALL EVENTS ENDS-->
@@ -907,8 +651,7 @@
                                 src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F91095599%2F353720857161%2F1%2Foriginal.20200205-194936?w=1080&auto=format%2Ccompress&q=75&sharp=10&rect=135%2C0%2C1520%2C760&s=d0e85e99d24e170ffdc215e6e22b67a8"
                                 width="100%" height="100%">
                               <!-- Bookmark icon -->
-                              <i class="far fa-clone icon icon-post fa-2x yellow-text mt-2" data-toggle="tooltip"
-                                title="Post it to Homepage"></i>
+
                               <i class="fas fa-bookmark icon icon-bookmark fa-2x yellow-text mt-2"></i>
                             </div>
                             <!-- Middle Ribbon -->
@@ -926,7 +669,8 @@
                                 How To Identify Your Career Potential</h6>
                               <!-- Organized By -->
                               <!-- Sector -->
-                              <p class="grey-text text-center mb-0">by MEERDERE DATA / Business</p>
+                              <p class="grey-text text-center mb-0">by MEERDERE DATA /
+                                Business</p>
                               <!-- External Link -->
                               <a
                                 href="https://www.eventbrite.be/e/how-to-identify-your-career-potential-english-class-tickets-90292726977"></a>
@@ -962,8 +706,7 @@
                               <!-- Background image -->
                               <img src="../images/icons/events/event-back.png" width="100%">
                               <!-- Bookmark icon -->
-                              <i class="far fa-clone icon icon-post fa-2x yellow-text mt-2" data-toggle="tooltip"
-                                title="Post it to Homepage"></i>
+
                               <i class="fas fa-bookmark icon icon-bookmark fa-2x yellow-text mt-2"></i>
                             </div>
                             <!-- Middle Ribbon -->
@@ -981,7 +724,8 @@
                                 How To Identify Your Career Potential</h6>
                               <!-- Organized By -->
                               <!-- Sector -->
-                              <p class="grey-text text-center mb-0">by MEERDERE DATA / Business</p>
+                              <p class="grey-text text-center mb-0">by MEERDERE DATA /
+                                Business</p>
                               <!-- External Link -->
                               <a
                                 href="https://www.eventbrite.be/e/how-to-identify-your-career-potential-english-class-tickets-90292726977"></a>
@@ -1019,8 +763,7 @@
                               <!-- Background image -->
                               <img src="../images/icons/events/project-back.png" width="100%">
                               <!--  icons fas-full far-empty -->
-                              <i class="far fa-clone icon icon-post fa-2x yellow-text mt-2" data-toggle="tooltip"
-                                title="Post it to Homepage"></i>
+
                               <i class="far fa-bookmark icon icon-bookmark fa-2x yellow-text mt-2"></i>
                             </div>
                             <!-- Middle Ribbon -->
@@ -1038,7 +781,8 @@
                                 How To Identify Your Career Potential</h6>
                               <!-- Organized By -->
                               <!-- Sector -->
-                              <p class="grey-text text-center mb-0">by MEERDERE DATA / Business</p>
+                              <p class="grey-text text-center mb-0">by MEERDERE DATA /
+                                Business</p>
                               <!-- External Link -->
                               <a
                                 href="https://www.eventbrite.be/e/how-to-identify-your-career-potential-english-class-tickets-90292726977"></a>
@@ -1075,8 +819,7 @@
                               <!-- Background image -->
                               <img src="../images/icons/events/study-back.png" width="100%">
                               <!--  icons fas-full far-empty -->
-                              <i class="far fa-clone icon icon-post fa-2x yellow-text mt-2" data-toggle="tooltip"
-                                title="Post it to Homepage"></i>
+
                               <i class="far fa-bookmark icon icon-bookmark fa-2x yellow-text mt-2"></i>
                             </div>
                             <!-- Middle Ribbon -->
@@ -1094,7 +837,8 @@
                                 How To Identify Your Career Potential</h6>
                               <!-- Organized By -->
                               <!-- Sector -->
-                              <p class="grey-text text-center mb-0">by MEERDERE DATA / Business</p>
+                              <p class="grey-text text-center mb-0">by MEERDERE DATA /
+                                Business</p>
                               <!-- External Link -->
                               <a
                                 href="https://www.eventbrite.be/e/how-to-identify-your-career-potential-english-class-tickets-90292726977"></a>
@@ -1132,8 +876,7 @@
                               <!-- Background image -->
                               <img src="../images/icons/events/vacancy-back.png" width="100%">
                               <!--  icons fas-full far-empty -->
-                              <i class="fas fa-clone icon icon-post fa-2x yellow-text mt-2" data-toggle="tooltip"
-                                title="Posted to Homepage"></i>
+
                               <i class="far fa-bookmark icon icon-bookmark fa-2x yellow-text mt-2"></i>
                             </div>
                             <!-- Middle Ribbon -->
@@ -1151,7 +894,8 @@
                                 How To Identify Your Career Potential</h6>
                               <!-- Organized By -->
                               <!-- Sector -->
-                              <p class="grey-text text-center mb-0">by MEERDERE DATA / Business</p>
+                              <p class="grey-text text-center mb-0">by MEERDERE DATA /
+                                Business</p>
                               <!-- External Link -->
                               <a
                                 href="https://www.eventbrite.be/e/how-to-identify-your-career-potential-english-class-tickets-90292726977"></a>
@@ -1188,8 +932,7 @@
                               <!-- Background image -->
                               <img src="../images/icons/events/tool-back.png" width="100%">
                               <!--  icons fas-full far-empty -->
-                              <i class="far fa-clone icon icon-post fa-2x yellow-text mt-2" data-toggle="tooltip"
-                                title="Post it to Homepage"></i>
+
                               <i class="far fa-bookmark icon icon-bookmark fa-2x yellow-text mt-2"></i>
                             </div>
                             <!-- Middle Ribbon -->
@@ -1207,7 +950,8 @@
                                 How To Identify Your Career Potential</h6>
                               <!-- Organized By -->
                               <!-- Sector -->
-                              <p class="grey-text text-center mb-0">by MEERDERE DATA / Business</p>
+                              <p class="grey-text text-center mb-0">by MEERDERE DATA /
+                                Business</p>
                               <!-- External Link -->
                               <a
                                 href="https://www.eventbrite.be/e/how-to-identify-your-career-potential-english-class-tickets-90292726977"></a>
@@ -1234,78 +978,283 @@
 
                       </div>
                     </div>
-                    <!-- ALL EVENTS ENDS-->
+                    <!-- ALL SVEPT POSTS  ENDS-->
+
+                    <!-- CREATE SVEPT POSTS  STARTS-->
+                    <div class="tab-pane fade" id="create" role="tabpanel">
+                      <section class="p-md-3 mx-md-5 text-lg-left">
+                        <h5 class="text-center mb-5 pb-3">You can create and share 5 different kind of S-V-E-P-T /
+                          networking post here for
+                          supporting any kind of the target group (HER, Mentor, Employer, Organisation -GO, NGO,
+                          Academia-)
+                        </h5>
+                        <div class="row text-center d-flex justify-content-center">
+                          <div class="col-lg-4 col-md-6 mb-md-0 mb-5">
+                            <img src="../images/icons/events/study-icon.png" width="80px">
+                            <h4 class="font-weight-bold mb-4">S-tudy</h4>
+                            <p class="text-muted px-2 mb-md-0">
+                              A study, learning or academic programme like language course, vocational training, online
+                              course, academic training, etc.
+                            </p>
+                          </div>
+                          <div class="col-lg-4 col-md-6 mb-md-0 mb-5">
+                            <img src="../images/icons/events/vacancy-icon.png" width="80px">
+                            <h4 class="font-weight-bold mb-4">V-acancy</h4>
+                            <p class="text-muted px-2 mb-md-0">
+                              A specific job vacancy, vacancy websites, company vacancy webpage links, etc.
+                            </p>
+                          </div>
+                          <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+                            <img src="../images/icons/events/event-icon.png" width="80px">
+                            <h4 class="font-weight-bold mb-4">E-vent</h4>
+                            <p class="text-muted px-2 mb-lg-0">
+                              A supporting event on a specific date like job fair, matchmaking event, conference,
+                              workshop,
+                              etc.
+                            </p>
+                          </div>
+                          <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+                            <img src="../images/icons/events/project-icon.png" width="80px">
+                            <h4 class="font-weight-bold mb-4">P-roject</h4>
+                            <p class="text-muted px-2 mb-lg-0">
+                              A project supporting a target group during a time frame like mentoring, buddying,
+                              coaching,
+                              etc.
+                            </p>
+                          </div>
 
 
+                          <div class="col-lg-4 col-md-6 mb-md-0 mb-5">
+                            <img src="../images/icons/events/tool-icon.png" width="80px">
+                            <h4 class="font-weight-bold mb-4">T-ool</h4>
+                            <p class="text-muted px-2 mb-md-0">
+                              A supporting tool like handbook, manual, digital platform, survey, etc.
+                            </p>
+                          </div>
+                        </div>
+                      </section>
 
-                  </div>
-                  <!-- event  TABS ends -->
-                  <div class="row">
+                      <form action="../settings/action.php" method="POST" enctype="multipart/form-data"
+                        data-parsley-validate>
+                        <div class="form-row">
+                          <div class="col">
+                            <h5 class="pb-2">You are creating a/an</h5>
+                          </div>
+                          <div class="col select-outline Employer">
+                            <?php
+                                    //Get all event type data
+                                    $typecheck=$db->prepare("SELECT * FROM eventstype");
+                                    $typecheck->execute( );
 
-                    <?php while($eventsinfo=$eventscheck->fetch(PDO::FETCH_ASSOC)) { ?>
-                    <div class="col-md-4" style="padding-bottom: 10px;">
-                      <div class="card">
+                                    //Count total number of rows
+                                    $rowCount = $typecheck->rowCount();
+                                    ?>
+                            <select class="mdb-select md-form md-outline Employer my-2" name="type" id="typeEvent">
+                              <option disabled selected></option>
+                              <?php
+                                        if($rowCount > 0){
+                                            while($typeinfo=$typecheck->fetch(PDO::FETCH_ASSOC)){
+                                                echo '<option value="'.$typeinfo['type_id'].'">'.$typeinfo['type_name'].'</option>';
+                                            }
+                                        }else{
+                                            echo '<option value="">Type not available</option>';
+                                        }
+                                        ?>
+                            </select>
+                            <label for="typeEvent">Type of Event</label>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="col select-outline Employer">
+                            <select class="mdb-select md-form md-outline Employer my-2" name="info" id="group">
+                              <option disabled selected></option>
+                              <optgroup class="text-primary" label="Event / Project">
+                                <option value="Mentoring">Mentoring</option>
+                                <option value="Job Coaching">Job Coaching</option>
+                                <option value="Job matching/ Job fair">Job matching/ Job
+                                  fair</option>
+                                <option value="Orientation">Orientation</option>
+                                <option value="Information">Information</option>
+                                <option value="Digital">Digital</option>
+                              </optgroup>
+                              <optgroup label="Training / Study">
+                                <option value="Language (NL)">Language (NL)</option>
+                                <option value="Vocational training">Vocational training
+                                </option>
+                                <option value="High school bachelor">High school
+                                  bachelor</option>
+                                <option value="University bachelor">University bachelor
+                                </option>
+                                <option value="Master / MaNaMa">Master / MaNaMa</option>
+                                <option value="Preparation program">Preparation program
+                                </option>
+                              </optgroup>
+                              <optgroup label="Vacancies">
+                                <option value="Job">Job</option>
+                                <option value="Internship">Internship</option>
+                                <option value="Volunteer Job">Volunteer Job</option>
+                              </optgroup>
+                              <optgroup label="Tool">
+                                <option value="Digital platform">Digital platform
+                                </option>
+                                <option value="Manual">Manual</option>
+                                <option value="Checklist">Checklist</option>
+                                <option value="Application">Application</option>
+                              </optgroup>
+                            </select>
+                            <label for="group">Description of Event</label>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="col">
+                            <!-- First name -->
+                            <div class="md-form md-outline Employer my-2">
+                              <input type="text" id="event-title" class="form-control" name="title" />
+                              <label for="event-title">Title</label>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <!-- Last name -->
+                            <div class="md-form md-outline Employer my-2">
+                              <input type="text" id="Organizer(s)" class="form-control" name="organizer" />
+                              <label for="Organizer(s)">Organizer(s)</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="md-form md-outline Employer my-2 col">
+                            <div class="file-field">
+                              <div class="btn btn-purple btn-sm float-left">
+                                <span>Choose image</span>
+                                <input type="file" name="img_link">
+                              </div>
+                              <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text" placeholder="Upload your cover image">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="col select-outline Employer">
+                            <select class="mdb-select md-form md-outline Employer my-2" id="sec11" multiple
+                              name="sector">
 
-                        <!-- Card image -->
-                        <div class="view overlay">
-                          <img class="card-img-top" src="<?php echo $eventsinfo['img_link'] ?>" alt="Card image cap">
-                          <a>
-                            <div class="mask rgba-white-slight"></div>
-                          </a>
+                              <?php
+                                    $sectorcheck=$db->prepare("SELECT sectors_name FROM sectors");
+                                    $sectorcheck->execute();
+
+                                    while($sectorinfo=$sectorcheck->fetch(PDO::FETCH_ASSOC)) { ?>
+
+                              <option value="<?php echo $sectorinfo['sectors_name'] ?>">
+                                <?php echo $sectorinfo['sectors_name'] ?></option>
+
+                              <?php } ?>
+
+                            </select>
+                            <label for="sec11">Sector</label>
+                            <button class="btn-save btn btn-purple btn-sm">Save</button>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="col">
+
+                            <div class="md-form md-outline Employer my-2">
+                              <input type="text" id="link" class="form-control" name="link" />
+                              <label for="link">Insert Link</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row my-2">
+                          <div class="md-form col-md-6">
+                            <input placeholder="Selected date" type="text" id="from" class="form-control datepicker"
+                              name="start_date">
+                            <label for="from" id="fromDate">From</label>
+                          </div>
+                          <div class="md-form col-md-6">
+                            <input placeholder="Selected date" type="text" id="to" class="form-control datepicker"
+                              name="end_date">
+                            <label for="to" id="toDate">To</label>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="col select-outline">
+                            <select class="mdb-select md-form md-outline Employer my-2" id="tar1" multiple
+                              name="target_group">
+                              <option disabled selected></option>
+                              <option value="Refugees">Refugees</option>
+                              <option value="Job seekers">Job seekers</option>
+                              <option value="Employers">Employers</option>
+                              <option value="Mentors">Mentors</option>
+                              <option value="Study seekers">Study seekers</option>
+                              <option value="Government Organizations">Government Organizations</option>
+                              <option value="NGO / nonprofit">NGO / nonprofit</option>
+                              <option value="Academia / Education">Academia / Education</option>
+                              <option value="All">All</option>
+                              <option value="Migrants ">Migrants</option>
+
+                            </select>
+                            <label for="tar1">Target Group</label>
+                            <button class="btn-save btn btn-purple btn-sm">Save</button>
+                          </div>
+                          <div class="col">
+
+                            <div class="md-form md-outline Employer my-2">
+                              <input type="text" id="link" class="form-control" name="link" />
+                              <label for="link">Insert Link</label>
+                            </div>
+                          </div>
                         </div>
 
-                        <!-- Button -->
-                        <a class="btn-floating btn-action ml-auto mr-4 mdb-color lighten-3"
-                          href="<?php echo $eventsinfo['link'] ?>"><i class="fas fa-chevron-right pl-1"></i></a>
-
-                        <!-- Card content -->
-                        <div class="card-body">
+                        <div class="row text-right">
+                          <input type="text" id="link" class="form-control" name="mentor_id"
+                            value="<?php echo $mentorinfo['mentor_id'] ?>" hidden="" />
 
 
-                          <p class="text-warning text-center"><?php echo $eventsinfo['type'] ?> |
-                            <?php echo $eventsinfo['info'] ?></p>
-                          <h6 class="font-weight-bold mt-1 mb-3" style="letter-spacing: 1px;">
-                            <?php echo $eventsinfo['title'] ?></h6>
-
-                          <p class="grey-text text-center"><?php echo $eventsinfo['organizer'] ?> /
-                            <?php echo $eventsinfo['sector'] ?></p>
+                          <input class="btn btn-purple" type="submit" name="eventadd" value="Create">
 
 
-                          <p class="text-warning text-center">Target Group : <?php echo $eventsinfo['target_group'] ?>
-                          </p>
 
                         </div>
-
-                        <!-- Card footer -->
-                        <div class="rounded-bottom mdb-color lighten-3 text-center pt-3">
-                          <ul class="list-unstyled list-inline font-small">
-
-                            <li class="list-inline-item pr-2 white-text"><i
-                                class="fas fa-calendar-alt pr-1"></i><?php echo $eventsinfo['start_date'] ?>-<?php echo $eventsinfo['end_date'] ?>
-                            </li>
-
-
-                            <li class="list-inline-item"><a href="#" class="white-text"><i
-                                  class="fas fa-map-marker-alt pr-1"> </i><?php echo $eventsinfo['location'] ?></a></li>
-                          </ul>
-                        </div>
-
-                      </div>
+                      </form>
                     </div>
+                    <!-- CREATE SVEPT POSTS  ENDS-->
 
-
-                    <?php } ?>
 
                   </div>
-                  <!-- Card -->
 
-                  <!-- Card -->
+                </section>
+
+
+              </div>
+            </div>
+            <!-- Panel 222-Networking Starts-->
+
+
+            <!-- Panel 333-SEARCH FOR TALENTS START-->
+            <div class="tab-pane fade in show" id="panel333" role="tabpanel">
+              <div class="container py-5 z-depth-1">
+                <!--Section: Content-->
+                <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
+                  <h3 class="font-weight-bold">Search for Talents</h3>
+                  <hr>
+                  <!-- SEARCH IN ALL EVENTS STARTS-->
+                  <div class="input-group md-form form-sm form-2 pl-0 mx-3 mb-4">
+                    <input class="form-control my-0 py-1 purple-border" type="text"
+                      placeholder="Search in all talents by Name" aria-label="Search">
+                    <div class="input-group-append">
+                      <span class="input-group-text purple lighten-3" id="basic-text1"><i
+                          class="fas fa-search text-grey" aria-hidden="true"></i></span>
+                    </div>
+                  </div>
+                  <!-- SEARCH IN ALL EVENTS ENDS-->
+
+
 
 
                 </section>
               </div>
             </div>
-            <!-- Panel 333-Event List Ends-->
+            <!-- Panel 333-SEARCH FOR TALENTS ENDS-->
           </div>
           <!-- Grid column -->
         </div>

@@ -1,3 +1,6 @@
+a {
+  color: #495057;
+}
 .md-form {
   margin-top: 0;
   margin-bottom: 0;
@@ -83,6 +86,9 @@ input::placeholder {
 }
 
 /* HER- Orange Start */
+.nav-tabs .nav-link.active.Her {
+  color: #ff8a65;
+}
 .md-form.md-outline.Her input[type="text"].valid {
   border-color: #ff8a65;
   box-shadow: inset 0 0 0 1px #ff8a65;
@@ -190,6 +196,9 @@ ul.stepper.Her .step.active:before {
 /* HER- Orange Ends */
 
 /* Mentor- Blue Starts */
+/* .nav-tabs .nav-link.active {
+  color: #007bff;
+} */
 .md-form.md-outline label.active {
   z-index: 5 !important;
 }
@@ -205,6 +214,9 @@ optgroup label {
 }
 
 /* Employer- Purple Start */
+.nav-tabs .nav-link.active .Employer {
+  color: #ba68c8;
+}
 .md-form.md-outline.Employer input[type="text"].valid {
   border-color: #ba68c8;
   box-shadow: inset 0 0 0 1px #ba68c8;
@@ -302,6 +314,10 @@ ul.stepper.Employer .step.active:before {
 /* Employer- Purple Ends */
 
 /* Org- Aqua Start */
+.nav-tabs .nav-link.active.Org {
+  color: #4dd0e0;
+}
+
 .md-form.md-outline.Org input[type="text"].valid {
   border-color: #4dd0e0;
   box-shadow: inset 0 0 0 1px #4dd0e0;
