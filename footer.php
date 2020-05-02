@@ -214,7 +214,7 @@
                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 text-dark">
 
                     <!-- Content -->
-                    <h6 class="text-uppercase font-weight-bold">All-in-one 4 HER</h6>
+                    <h6 class="text-uppercase font-weight-bold">All-in-one 4 HER / HOA</h6>
                     <hr class="primary-color accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                     <p>Fast-track Integration of Highly Educated Refugees(HER) into Labour market</p>
 
