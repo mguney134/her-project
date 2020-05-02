@@ -21,14 +21,14 @@
                         </div>
                         <div class="col-md-6 d-flex align-items-center">
                             <div>
-                                <h3 class="display-3 font-weight-bold white-text mb-0 pt-md-5 pt-5">All-in-one 4 HER/ HOA
+                                <h3 class="display-3 font-weight-bold white-text mb-0 pt-md-5 pt-5" >All-in-one 4 <br>HER / HOA
                                 </h3>
 
                                 <hr class="hr-light my-4 wow fadeInDown d-flex justify-content-start"
                                     data-wow-delay="0.4s">
 
                                 <h3 class="display-5 mt-2 mb-2 white-text pr-2"><span
-                                        style="background-color: rgba(255, 152, 0, 0.3); line-height: 1.6;">Fast-track Integration of Highly Educated Refugees (HER) & Other Language Speakers (HOA) into Flemish Labour Market</span></h3>
+                                        style="background-color: rgba(255, 152, 0, 0.3); line-height: 1.6;">Fast-track Integration of <br>Highly Educated Refugees (HER) &<br> Other Language Speakers (HOA) into Flemish Labour Market</span></h3>
 
                                 <button type="button" class="btn btn-orange btn-rounded mx-0" href=""
                                     data-toggle="modal" data-target="#modalSubscriptionForm">Sign Up</button>
@@ -85,7 +85,7 @@
                             <!-- Content -->
                             <div class="card-body text-center">
                                 <!-- Name -->
-                                <h4 class="card-title">I am a talent (HER/HOA)</h4>
+                                <h4 class="card-title">I am a talent <br>(HER / HOA)</h4>
 
                             </div>
                             <!-- Quotation -->
@@ -96,7 +96,7 @@
                                 </li>
                                 <li class="list-group-item">
                                     <div class="md-v-line"></div><i class="fas fa-check pr-1"></i> <span
-                                        class="listim">Find a FREE mentor or career coach</span>
+                                        class="listim">Find a FREE mentor or coach</span>
                                 </li>
                                 <li class="list-group-item">
                                     <div class="md-v-line"></div><i class="fas fa-check pr-1"></i><span
@@ -142,7 +142,7 @@
                             <div class="card-body text-center">
                                 <!-- Name -->
                                 <h4 class="card-title">I am a mentor</h4>
-
+                                <br>
                             </div>
                             <!-- Quotation -->
                             <ul class="list-group">
@@ -168,8 +168,8 @@
                                     <div class="md-v-line"></div><i class="fas fa-check pr-1"></i><span
                                         class="listim">Plan your mentoring sessions </span>
                                     <br>&nbsp
-                                    <br>&nbsp
-                                    <br>&nbsp
+                                    
+                                    
 
                                 </li>
 
@@ -202,6 +202,7 @@
                             <div class="card-body text-center">
                                 <!-- Name -->
                                 <h4 class="card-title">I am an employer</h4>
+                                <br>
 
                             </div>
                             <!-- Quotation -->
@@ -212,7 +213,7 @@
                                 </li>
                                 <li class="list-group-item">
                                     <div class="md-v-line"></div><i class="fas fa-check pr-1"></i><span
-                                        class="listim">Benefits of employing a HER/HOA</span>
+                                        class="listim">Employing a HER/HOA</span>
                                 </li>
                                 <li class="list-group-item">
                                     <div class="md-v-line"></div><i class="fas fa-check pr-1"></i><span
@@ -220,12 +221,14 @@
                                 </li>
                                 <li class="list-group-item">
                                     <div class="md-v-line"></div><i class="fas fa-check pr-1"></i><span
-                                        class="listim">Get access to a pool of international talents</span>
+                                        class="listim">Get access to a pool of talents</span>
                                 </li>
                                 <li class="list-group-item">
                                     <div class="md-v-line"></div><i class="fas fa-check pr-1"></i><span
-                                        class="listim">Have direct contact with the talents</span>
+                                        class="listim">Direct contact with the talents</span>
+                                        <br>&nbsp
                                 </li>
+                                
 
                             </ul>
 
