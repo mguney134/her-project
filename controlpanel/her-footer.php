@@ -490,7 +490,7 @@
                     <div class="mx-5 my-3">
                                 <div class="form-row">
                                     <div class="col select-outline">
-                                        <select class="mdb-select md-form md-outline Her my-2" id="studyseeker" name="study[]">
+                                        <select class="mdb-select md-form md-outline Her my-2" id="studyseeker" multiple name="study[]">
                                         <?php 
                                   $allStudies=array("Language", "Vocational Training", "Bachelor", "Master");
                                   if (isset($motivationinfo['study'])) {
@@ -520,12 +520,13 @@
                                   <?php } ?>
                                         </select>
                                         <label for="studyseeker">Study - (Studyseeker)</label>
+                                        <button class="btn-save btn btn-warning btn-sm">Save</button>
                                     </div>
                                 </div>
 
                                 <div class="form-row">
                                     <div class="col select-outline">
-                                        <select class="mdb-select md-form md-outline Her my-2" id="workseeker" name="work">
+                                        <select class="mdb-select md-form md-outline Her my-2" id="workseeker" multiple name="work">
                                         <?php 
                                   $allWork=array("Parttime", "Fulltime", "Volunteer", "Internship");
                                   if (isset($motivationinfo['work'])) {
@@ -556,6 +557,7 @@
                                   <?php } ?>
                                         </select>
                                         <label for="workseeker">Work - (jobseeker)</label>
+                                        <button class="btn-save btn btn-warning btn-sm">Save</button>
                                     </div>
 
                                 </div>

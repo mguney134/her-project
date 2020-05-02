@@ -149,16 +149,7 @@
                         <div class="mask rgba-blue-light"></div>
                     </a>
                 </div>
-
-                <!--Image-->
-                <div class="view overlay">
-                    <img src="images/logos/oostande.png" class="img-fluid" alt="">
-                    <a href="https://www.economischhuis.be/nl">
-                        <div class="mask rgba-blue-light"></div>
-                    </a>
-                </div>
-
-                <!--Image-->
+    <!--Image-->
                 <div class="view overlay">
                     <img src="images/logos/ucll.png" class="img-fluid" alt="">
                     <a href="https://www.ucll.be/">
@@ -176,6 +167,21 @@
 
                 <!--Image-->
                 <div class="view overlay">
+                    <img src="images/logos/hiva.png" class="img-fluid" alt="">
+                    <a href="https://hiva.kuleuven.be/en">
+                        <div class="mask rgba-blue-light"></div>
+                    </a>
+                </div>
+
+                <!--Image-->
+                <div class="view overlay">
+                    <img src="images/logos/oostande.png" class="img-fluid" alt="">
+                    <a href="https://www.economischhuis.be/nl">
+                        <div class="mask rgba-blue-light"></div>
+                    </a>
+                </div>
+                <!--Image-->
+                <div class="view overlay">
                     <img src="images/logos/turku.png" class="img-fluid" alt="">
                     <a href="http://www.tuas.fi/en/">
                         <div class="mask rgba-blue-light"></div>
@@ -190,13 +196,7 @@
                     </a>
                 </div>
 
-                <!--Image-->
-                <div class="view overlay">
-                    <img src="images/logos/hiva.png" class="img-fluid" alt="">
-                    <a href="https://hiva.kuleuven.be/en">
-                        <div class="mask rgba-blue-light"></div>
-                    </a>
-                </div>
+                
 
             </div>
             <!--row ends-->
