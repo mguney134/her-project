@@ -297,7 +297,7 @@ input:focus.Employer {
   color: #ba68c8;
 }
 ul.stepper.Employer .step.active:before {
-  background-color: #febb33;
+  background-color: #ba68c8;
 }
 /* Employer- Purple Ends */
 

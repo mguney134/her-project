@@ -48,7 +48,7 @@ include 'settings/connect-db.php';
                     <div class="media">
                         <div class="media-body">
                             <h2 class="h2-responsive">
-                                <strong>Sign-up as a Government Organization </strong>
+                                <strong>Sign-up as an Organization </strong>
                             </h2>
                         </div>
                         <img class="d-flex mr-3" src="./images/icons/organization.png" alt="Her Icon" />
@@ -105,7 +105,7 @@ include 'settings/connect-db.php';
                             <li class="step">
                                 <div class="step-title waves-effect waves-dark">Step 3 - Fill in your information</div>
                                 <div class="step-new-content">
-                                    <div class="form-row mb-2">
+                                    <div class="form-row mb-1">
                                    
                                         <div class="col">
                                             <div class="md-form md-outline Org">
@@ -122,7 +122,7 @@ include 'settings/connect-db.php';
                                         </div>
 
                                     </div>
-                                    <div class="form-row mb-2">
+                                    <div class="form-row mb-1">
                                    
                                         <div class="col">
                                             <div class="md-form md-outline Org">
@@ -130,6 +130,11 @@ include 'settings/connect-db.php';
                                                 <label for="position">Position</label>
                                             </div>
                                         </div>
+                                        
+                                    </div>
+                                    <div class="form-row mb-1">
+                                   
+                                        
                                         <div class="col">
                                        
                                             <div class="md-form md-outline Org">
@@ -137,8 +142,26 @@ include 'settings/connect-db.php';
                                                 <label for="organisation">Name of the Organization</label>
                                             </div>
                                         </div>
+                                        <div class="col select-outline Org">
+
+                                            <select class="mdb-select md-form md-outline Org"
+                                                id="org1">
+                                                <option value="" disabled selected></option>
+                                                <option value="Government organization">
+                                                    Government organization</option>
+
+                                                <option value="NGO / nonprofit">NGO / nonprofit
+                                                </option>
+                                                <option value="Academia / Education">Academia /
+                                                    Education
+                                                </option>
+
+                                            </select>
+                                            <label for="org1">Organization Type</label>
+
+                                        </div>
                                     </div>
-                                    <div class="form-row mb-2">
+                                    <div class="form-row mb-1">
                                         <div class="col select-outline Org">
                                             <select class="mdb-select md-form md-outline Org" name="town" id="region" searchable="Search here..">
                                                 <option disabled selected></option>
