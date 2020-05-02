@@ -213,7 +213,7 @@
                                 </li>
                                 <li class="list-group-item">
                                     <div class="md-v-line"></div><i class="fas fa-check pr-1"></i><span
-                                        class="listim">Employing a HER/HOA</span>
+                                        class="listim">Benefits of employing a HER/HOA</span>
                                 </li>
                                 <li class="list-group-item">
                                     <div class="md-v-line"></div><i class="fas fa-check pr-1"></i><span
@@ -226,7 +226,7 @@
                                 <li class="list-group-item">
                                     <div class="md-v-line"></div><i class="fas fa-check pr-1"></i><span
                                         class="listim">Direct contact with the talents</span>
-                                        <br>&nbsp
+                                        
                                 </li>
                                 
 
