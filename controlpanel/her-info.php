@@ -92,7 +92,7 @@
                                 <p class="text-right">Name Lastname</p>
                             </div>
                             <div class="col-9">
-                                <p class="border-bottom pb-1"><?php echo $herinfo['firstname']." ".$herinfo['lastname'] ?></p>
+                                <p class="border-bottom pb-1"><?php echo $herinfo['firstname']." ".$herinfo['lastname'] ?>&nbsp</p>
                             </div>
                         </div>
                         <div class="row my-2">
@@ -100,7 +100,7 @@
                                 <p class="text-right">Gender</p>
                             </div>
                             <div class="col-9">
-                                <p class="border-bottom pb-1"><?php echo $herinfo['gender'] ?></p>
+                                <p class="border-bottom pb-1"><?php echo $herinfo['gender'] ?>&nbsp</p>
                             </div>
                         </div>
                         <div class="row my-2">
@@ -108,7 +108,7 @@
                                 <p class="text-right">Year of Birth</p>
                             </div>
                             <div class="col-9">
-                                <p class="border-bottom pb-1"><?php echo $herinfo['birth'] ?></p>
+                                <p class="border-bottom pb-1"><?php echo $herinfo['birth'] ?>&nbsp</p>
                             </div>
                         </div>
                         <div class="row my-2">
@@ -116,7 +116,7 @@
                                 <p class="text-right">Country of Origin</p>
                             </div>
                             <div class="col-9">
-                                <p class="border-bottom pb-1"><?php echo $herinfo['country'] ?></p>
+                                <p class="border-bottom pb-1"><?php echo $herinfo['country'] ?>&nbsp</p>
                             </div>
                         </div>
                         <div class="row my-2">
@@ -124,7 +124,7 @@
                                 <p class="text-right">Legal Status</p>
                             </div>
                             <div class="col-9">
-                                <p class="border-bottom pb-1"><?php echo $herinfo['legalStatus'] ?></p>
+                                <p class="border-bottom pb-1"><?php echo $herinfo['legalStatus'] ?>&nbsp</p>
                             </div>
                         </div>
                         <div class="row my-2">
@@ -132,7 +132,7 @@
                                 <p class="text-right">Country of Highest Degree</p>
                             </div>
                             <div class="col-9">
-                                <p class="border-bottom pb-1"><?php echo $herinfo['degreeCountry'] ?></p>
+                                <p class="border-bottom pb-1"><?php echo $herinfo['degreeCountry'] ?>&nbsp</p>
                             </div>
                         </div>
                         <div class="row my-2">
@@ -140,7 +140,7 @@
                                 <p class="text-right">Resident City/Town</p>
                             </div>
                             <div class="col-9">
-                                <p class="border-bottom pb-1"><?php echo $herinfo['town'] ?></p>
+                                <p class="border-bottom pb-1"><?php echo $herinfo['town'] ?>&nbsp</p>
                             </div>
                         </div>
                         <div class="row my-2">
@@ -148,7 +148,7 @@
                                 <p class="text-right">E-mail</p>
                             </div>
                             <div class="col-9">
-                                <p class="border-bottom pb-1"><?php echo $_SESSION['email'] ?></p>
+                                <p class="border-bottom pb-1"><?php echo $_SESSION['email'] ?>&nbsp</p>
                             </div>
                         </div>
                         
