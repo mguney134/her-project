@@ -215,107 +215,173 @@
                             <div class="container py-5 z-depth-1">
                                 <!--Section: Content-->
                                 <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
-                                    <h3 class="font-weight-bold">Your Information</h3>
-                                    <hr />
-                                    <table class="table table-borderless text-left">
-                                        <thead>
-                                            <tr>
-                                                <th scope="row" class="text-right th-sm" style="width: 25%">
-                                                    Name Lastname
-                                                </th>
-                                                <th colspan="4" class="border-bottom th-lg">
-                                                    Saskia Sels
-                                                </th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row" class="text-right th-sm">Position</th>
-                                                <td colspan="4" class="border-bottom th-lg">
-                                                    Manager
-                                                </td>
-                                            </tr>
+                                    <div class="d-flex flex-row  justify-content-between">
+                                        <h3 class="font-weight-bold text-left">Your Information</h3>
+                                        <button type="button"
+                                            class="btn btn-sm btn-outline-info btn-rounded waves-effect"
+                                            data-toggle="modal" data-target="#changePassword">Change Password</button>
+                                    </div>
 
-                                            <tr>
-                                                <th scope="row" class="text-right th-sm">
-                                                    Organization Type
-                                                </th>
-                                                <td colspan="4" class="border-bottom th-lg">
-                                                    NGO / nonprofit
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row" class="text-right">
-                                                    Organization Name
-                                                </th>
-                                                <td colspan="4" class="border-bottom th-lg">
-                                                    Red Cross
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row" class="text-right th-sm">
-                                                    Region / City
-                                                </th>
-                                                <td colspan="4" class="border-bottom th-lg">
-                                                    Antwerpen
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row" class="text-right th-sm">
-                                                    Email
-                                                </th>
-                                                <td colspan="4" class="border-bottom th-lg">
-                                                    sas.sels@gmail.com
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row" class="text-right th-sm">
-                                                    Are you employer?
-                                                </th>
-                                                <td colspan="4" class="border-bottom th-lg">
-                                                    Yes
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row" class="text-right th-sm">
-                                                    Communication
-                                                </th>
-                                                <td colspan="4" class="border-bottom th-lg">
-                                                    ?
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row" class="text-right th-sm">
-                                                    Explanation
-                                                </th>
-                                                <td colspan="4" class="border-bottom th-lg">
-                                                    Red Cross is looking for doctors bla bla
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row" class="text-right th-sm">Link</th>
-                                                <td colspan="4" class="border-bottom th-lg">
-                                                    www.rodekruis.be
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row" class="text-right th-sm">
-                                                    Photo - Logo
-                                                </th>
-                                                <td colspan="4" class="border-bottom th-lg">
-                                                    <img
-                                                        src="https://storage.googleapis.com/stateless-www-nuus-be/2019/11/rode-kruis.png" />
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                    <!--Change Password Modal starts-->
+                                    <div class="modal fade" id="changePassword" tabindex="-1" role="dialog"
+                                        aria-labelledby="changePassword" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title text-info" id="exampleModalLabel">
+                                                        Change
+                                                        your password</h5>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="row px-1">
+                                                        <div class="col">
+                                                            <div class="md-form md-outline Org mb-1 mt-3">
+                                                                <input name="all_password" id="oldPassword"
+                                                                    type="password" class="form-control validate"
+                                                                    required>
+                                                                <label for="oldPassword">Old password</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row px-1">
+                                                        <div class="col">
+                                                            <div class="md-form md-outline Org  my-1">
+                                                                <input name="all_password" id="newPassword"
+                                                                    type="password" class="form-control validate"
+                                                                    required>
+                                                                <label for="newPassword">Create new password</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <div class="md-form md-outline Org  my-1">
+                                                                <input name="confirmpassword" id="conPass"
+                                                                    type="password" class="form-control" required>
+                                                                <label for="conPass">Confirm new password</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-sm btn-outline-info"
+                                                        data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-sm btn-info">Save
+                                                        changes</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Change Password Modal ends-->
+
+                                    <hr />
+                                    <div class="row my-2">
+                                        <div class="col-3">
+                                            <p class="text-right">Name Lastname</p>
+                                        </div>
+                                        <div class="col-9">
+                                            <p class="border-bottom pb-1">
+                                                &nbsp
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row my-2">
+                                        <div class="col-3">
+                                            <p class="text-right">Position</p>
+                                        </div>
+                                        <div class="col-9">
+                                            <p class="border-bottom pb-1">
+                                                &nbsp
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row my-2">
+                                        <div class="col-3">
+                                            <p class="text-right">Organization Type</p>
+                                        </div>
+                                        <div class="col-9">
+                                            <p class="border-bottom pb-1">&nbsp</p>
+                                        </div>
+                                    </div>
+                                    <div class="row my-2">
+                                        <div class="col-3">
+                                            <p class="text-right">Organization Name</p>
+                                        </div>
+                                        <div class="col-9">
+                                            <p class="border-bottom pb-1">&nbsp</p>
+                                        </div>
+                                    </div>
+                                    <div class="row my-2">
+                                        <div class="col-3">
+                                            <p class="text-right">Region / City</p>
+                                        </div>
+                                        <div class="col-9">
+                                            <p class="border-bottom pb-1">&nbsp</p>
+                                        </div>
+                                    </div>
+                                    <div class="row my-2">
+                                        <div class="col-3">
+                                            <p class="text-right">Are you an Employer?</p>
+                                        </div>
+                                        <div class="col-9">
+                                            <p class="border-bottom pb-1">&nbsp</p>
+                                        </div>
+                                    </div>
+                                    <div class="row my-2">
+                                        <div class="col-3">
+                                            <p class="text-right">Communication</p>
+                                        </div>
+                                        <div class="col-9">
+                                            <p class="border-bottom pb-1">&nbsp</p>
+                                        </div>
+                                    </div>
+                                    <div class="row my-2">
+                                        <div class="col-3">
+                                            <p class="text-right">Explanation</p>
+                                        </div>
+                                        <div class="col-9">
+                                            <p class="border-bottom pb-1">&nbsp</p>
+                                        </div>
+                                    </div>
+                                    <div class="row my-2">
+                                        <div class="col-3">
+                                            <p class="text-right">Link</p>
+                                        </div>
+                                        <div class="col-9">
+                                            <p class="border-bottom pb-1">&nbsp
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row my-2">
+                                        <div class="col-3">
+                                            <p class="text-right">Logo</p>
+                                        </div>
+                                        <div class="col-9">
+                                            <p class="border-bottom pb-1">&nbsp</p>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="row my-2">
+                                        <div class="col-3">
+                                            <p class="text-right">E-mail</p>
+                                        </div>
+                                        <div class="col-9">
+                                            <p class="border-bottom pb-1"><?php echo $_SESSION['email'] ?>&nbsp</p>
+                                        </div>
+                                    </div>
+
                                     <div class="text-right">
-                                        <button class="btn btn-info text-right" type="button" data-toggle="modal"
+                                        <button class="btn btn-md btn-info text-right" type="button" data-toggle="modal"
                                             data-target="#editInfo">
                                             <i class="fas fa-user-edit mr-1"></i> Edit
                                         </button>
                                     </div>
-                                    <!-- Modal -->
                                     <div class="modal fade" id="editInfo" tabindex="-1" role="dialog"
                                         aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
@@ -585,7 +651,6 @@
                                         </div>
                                     </div>
                                 </section>
-                                <!--Section: Content-->
                             </div>
                             <!-- Nav tabs -->
                         </div>
