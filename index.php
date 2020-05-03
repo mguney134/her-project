@@ -21,15 +21,14 @@
                         </div>
                         <div class="col-md-6 d-flex align-items-center">
                             <div>
-                                <h3 class="display-3 font-weight-bold white-text mb-0 pt-md-5 pt-5">All-in-one 4 HER
+                                <h3 class="display-3 font-weight-bold white-text mb-0 pt-md-5 pt-5" >All-in-one 4 <br>HER / HOA
                                 </h3>
 
                                 <hr class="hr-light my-4 wow fadeInDown d-flex justify-content-start"
                                     data-wow-delay="0.4s">
 
                                 <h3 class="display-5 mt-2 mb-2 white-text pr-2"><span
-                                        style="background-color: rgba(255, 152, 0, 0.3); line-height: 1.6;">Integration
-                                        of Highly Educated Refugees (HER) into Flemish Labour Market</span></h3>
+                                        style="background-color: rgba(255, 152, 0, 0.3); line-height: 1.6;">Fast-track Integration of <br>Highly Educated Refugees (HER) &<br> Other Language Speakers (HOA) into Flemish Labour Market</span></h3>
 
                                 <button type="button" class="btn btn-orange btn-rounded mx-0" href=""
                                     data-toggle="modal" data-target="#modalSubscriptionForm">Sign Up</button>
@@ -86,7 +85,7 @@
                             <!-- Content -->
                             <div class="card-body text-center">
                                 <!-- Name -->
-                                <h4 class="card-title">I am a talent (HER)</h4>
+                                <h4 class="card-title">I am a talent <br>(HER / HOA)</h4>
 
                             </div>
                             <!-- Quotation -->
@@ -97,20 +96,22 @@
                                 </li>
                                 <li class="list-group-item">
                                     <div class="md-v-line"></div><i class="fas fa-check pr-1"></i> <span
-                                        class="listim">Find a FREE mentor or career coach</span>
+                                        class="listim">Find a FREE mentor or coach</span>
                                 </li>
                                 <li class="list-group-item">
                                     <div class="md-v-line"></div><i class="fas fa-check pr-1"></i><span
-                                        class="listim">Create your CV and motivation letter</span>
+                                        class="listim">Create your CV</span>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="md-v-line"></div><i class="fas fa-check pr-1"></i><span
+                                        class="listim">Widen your network</span>
                                 </li>
                                 <li class="list-group-item">
                                     <div class="md-v-line"></div><i class="fas fa-check pr-1"></i><span
                                         class="listim">Find available job vacancies</span>
+                                        <br>&nbsp
                                 </li>
-                                <li class="list-group-item">
-                                    <div class="md-v-line"></div><i class="fas fa-check pr-1"></i><span
-                                        class="listim">Get in contact with employers</span>
-                                </li>
+                               
 
                             </ul>
 
@@ -141,7 +142,7 @@
                             <div class="card-body text-center">
                                 <!-- Name -->
                                 <h4 class="card-title">I am a mentor</h4>
-
+                                <br>
                             </div>
                             <!-- Quotation -->
                             <ul class="list-group">
@@ -154,19 +155,21 @@
                                     <div class="md-v-line"></div><i class="fas fa-check pr-1"></i><span
                                         class="listim">Get FREE training</span>
                                 </li>
-                                <li class="list-group-item">
-                                    <div class="md-v-line"></div><i class="fas fa-check pr-1"></i><span
-                                        class="listim">Access to online training</span>
-                                </li>
+                                
                                 <li class="list-group-item">
                                     <div class="md-v-line"></div><i class="fas fa-check pr-1"></i><span
                                         class="listim">Be a certified mentor2work</span>
                                 </li>
                                 <li class="list-group-item">
                                     <div class="md-v-line"></div><i class="fas fa-check pr-1"></i><span
-                                        class="listim">Assist HERs to find a job</span>
+                                        class="listim">Assist a HER/HOA to find a job</span>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="md-v-line"></div><i class="fas fa-check pr-1"></i><span
+                                        class="listim">Plan your mentoring sessions </span>
                                     <br>&nbsp
-                                    <br>&nbsp
+                                    
+                                    
 
                                 </li>
 
@@ -199,26 +202,33 @@
                             <div class="card-body text-center">
                                 <!-- Name -->
                                 <h4 class="card-title">I am an employer</h4>
+                                <br>
 
                             </div>
                             <!-- Quotation -->
                             <ul class="list-group">
                                 <li class="list-group-item">
                                     <div class="md-v-line"></div><i class="fas fa-check pr-1"></i><span
-                                        class="listim">Get informed with HOW TO EMPLOY HERs</span>
+                                        class="listim">HOW TO EMPLOY a HER/HOA</span>
                                 </li>
                                 <li class="list-group-item">
                                     <div class="md-v-line"></div><i class="fas fa-check pr-1"></i><span
-                                        class="listim">Get informed about benefits of employing HERs</span>
+                                        class="listim">Benefits of employing a HER/HOA</span>
                                 </li>
                                 <li class="list-group-item">
                                     <div class="md-v-line"></div><i class="fas fa-check pr-1"></i><span
-                                        class="listim">Get access to a pool of international talents</span>
+                                        class="listim">Share your job vacancies</span>
                                 </li>
                                 <li class="list-group-item">
                                     <div class="md-v-line"></div><i class="fas fa-check pr-1"></i><span
-                                        class="listim">Have direct contact with the talents</span>
+                                        class="listim">Get access to a pool of talents</span>
                                 </li>
+                                <li class="list-group-item">
+                                    <div class="md-v-line"></div><i class="fas fa-check pr-1"></i><span
+                                        class="listim">Direct contact with the talents</span>
+                                        
+                                </li>
+                                
 
                             </ul>
 
@@ -254,21 +264,26 @@
                             <ul class="list-group">
                                 <li class="list-group-item">
                                     <div class="md-v-line"></div><i class="fas fa-check pr-1"></i><span
-                                        class="listim">Access to information</span>
+                                        class="listim">Access to data/information</span>
                                 </li>
                                 <li class="list-group-item">
                                     <div class="md-v-line"></div><i class="fas fa-check pr-1"></i><span
-                                        class="listim">Access to data/ statistics</span>
+                                        class="listim">Reach out to your target group</span>
                                 </li>
                                 <li class="list-group-item">
                                     <div class="md-v-line"></div><i class="fas fa-check pr-1"></i><span
-                                        class="listim">Enter/ edit info of the target group</span>
+                                        class="listim">Follow your target group </span>
                                 </li>
                                 <li class="list-group-item">
                                     <div class="md-v-line"></div><i class="fas fa-check pr-1"></i><span
-                                        class="listim">Follow your target group</span>
+                                        class="listim">Share your posts</span>
+                                </li>
+                                
+                                <li class="list-group-item">
+                                    <div class="md-v-line"></div><i class="fas fa-check pr-1"></i><span
+                                        class="listim">Widen your network</span>
                                     <br>&nbsp
-                                    <br>&nbsp
+                                 
                                 </li>
 
                             </ul>
@@ -297,9 +312,7 @@
                     <h2 class="font-weight-bold">Register & Access to Your Platform!</h2>
                     <br>
 
-                    <h5><i class="fas fa-quote-left"></i>&nbsp;&nbsp;Better and faster integrating highly educated
-                        refugees into the Flemish labour market by a platform bringing all relevant actors and
-                        initiatives together&nbsp;&nbsp;<i class="fas fa-quote-right"></i></h5>
+                    <h5><i class="fas fa-quote-left"></i>&nbsp;&nbsp;Better and faster integrating Highly Educated Refugees (HER) & other language speakers (HOA) into the Flemish labour market by a platform bringing all relevant actors and initiatives together  &nbsp;&nbsp;<i class="fas fa-quote-right"></i></h5>
 
                     <a data-toggle="modal" data-target="#modalSubscriptionForm" href=""
                         class="btn btn-outline-white btn-md waves-effect" role="button"><i
@@ -313,6 +326,89 @@
 
         </section>
         <!-- CALL TO ACTION- REGISTER ENDS-->
+
+        <!-- TYPE OF EVENTS STARTS-->
+        <div class="container my-5 p-5">
+
+
+            <!--Section: Content-->
+            <section class="text-center dark-grey-text">
+
+                <!-- Section heading -->
+                <h2 class="font-weight-bold mb-4 pb-2">Widen your network by SVEEPING on our platform!</h2>
+                <!-- Section description -->
+                <p class="lead grey-text mx-auto mb-5">•	Create & share your S-V-E-P-T posts for all users
+•	See shared posts on the platform
+•	Our platform brings all matched posts to you
+•	Reach out to your target group
+</p>
+
+                <!-- Grid row -->
+                <div class="row text-center d-flex justify-content-center">
+
+                <!-- Grid column -->
+                <div class="col-md-4 mb-4">
+
+                    <img src="./images/icons/events/study-icon.png" alt="" width="120px">
+                    <h5 class="font-weight-bold mt-2">S-TUDY</h5>
+                    <p class="mb-4">Organisations</p>
+                    <p class="grey-text mb-md-0">Share your study programmes, vocational trainings, language courses, online courses on the platform and reach out to the target group.
+                    </p>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-4 mb-4">
+
+                    <img src="./images/icons/events/vacancy-icon.png" alt="" width="120px">
+                    <h5 class="font-weight-bold mt-2">V-ACANCY</h5>
+                    <p class="mb-4">Employers / Organisations</p>
+                    <p class="grey-text mb-md-0">Share your vacancy links, websites with the job seekers
+                    </p>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-4 mb-4">
+
+                     <img src="./images/icons/events/event-icon.png" alt="" width="120px">
+                    <h5 class="font-weight-bold mt-2">E-VENT</h5>
+                    <p class="mb-4">Organisations</p>
+                    <p class="grey-text mb-md-0">Promote your events like job fairs, matchmaking events, conferences, workshops, etc.
+                    </p>
+
+                </div>
+                <div class="col-md-4 mb-4">
+
+                    <img src="./images/icons/events/project-icon.png" alt="" width="120px">
+                    <h5 class="font-weight-bold mt-2">P-ROJECT</h5>
+                    <p class="mb-4">Organisations</p>
+                    <p class="grey-text mb-md-0">Reach out to your target group of your project like mentoring, buddying, coaching, etc.
+                    </p>
+
+                </div>
+                <div class="col-md-4 mb-4">
+
+                    <img src="./images/icons/events/tool-icon.png" alt="" width="120px">
+                    <h5 class="font-weight-bold mt-2">T-OOL </h5>
+                    <p class="mb-4">Organisations</p>
+                    <p class="grey-text mb-md-0">Share your supporting tools like a handbook, manual, digital platform, survey, etc.
+                    </p>
+
+                </div>
+                <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+
+            </section>
+            <!--Section: Content-->
+
+
+            </div>
+        <!-- TYPE OF EVENTS ENDS-->
 
 
         <!-- PUBLICATIONS STARTS-->
@@ -452,15 +548,7 @@
 
                     </p>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-md-0 mb-5">
-                    <i class="fas fa-briefcase fa-3x purple-text mb-4"></i>
-                    <h4 class="font-weight-bold mb-1">Place your job vacancies!</h4>
-                    <p class="font-weight-bold mb-4">Employers</p>
-                    <p class="text-white px-2 mb-md-0">
-                        Register to our platform and publish your available job vacancies.
-
-                    </p>
-                </div>
+                
             </div>
         </section>
         <!-- PILOT PRACTICES ENDS-->
@@ -471,6 +559,40 @@
             <h3 class="display-4 mb-4 pb-2">Events</h3>
             <!-- Grid row -->
             <div class="row">
+                <div class="col-lg-4 col-md-6 mb-md-0 mb-4">
+
+                    <!-- Featured image -->
+                    <div class="view overlay rounded z-depth-1 mb-4">
+                        <img class="img-fluid" src="./images/events/mentor-training.jpeg"
+                            alt="Sample image">
+                        <a>
+                            <div class="mask rgba-white-slight waves-effect waves-light"></div>
+                        </a>
+                        <div class="yellow accent-3">
+                            <span class="font-weight-bold" style="font-size: 12px;">POSTPONED</span>
+                        </div>
+
+                        <!-- Post title -->
+                        <h4 class="font-weight-bold mb-3 mt-3"><strong>Mentor Training</strong></h4>
+                        <a href="#!" class="deep-orange-text">
+                            <h6 class="font-weight-bold mb-2"><i
+                                    class="fas fa-map-marker-alt pr-2"></i>BtH, Zaventem, Belgium</h6>
+                        </a>
+                        <a href="#!" class="deep-orange-text">
+                            <h6 class="font-weight-bold mb-2"><i class="fas fa-calendar-alt pr-2"></i>15
+                                Mar 2020</h6>
+                        </a>
+
+                        <!-- Excerpt -->
+                        <p class="dark-grey-text mx-md-3">We train our volunteer mentors who will be
+                            part of testing our model and platform.</p>
+                        <!-- Read more button -->
+                     
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeIqzCvAY8NSvopT4PSoe-G4EGd70vvDWeFz_r9MyezqurXng/viewform"
+                            class="btn btn-info btn-sm btn-rounded"><i class="fas fa-clone left"></i>
+                            Register</a>
+                    </div>
+                </div>
 
                 <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
 
@@ -532,35 +654,7 @@
 
                 </div>
 
-                <!-- Grid column -->
-                <div class="col-lg-4 col-md-6 mb-0">
-
-                    <div class="view overlay rounded z-depth-1 mb-4">
-                        <img class="img-fluid" src="./images/events/ws-2.png" alt="Sample image">
-                        <a>
-                            <div class="mask rgba-white-slight waves-effect waves-light"></div>
-                        </a>
-
-                        <!-- Post title -->
-                        <h4 class="font-weight-bold mb-3 mt-3"><strong>Transnational Workshop - 1</strong></h4>
-                        <a href="#!" class="deep-orange-text">
-                            <h6 class="font-weight-bold mb-2"><i class="fas fa-map-marker-alt pr-2"></i>Oostende,
-                                Belgium</h6>
-                        </a>
-                        <a href="#!" class="deep-orange-text">
-                            <h6 class="font-weight-bold mb-2"><i class="fas fa-calendar-alt pr-2"></i>8-9 Oct 2019 </h6>
-                        </a>
-
-                        <!-- Excerpt -->
-                        <p class="dark-grey-text mx-md-3">1st transnational workshop is organised by Economischhuis
-                            Oostende with all transnational partners.</p>
-                        <!-- Read more button -->
-
-                    </div>
-
-                </div>
-                <!-- Grid column -->
-
+                
             </div>
             <!-- Grid row -->
 

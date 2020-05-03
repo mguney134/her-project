@@ -35,76 +35,126 @@
                 <div class="container py-5 z-depth-1">
                 <!--Section: Content-->
                     <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
-                        <h3 class="font-weight-bold">Your Information</h3>
-                        <hr />
-                        <table class="table table-borderless text-left">
-                            <thead>
-                                <tr>
-                                    <th scope="row" class="text-right th-sm" style="width: 25%">
-                                        Name Lastname
-                                    </th>
-                                    <th colspan="4" class="border-bottom th-lg">
-                                        <?php echo $herinfo['firstname']." ".$herinfo['lastname'] ?>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row" class="text-right th-sm">Gender</th>
-                                    <td colspan="4" class="border-bottom th-lg">
-                                        <?php echo $herinfo['gender'] ?>
-                                    </td>
-                                </tr>
+                        <div class="d-flex flex-row  justify-content-between">
+                            <h3 class="font-weight-bold text-left">Your Information</h3>
+                            <button type="button" class="btn btn-sm btn-outline-warning btn-rounded waves-effect" data-toggle="modal" data-target="#changePassword">Change Password</button>
+                        </div>
 
-                                <tr>
-                                    <th scope="row" class="text-right th-sm">
-                                        Year of Birth
-                                    </th>
-                                    <td colspan="4" class="border-bottom th-lg"><?php echo $herinfo['birth'] ?></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="text-right">
-                                        Country of Origin
-                                    </th>
-                                    <td colspan="4" class="border-bottom th-lg">
-                                        <?php echo $herinfo['country'] ?>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="text-right th-sm">
-                                        Legal Status
-                                    </th>
-                                    <td colspan="4" class="border-bottom th-lg">
-                                        <?php echo $herinfo['legalStatus'] ?>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="text-right th-sm">
-                                        Country of Highest Degree
-                                    </th>
-                                    <td colspan="4" class="border-bottom th-lg">
-                                         <?php echo $herinfo['degreeCountry'] ?>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="text-right th-sm">
-                                        Resident City/Town
-                                    </th>
-                                    <td colspan="4" class="border-bottom th-lg">
-                                        <?php echo $herinfo['town'] ?>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="text-right th-sm">Email</th>
-                                    <td colspan="4" class="border-bottom th-lg">
-                                        <?php echo $_SESSION['email'] ?>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <!--Change Password Modal starts-->
+                            <div class="modal fade" id="changePassword" tabindex="-1" role="dialog" aria-labelledby="changePassword"
+                                aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title deep-orange-text" id="exampleModalLabel">Change your password</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row px-1">
+                                                    <div class="col">
+                                                        <div class="md-form md-outline  Her mb-1 mt-3">
+                                                            <input name="all_password" id="oldPassword" type="password" class="form-control validate" required>
+                                                            <label for="oldPassword" >Old password</label>
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            
+                                                <div class="row px-1">
+                                                    <div class="col">
+                                                        <div class="md-form md-outline  Her my-1">
+                                                            <input name="all_password" id="newPassword" type="password" class="form-control validate" required>
+                                                            <label for="newPassword">Create new password</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="md-form md-outline  Her  my-1">
+                                                            <input name="confirmpassword" id="conPass" type="password" class="form-control" required>
+                                                            <label for="conPass" >Confirm new password</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-sm btn-secondary">Save changes</button>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Change Password Modal ends-->
+                      
+                        <hr />
+                        <div class="row my-2">
+                            <div class="col-3">
+                                <p class="text-right">Name Lastname</p>
+                            </div>
+                            <div class="col-9">
+                                <p class="border-bottom pb-1"><?php echo $herinfo['firstname']." ".$herinfo['lastname'] ?>&nbsp</p>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-3">
+                                <p class="text-right">Gender</p>
+                            </div>
+                            <div class="col-9">
+                                <p class="border-bottom pb-1"><?php echo $herinfo['gender'] ?>&nbsp</p>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-3">
+                                <p class="text-right">Year of Birth</p>
+                            </div>
+                            <div class="col-9">
+                                <p class="border-bottom pb-1"><?php echo $herinfo['birth'] ?>&nbsp</p>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-3">
+                                <p class="text-right">Country of Origin</p>
+                            </div>
+                            <div class="col-9">
+                                <p class="border-bottom pb-1"><?php echo $herinfo['country'] ?>&nbsp</p>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-3">
+                                <p class="text-right">Legal Status</p>
+                            </div>
+                            <div class="col-9">
+                                <p class="border-bottom pb-1"><?php echo $herinfo['legalStatus'] ?>&nbsp</p>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-3">
+                                <p class="text-right">Country of Highest Degree</p>
+                            </div>
+                            <div class="col-9">
+                                <p class="border-bottom pb-1"><?php echo $herinfo['degreeCountry'] ?>&nbsp</p>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-3">
+                                <p class="text-right">Resident City/Town</p>
+                            </div>
+                            <div class="col-9">
+                                <p class="border-bottom pb-1"><?php echo $herinfo['town'] ?>&nbsp</p>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <div class="col-3">
+                                <p class="text-right">E-mail</p>
+                            </div>
+                            <div class="col-9">
+                                <p class="border-bottom pb-1"><?php echo $_SESSION['email'] ?>&nbsp</p>
+                            </div>
+                        </div>
+                        
                             <div class="text-right">
                                 <a class="" href="herprofile-edit.php" >
-                                <button class="btn btn-warning text-right">
+                                <button class="btn btn-warning btn-md text-right">
                                   <i class="fas fa-user-edit mr-1"></i>Edit 
                                 </button></a>
                             </div>

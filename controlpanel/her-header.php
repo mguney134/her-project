@@ -61,6 +61,7 @@ $moppinfo=$moppcheck->fetch(PDO::FETCH_ASSOC);
   <link href="../css/mdb.min.css" rel="stylesheet" />
   <link href="../css/style-other.min.css" rel="stylesheet" />
   <link href="../css/inputs.css" rel="stylesheet" />
+  <link href="../css/events.css" rel="stylesheet" />
 
 </head>
 

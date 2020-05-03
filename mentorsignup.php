@@ -20,38 +20,12 @@ include 'settings/connect-db.php';
     <!-- Material Design Bootstrap -->
     <link href="css/mdb.min.css" rel="stylesheet" />
     <!-- Your custom styles (optional) -->
-    <link href="css/style.min.css" rel="stylesheet" />
+    <link href="css/mdb.min.css" rel="stylesheet" />
+        <!-- Your custom styles (optional) -->
+        <!-- <link href="css/style-other.min.css" rel="stylesheet" /> -->
+    <link href="css/inputs.css" rel="stylesheet" />
     <link href="css/addons-pro/steppers.min.css" rel="stylesheet" />
-    <style>
-        .dropdown-content li>span {
-            color: #52585f;
-        }
-
-        .select-wrapper {
-            margin-top: 0;
-            margin-bottom: 0;
-        }
-
-        .md-form {
-            margin-top: 0;
-            margin-bottom: 0;
-        }
-
-
-
-        .md-form label {
-            color: #485057;
-            font-weight: 500;
-        }
-
-
-
-        .select-wrapper>label.mdb-main-label {
-            top: 0;
-            font-weight: 500;
-            color: #485057;
-        }
-    </style>
+    
 </head>
 
 <body>
@@ -89,15 +63,15 @@ include 'settings/connect-db.php';
                             <div class="step-title waves-effect waves-dark">Step 1- Insert your e-mail</div>
                             <div class="step-new-content">
                                 <div class="row">
-                                    <div class="md-form col-12 ml-auto mt-5 mb-4">
-                                        <input name="email" id="email-linear" type="email" class="form-control validate"
-                                               required>
+                                <div class="md-form md-outline col-12 my-3">
+                                        <input name="email" id="email-linear" type="email" class="form-control validate" required>
                                         <label for="email-linear">Your e-mail</label>
+                                                
+                                        
                                     </div>
-                                </div>
-                                <div class="step-actions">
-                                    <button
-                                            class="waves-effect waves-dark btn btn-sm btn-primary next-step">Continue</button>
+                                    <div class=" ml-2 mt-2 step-actions">
+                                        <button class="waves-effect waves-dark btn btn-sm btn-primary next-step">Continue</button>
+                                    </div>
                                 </div>
                             </div>
                         </li>
@@ -107,27 +81,22 @@ include 'settings/connect-db.php';
                             <div class="step-new-content">
                                 <div class="mt-5 mb-5">
                                     <div class="row">
-                                        <div class="md-form col-12 ml-auto">
-                                            <div class="row mb-4 mt-4">
-                                                <div class="col">
-                                                    <div class="md-form">
-                                                        <input name="all_password" id="password" type="password"
-                                                               class="form-control validate" required>
-                                                        <label for="password">Create a password</label>
+                                    <div class="col-12 ml-auto">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="md-form md-outline my-3">
+                                                            <input name="all_password" id="password" type="password" class="form-control validate" required>
+                                                            <label for="password" style="padding-left:0px;">Create a password</label>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="md-form">
-                                                        <input name="confirmpassword" id="password2" type="password" class="form-control"
-                                                               required>
-                                                        <label for="password2">Confirm your password</label>
+                                                    <div class="col">
+                                                        <div class="md-form md-outline  my-3">
+                                                            <input name="confirmpassword" id="password2" type="password" class="form-control" required>
+                                                            <label for="password2" style="padding-left:0px;">Confirm your password</label>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="md-form col-12 ml-auto">
-
-                                        </div>
                                     </div>
                                     <div class="step-actions">
                                         <button
@@ -143,63 +112,68 @@ include 'settings/connect-db.php';
                             <div class="step-title waves-effect waves-dark">Step 3 - Fill in your information</div>
                             <div class="step-new-content">
                                 <div class="mt-4 mb-4">
-                                    <div class="form-row mb-4">
+                                    <div class="form-row mb-2">
+                                    
                                         <div class="col">
-                                            <div class="md-form">
-                                                <input name="firstname" type="text" id="firstname" class="form-control" />
-                                                <label for="firstname">First name </label>
+                                            <div class="md-form md-outline">
+                                                <input name="firstname" type="text" id="materialRegisterFormFirstName" class="form-control" required />
+                                                <label for="materialRegisterFormFirstName">First name </label>
                                             </div>
                                         </div>
-
-
-                                    </div>
-                                    <div class="form-row mb-4">
                                         <div class="col">
                                             <!-- Last name -->
-                                            <div class="md-form">
-                                                <input name="lastname" type="text" id="lastname" class="form-control" />
-                                                <label for="lastname">Last name</label>
+                                            <div class="md-form md-outline">
+                                                <input name="lastname" type="text" id="materialRegisterFormLastName" class="form-control" required />
+                                                <label for="materialRegisterFormLastName">Last name</label>
                                             </div>
+                                        </div>
+
+                                </div>
+                                <div class="form-row mb-2">
+                                    <div class="col">
+                                        <div class="md-form md-outline">
+                                            <input name="age" type="number" id="age" class="form-control" max="90"
+                                                       min="17"  required>
+                                            <label for="AGE">Age</label>
                                         </div>
                                     </div>
-                                    <div class="form-row mb-4">
-                                        <div class="col">
-                                            <div class="md-form">
-                                                <input name="age" type="number" id="age" class="form-control" max="90"
-                                                       min="17" />
-                                                <label for="age">Your Age</label>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="col">
-                                            <select name="education" class="mdb-select md-form">
-                                                <option disabled selected></option>
-                                                <option value="Bachelor">Bachelor</option>
-                                                <option value="Master">Master</option>
-                                                <option value="PHD">PHD</option>
-                                            </select>
-                                            <label class="mdb-main-label">Level Study</label>
-                                        </div>
-
-
-                                    </div>
-                                    <div class="form-row mb-4">
-                                        <div class="col">
-                                            <div class="md-form">
-                                                <input name="sector" type="text" id="sector" class="form-control" />
-                                                <label for="sector">Working Sector</label>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="md-form">
-                                                <input name="experience" type="number" id="exp" class="form-control" />
-                                                <label for="exp">Working years</label>
-                                            </div>
-                                        </div>
-
+                                    <div class="col select-outline">
+                                        <select name="education"  class="mdb-select md-form md-outline" id="LevelStudy" required>
+                                            <option disabled selected value=""></option>
+                                            <option value="Bachelor">Bachelor</option>
+                                            <option value="Master">Master</option>
+                                            <option value="PHD">PHD</option>
+                                        </select>
+                                        <label for="LevelStudy">Level Study</label>
                                     </div>
                                 </div>
+                                <div class="form-row mb-2">
+                                    
+                                    <div class="col select-outline">
+                                        <select name="sector"  class="mdb-select md-form md-outline " multiple id="sector" required>
+                                            <option disabled selected value=""></option>
+                                            <?php 
+                                             $sectorcheck=$db->prepare("SELECT sectors_name FROM sectors");
+                                            $sectorcheck->execute();
+                                                          $countsector=0;
+                                                          while($sectorinfo=$sectorcheck->fetch(PDO::FETCH_ASSOC)) { $countsector++?>
+
+                                                        <option value="<?php echo $sectorinfo['sectors_name'] ?>"><?php echo $sectorinfo['sectors_name'] ?></option>
+                                                        <?php } ?>
+                                        </select>
+                                        <label for="sector">Working Sector</label>
+                                        <button class="btn-save btn btn-primary btn-sm">Save</button>
+                                    </div>
+                                    <div class="col">
+                                        <div class="md-form md-outline">
+                                            <input name="experience" type="number" id="exp" class="form-control" />
+                                            <label for="exp">Working years</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
 
                                 <div class="step-actions mb-5">
                                     <button

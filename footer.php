@@ -149,16 +149,7 @@
                         <div class="mask rgba-blue-light"></div>
                     </a>
                 </div>
-
-                <!--Image-->
-                <div class="view overlay">
-                    <img src="images/logos/oostande.png" class="img-fluid" alt="">
-                    <a href="https://www.economischhuis.be/nl">
-                        <div class="mask rgba-blue-light"></div>
-                    </a>
-                </div>
-
-                <!--Image-->
+    <!--Image-->
                 <div class="view overlay">
                     <img src="images/logos/ucll.png" class="img-fluid" alt="">
                     <a href="https://www.ucll.be/">
@@ -176,6 +167,21 @@
 
                 <!--Image-->
                 <div class="view overlay">
+                    <img src="images/logos/hiva.png" class="img-fluid" alt="">
+                    <a href="https://hiva.kuleuven.be/en">
+                        <div class="mask rgba-blue-light"></div>
+                    </a>
+                </div>
+
+                <!--Image-->
+                <div class="view overlay">
+                    <img src="images/logos/oostande.png" class="img-fluid" alt="">
+                    <a href="https://www.economischhuis.be/nl">
+                        <div class="mask rgba-blue-light"></div>
+                    </a>
+                </div>
+                <!--Image-->
+                <div class="view overlay">
                     <img src="images/logos/turku.png" class="img-fluid" alt="">
                     <a href="http://www.tuas.fi/en/">
                         <div class="mask rgba-blue-light"></div>
@@ -190,13 +196,7 @@
                     </a>
                 </div>
 
-                <!--Image-->
-                <div class="view overlay">
-                    <img src="images/logos/hiva.png" class="img-fluid" alt="">
-                    <a href="https://hiva.kuleuven.be/en">
-                        <div class="mask rgba-blue-light"></div>
-                    </a>
-                </div>
+                
 
             </div>
             <!--row ends-->
@@ -214,7 +214,7 @@
                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 text-dark">
 
                     <!-- Content -->
-                    <h6 class="text-uppercase font-weight-bold">All-in-one 4 HER</h6>
+                    <h6 class="text-uppercase font-weight-bold">All-in-one 4 HER / HOA</h6>
                     <hr class="primary-color accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                     <p>Fast-track Integration of Highly Educated Refugees(HER) into Labour market</p>
 
