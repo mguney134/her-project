@@ -7,7 +7,7 @@ $eventscheck->execute( );
 $eventsinfo=$eventscheck->fetch(PDO::FETCH_ASSOC);
 
 ?>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
     </script>
     <script type="text/javascript">
         $(document).ready(function()
@@ -219,6 +219,33 @@ $eventsinfo=$eventscheck->fetch(PDO::FETCH_ASSOC);
                                         <?php
                                         $sectorcheck=$db->prepare("SELECT sectors_name FROM sectors");
                                         $sectorcheck->execute();
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row" class="text-right th-sm"></th>
+                                    <td colspan="4" class="">
+                                        <form class="md-form">
+                                            <div class="file-field">
+                                                <div class="btn btn-primary btn-sm float-left">
+                                                    <span>Choose image</span>
+                                                    <input type="file" name="img_link">
+                                                </div>
+                                                <div class="file-path-wrapper">
+                                                    <input class="file-path validate" type="text" placeholder="Upload your cover image" >
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-right th-sm"></th>
+                                    <td colspan="4" class="">
+                                        <select class="mdb-select md-form  dropdown-primary" name="sector" multiple="">
+                                            <option disabled selected>Sector</option>
+                                            <?php
+                                            $sectorcheck=$db->prepare("SELECT sectors_name FROM sectors");
+                                            $sectorcheck->execute();
 
                                         while($sectorinfo=$sectorcheck->fetch(PDO::FETCH_ASSOC)) { ?>
 
@@ -256,6 +283,52 @@ $eventsinfo=$eventscheck->fetch(PDO::FETCH_ASSOC);
                                 <div class="col select-outline">
                                     <select class="mdb-select md-form md-outline my-2" id="tar1" multiple name="target_group">
                                             <option disabled selected></option>
+                                            <?php } ?>
+                                        </select>
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-right th-sm"></th>
+                                    <td colspan="4" class="">
+                                        <div class="md-form">
+                                            <input type="text" id="link" class="form-control" name="link" />
+                                            <label for="link">Insert Link</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-right th-sm"></th>
+                                    <td colspan="4" class="">
+                                        <div class="row">
+                                            <div class="md-form col-md-5 ml-3 mt-3">
+                                                <input placeholder="Selected date" type="date" id="from" class="form-control datepicker" name="start_date">
+                                                <label for="from">From</label>
+                                            </div>
+                                            <div class="md-form col-md-6 pl-3 mt-3 mb-2">
+                                                <input placeholder="Selected date" type="date" id="to" class="form-control datepicker" name="end_date">
+                                                <label for="to">To</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!--tr>
+                                    <th scope="row" class="text-right th-sm"></th>
+                                    <td colspan="4" class="">
+                                        <select class="mdb-select md-form  dropdown-info" name="">
+                                            <option disabled selected>Language</option>
+                                            <option value="English">English</option>
+                                            <option value="Dutch">Dutch</option>
+                                            <option value="Employers">Employers</option>
+                                            <option value="French">French</option>
+                                        </select>
+                                    </td>
+                                </tr-->
+                                <tr>
+                                    <th scope="row" class="text-right th-sm"></th>
+                                    <td colspan="4" class="">
+                                        <select class="mdb-select md-form  dropdown-info" name="target_group">
+                                            <option disabled selected>Target group</option>
                                             <option value="Refugees">Refugees</option>
                                             <option value="Job seekers">Job seekers</option>
                                             <option value="Employers">Employers</option>
