@@ -29,11 +29,15 @@ $eventscheck->execute( );
                 <a class="nav-link active"  href="her-networking.php" role="tab">
                     <i class="fas fa-project-diagram pr-2"></i>Networking</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link"  href="her-meeting.php" role="tab">
+                    <i class="fas fa-user-friends pr-2"></i>Meet</a>
+            </li>
         </ul>
         <!-- Nav tabs -->
-    <!-- Tab panels -->
+        <!-- Tab panels -->
         <div class="tab-content">
-        <!-- Panel 444-Networking Starts-->
+            <!-- Panel 444-Networking Starts-->
             <div class="tab-pane fade in show active" >
                 <div class="container py-5 z-depth-1">
                     <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
@@ -743,7 +747,7 @@ $eventscheck->execute( );
                     </section>
                 </div>
             </div>
-        <!-- Panel 444-Networking Ends-->
+            <!-- Panel 444-Networking Ends-->
         </div>
     </div>
 <?php include 'her-footer.php'; ?>
