@@ -196,9 +196,9 @@ ul.stepper.Her .step.active:before {
 /* HER- Orange Ends */
 
 /* Mentor- Blue Starts */
-/* .nav-tabs .nav-link.active {
+.nav-tabs .nav-link.active .Mentor {
   color: #007bff;
-} */
+}
 .md-form.md-outline label.active {
   z-index: 5 !important;
 }
