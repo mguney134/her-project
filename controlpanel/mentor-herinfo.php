@@ -46,6 +46,10 @@ $herinfo=$hercheck->fetch(PDO::FETCH_ASSOC);
                 <a class="nav-link"  href="mentor-hernetworking.php?her_id=<?php echo $herinfo['her_id'] ?>" role="tab">
                     <i class="fas fa-project-diagram pr-2"></i>Networking</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link"  href="mentor-hermeeting.php?her_id=<?php echo $herinfo['her_id'] ?>" role="tab">
+                <i class="fas fa-user-friends pr-2"></i>Meet</a>
+            </li>
         </ul>
         <!-- Nav tabs -->
     <!-- Tab panels -->

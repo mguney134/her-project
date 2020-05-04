@@ -16,10 +16,9 @@ include 'mentor-header.php';
                 <i class="fas fa-project-diagram  pr-2"></i>Networking
             </a>
         </li>
-            <li class="nav-item">
-            <a class="nav-link"  href="event-list.php" >
-                <i class="fas fa-calendar-alt  pr-2"></i>Events List
-            </a>
+        <li class="nav-item">
+            <a class="nav-link"  href="mentor-meeting.php" role="tab">
+            <i class="fas fa-user-friends pr-2"></i>Meet</a>
         </li>
     </ul>
     <!-- Nav tabs -->

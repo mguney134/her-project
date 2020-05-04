@@ -52,6 +52,10 @@ $eventsinfo=$eventscheck->fetch(PDO::FETCH_ASSOC);
                                 <i class="fas fa-calendar-alt  pr-2"></i>Events List
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link"  href="mentor-meeting.php" role="tab">
+                                <i class="fas fa-user-friends pr-2"></i>Meet</a>
+                        </li>
                     </ul>
                     <!-- Nav tabs -->
 
