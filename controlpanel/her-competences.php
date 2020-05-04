@@ -21,11 +21,15 @@
                 <a class="nav-link"  href="her-networking.php" role="tab">
                     <i class="fas fa-project-diagram pr-2"></i>Networking</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link"  href="her-meeting.php" role="tab">
+                    <i class="fas fa-user-friends pr-2"></i>Meet</a>
+            </li>
         </ul>
         <!-- Nav tabs -->
-    <!-- Tab panels -->
+        <!-- Tab panels -->
         <div class="tab-content">
-        <!-- Panel 333-Competences starts-->
+            <!-- Panel 333-Competences starts-->
             <div class="tab-pane fade in show active" >
                 <div class="container py-5 z-depth-1">
                 <!--Section: Content-->
@@ -143,7 +147,7 @@
                     </section>
                 </div>
             </div>
-          <!-- Panel 333-Competences Ends-->
+            <!-- Panel 333-Competences Ends-->
         </div>
     </div>
 <?php include 'her-footer.php'; ?>

@@ -5,6 +5,13 @@ a {
   margin-top: 0;
   margin-bottom: 0;
 }
+.crop-text-2 {
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
 .md-outline.select-wrapper + label {
   top: 0.5em !important;
   z-index: 5 !important;
@@ -196,11 +203,15 @@ ul.stepper.Her .step.active:before {
 /* HER- Orange Ends */
 
 /* Mentor- Blue Starts */
-/* .nav-tabs .nav-link.active {
+.nav-tabs .nav-link.active .Mentor {
   color: #007bff;
-} */
+}
 .md-form.md-outline label.active {
   z-index: 5 !important;
+}
+.md-form.md-outline.Mentor label.active {
+  color: #007bff;
+  /* margin-left: 11px; */
 }
 .md-form.md-outline.input[type="email"]:focus:not([readonly]) label.active {
   left: 20px;

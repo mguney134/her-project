@@ -32,11 +32,6 @@ $motivationinfo=$motivationcheck->fetch(PDO::FETCH_ASSOC);
                     <i class="fas fa-project-diagram  pr-2"></i>Networking
                 </a>
             </li>
-             <li class="nav-item">
-                <a class="nav-link"  href="event-list.php" >
-                    <i class="fas fa-calendar-alt  pr-2"></i>Events List
-                </a>
-            </li>
         </ul>
         <ul class="nav nav-tabs md-tabs nav-justified deep-orange lighten-2" role="tablist">
             <li class="nav-item">
@@ -57,6 +52,10 @@ $motivationinfo=$motivationcheck->fetch(PDO::FETCH_ASSOC);
                 <a class="nav-link"  href="mentor-hernetworking.php?her_id=<?php echo $herinfo['her_id'] ?>" role="tab">
                     <i class="fas fa-project-diagram pr-2"></i>Networking</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link"  href="mentor-hermeeting.php?her_id=<?php echo $herinfo['her_id'] ?>" role="tab">
+                <i class="fas fa-user-friends pr-2"></i>Meet</a>
+             </li>
         </ul>
         <!-- Nav tabs -->
     <!-- Tab panels -->
