@@ -93,7 +93,7 @@ input::placeholder {
 }
 
 /* HER- Orange Start */
-.nav-tabs .nav-link.active .Her {
+.nav-tabs .nav-link.active.Her {
   color: #ff8a65;
 }
 .md-form.md-outline.Her input[type="text"].valid {
@@ -208,6 +208,10 @@ ul.stepper.Her .step.active:before {
 }
 .md-form.md-outline label.active {
   z-index: 5 !important;
+}
+.md-form.md-outline.Mentor label.active {
+  color: #007bff;
+  /* margin-left: 11px; */
 }
 .md-form.md-outline.input[type="email"]:focus:not([readonly]) label.active {
   left: 20px;

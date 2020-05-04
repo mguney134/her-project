@@ -210,7 +210,7 @@ include 'mentor-header.php';
 
 
                                         <!--confirm delete meeting details starts-->
-                                        <div class="modal fade" id="editMeeting" tabindex="-1" role="dialog" aria-hidden="true">
+                                        <div class="modal fade" id="deleteMeeting" tabindex="-1" role="dialog" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
@@ -296,10 +296,6 @@ include 'mentor-header.php';
                                             </div>
                                         </div>
                                         <!--Create a meeting Modal ends-->
-
-
-
-
 
                                     </div>
                                     

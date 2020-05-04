@@ -336,20 +336,46 @@ $eventscheck->execute( );
 
                             <!-- ALL SVEPT POSTS  STARTS-->
                             <div class="tab-pane fade" id="all" role="tabpanel">
+                                
+                                <!-- SEARCH IN ALL EVENTS STARTS-->
                                 <div class="row">
-                                    <!-- SEARCH IN ALL EVENTS STARTS-->
                                     <div class="input-group md-form form-sm form-2 pl-0 mx-3 mb-4">
-                                        <input class="form-control my-0 py-1 border-info" type="text"
-                                            placeholder="Search in all the events" aria-label="Search">
+                                        <input class="form-control my-0 py-1 border-danger" type="text"
+                                        placeholder="Search networking post by name" aria-label="Search">
                                         <div class="input-group-append">
-                                            <span class="input-group-text teal accent-4" id="basic-text1"><i
-                                                    class="fas fa-search white-text"
-                                                    aria-hidden="true"></i></span>
+                                            <span class="input-group-text orange accent-4" id="basic-text1"><i
+                                        class="fas fa-search white-text" aria-hidden="true"></i></span>
                                         </div>
                                     </div>
-                                    <!-- SEARCH IN ALL EVENTS ENDS-->
+                                 </div>
+                                <!-- SEARCH IN ALL EVENTS ENDS-->
 
-                                    <!-- Event-EVENT Sample with given image starts-->
+
+
+                                <!-- Filter IN ALL post STARTS-->
+                                <div class="row text-right mb-3 mt-2">
+                                    <div class="col select-outline">
+                                        <select class="mdb-select md-form md-outline Her my-2" id="filterPosts" >
+                                        <option disabled select></option>
+                                        <optgroup label="Type of Networking Posts">
+                                            <option value="study">Study</option>
+                                            <option value="Vacancy">Vacancy</option>
+                                            <option value="Event">Event</option>
+                                            <option value="Project">Project</option>
+                                            <option value="Tool">Tool</option>
+                                        </optgroup>
+                                        <optgroup label="Target Group">
+                                            <option value="3">Option 3</option>
+                                            <option value="4">Option 4</option>
+                                        </optgroup>
+                                        </select>
+                                        <label for="filterPosts">Filter Networking Posts</label>
+                                    </div>
+                                </div>
+                                <!-- Filter IN ALL post ends-->
+
+                                    <div class="row">
+                                        <!-- Event-EVENT Sample with given image starts-->
                                     <div class="col-lg-4 col-md-12 col-xs-12">
                                         <div class="card testimonial-card" style="cursor: pointer;">
                                             <div class="card-up">
@@ -736,6 +762,8 @@ $eventscheck->execute( );
                                         <br>
                                     </div>
                                     <!-- Event-TOOL Sample with default image ends-->
+                                    </div>
+                                    
 
                                 </div>
                             </div>

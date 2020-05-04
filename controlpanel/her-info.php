@@ -157,12 +157,12 @@
                         </div>
                     </div>
                     
-                        <div class="text-right">
-                            <a class="" href="herprofile-edit.php" >
-                            <button class="btn btn-warning btn-md text-right">
-                                <i class="fas fa-user-edit mr-1"></i>Edit 
-                            </button></a>
-                        </div>
+                    <div class="text-right">
+                        <a class="" href="herprofile-edit.php" >
+                        <button class="btn btn-warning btn-md text-right">
+                            <i class="fas fa-user-edit mr-1"></i>Edit 
+                        </button></a>
+                    </div>
                 </section>
             </div>
                         <!-- Grid column -->
