@@ -21,6 +21,10 @@
                 <a class="nav-link"  href="her-networking.php" role="tab">
                     <i class="fas fa-project-diagram pr-2"></i>Networking</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link"  href="her-meeting.php" role="tab">
+                    <i class="fas fa-user-friends pr-2"></i>Meet</a>
+            </li>
         </ul>
         <!-- Nav tabs -->
     <!-- Tab panels -->
