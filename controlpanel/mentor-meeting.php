@@ -24,7 +24,7 @@ include 'mentor-header.php';
   
       <!-- Tab panels -->
       <div class="tab-content">
-          <!-- Panel 111-Information Starts-->
+          <!-- Panel Meeting Starts-->
           <div class="tab-pane fade in show active" id="panel111" role="tabpanel">
               <div class="container py-5 z-depth-1">
                   <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
@@ -33,51 +33,68 @@ include 'mentor-header.php';
                             <button type="button" class="btn btn-sm btn-outline-primary btn-rounded waves-effect" data-toggle="modal" data-target="#newMeeting">New Meeting</button>
                         </div>
   
-                      <!--Change Password Modal starts-->
-                          <div class="modal fade" id="newMeeting" tabindex="-1" role="dialog"           aria-labelledby="changePassword"
-                              aria-hidden="true">
-                              <div class="modal-dialog" role="document">
-                                  <div class="modal-content">
-                                      <div class="modal-header">
-                                          <h5 class="modal-title blue-text" id="exampleModalLabel">Create a meeting</h5>
-                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                          <span aria-hidden="true">&times;</span>
-                                          </button>
-                                      </div>
-                                      <div class="modal-body">
-                                          <div class="row px-1">
-                                                  <div class="col">
-                                                      <div class="md-form md-outline  mb-1 mt-3">
-                                                          <input name="agenda" id="agenda" type="text" class="form-control">
-                                                          <label for="agenda">Agenda</label>
-                                                      </div>
-                                                  </div>
-                                          </div>
-                                          
-                                              <div class="row px-1">
-                                                  <div class="col">
-                                                      <div class="md-form md-outline  my-1">
-                                                          <input name="all_password" id="newPassword" type="password" class="form-control validate" required>
-                                                          <label for="newPassword">Create new password</label>
-                                                      </div>
-                                                  </div>
-                                                  <div class="col">
-                                                      <div class="md-form md-outline  my-1">
-                                                          <input name="confirmpassword" id="conPass" type="password" class="form-control" required>
-                                                          <label for="conPass" >Confirm new password</label>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          
-                                      </div>
-                                      <div class="modal-footer">
-                                          <button type="button" class="btn btn-sm btn-outline-primary" data-dismiss="modal">Close</button>
-                                          <button type="button" class="btn btn-sm btn-primary">Save changes</button>
-                                      </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <!--Change Password Modal ends-->
+                        <!--Create a meeting starts-->
+                        <div class="modal fade" id="newMeeting" tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title blue-text" id="exampleModalLabel">Create a meeting</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="md-form md-outline  my-3 mt-1">
+                                                    <input name="agenda" id="agenda" type="text" class="form-control">
+                                                    <label for="agenda">Meeting's Agenda</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                        <div class="row">
+                                                <div class="col">
+                                                <div class="md-form md-outline  my-3 px-1">
+                                                    <input placeholder="Select a date" id="date-picker-example" type="text" class="form-control datepicker" name="birth" >
+                                                    <label for="date-picker-example">When?</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="md-form md-outline  my-3">
+                                                    <input id="time" type="text" class="form-control">
+                                                    <label for="time">What time?</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="md-form md-outline  my-3">
+                                                    <input id="location" type="text" class="form-control">
+                                                    <label for="location">Where?</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="md-form md-outline my-3">
+                                                    <textarea id="todo" class="md-textarea active-aqua-textarea  form-control" rows="4" placeholder="•&#10;•&#10;•&#10;•"></textarea>
+                                                    <label for="todo" class="">What to discuss?</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-sm btn-outline-primary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-sm btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Create a meeting Modal ends-->
                       
                       <hr />
 
@@ -125,14 +142,165 @@ include 'mentor-header.php';
                                     <div class="col-md-2 ">
                                         
                                         <div class="row d-flex justify-content-end mt-1 mb-1">
-                                            
-                                                <i class="fas fa-pen mr-1"></i>
-                                                <i class="fas fa-times mr-1"></i>
-                                        
+                                            <a data-toggle="modal" data-target="#editMeeting"><i class="fas fa-pen mr-1"></i></a>
+                                            <a data-toggle="modal" data-target="#deleteMeeting"><i class="fas fa-times mr-1"></i></a>
                                         </div>
+                                        <!--edit meeting details starts-->
+                                        <div class="modal fade" id="editMeeting" tabindex="-1" role="dialog" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title blue-text" id="exampleModalLabel">Edit the Meeting's Details</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <div class="md-form md-outline  my-3 mt-1">
+                                                                    <input name="agenda" id="agenda" type="text" class="form-control " value="Cv review">
+                                                                    <label for="agenda">Meeting's Agenda</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    
+                                                        <div class="row">
+                                                                <div class="col">
+                                                                <div class="md-form md-outline  my-3 px-1">
+                                                                    <input placeholder="Date"  id="date-picker-example" type="text" class="form-control datepicker " value="25 May 2010 Friday" >
+                                                                    <label for="date-picker-example">Date</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <div class="md-form md-outline  my-3">
+                                                                    <input id="time" type="text" class="form-control " value="18.30">
+                                                                    <label for="time">Time</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <div class="md-form md-outline  my-3">
+                                                                    <input id="location" type="text" class="form-control " value="Brussels, Central Starbucks">
+                                                                    <label for="location">Location</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <div class="md-form md-outline my-3">
+                                                                    <textarea id="todo" class="md-textarea aqua-textarea   form-control" rows="4" placeholder="•vfvfvf&#10;•fvfvf&#10;•vfvfvf&#10;•dvfvfsd"></textarea>
+                                                                    <label for="todo" class="">What to discuss?</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-sm btn-outline-primary" data-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-sm btn-primary">Save changes</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--edit meeting details ends-->
+
+
+                                        <!--confirm delete meeting details starts-->
+                                        <div class="modal fade" id="editMeeting" tabindex="-1" role="dialog" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title blue-text" id="exampleModalLabel">Delete meeting</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>Are you sure you want to delete this meeting?</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-sm btn-outline-primary" data-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-sm btn-primary">Delete</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--confirm delete meeting details ends-->
+
                                         <div class="text-center pt-2">
-                                            <button type="button" class="btn btn-sm btn-primary waves-effect" data-toggle="modal" data-target="#newMeeting">Details</button>
+                                            <button type="button" class="btn btn-sm btn-primary waves-effect" data-toggle="modal" data-target="#meetingDetails">Details</button>
                                         </div>
+                                        <!--Create a meeting starts-->
+                                        <div class="modal fade" id="meetingDetails" tabindex="-1" role="dialog" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title blue-text" id="exampleModalLabel">The Meeting's Details</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <div class="md-form md-outline  my-3 mt-1">
+                                                                    <input name="agenda" id="agenda" type="text" class="form-control disabled" value="Cv review">
+                                                                    <label for="agenda">Meeting's Agenda</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    
+                                                        <div class="row">
+                                                                <div class="col">
+                                                                <div class="md-form md-outline  my-3 px-1">
+                                                                    <input placeholder="Date"  id="date-picker-example" type="text" class="form-control datepicker disabled" value="25 May 2010 Friday" >
+                                                                    <label for="date-picker-example">Date</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <div class="md-form md-outline  my-3">
+                                                                    <input id="time" type="text" class="form-control disabled" value="18.30">
+                                                                    <label for="time">Time</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <div class="md-form md-outline  my-3">
+                                                                    <input id="location" type="text" class="form-control disabled" value="Brussels, Central Starbucks">
+                                                                    <label for="location">Location</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <div class="md-form md-outline my-3">
+                                                                    <textarea id="todo" class="md-textarea aqua-textarea disabled  form-control" rows="4" placeholder="•vfvfvf&#10;•fvfvf&#10;•vfvfvf&#10;•dvfvfsd"></textarea>
+                                                                    <label for="todo" class="">What to discuss?</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-sm btn-outline-primary" data-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-sm btn-primary">Save changes</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--Create a meeting Modal ends-->
+
+
+
+
+
                                     </div>
                                     
                                 </div>
