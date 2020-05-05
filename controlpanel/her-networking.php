@@ -48,7 +48,7 @@ $eventscheck->execute( );
                             </li>
                             <li class="nav-item Her">
                                 <a class="nav-link" id="all-tab" data-toggle="tab" href="#purposed" role="tab"
-                                    aria-selected="false">Purposed</a>
+                                    aria-selected="false">Proposed</a>
                             </li>
                             <li class="nav-item Her">
                                 <a class="nav-link" id="all-tab" data-toggle="tab" href="#all" role="tab"
