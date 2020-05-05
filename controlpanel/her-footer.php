@@ -442,6 +442,7 @@
                                 <div class="form-row">
                                     <div class="col select-outline">
                                         <select class="mdb-select md-form md-outline Her my-2" multiple id="workseeker" name="work">
+                                        <select class="mdb-select md-form md-outline Her my-2" id="workseeker" name="work[]">
                                             <option disabled selected></option>
                                             <option value="Parttime/Fulltime">Part time/Full time</option>
                                             <option value="Volunteer">Volunteer</option>
@@ -512,7 +513,7 @@
                                 <?php } ?>
 
                                 <?php if (!isset($motivationinfo['study'])) { ?>
-                                  
+                                  <option disabled selected>Study - (Studyseeker)</option>
                                   <option value="Language">Language</option>
                                   <option value="Vocational Training">Vocational Training</option>
                                   <option value="Bachelor">Bachelor</option>
@@ -527,6 +528,7 @@
                                 <div class="form-row">
                                     <div class="col select-outline">
                                         <select class="mdb-select md-form md-outline Her my-2" id="workseeker" multiple name="work">
+                                        <select class="mdb-select md-form md-outline Her my-2" id="workseeker" multiple name="work[]">
                                         <?php 
                                   $allWork=array("Parttime", "Fulltime", "Volunteer", "Internship");
                                   if (isset($motivationinfo['work'])) {
@@ -549,7 +551,7 @@
 
 
                                 <?php if (!isset($motivationinfo['work'])) { ?>
-                                  
+                                  <option disabled selected>WORK - (jobseeker)</option>
                                   <option value="Parttime">Part time</option>
                                   <option value="Fulltime">Full time</option>
                                   <option value="Volunteer">Volunteer</option>
@@ -564,7 +566,7 @@
                               
                                 <div class="form-row">
                                     <div class="col select-outline">
-                                        <select class="mdb-select md-form md-outline Her my-2" id="sec1" multiple name="sector">
+                                        <select class="mdb-select md-form md-outline Her my-2" id="sec1" multiple name="sector[]">
                                             
                                         <?php 
                                   $sectorcheck=$db->prepare("SELECT sectors_name FROM sectors");
@@ -594,7 +596,7 @@
 
 
                                 <?php if (!isset($motivationinfo['sector'])) { ?>
-                                  <option disabled selected></option>
+                                  <option disabled selected>Sector</option>
                                 
                                   <?php 
                                     $sectorcheck=$db->prepare("SELECT sectors_name FROM sectors");
@@ -607,8 +609,7 @@
                                     <?php }
                                     } ?>
                                         </select>
-                                        <label for="sec1">Sector</label>
-                                        <button class="btn-save btn btn-warning btn-sm">Save</button>
+                                        
                                     </div>
 
                                 </div>

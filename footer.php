@@ -35,7 +35,7 @@
                             </div>
                             <div class="text-center mb-1">
                             <!-- Forgot password -->
-                            <a href="">Forgot password?</a>
+                            <a href="forgot-password.php">Forgot password?</a>
                         </div>
 
                         </div>
@@ -286,6 +286,7 @@
     <script type="text/javascript" id="cookieinfo" src="//cookieinfoscript.com/js/cookieinfo.min.js" data-bg="#efefef"
         data-fg="#333333" data-link="#4CC4EA" data-cookie="CookieInfoScript" data-text-align="center"
         data-divlinkbg="#4CC4EA" data-close-text="Got it!" data-moreinfo="./terms_of_use.html">
+        
         </script>
     <!-- JQuery -->
     <script src="js/jquery.min.js"></script>
