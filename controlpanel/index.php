@@ -19,9 +19,9 @@ if ($userinfo['who']==1) {
 } elseif ($userinfo['who']==2) {
     header("Location:mentor-info.php");
 } elseif ($userinfo['who']==3) {
-    header("Location:empprofile.php");
+    header("Location:employer-info.php");
 } elseif ($userinfo['who']==4) {
-    header("Location:organisationprofile.php");
+    header("Location:organisation-info.php");
 
 }
 

@@ -63,8 +63,8 @@
                     <div class="form-row">
                        <div class="col">
                           <div class="md-form md-outline Her">
-                              <input name="birth"  type="text" id="date-picker-example" class="form-control datepicker"  value="<?php echo $herinfo['birth'] ?>">
-                              <label for="date-picker-example">Birth Date</label>
+                              <input name="birth" type="text" id="birth" class="form-control" value="<?php echo $herinfo['birth'] ?>" required />
+                              <label for="birth">Birth Year</label>
                           </div>
                         </div>
                     </div>
@@ -139,6 +139,15 @@
                             <label for="resident">Resident City/Town</label>
                         </div>
                     </div>
+                    <div class="form-row">
+                      <div class="col">
+                          <div class="md-form md-outline Her">
+                            <input name="tel_no"  type="text" id="tel" class="form-control"  value="<?php echo $herinfo['tel_no'] ?>">
+                            <label for="tel">Phone Number</label>
+                        </div>
+                      </div>
+                    </div>
+                    
                     <div class="form-row">
                       <div class="col">
                           <div class="md-form md-outline my-2 Her">

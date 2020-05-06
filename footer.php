@@ -112,7 +112,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-lg-6" onclick="location.href='governmentsignup.php';"
+                                <div class="col-lg-6" onclick="location.href='organizationsignup.php';"
                                     style="cursor: pointer;">
                                     <div class="card text-center aqua-gradient text-white">
                                         <div class="card-body">

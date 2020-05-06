@@ -137,8 +137,8 @@ include 'settings/connect-db.php';
                                         </div>
                                         <div class="col">
                                             <div class="md-form md-outline Her">
-                                                <input name="birth"  type="text" id="date-picker-example" class="form-control datepicker" required>
-                                                <label for="date-picker-example">Birth Date</label>
+                                                <input name="birth" type="text" id="birth" class="form-control" required />
+                                                <label for="birth">Birth Year</label>
                                             </div>
                                         </div>
                                     </div>
