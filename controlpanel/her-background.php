@@ -241,7 +241,7 @@
                                             <!--Grid column-->
                                             <?php if ($bginfo4['type']=='Internship') { ?>
 
-                                            <div class="col-6">
+                                            <div class="col-6 mb-4">
                                                 <div class="media  grey lighten-5 text-orange z-depth-1 rounded">
                                                     <?php if ($bginfo4['type']=='Study') {?>
                                                     <i class="fas fa-graduation-cap fa-2x orange lighten-2 z-depth-1 rounded-left text-white"
@@ -313,7 +313,7 @@
                                             <!--Grid column-->
                                             <?php if ($bginfo3['type']=='Job') {?>
 
-                                            <div class="col-6">
+                                            <div class="col-6 mb-4">
                                                 <div class="media  grey lighten-5 text-orange z-depth-1 rounded">
                                                     <?php if ($bginfo3['type']=='Study') {?>
                                                     <i class="fas fa-graduation-cap fa-2x orange lighten-2 z-depth-1 rounded-left text-white"
@@ -384,7 +384,7 @@
                                             <!--Grid column-->
                                             <?php if ($bginfo5['type']=='Volunteering') {?>
 
-                                            <div class="col-6">
+                                            <div class="col-6 mb-4">
                                                 <div class="media  grey lighten-5 text-orange z-depth-1 rounded">
                                                     <?php if ($bginfo5['type']=='Study') {?>
                                                     <i class="fas fa-graduation-cap fa-2x orange lighten-2 z-depth-1 rounded-left text-white"
