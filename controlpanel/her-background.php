@@ -239,7 +239,7 @@
                                             ));
                                             while($bginfo4=$bgcheck4->fetch(PDO::FETCH_ASSOC)) { ?>
                                             <!--Grid column-->
-                                            <?php if ($bginfo4['type']=='Internship') {?>
+                                            <?php if ($bginfo4['type']=='Internship') { ?>
 
                                             <div class="col-6">
                                                 <div class="media  grey lighten-5 text-orange z-depth-1 rounded">
@@ -277,14 +277,12 @@
                                                                 class="fas fa-pen m-1 "></i></a>
                                                     </div>
                                                 </div>
-                                                <?php } ?>
-
-                                                <!--Grid column-->
-                                                <?php  } ?>
+                                                
 
                                             </div>
                                             <?php } ?>
-                                            <?php } ?>
+
+                                            <?php  } ?>
 
                                         </div>
 
