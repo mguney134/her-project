@@ -108,7 +108,7 @@
 
                 <!--Meeting Card starts-->
                 <div class="col-12 mb-4">
-                <div class="card z-depth-0 bordered border-light">
+                 <div class="card z-depth-0 bordered border-light">
                     <div class="card-body p-0">
                         <div class="row mx-0">
                             <div class="col-md-10 grey lighten-4 rounded-left pt-4">
@@ -205,6 +205,14 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="md-form md-outline Her my-2">
+                                                            <textarea id="postMet" class="md-textarea aqua-textarea   form-control" rows="3" ></textarea>
+                                                            <label for="postMet" class="">Post-Meeting Report</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             
                                             </div>
                                             <div class="modal-footer">
@@ -253,6 +261,7 @@
                                                 </button>
                                             </div>
                                             <div class="modal-body">
+                                                
                                                 <div class="row">
                                                     <div class="col">
                                                         <div class="md-form md-outline Her my-3 mt-1">
@@ -309,9 +318,9 @@
                             
                         </div>
                     </div>
+                    </div>
                 </div>
-            </div>
-            <!--Meeting Card Ends-->
+                <!--Meeting Card Ends-->
 
             </section>
 

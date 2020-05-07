@@ -149,42 +149,81 @@
                         </div>
                     </div>
                     <div class="card profile-card mt-4">
+                        <!-- Panel -->
+                        <div class="card">
 
-
-                        <div class="card-body pt-0 mt-0">
-                            <!-- Name -->
-                            <h4 class="mb-4 mt-4 font-weight-bold">
-                                <strong>Matched Talents</strong>
-                            </h4>
-                            <h5 class="mb-3">Joe Doe</h5>
-                            <hr>
-                            <div class="row text-center">
-                                <div class="col text-center">
-                                    <h5 class="mt-5 text-default mx-4">
-                                        Search for talents
-                                    </h5>
-                                </div>
-
-
+                            <div class="card-header white-text cyan lighten-2">
+                                Matched Talents
                             </div>
 
-                            <div class="row mx-4">
-                                <div class="input-group md-form form-sm form-1 pl-0">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text cyan lighten-2" id="basic-text1"><i
-                                                class="fas fa-search text-white" aria-hidden="true"></i></span>
+                            <section class="p-md-3 mx-md-3 text-center text-lg-left">
+
+                                <div class="row mt-2">
+
+                                    <!--    matched talent 1 starts -->
+
+                                    <a class="col-lg-6 mb-4" href="org-talent.php">
+                                        <div class="card text-center">
+
+                                            <div>
+                                                <i class="fas fa-user-check fa-2x text-info px-4 py-2"></i>
+
+                                            </div>
+                                            <div class="card-body pt-1">
+                                                <h5 style="font-size: 1.1rem;" class="card-text">Micheal Gate
+                                                </h5>
+                                            </div>
+
+                                        </div>
+                                    </a>
+                                    <!--    matched talent 1 Ends -->
+
+                                    <!--    matched talent 2 starts -->
+                                    <a class="col-lg-6 mb-4" href="org-talent.php">
+                                        <div class="card text-center">
+
+                                            <div>
+                                                <i class="fas fa-user-check fa-2x text-info px-4 py-2"></i>
+
+                                            </div>
+                                            <div class="card-body pt-1">
+                                                <h5 style="font-size: 1.1rem;" class="card-text">Jane Doe
+                                                </h5>
+                                            </div>
+
+                                        </div>
+                                    </a>
+                                    <!--    matched talent 2 Ends -->
+                                </div>
+                            </section>
+                        </div>
+                        <!-- Panel -->
+                    </div>
+                    <div class="card profile-card mt-4">
+                        <!-- Panel -->
+                        <div class="card">
+
+                            <div class="card-header white-text cyan lighten-2">
+                                Search for Talents
+                            </div>
+
+                            <!-- Search IN ALL talents STARTS-->
+                            <div class="row m-4">
+                                <div class="input-group md-form form-sm form-2">
+                                    <input class="form-control my-0 py-1 info-border" type="text"
+                                        placeholder="Search in all talents by Name" aria-label="Search">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text teal lighten-3" id="basic-text1"><i
+                                                class="fas fa-search text-grey" aria-hidden="true"></i></span>
                                     </div>
-                                    <input class="form-control my-0 py-1" type="text" placeholder="Search"
-                                        aria-label="Search">
                                 </div>
-
                             </div>
-
-
-
+                            <!-- Filter IN ALL talents STARTS-->
 
                         </div>
+                        <!-- Panel -->
                     </div>
+
                 </div>
                 <!-- Profile Ends -->
 
@@ -202,7 +241,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-toggle="tab" href="#panel333" role="tab">
-                                <i class="fas fa-search pr-2"></i>Search</a>
+                                <i class="fas fa-users pr-2"></i>Talents</a>
                         </li>
                     </ul>
 
@@ -1826,15 +1865,15 @@
                         <!-- Panel 222-Networking Starts-->
 
 
-                        <!-- Panel 333-SEARCH FOR TALENTS START-->
+                        <!-- Panel 333-TALENTS START-->
                         <div class="tab-pane fade in show" id="panel333" role="tabpanel">
                             <div class="container py-5 z-depth-1">
                                 <!--Section: Content-->
                                 <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
                                     <h3 class="font-weight-bold">Search for Talents</h3>
                                     <hr>
-                                    <!-- SEARCH IN ALL EVENTS STARTS-->
-                                    <div class="input-group md-form form-sm form-2 pl-0 mx-3 mb-4">
+                                    <!-- Search IN ALL talents STARTS-->
+                                    <div class="input-group md-form form-sm form-2 pl-0 mb-4">
                                         <input class="form-control my-0 py-1 info-border" type="text"
                                             placeholder="Search in all talents by Name" aria-label="Search">
                                         <div class="input-group-append">
@@ -1842,14 +1881,158 @@
                                                     class="fas fa-search text-grey" aria-hidden="true"></i></span>
                                         </div>
                                     </div>
-                                    <!-- SEARCH IN ALL EVENTS ENDS-->
+                                    <!-- Filter IN ALL talents STARTS-->
 
+                                    <div class="row mb-4">
+                                        <!-- by  sector-->
+                                        <div class="col-6 select-outline">
+                                            <select class="mdb-select md-form md-outline Org my-2" multiple
+                                                id="filterSector">
+                                                <option disabled selected></option>
+                                                <?php
+                              $sectorcheck=$db->prepare("SELECT sectors_name FROM sectors");
+                              $sectorcheck->execute();
+
+                              while($sectorinfo=$sectorcheck->fetch(PDO::FETCH_ASSOC)) { ?>
+
+                                                <option value="<?php echo $sectorinfo['sectors_name'] ?>">
+                                                    <?php echo $sectorinfo['sectors_name'] ?></option>
+
+                                                <?php } ?>
+                                            </select>
+                                            <label for="filterSector">Filter by Sector</label>
+                                        </div>
+
+
+                                        <div class="col-6 select-outline">
+                                            <select class="mdb-select md-form md-outline Org my-2" multiple id="filLoc">
+                                                <option disabled selected></option>
+                                                <?php 
+                                                $citycheck=$db->prepare("SELECT city FROM cities");
+                                                $citycheck->execute();
+                                                $countcity=0;
+                                                while($cityinfo=$citycheck->fetch(PDO::FETCH_ASSOC)) { $countcity++?>
+
+                                                <option value="<?php echo $cityinfo['city'] ?>">
+                                                    <?php echo $cityinfo['city'] ?></option>
+
+                                                <?php } ?>
+                                            </select>
+                                            <label for="filLoc">Filter by Location</label>
+                                        </div>
+
+                                    </div>
+                                    <!-- Filter IN ALL talents ends-->
+
+
+                                    <!--Talent Card starts-->
+                                    <div class="col-12 mb-4">
+                                        <div class="card z-depth-0 bordered border-light">
+                                            <div class="card-body p-0">
+                                                <div
+                                                    class="row mx-0 grey lighten-4 rounded-left d-flex align-items-center">
+                                                    <div class="col-1 text-center pt-1">
+                                                        <i class="far fa-id-badge text-info fa-3x"></i>
+                                                    </div>
+                                                    <div class="col-11 px-0 pt-3">
+                                                        <table class="table m-0">
+
+                                                            <tr>
+                                                                <td class="p-0 font-weight-light"><small>Name</small>
+                                                                </td>
+                                                                <td class="p-0 font-weight-light"><small>Gender</small>
+                                                                </td>
+                                                                <td class="p-0 font-weight-light"><small>Age</small>
+                                                                </td>
+                                                                <td class="p-0 font-weight-light"><small>Highest Study
+                                                                        Level</small></td>
+                                                                <td class="p-0 font-weight-light"><small>Sector</small>
+                                                                </td>
+                                                                <td class="p-0 font-weight-light">
+                                                                    <small>Language</small></td>
+                                                                <td class="p-0 font-weight-light"><small>Check</small>
+                                                                </td>
+                                                            </tr>
+
+
+                                                            <tr>
+                                                                <td class="px-0 py-3">Jane Doe</td>
+                                                                <td class="px-0 py-3">Female</td>
+                                                                <td class="px-0 py-3">34</td>
+                                                                <td class="px-0 py-3">Master</td>
+                                                                <td class="px-0 py-3">IT</td>
+                                                                <td class="px-0 py-3">English, Dutch</td>
+                                                                <td class="px-0 py-0"><button
+                                                                        class="btn btn-sm btn-info mt-1 mx-0">Profile</button>
+                                                                </td>
+                                                            </tr>
+
+
+                                                        </table>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 mb-4">
+                                        <div class="card z-depth-0 bordered border-light">
+                                            <div class="card-body p-0">
+                                                <div
+                                                    class="row mx-0 grey lighten-4 rounded-left d-flex align-items-center">
+                                                    <div class="col-1 text-center pt-1">
+                                                        <i class="far fa-id-badge text-info fa-3x"></i>
+                                                    </div>
+                                                    <div class="col-11 px-0 pt-3">
+                                                        <table class="table m-0">
+
+                                                            <tr>
+                                                                <td class="p-0 font-weight-light"><small>Name</small>
+                                                                </td>
+                                                                <td class="p-0 font-weight-light"><small>Gender</small>
+                                                                </td>
+                                                                <td class="p-0 font-weight-light"><small>Age</small>
+                                                                </td>
+                                                                <td class="p-0 font-weight-light"><small>Highest Study
+                                                                        Level</small></td>
+                                                                <td class="p-0 font-weight-light"><small>Sector</small>
+                                                                </td>
+                                                                <td class="p-0 font-weight-light">
+                                                                    <small>Language</small></td>
+                                                                <td class="p-0 font-weight-light"><small>Check</small>
+                                                                </td>
+                                                            </tr>
+
+
+                                                            <tr>
+                                                                <td class="px-0 py-3">Micheal Gate</td>
+                                                                <td class="px-0 py-3">Male</td>
+                                                                <td class="px-0 py-3">29</td>
+                                                                <td class="px-0 py-3">Bachelor </td>
+                                                                <td class="px-0 py-3">Medicine</td>
+                                                                <td class="px-0 py-3">English, French</td>
+                                                                <td class="px-0 py-0"><button
+                                                                        class="btn btn-sm btn-info mt-1 mx-0">Profile</button>
+                                                                </td>
+                                                            </tr>
+
+
+                                                        </table>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Talent Card Ends-->
 
 
 
                                 </section>
                             </div>
                         </div>
+                        <!-- Panel 333-TALENTS ENDS-->
                     </div>
                     <!-- Grid column -->
                 </div>
