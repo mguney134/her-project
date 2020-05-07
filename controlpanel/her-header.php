@@ -121,64 +121,92 @@ $moppinfo=$moppcheck->fetch(PDO::FETCH_ASSOC);
                         <!-- Panel -->
                         <div class="card">
 
-                            <div class="card-header white-text warning-color">
-                                Motivation
+                            <div class="card-header white-text warning-color text-center  position-relative pl-3 pr-2">
+                              <h5 class="d-inline font-weight-normal">
+                              Motivation
+                              </h5>
+                              
+                                <a ><i class="fas fa-edit white-text d-inline float-right " data-toggle="modal" data-target="#editMotivation"></i></a>
                             </div>
-                            <div class=" mx-5 mt-5">
                               <?php if (!isset($motivationinfo['her_id'])) { ?>
-                              <h5 class="font-weight-bold">No records yet.</h5>
+                              <h5 class="mx-4 my-3 font-weight-bold">No records yet.</h5>
                               <?php } ?>
+                              
 
+                            <div class="row mx-2">
+                              <!--studyseeker starts-->
                               <?php if (isset($motivationinfo['study'])) { ?>
-                                <h5 class="font-weight-bold">I am a <span class="">Studyseeker</span> <br>
+                              <div class="col-lg-6 my-2" >
+                                  <div class="card text-center">
 
-                                 <?php 
+                                      <div>
+                                          <i class="far fa-compass fa-2x deep-orange-text px-4 py-2"></i>
 
-                                 $studies = explode(",", $motivationinfo['study']);
-                                 for ($i = 0; $i <  count($studies); $i++) {
-                                      $key=key($studies);
-                                      $val=$studies[$key];
-                                      if ($val<> ' ') { ?>
-                                         <span class="badge badge-warning"><?php echo $val ?></span><br>
-                                        <?php }
-                                       next($studies);
-                                      }
-                                 ?>
-                                  
+                                      </div>
+                                      <div class="card-body pt-1">
+                                          <h5 style="font-size: 1.1rem;" class="card-text">I am a <span class="font-weight-bold">Studyseeker</span>
+                                          </h5>
+                                      </div>
+                                      <div class="mb-2">
+                                      <?php 
 
+                                        $studies = explode(",", $motivationinfo['study']);
+                                        for ($i = 0; $i <  count($studies); $i++) {
+                                            $key=key($studies);
+                                            $val=$studies[$key];
+                                            if ($val<> ' ') { ?>
+                                                <span class=" badge badge-warning"><?php echo $val ?></span><br>
+                                              <?php }
+                                              next($studies);
+                                            }
+                                        ?>
+                                                                            
+                                        </div>
 
-                                </h5>
-                                <hr />
-                              <?php } ?>
-                                <?php if (isset($motivationinfo['work'])) { ?>
-                                  
-                                  <h5 class="font-weight-bold">I am a <span class="">Jobseeker</span> <br> 
-
-                                    
-                                <?php 
-
-                                 $works = explode(",", $motivationinfo['work']);
-                                 for ($i = 0; $i <  count($works); $i++) {
-                                      $key1=key($works);
-                                      $val1=$works[$key1];
-                                      if ($val1<> ' ') { ?>
-                                         <span class="badge badge-warning"><?php echo $val1 ?></span><br>
-                                        <?php }
-                                       next($works);
-                                      }
-                                 ?>
-
-                                  </h5>
-                                <?php } ?>
-                               
-
-                                <div class="text-right">
-                                    <a class="btn-floating btn-sm btn-secondary" data-toggle="modal" data-target="#editMotivation"><i class="fas fa-edit"></i></a>
-                                   
+                                      </div>
                                 </div>
-                                <br>
-                            
+                              <?php } ?>
+                              <!--studyseeker ends-->
+
+                              <!--jobseeker starts-->
+                              <?php if (isset($motivationinfo['work'])) { ?>
+                              <div class="col-lg-6 my-2" >
+                                  <div class="card text-center">
+
+                                      <div>
+                                          <i class="far fa-compass fa-2x deep-orange-text px-4 py-2"></i>
+
+                                      </div>
+                                      <div class="card-body pt-1">
+                                          <h5 style="font-size: 1.1rem;" class="card-text">I am a <span class="font-weight-bold">Jobseeker</span>
+                                          </h5>
+                                      </div>
+                                      <div class="mb-2">
+                                            <?php 
+
+                                        $works = explode(",", $motivationinfo['work']);
+                                        for ($i = 0; $i <  count($works); $i++) {
+                                              $key1=key($works);
+                                              $val1=$works[$key1];
+                                              if ($val1<> ' ') { ?>
+                                                <span class="badge badge-warning"><?php echo $val1 ?></span><br>
+                                                <?php }
+                                              next($works);
+                                              }
+                                        ?>
+                                                                            
+                                        </div>
+
+                                      </div>
+                                </div>
+                              <?php } ?>
+                              <!--jobseeker ends-->
+
+
                             </div>
+                            
+
+
                             
                          
 
@@ -189,10 +217,15 @@ $moppinfo=$moppcheck->fetch(PDO::FETCH_ASSOC);
                     <div class="card profile-card mt-4">
                       <!-- Panel -->
                       <div class="card">
+                           <div class="card-header white-text warning-color text-center  position-relative pl-3 pr-2">
+                              <h5 class="d-inline font-weight-normal">
+                                Member of piloting
+                              </h5>
+                              
+                                <a ><i class="fas fa-edit white-text d-inline float-right " data-toggle="modal" data-target="#editMopp"></i></a>
+                            </div>
 
-                          <div class="card-header white-text warning-color">
-                            Member of piloting
-                          </div>
+                          
 
                           <?php
                             $mentorcheck=$db->prepare("SELECT * FROM mentor where mentor_id=:mentor_id");
@@ -305,10 +338,7 @@ $moppinfo=$moppcheck->fetch(PDO::FETCH_ASSOC);
                             <?php if (!isset($herinfo['mentor_id'])) { ?>
                               <h5 class="font-weight-bold">You haven't been matched with a mentor yet.</h5>
                             <?php } ?>
-                            <div class="text-right">
-                                    <a class="btn-floating btn-sm btn-secondary" data-toggle="modal" data-target="#editMopp"><i class="fas fa-edit"></i></a>
-                                   
-                            </div>
+                            
                         </div>
                           
 
