@@ -353,23 +353,57 @@ $eventscheck->execute( );
 
 
                                 <!-- Filter IN ALL post STARTS-->
-                                <div class="row text-right mb-3 mt-2">
-                                    <div class="col select-outline">
-                                        <select class="mdb-select md-form md-outline Her my-2" id="filterPosts" >
-                                        <option disabled select></option>
-                                        <optgroup label="Type of Networking Posts">
+                                <div class="row mb-4">
+                                    <!-- by type-->
+                                    <div class="col-4 select-outline">
+                                        <select class="mdb-select md-form md-outline Her my-2" multiple
+                                            id="filterPosts">
+                                            <option disabled select></option>
                                             <option value="study">Study</option>
                                             <option value="Vacancy">Vacancy</option>
                                             <option value="Event">Event</option>
                                             <option value="Project">Project</option>
                                             <option value="Tool">Tool</option>
-                                        </optgroup>
-                                        <optgroup label="Target Group">
-                                            <option value="3">Option 3</option>
-                                            <option value="4">Option 4</option>
-                                        </optgroup>
                                         </select>
-                                        <label for="filterPosts">Filter Networking Posts</label>
+                                        <label for="filterPosts">Filter by Type</label>
+                                    </div>
+                                    <!-- by target group-->
+                                    <div class="col-4 select-outline">
+                                        <select class="mdb-select md-form md-outline Her my-2" multiple
+                                            id="filterTarget">
+                                            <option disabled selected></option>
+                                            <option value="Refugees">Refugees</option>
+                                            <option value="Job seekers">Job seekers</option>
+                                            <option value="Employers">Employers</option>
+                                            <option value="Mentors">Mentors</option>
+                                            <option value="Study seekers">Study seekers</option>
+                                            <option value="Government Organizations">Government
+                                                Organizations</option>
+                                            <option value="NGO / nonprofit">NGO / nonprofit</option>
+                                            <option value="Academia / Education">Academia / Education
+                                            </option>
+                                            <option value="All">All</option>
+                                            <option value="Migrants ">Migrants</option>
+                                        </select>
+                                        <label for="filterTarget">Filter by Target Group</label>
+                                    </div>
+                                    <!-- by target sector-->
+                                    <div class="col-4 select-outline">
+                                        <select class="mdb-select md-form md-outline Her my-2" multiple
+                                            id="filterSector">
+                                            <option disabled selected></option>
+                                            <?php
+                                        $sectorcheck=$db->prepare("SELECT sectors_name FROM sectors");
+                                        $sectorcheck->execute();
+
+                                        while($sectorinfo=$sectorcheck->fetch(PDO::FETCH_ASSOC)) { ?>
+
+                                            <option value="<?php echo $sectorinfo['sectors_name'] ?>">
+                                                <?php echo $sectorinfo['sectors_name'] ?></option>
+
+                                            <?php } ?>
+                                        </select>
+                                        <label for="filterSector">Filter by Sector</label>
                                     </div>
                                 </div>
                                 <!-- Filter IN ALL post ends-->
