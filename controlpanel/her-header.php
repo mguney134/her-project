@@ -101,7 +101,7 @@ $moppinfo=$moppcheck->fetch(PDO::FETCH_ASSOC);
                             <!-- Name -->
                             <h3 class="mb-3 font-weight-bold"><strong><?php echo $herinfo['firstname'] ?></strong></h3>
 
-                            <a class="btn btn-warning btn-rounded waves-effect waves-light" href="generate-cv.php">Generate CV</a>
+                            <a class="btn btn-deep-orange  btn-md waves-effect waves-light" href="generate-cv.php">Generate CV</a>
                             <br>
                             <br>
                             
@@ -121,10 +121,10 @@ $moppinfo=$moppcheck->fetch(PDO::FETCH_ASSOC);
                         <!-- Panel -->
                         <div class="card">
 
-                            <div class="card-header white-text warning-color text-center  position-relative pl-3 pr-2">
-                              <h5 class="d-inline font-weight-normal">
+                            <div class="card-header white-text deep-orange lighten-2 text-center  position-relative py-2 pl-3 pr-2">
+                              <h6 class="d-inline font-weight-normal">
                               Motivation
-                              </h5>
+                              </h6>
                               
                                 <a ><i class="fas fa-edit white-text d-inline float-right " data-toggle="modal" data-target="#editMotivation"></i></a>
                             </div>
@@ -136,7 +136,7 @@ $moppinfo=$moppcheck->fetch(PDO::FETCH_ASSOC);
                             <div class="row mx-2">
                               <!--studyseeker starts-->
                               <?php if (isset($motivationinfo['study'])) { ?>
-                              <div class="col-lg-6 my-2" >
+                              <div class="col-lg-6 my-3" >
                                   <div class="card text-center">
 
                                       <div>
@@ -170,7 +170,7 @@ $moppinfo=$moppcheck->fetch(PDO::FETCH_ASSOC);
 
                               <!--jobseeker starts-->
                               <?php if (isset($motivationinfo['work'])) { ?>
-                              <div class="col-lg-6 my-2" >
+                              <div class="col-lg-6 my-3" >
                                   <div class="card text-center">
 
                                       <div>
@@ -217,16 +217,18 @@ $moppinfo=$moppcheck->fetch(PDO::FETCH_ASSOC);
                     <div class="card profile-card mt-4">
                       <!-- Panel -->
                       <div class="card">
-                           <div class="card-header white-text warning-color text-center  position-relative pl-3 pr-2">
-                              <h5 class="d-inline font-weight-normal">
+                           <div class="card-header white-text deep-orange lighten-2 text-center py-2 position-relative pl-3 pr-2">
+                              <h6 class="d-inline font-weight-normal">
                                 Member of piloting
-                              </h5>
+                              </h6>
                               
                                 <a ><i class="fas fa-edit white-text d-inline float-right " data-toggle="modal" data-target="#editMopp"></i></a>
                             </div>
 
                           
-
+                          <div class="mx-3 my-2">
+                            <img src="../images/logos/motivation/vdab-limburg.png" width="100%">
+                          </div>
                           <?php
                             $mentorcheck=$db->prepare("SELECT * FROM mentor where mentor_id=:mentor_id");
                             $mentorcheck->execute(array(
@@ -308,38 +310,109 @@ $moppinfo=$moppcheck->fetch(PDO::FETCH_ASSOC);
                                    
                               </thead>
                           </div>
-                           <hr />
-                          <div class=" mx-5 mt-4">
-                          <?php if (isset($herinfo['coach_id'])) { ?>
-                           
-                              <h5 class="font-weight-bold">Your matched career coach is  <span class="badge badge-warning"><?php echo $mentorinfo['firstname']." ".$mentorinfo['lastname'] ?></span></h5>
-                          <?php } ?>
-                          <?php if (!isset($herinfo['coach_id'])) { ?>
-                              <h5 class="font-weight-bold">You haven't been matched with a coach yet.</h5>
-                          <?php } ?>
+                          <div class="card-header white-text deep-orange lighten-2 text-center mt-3 py-2">
+                              <h6 class="font-weight-normal mb-0">
+                                Matched Mentor / Coach
+                              </h6>
+                              
+                                
+                          </div>
 
-                            <hr />
-                            <?php if (isset($herinfo['mentor_id'])) { ?>
-                              <h5 class="font-weight-bold">Your matched mentor is <span class="badge badge-warning"><?php echo $mentorinfo['firstname']." ".$mentorinfo['lastname'] ?></span></h5>
-                              <h6 class="font-weight-bold">
-                                 <?php 
-                                    $usercheck=$db->prepare("SELECT * FROM users where user_id=:user_id");
-                                    $usercheck->execute(array(
-                                      'user_id' => $mentorinfo['user_id']
-                                      ));
-                                    $userinfo=$usercheck->fetch(PDO::FETCH_ASSOC);
-                                    ?>
-
-                                    <?php echo $userinfo['email'] ?> / 
+                          <div class="row mx-2">
 
 
-                                <span><?php echo $mentorinfo['tel'] ?></span> </h6>
-                            <?php } ?>
-                            <?php if (!isset($herinfo['mentor_id'])) { ?>
-                              <h5 class="font-weight-bold">You haven't been matched with a mentor yet.</h5>
-                            <?php } ?>
-                            
-                        </div>
+
+                              <!--matched mentor starts-->
+                              <?php if (isset($herinfo['mentor_id'])) { ?>
+                              <div class="col-lg-6 my-3" >
+                                  <div class="card text-center">
+                                      <i class="fas fa-user-friends fa-2x deep-orange-text px-4 py-2"></i>
+                                        <div class="card-body pt-1 pb-1">
+                                            <h5 style="font-size: 1.1rem;" class="card-text"><span class="font-weight-bold">Your Mentor</span>
+                                            </h5>
+                                        </div>
+                                      <div class="">
+                                        <p class="mb-1"><?php echo $mentorinfo['firstname']." ".$mentorinfo['lastname'] ?></p>
+                                        <p class="font-weight-bold mx-2"><small>
+                                            <?php 
+                                                $usercheck=$db->prepare("SELECT * FROM users where user_id=:user_id");
+                                                $usercheck->execute(array(
+                                                  'user_id' => $mentorinfo['user_id']
+                                                  ));
+                                                $userinfo=$usercheck->fetch(PDO::FETCH_ASSOC);
+                                                ?>
+
+                                                <?php echo $userinfo['email'] ?> 
+
+
+                                            <span><?php echo $mentorinfo['tel'] ?></span> </small></p>
+                                      
+                                      </div>
+                                    </div>
+                                </div>
+                                <?php } ?>
+                              <!--matched mentor ends-->
+
+                              <!--No Mentor starts-->
+                              <?php if (!isset($herinfo['mentor_id'])) { ?>
+                                <div class="col-lg-6 my-3" >
+                                    <div class="card text-center">
+                                        <i class="fas fa-user-friends fa-2x deep-orange-text px-4 py-2"></i>
+                                        <div class="card-body pt-1">
+                                            <h5 style="font-size: 1.1rem;" class="card-text"><span class="font-weight-bold">Mentor</span>
+                                            </h5>
+                                        </div>
+                                        <div class="mb-2">
+                                          <p>No match yet</p>
+                                        </div>
+                                     </div>
+                                </div>
+                                <?php } ?>
+                              <!--No Mentor ends-->
+
+                              <!--matched coach starts-->
+                              <?php if (isset($herinfo['coach_id'])) { ?>
+                              <div class="col-lg-6 my-3" >
+                                  <div class="card text-center">
+                                      <i class="fas fa-user-friends fa-2x deep-orange-text px-4 py-2"></i>
+                                        <div class="card-body pt-1 pb-1">
+                                            <h5 style="font-size: 1.1rem;" class="card-text"><span class="font-weight-bold">Your Coach</span>
+                                            </h5>
+                                        </div>
+                                      <div class="mb-2">
+                                        <p>
+                                          <?php echo $mentorinfo['firstname']." ".$mentorinfo['lastname'] ?>
+                                            
+                                        </p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <?php } ?>
+                              <!--matched coach ends-->
+                                
+                              <!--No coach starts-->
+                              <?php if (!isset($herinfo['coach_id'])) { ?>
+                                <div class="col-lg-6 my-3" >
+                                    <div class="card text-center">
+                                        <i class="fas fa-user-friends fa-2x deep-orange-text px-4 py-2"></i>
+                                        <div class="card-body pt-1">
+                                            <h5 style="font-size: 1.1rem;" class="card-text"><span class="font-weight-bold">Your Coach</span>
+                                            </h5>
+                                        </div>
+                                        <div class="mb-2">
+                                          <p>No match yet</p>
+                                        </div>
+                                     </div>
+                                </div>
+                                <?php } ?>
+                              <!--No coach ends-->
+                              
+
+                              
+
+
+                            </div>
+                          
                           
 
                       </div>

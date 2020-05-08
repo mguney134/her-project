@@ -42,7 +42,7 @@
                 <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
                     <div class="d-flex flex-row  justify-content-between">
                         <h3 class="font-weight-bold text-left">Your Information</h3>
-                        <button type="button" class="btn btn-sm btn-outline-warning btn-rounded waves-effect" data-toggle="modal" data-target="#changePassword">Change Password</button>
+                        <button type="button" class="btn btn-sm btn-outline-amber btn-rounded waves-effect" data-toggle="modal" data-target="#changePassword">Change Password</button>
                     </div>
 
                     <!--Change Password Modal starts-->
@@ -170,7 +170,7 @@
                     
                     <div class="text-right">
                         <a class="" href="herprofile-edit.php" >
-                        <button class="btn btn-warning btn-md text-right">
+                        <button class="btn btn-amber btn-md text-right">
                             <i class="fas fa-user-edit mr-1"></i>Edit 
                         </button></a>
                     </div>
