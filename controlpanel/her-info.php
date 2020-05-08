@@ -42,7 +42,7 @@
                 <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
                     <div class="d-flex flex-row  justify-content-between">
                         <h3 class="font-weight-bold text-left">Your Information</h3>
-                        <button type="button" class="btn btn-sm btn-outline-warning btn-rounded waves-effect" data-toggle="modal" data-target="#changePassword">Change Password</button>
+                        <button type="button" class="btn btn-sm btn-outline-amber btn-rounded waves-effect" data-toggle="modal" data-target="#changePassword">Change Password</button>
                     </div>
 
                     <!--Change Password Modal starts-->
@@ -56,40 +56,43 @@
                                         <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
-                                    <div class="modal-body">
-                                        <div class="row px-1">
-                                                <div class="col">
-                                                    <div class="md-form md-outline  Her mb-1 mt-3">
-                                                        <input name="all_password" id="oldPassword" type="password" class="form-control validate" required>
-                                                        <label for="oldPassword" >Old password</label>
-                                                    </div>
-                                                </div>
-                                        </div>
-                                        
+                                    <form action="../settings/action.php" method="POST">
+                                        <div class="modal-body">
                                             <div class="row px-1">
-                                                <div class="col">
-                                                    <div class="md-form md-outline  Her my-1">
-                                                        <input name="all_password" id="newPassword" type="password" class="form-control validate" required>
-                                                        <label for="newPassword">Create new password</label>
+                                                    <div class="col">
+                                                        <div class="md-form md-outline  Her mb-1 mt-3">
+                                                            <input name="password" id="oldPassword" type="password" class="form-control validate" required>
+                                                            <label for="oldPassword" >Old password</label>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="md-form md-outline  Her  my-1">
-                                                        <input name="confirmpassword" id="conPass" type="password" class="form-control" required>
-                                                        <label for="conPass" >Confirm new password</label>
-                                                    </div>
-                                                </div>
                                             </div>
-                                        
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-sm btn-secondary">Save changes</button>
-                                    </div>
-                                    </div>
+                                            
+                                                <div class="row px-1">
+                                                    <div class="col">
+                                                        <div class="md-form md-outline  Her my-1">
+                                                            <input name="all_password" id="newPassword" type="password" class="form-control validate" required>
+                                                            <label for="newPassword">Create new password</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="md-form md-outline  Her  my-1">
+                                                            <input name="confirmpassword" id="conPass" type="password" class="form-control" required>
+                                                            <label for="conPass" >Confirm new password</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            
+                                        </div>
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-sm btn-secondary" name="changepassword">Save changes</button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
-                            <!--Change Password Modal ends-->
+                        </div>
+                        <!--Change Password Modal ends-->
                     
                     <hr />
                     <div class="row my-2">
@@ -150,6 +153,14 @@
                     </div>
                     <div class="row my-2">
                         <div class="col-3">
+                            <p class="text-right">Phone Number</p>
+                        </div>
+                        <div class="col-9">
+                            <p class="border-bottom pb-1"><?php echo $herinfo['tel_no'] ?>&nbsp</p>
+                        </div>
+                    </div>
+                    <div class="row my-2">
+                        <div class="col-3">
                             <p class="text-right">E-mail</p>
                         </div>
                         <div class="col-9">
@@ -159,7 +170,7 @@
                     
                     <div class="text-right">
                         <a class="" href="herprofile-edit.php" >
-                        <button class="btn btn-warning btn-md text-right">
+                        <button class="btn btn-amber btn-md text-right">
                             <i class="fas fa-user-edit mr-1"></i>Edit 
                         </button></a>
                     </div>

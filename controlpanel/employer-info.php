@@ -1,229 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <title>Welcome User</title>
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="../images/favicon/favicon-32x32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="../images/favicon/favicon-16x16.png" sizes="16x16" />
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
-  <!-- Bootstrap core CSS -->
-  <link href="../css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Material Design Bootstrap -->
-  <link href="../css/mdb.min.css" rel="stylesheet" />
-  <link href="../css/style-other.min.css" rel="stylesheet" />
-  <link href="../css/inputs.css" rel="stylesheet" />
-  <link href="../css/events.css" rel="stylesheet" />
-
-</head>
-
-<body class="fixed-sn white-skin" cz-shortcut-listen="true">
-  <!-- NAVBAR STARTS -->
-  <header>
-    <!-- Navbar -->
-    <nav class="mb-1 navbar navbar-expand-lg navbar-dark purple-gradient">
-      <a class="navbar-brand" href="../home.html">
-        <img src="../images/logos/logo.png" height="30" alt="all-in-one-4-her logo" />
-      </a>
-      <ul class="navbar-nav ml-auto nav-flex-icons">
-        <i class="nav-item fas fa-user mr-3 text-white pt-1"></i>
-        <a class="nav-item text-white" href="#">Log Out</a>
-      </ul>
-    </nav>
-    <!-- Navbar -->
-  </header>
-  <!-- NAVBAR ENDS -->
-
+<?php
+    
+    include 'employer-header.php';
+    
+  
+?>   
   <!-- CONTAINER STARTS-->
-  <div class="container-fluid">
-    <!-- Section: Team v.1 starts-->
-    <section class="section team-section mt-5">
-      <!-- Grid row -->
-      <div class="row text-center">
-        <!-- Profile Starts -->
-        <div class="col-md-3 mb-4">
-          <!-- Card -->
-          <div class="card profile-card mt-4">
-            <!-- Avatar -->
-            <div class="avatar mt-n5 mb-4">
-              <img src="../images/icons/user-employer.png" class="rounded-circle" alt="First sample avatar image" />
-            </div>
-
-            <div class="card-body pt-0 mt-0">
-              <!-- Name -->
-              <h3 class="mb-4 font-weight-bold">
-                <strong>Bill Gates</strong>
-              </h3>
-              <h5 class="mb-3">-Microsoft-</h5>
-              <hr>
-              <div class="row">
-                <h5 class="mx-5 deep-purple-text">
-                  Which type of talents are you looking for?
-                </h5>
-
-              </div>
-
-              <div class="row">
-                <div class="col">
-                  <h6 class="text-center">
-                    <span>ICT</span>-<span>Software Developer</span>
-                  </h6>
-                </div>
-
-              </div>
-
-              <div class="text-right">
-                <button class="btn-floating btn-sm btn-purple" type="button" data-toggle="modal" data-target="#talent">
-                  <i class="fas fa-edit"></i>
-                </button>
-              </div>
-              <div class="modal fade" id="talent" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title text-secondary" id="exampleModalLabel">
-                        Which type of talents are you looking for?
-                      </h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body  mx-4">
-                      <form>
-                        <div class="row">
-                          <div class="col-md-12 select-outline Employer">
-
-                            <select class="mdb-select md-form md-outline Employer " id="sector1">
-                              <option value="" disabled selected></option>
-                              <option value="Administrative & Accountancy">Administrative & Accountancy</option>
-                              <option value="ICT">ICT</option>
-                              <option value="Education & Research">Education & Research</option>
-                              <option value="Entrepreneurship">Entrepreneurship</option>
-                              <option value="Industry & Construction">Industry & Construction</option>
-                              <option value="Logistics">Logistics</option>
-                              <option value="Medical & Care">Medical & Care</option>
-                              <option value="Social Profit">Social Profit</option>
-                            </select>
-                            <label for="sector1">Sector</label>
-
-                          </div>
-                        </div>
-
-
-                        <div class="form-row my-2">
-                          <div class="col">
-                            <div class="md-form md-outline  Employer my-1">
-                              <input type="text" id="jobTitle" class="form-control" />
-                              <label for="jobTitle" class="font-weight-normal">Job Title</label>
-                            </div>
-                          </div>
-                        </div>
-
-
-
-                      </form>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-outline-purple btn-sm" data-dismiss="modal">
-                        Close
-                      </button>
-                      <button type="button" class="btn btn-sm btn-purple">
-                        Save
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-          <div class="card profile-card mt-4">
-            <!-- Panel -->
-            <div class="card">
-
-              <div class="card-header white-text purple lighten-2">
-                Matched Talents
-              </div>
-
-              <section class="p-md-3 mx-md-3 text-center text-lg-left">
-
-                <div class="row mt-2">
-
-                  <!--    matched talent 1 starts -->
-
-                  <a class="col-lg-6 mb-4" href="employer-talent.php">
-                    <div class="card text-center">
-
-                      <div>
-                        <i class="fas fa-user-check fa-2x text-secondary px-4 py-2"></i>
-
-                      </div>
-                      <div class="card-body pt-1">
-                        <h5 style="font-size: 1.1rem;" class="card-text">Joe Black
-                        </h5>
-                      </div>
-
-                    </div>
-                  </a>
-                  <!--    matched talent 1 Ends -->
-
-                  <!--    matched talent 2 starts -->
-                  <a class="col-lg-6 mb-4" href="org-talent.php">
-                    <div class="card text-center">
-
-                      <div>
-                        <i class="fas fa-user-check fa-2x text-secondary px-4 py-2"></i>
-
-                      </div>
-                      <div class="card-body pt-1">
-                        <h5 style="font-size: 1.1rem;" class="card-text">Jane Doe
-                        </h5>
-                      </div>
-
-                    </div>
-                  </a>
-                  <!--    matched talent 2 Ends -->
-                </div>
-              </section>
-            </div>
-            <!-- Panel -->
-          </div>
-          <!-- Search for Talent card starts -->
-          <!-- <div class="card profile-card mt-4">
-            <div class="card-body pt-0 mt-0">
-              
-              <h4 class="mb-4 mt-4 font-weight-bold">
-                <strong>Matched Talents</strong>
-              </h4>
-              <h5 class="mb-3">Joe Doe</h5>
-              <hr>
-              <div class="row text-center">
-                <div class="col text-center">
-                  <h5 class="mt-5 deep-purple-text mx-4">
-                    Search for talents
-                  </h5>
-                </div>
-              </div>
-              <div class="row mx-4">
-                <div class="input-group md-form form-sm form-1 pl-0">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text purple lighten-3" id="basic-text1"><i class="fas fa-search text-white"
-                        aria-hidden="true"></i></span>
-                  </div>
-                  <input class="form-control my-0 py-1" type="text" placeholder="Search" aria-label="Search">
-                </div>
-
-              </div>
-            </div>
-          </div> -->
-          <!-- Search for Talent card ends -->
-        </div>
-        <!-- Profile Ends -->
+  
 
         <!-- Tabbed Nav starts -->
         <div class="col-md-9 mb-4">
@@ -240,7 +22,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" data-toggle="tab" href="#panel333" role="tab">
-                <i class="fas fa-users pr-2"></i>Talents</a>
+                <i class="fas fa-search pr-2"></i>Search</a>
             </li>
           </ul>
 
@@ -324,7 +106,7 @@
                       <p class="text-right">Position</p>
                     </div>
                     <div class="col-9">
-                      <p class="border-bottom pb-1"><?php echo $mentorinfo['gender'] ?>&nbsp</p>
+                      <p class="border-bottom pb-1"><?php echo $employerinfo['position'] ?>&nbsp</p>
                     </div>
                   </div>
                   <div class="row my-2">
@@ -332,7 +114,7 @@
                       <p class="text-right">Name of the Company</p>
                     </div>
                     <div class="col-9">
-                      <p class="border-bottom pb-1"><?php echo $$mentorinfo['birth'] ?>&nbsp</p>
+                      <p class="border-bottom pb-1"><?php echo $employerinfo['company'] ?>&nbsp</p>
                     </div>
                   </div>
                   <div class="row my-2">
@@ -340,7 +122,7 @@
                       <p class="text-right">Sector</p>
                     </div>
                     <div class="col-9">
-                      <p class="border-bottom pb-1"><?php echo $$mentorinfo['country'] ?>&nbsp</p>
+                      <p class="border-bottom pb-1"><?php echo $employerinfo['sector'] ?>&nbsp</p>
                     </div>
                   </div>
                   <div class="row my-2">
@@ -348,7 +130,7 @@
                       <p class="text-right">Explanation</p>
                     </div>
                     <div class="col-9">
-                      <p class="border-bottom pb-1"><?php echo $herinfo['legalStatus'] ?>&nbsp</p>
+                      <p class="border-bottom pb-1"><?php echo $herinfo['explanation'] ?>&nbsp</p>
                     </div>
                   </div>
                   <div class="row my-2">
@@ -356,7 +138,7 @@
                       <p class="text-right">Link</p>
                     </div>
                     <div class="col-9">
-                      <p class="border-bottom pb-1"><?php echo $mentorinfo['levelofStudy'] ?>&nbsp</p>
+                      <p class="border-bottom pb-1"><?php echo $employerinfo['link'] ?>&nbsp</p>
                     </div>
                   </div>
                   <div class="row my-2">
@@ -364,7 +146,7 @@
                       <p class="text-right">Logo</p>
                     </div>
                     <div class="col-9">
-                      <p class="border-bottom pb-1"><?php echo $mentorinfo['job'] ?>&nbsp</p>
+                      <p class="border-bottom pb-1"><?php echo $employerinfo['logo'] ?>&nbsp</p>
                     </div>
                   </div>
 
@@ -408,14 +190,14 @@
                               <div class="col">
                                 <!-- First name -->
                                 <div class="md-form md-outline Employer my-1">
-                                  <input type="text" id="firstName" class="form-control" />
+                                  <input type="text" id="firstName" class="form-control" name="firstname" value="<?php echo $employerinfo['firstname'] ?>" />
                                   <label for="firstName">First name </label>
                                 </div>
                               </div>
                               <div class="col">
                                 <!-- Last name -->
                                 <div class="md-form md-outline Employer my-1">
-                                  <input type="text" id="lastName" class="form-control" />
+                                  <input type="text" id="lastName" class="form-control" name="lastname" value="<?php echo $employerinfo['lastname'] ?>"/>
                                   <label for="lastName">Last name</label>
                                 </div>
                               </div>
@@ -424,7 +206,7 @@
                             <div class="form-row">
                               <div class="col">
                                 <div class="md-form md-outline Employer my-2">
-                                  <input type="text" id="position" class="form-control" />
+                                  <input type="text" id="position" class="form-control" name="position" value="<?php echo $employerinfo['position'] ?>"/>
                                   <label for="position">Position</label>
                                 </div>
                               </div>
@@ -432,7 +214,7 @@
                             <div class="form-row">
                               <div class="col">
                                 <div class="md-form md-outline Employer my-2">
-                                  <input type="text" id="companyName" class="form-control" />
+                                  <input type="text" id="companyName" class="form-control" name="company" value="<?php echo $employerinfo['company'] ?>"/>
                                   <label for="companyName">Name of the Company</label>
                                 </div>
                               </div>
@@ -441,15 +223,14 @@
                               <div class="col-md-12 select-outline Employer">
 
                                 <select class="mdb-select md-form md-outline Employer my-2" id="sector2">
-                                  <option value="" disabled selected></option>
-                                  <option value="Administrative & Accountancy">Administrative & Accountancy</option>
-                                  <option value="ICT">ICT</option>
-                                  <option value="Education & Research">Education & Research</option>
-                                  <option value="Entrepreneurship">Entrepreneurship</option>
-                                  <option value="Industry & Construction">Industry & Construction</option>
-                                  <option value="Logistics">Logistics</option>
-                                  <option value="Medical & Care">Medical & Care</option>
-                                  <option value="Social Profit">Social Profit</option>
+                                    <option selected="" value="<?php echo $employerinfo['sector'] ?>"><?php echo $employerinfo['sector'] ?></option>
+                                    <?php 
+                                    $sectorcheck = $db->prepare("SELECT sectors_name FROM sectors");
+                                    $sectorcheck->execute();
+                                    $sectorinfo = $sectorcheck->fetch(PDO::FETCH_ASSOC);
+                                    while ($sectorinfo = $sectorcheck->fetch(PDO::FETCH_ASSOC)) { ?>
+                                        <option value="<?php echo $sectorinfo['sectors_name'] ?>"><?php echo $sectorinfo['sectors_name'] ?></option>
+                                    <?php }?>
                                 </select>
                                 <label for="sector2">Sector</label>
 
@@ -458,7 +239,7 @@
                             <div class="form-row">
                               <div class="col-md-12 select-outline Employer">
 
-                                <select class="mdb-select md-form md-outline Employer  my-2" id="num1">
+                                <select class="mdb-select md-form md-outline Employer  my-2" id="num1" name="employees">
                                   <option disabled selected></option>
                                   <option value="1-10 employees">1-10 employees</option>
                                   <option value="11-50 employees">11-50 employees</option>
@@ -473,14 +254,7 @@
 
                               </div>
                             </div>
-                            <div class="form-row">
-                              <div class="col">
-                                <div class="md-form md-outline Employer my-2">
-                                  <input type="email" id="materialContactFormEmail" class="form-control" />
-                                  <label for="materialContactFormEmail" class="font-weight-normal">E-mail</label>
-                                </div>
-                              </div>
-                            </div>
+                           
                             <div class="form-row">
                               <div class="col">
                                 <div class="md-form md-outline Employer my-2">
@@ -493,7 +267,7 @@
                             <div class="form-row">
                               <div class="col">
                                 <div class="md-form md-outline Employer my-2">
-                                  <input type="text" id="materialContactFormEmail" class="form-control" />
+                                  <input type="text" id="materialContactFormEmail" class="form-control" name="link"/>
                                   <label for="materialContactFormEmail" class="font-weight-normal">Link</label>
                                 </div>
                               </div>
@@ -508,7 +282,7 @@
                                     </div>
                                     <div class="file-path-wrapper">
                                       <input class="file-path validate" type="text"
-                                        placeholder="Upload one or more files" />
+                                        placeholder="Upload one or more files" name="img"/>
                                     </div>
                                   </div>
                                 </form>
@@ -520,7 +294,7 @@
                           <button type="button" class="btn btn-outline-purple btn-sm" data-dismiss="modal">
                             Close
                           </button>
-                          <button type="button" class="btn btn-sm btn-purple">
+                          <button type="submit" name="employeredit" class="btn btn-sm btn-purple">
                             Save
                           </button>
                         </div>
@@ -677,72 +451,17 @@
 
                     <!-- ALL SVEPT POSTS  STARTS-->
                     <div class="tab-pane fade" id="all" role="tabpanel">
-                      <!-- SEARCH IN ALL EVENTS STARTS-->
                       <div class="row">
+                        <!-- SEARCH IN ALL EVENTS STARTS-->
                         <div class="input-group md-form form-sm form-2 pl-0 mx-3 mb-4">
-                          <input class="form-control my-0 py-1 border-secondary" type="text"
-                            placeholder="Search networking post by name" aria-label="Search">
+                          <input class="form-control my-0 py-1 border-info" type="text"
+                            placeholder="Search in all the events" aria-label="Search">
                           <div class="input-group-append">
-                            <span class="input-group-text purple accent-4" id="basic-text1"><i
+                            <span class="input-group-text teal accent-4" id="basic-text1"><i
                                 class="fas fa-search white-text" aria-hidden="true"></i></span>
                           </div>
                         </div>
-                      </div>
-                      <!-- SEARCH IN ALL EVENTS ENDS-->
-
-                      <!-- Filter IN ALL post STARTS-->
-                      <div class="row mb-4">
-                        <!-- by type-->
-                        <div class="col-4 select-outline">
-                          <select class="mdb-select md-form md-outline Employer my-2" multiple id="filterPosts">
-                            <option disabled select></option>
-                            <option value="study">Study</option>
-                            <option value="Vacancy">Vacancy</option>
-                            <option value="Event">Event</option>
-                            <option value="Project">Project</option>
-                            <option value="Tool">Tool</option>
-                          </select>
-                          <label for="filterPosts">Filter by Type</label>
-                        </div>
-                        <!-- by target group-->
-                        <div class="col-4 select-outline">
-                          <select class="mdb-select md-form md-outline Employer my-2" multiple id="filterTarget">
-                            <option disabled selected></option>
-                            <option value="Refugees">Refugees</option>
-                            <option value="Job seekers">Job seekers</option>
-                            <option value="Employers">Employers</option>
-                            <option value="Mentors">Mentors</option>
-                            <option value="Study seekers">Study seekers</option>
-                            <option value="Government Organizations">Government Organizations</option>
-                            <option value="NGO / nonprofit">NGO / nonprofit</option>
-                            <option value="Academia / Education">Academia / Education</option>
-                            <option value="All">All</option>
-                            <option value="Migrants ">Migrants</option>
-                          </select>
-                          <label for="filterTarget">Filter by Target Group</label>
-                        </div>
-                        <!-- by target sector-->
-                        <div class="col-4 select-outline">
-                          <select class="mdb-select md-form md-outline Employer my-2" multiple id="filterSector">
-                            <option disabled selected></option>
-                            <?php
-                                  $sectorcheck=$db->prepare("SELECT sectors_name FROM sectors");
-                                  $sectorcheck->execute();
-
-                                  while($sectorinfo=$sectorcheck->fetch(PDO::FETCH_ASSOC)) { ?>
-
-                            <option value="<?php echo $sectorinfo['sectors_name'] ?>">
-                              <?php echo $sectorinfo['sectors_name'] ?></option>
-
-                            <?php } ?>
-                          </select>
-                          <label for="filterSector">Filter by Sector</label>
-                        </div>
-                      </div>
-                      <!-- Filter IN ALL post ends-->
-
-                      <div class="row">
-
+                        <!-- SEARCH IN ALL EVENTS ENDS-->
 
                         <!-- Event-EVENT Sample with given image starts-->
                         <div class="col-lg-4 col-md-12 col-xs-12">
@@ -1091,7 +810,7 @@
                       <section class="p-md-3 mx-md-5 text-lg-left">
                         <h5 class="text-center mb-5 pb-3">You can create and share 5 different kind of S-V-E-P-T /
                           networking post here for
-                          supporting any kind of the target group (HER, Mentor, Employer, Organisation -GO, NGO,
+                          supporting any kind of the target group (HER, employer, Employer, Organisation -GO, NGO,
                           Academia-)
                         </h5>
                         <div class="row text-center d-flex justify-content-center">
@@ -1123,7 +842,7 @@
                             <img src="../images/icons/events/project-icon.png" width="80px">
                             <h4 class="font-weight-bold mb-4">P-roject</h4>
                             <p class="text-muted px-2 mb-lg-0">
-                              A project supporting a target group during a time frame like mentoring, buddying,
+                              A project supporting a target group during a time frame like employering, buddying,
                               coaching,
                               etc.
                             </p>
@@ -1138,433 +857,190 @@
                             </p>
                           </div>
                         </div>
-                        <div class="row text-center my-3">
-                          <div class="col text-center">
-                            <button type="button" data-toggle="modal" data-target="#createPost"
-                              class="btn btn-md btn-purple ">Create a Networking Post</button>
-                          </div>
-                        </div>
                       </section>
 
+                      <form action="../settings/action.php" method="POST" enctype="multipart/form-data"
+                        data-parsley-validate>
+                        <div class="form-row">
+                          <div class="col">
+                            <h5 class="pb-2">You are creating a/an</h5>
+                          </div>
+                          <div class="col select-outline Employer">
+                            <?php
+                                    //Get all event type data
+                                    $typecheck=$db->prepare("SELECT * FROM eventstype");
+                                    $typecheck->execute( );
 
-                      <!--Create Post Modal starts-->
-                      <div class="modal fade" id="createPost" tabindex="-1" role="dialog" aria-labelledby="createPost"
-                        aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title text-purple" id="exampleModalLabel">Create New Networking Post
-                              </h5>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
+                                    //Count total number of rows
+                                    $rowCount = $typecheck->rowCount();
+                                    ?>
+                            <select class="mdb-select md-form md-outline Employer my-2" name="type" id="typeEvent">
+                              <option disabled selected></option>
+                              <?php
+                                        if($rowCount > 0){
+                                            while($typeinfo=$typecheck->fetch(PDO::FETCH_ASSOC)){
+                                                echo '<option value="'.$typeinfo['type_id'].'">'.$typeinfo['type_name'].'</option>';
+                                            }
+                                        }else{
+                                            echo '<option value="">Type not available</option>';
+                                        }
+                                        ?>
+                            </select>
+                            <label for="typeEvent">Type of Event</label>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="col select-outline Employer">
+                            <select class="mdb-select md-form md-outline Employer my-2" name="info" id="group">
+                              <option disabled selected></option>
+                              <optgroup class="text-primary" label="Event / Project">
+                                <option value="employering">employering</option>
+                                <option value="Job Coaching">Job Coaching</option>
+                                <option value="Job matching/ Job fair">Job matching/ Job
+                                  fair</option>
+                                <option value="Orientation">Orientation</option>
+                                <option value="Information">Information</option>
+                                <option value="Digital">Digital</option>
+                              </optgroup>
+                              <optgroup label="Training / Study">
+                                <option value="Language (NL)">Language (NL)</option>
+                                <option value="Vocational training">Vocational training
+                                </option>
+                                <option value="High school bachelor">High school
+                                  bachelor</option>
+                                <option value="University bachelor">University bachelor
+                                </option>
+                                <option value="Master / MaNaMa">Master / MaNaMa</option>
+                                <option value="Preparation program">Preparation program
+                                </option>
+                              </optgroup>
+                              <optgroup label="Vacancies">
+                                <option value="Job">Job</option>
+                                <option value="Internship">Internship</option>
+                                <option value="Volunteer Job">Volunteer Job</option>
+                              </optgroup>
+                              <optgroup label="Tool">
+                                <option value="Digital platform">Digital platform
+                                </option>
+                                <option value="Manual">Manual</option>
+                                <option value="Checklist">Checklist</option>
+                                <option value="Application">Application</option>
+                              </optgroup>
+                            </select>
+                            <label for="group">Description of Event</label>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="col">
+                            <!-- First name -->
+                            <div class="md-form md-outline Employer my-2">
+                              <input type="text" id="event-title" class="form-control" name="title" />
+                              <label for="event-title">Title</label>
                             </div>
-                            <div class="modal-body">
-                              <form action="../settings/action.php" method="POST" enctype="multipart/form-data"
-                                data-parsley-validate>
-                                <!-- type  -->
-                                <div class="row">
-
-                                  <!-- type -->
-                                  <div class="col select-outline my-0">
-                                    <?php
-                                              //Get all event type data
-                                              $typecheck=$db->prepare("SELECT * FROM eventstype");
-                                              $typecheck->execute( );
-
-                                              //Count total number of rows
-                                              $rowCount = $typecheck->rowCount();
-                                              ?>
-                                    <select class="mdb-select md-form md-outline Employer my-2" id="posttype"
-                                      name="type">
-
-                                      <option disabled selected value=""></option>
-                                      <?php
-                                              if($rowCount > 0){
-                                                  while($typeinfo=$typecheck->fetch(PDO::FETCH_ASSOC)){
-                                                      echo '<option value="'.$typeinfo['type_id'].'">'.$typeinfo['type_name'].'</option>';
-                                                  }
-                                              }else{
-                                                  echo '<option value="">Type not available</option>';
-                                              }
-                                              ?>
-
-                                    </select>
-                                    <label for="posttype">Networking Post Type</label>
-
-                                  </div>
-                                </div>
-                                <!-- group -->
-                                <div class="row">
-
-                                  <!-- type -->
-                                  <div class="col select-outline ">
-
-                                    <select class="mdb-select md-form md-outline Employer my-2" id="info2" name="group">
-                                      <option disabled selected></option>
-
-
-                                    </select>
-                                    <label for="info2">Select Post Type First</label>
-                                  </div>
-
-                                </div>
-
-
-                                <!-- title and Organizer -->
-                                <div class="row">
-                                  <div class="col">
-                                    <!-- title -->
-                                    <div class="md-form md-outline Employer my-0">
-                                      <input type="text" id="event-title" class="form-control" name="title" />
-                                      <label for="event-title">Title</label>
-                                    </div>
-                                  </div>
-                                  <div class="col">
-                                    <!-- organizer -->
-                                    <div class="md-form md-outline Employer my-0">
-                                      <input type="text" id="Organizer(s)" class="form-control" name="organizer" />
-                                      <label for="Organizer(s)">Organizer(s)</label>
-                                    </div>
-                                  </div>
-                                </div>
-                                <!-- Image -->
-                                <div class="row">
-                                  <div class="md-form md-outline Employer my-2 col">
-                                    <div class="file-field">
-                                      <div class="btn btn-purple btn-sm float-left">
-                                        <span>Choose image</span>
-                                        <input type="file" name="img_link">
-                                      </div>
-                                      <div class="file-path-wrapper">
-                                        <input class="file-path validate" type="text"
-                                          placeholder="Upload your cover image">
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <!-- Sector -->
-                                <div class="row">
-                                  <div class="col select-outline ">
-                                    <select class="mdb-select md-form md-outline Employer my-1" id="secCreate" multiple
-                                      name="sector">
-
-                                      <option disabled selected></option>
-                                      <?php
-                                              $sectorcheck=$db->prepare("SELECT sectors_name FROM sectors");
-                                              $sectorcheck->execute();
-
-                                              while($sectorinfo=$sectorcheck->fetch(PDO::FETCH_ASSOC)) { ?>
-
-                                      <option value="<?php echo $sectorinfo['sectors_name'] ?>">
-                                        <?php echo $sectorinfo['sectors_name'] ?></option>
-
-                                      <?php } ?>
-
-                                    </select>
-                                    <label for="secCreate">Sector</label>
-
-                                  </div>
-                                </div>
-                                <!-- Link -->
-                                <div class="row">
-                                  <div class="col">
-                                    <div class="md-form md-outline Employer my-2">
-                                      <input type="text" id="link" class="form-control" name="link" />
-                                      <label for="link">Insert Link</label>
-                                    </div>
-                                  </div>
-                                </div>
-                                <!-- Date -->
-                                <div class="row">
-                                  <div class="md-form col-md-6 my-2">
-                                    <input placeholder="Selected date" type="text" id="from"
-                                      class="form-control datepicker" name="start_date">
-                                    <label for="from" id="fromDate">From</label>
-                                  </div>
-                                  <div class="md-form col-md-6 my-2">
-                                    <input placeholder="Selected date" type="text" id="to"
-                                      class="form-control datepicker" name="end_date">
-                                    <label for="to" id="toDate">To</label>
-                                  </div>
-                                </div>
-                                <!-- Target Group -->
-                                <div class="row">
-                                  <div class="col select-outline">
-                                    <select class="mdb-select md-form md-outline Employer my-2" id="targett" multiple
-                                      name="target_group">
-                                      <option disabled selected></option>
-                                      <option value="Refugees">Refugees</option>
-                                      <option value="Job seekers">Job seekers
-                                      </option>
-                                      <option value="Orgs">Employers</option>
-                                      <option value="Mentors">Mentors</option>
-                                      <option value="Study seekers">Study seekers
-                                      </option>
-                                      <option value="Government Organizations">
-                                        Government
-                                        Organizations</option>
-                                      <option value="NGO / nonprofit">NGO /
-                                        nonprofit</option>
-                                      <option value="Academia / Education">
-                                        Academia / Education
-                                      </option>
-                                      <option value="All">All</option>
-                                      <option value="Migrants ">Migrants</option>
-
-                                    </select>
-                                    <label for="targett">Target Group</label>
-
-                                  </div>
-
-                                </div>
-
-                              </form>
-
-
-                            </div>
-                            <div class="modal-footer">
-
-                              <button type="button" class="btn btn-sm btn-outline-purple"
-                                data-dismiss="modal">Close</button>
-                              <button type="button" type="submit" name="eventadd"
-                                class="btn btn-sm btn-purple">Create</button>
+                          </div>
+                          <div class="col">
+                            <!-- Last name -->
+                            <div class="md-form md-outline Employer my-2">
+                              <input type="text" id="Organizer(s)" class="form-control" name="organizer" />
+                              <label for="Organizer(s)">Organizer(s)</label>
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <!--Create Post Modal ends-->
-
-
-                      <!-- Created Post-STUDY Sample with default image starts-->
-                      <div class="col-lg-4 col-md-12 col-xs-12">
-                        <div class="card testimonial-card" style="cursor: pointer;">
-                          <div class="card-up">
-                            <!-- Event Type -->
-                            <div class="row green darken-4 d-flex justify-content-between m-0" style="height:20px;">
-                              <div>&nbsp;&nbsp;&nbsp;</div>
-                              <p class="font-weight-bold white-text" style="font-size:14px">&nbsp;STUDY</p>
-                              <div style="margin: 0;" class="row pb-2">
-                                <a data-toggle="modal" data-target="#editPost2" style="font-size:12px"><i
-                                    class="fas fa-pen white-text mr-1"></i></a>
-                                <a data-toggle="modal" data-target="#deletePost2" style="font-size:12px"><i
-                                    class="fas fa-times white-text mr-1"></i></a>
+                        <div class="form-row">
+                          <div class="md-form md-outline Employer my-2 col">
+                            <div class="file-field">
+                              <div class="btn btn-purple btn-sm float-left">
+                                <span>Choose image</span>
+                                <input type="file" name="img_link">
+                              </div>
+                              <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text" placeholder="Upload your cover image">
                               </div>
                             </div>
-
-
-                            <!-- Background image -->
-                            <img src="../images/icons/events/study-back.png" width="100%">
-                            <!--  icons fas-full far-empty -->
-
-                            <i class="far fa-bookmark icon icon-bookmark fa-2x yellow-text mt-2"></i>
                           </div>
-                          <!-- Middle Ribbon -->
-                          <div class="green darken-4" style="height:10px;">&nbsp;</div>
-
-                          <!-- Circle Icon -->
-                          <div class="avatar mx-auto white" style="z-index: 100;">
-                            <img src="../images/icons/events/study-icon.png" class="rounded-circle">
-                          </div>
-
-                          <!-- Card content -->
-                          <div class="card-body pt-1">
-                            <!-- Title -->
-                            <h6 class="font-weight-bold mb-1" style="letter-spacing: 1px;">
-                              How To Identify Your Career Potential</h6>
-                            <!-- Organized By -->
-                            <!-- Sector -->
-                            <p class="grey-text text-center mb-0">by MEERDERE DATA /
-                              Business</p>
-                            <!-- External Link -->
-                            <a
-                              href="https://www.eventbrite.be/e/how-to-identify-your-career-potential-english-class-tickets-90292726977"></a>
-                          </div>
-
-                          <!-- Card footer -->
-                          <div class="rounded-bottom green darken-4 text-center pt-1">
-                            <ul class="list-unstyled list-inline font-small mb-1">
-                              <!-- Date -->
-                              <li class="list-inline-item pr-2 white-text">
-                                <i class="fas fa-calendar-alt pr-1"></i>05-07/04/2020
-                              </li>
-                              <!-- Location -->
-                              <li class="list-inline-item">
-                                <a href="#" class="white-text"><i class="fas fa-map-marker-alt pr-1"></i>Antwerpen</a>
-                              </li>
-                            </ul>
-                          </div>
-
                         </div>
-                        <br>
-                      </div>
-                      <!-- Created Post-STUDY Sample with default image ends-->
+                        <div class="form-row">
+                          <div class="col select-outline Employer">
+                            <select class="mdb-select md-form md-outline Employer my-2" id="sec11" multiple
+                              name="sector">
 
-                      <!--Created Post edit post starts-->
-                      <div class="modal fade" id="editPost2" tabindex="-1" role="dialog" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title text-secondary" id="exampleModalLabel">
-                                Edit Networking Post</h5>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                            </div>
-                            <div class="modal-body">
-                              <form action="../settings/action.php" method="POST" enctype="multipart/form-data"
-                                data-parsley-validate>
+                              <?php
+                                    $sectorcheck=$db->prepare("SELECT sectors_name FROM sectors");
+                                    $sectorcheck->execute();
 
+                                    while($sectorinfo=$sectorcheck->fetch(PDO::FETCH_ASSOC)) { ?>
 
-                                <div class="form-row">
-                                  <div class="col">
-                                    <!-- First name -->
-                                    <div class="md-form md-outline Employer my-2">
-                                      <input type="text" id="event-title" class="form-control" name="title" />
-                                      <label for="event-title">Title</label>
-                                    </div>
-                                  </div>
-                                  <div class="col">
-                                    <!-- Last name -->
-                                    <div class="md-form md-outline Employer my-2">
-                                      <input type="text" id="Organizer(s)" class="form-control" name="organizer" />
-                                      <label for="Organizer(s)">Organizer(s)</label>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="form-row">
-                                  <div class="md-form md-outline Employer my-2 col">
-                                    <div class="file-field">
-                                      <div class="btn btn-purple btn-sm float-left">
-                                        <span>Choose image</span>
-                                        <input type="file" name="img_link">
-                                      </div>
-                                      <div class="file-path-wrapper">
-                                        <input class="file-path validate" type="text"
-                                          placeholder="Upload your cover image">
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="form-row">
-                                  <div class="col select-outline Employer">
-                                    <select class="mdb-select md-form md-outline Org my-2" id="sec11" multiple
-                                      name="sector">
+                              <option value="<?php echo $sectorinfo['sectors_name'] ?>">
+                                <?php echo $sectorinfo['sectors_name'] ?></option>
 
-                                      <?php
-            $sectorcheck=$db->prepare("SELECT sectors_name FROM sectors");
-            $sectorcheck->execute();
+                              <?php } ?>
 
-            while($sectorinfo=$sectorcheck->fetch(PDO::FETCH_ASSOC)) { ?>
+                            </select>
+                            <label for="sec11">Sector</label>
+                            <button class="btn-save btn btn-purple btn-sm">Save</button>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="col">
 
-                                      <option value="<?php echo $sectorinfo['sectors_name'] ?>">
-                                        <?php echo $sectorinfo['sectors_name'] ?>
-                                      </option>
-
-                                      <?php } ?>
-
-                                    </select>
-                                    <label for="sec11">Sector</label>
-                                    <button class="btn-save btn btn-purple btn-sm">Save</button>
-                                  </div>
-                                </div>
-                                <div class="form-row">
-                                  <div class="col">
-
-                                    <div class="md-form md-outline Employer my-2">
-                                      <input type="text" id="link" class="form-control" name="link" />
-                                      <label for="link">Insert Link</label>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="row my-2">
-                                  <div class="md-form col-md-6">
-                                    <input placeholder="Selected date" type="text" id="from"
-                                      class="form-control datepicker" name="start_date">
-                                    <label for="from" id="fromDate">From</label>
-                                  </div>
-                                  <div class="md-form col-md-6">
-                                    <input placeholder="Selected date" type="text" id="to"
-                                      class="form-control datepicker" name="end_date">
-                                    <label for="to" id="toDate">To</label>
-                                  </div>
-                                </div>
-                                <div class="form-row">
-                                  <div class="col select-outline Employer">
-                                    <select class="mdb-select md-form md-outline Org my-2" id="tar1" multiple
-                                      name="target_group">
-                                      <option disabled selected></option>
-                                      <option value="Refugees">Refugees</option>
-                                      <option value="Job seekers">Job seekers
-                                      </option>
-                                      <option value="Orgs">Employers</option>
-                                      <option value="Mentors">Mentors</option>
-                                      <option value="Study seekers">Study seekers
-                                      </option>
-                                      <option value="Government Organizations">
-                                        Government
-                                        Organizations</option>
-                                      <option value="NGO / nonprofit">NGO /
-                                        nonprofit</option>
-                                      <option value="Academia / Education">
-                                        Academia / Education
-                                      </option>
-                                      <option value="All">All</option>
-                                      <option value="Migrants ">Migrants</option>
-
-                                    </select>
-                                    <label for="tar1">Target Group</label>
-                                    <button class="btn-save btn btn-purple btn-sm">Save</button>
-                                  </div>
-                                  <div class="col">
-
-                                    <div class="md-form md-outline Employer my-2">
-                                      <input type="text" id="link" class="form-control" name="link" />
-                                      <label for="link">Insert Link</label>
-                                    </div>
-                                  </div>
-                                </div>
-
-
-                              </form>
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-sm btn-outline-purple"
-                                data-dismiss="modal">Close</button>
-                              <button type="button" class="btn btn-sm btn-purple">Save
-                                Changes</button>
+                            <div class="md-form md-outline Employer my-2">
+                              <input type="text" id="link" class="form-control" name="link" />
+                              <label for="link">Insert Link</label>
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <!--Created Post edit ends-->
+                        <div class="row my-2">
+                          <div class="md-form col-md-6">
+                            <input placeholder="Selected date" type="text" id="from" class="form-control datepicker"
+                              name="start_date">
+                            <label for="from" id="fromDate">From</label>
+                          </div>
+                          <div class="md-form col-md-6">
+                            <input placeholder="Selected date" type="text" id="to" class="form-control datepicker"
+                              name="end_date">
+                            <label for="to" id="toDate">To</label>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="col select-outline">
+                            <select class="mdb-select md-form md-outline Employer my-2" id="tar1" multiple
+                              name="target_group">
+                              <option disabled selected></option>
+                              <option value="Refugees">Refugees</option>
+                              <option value="Job seekers">Job seekers</option>
+                              <option value="Employers">Employers</option>
+                              <option value="employers">employers</option>
+                              <option value="Study seekers">Study seekers</option>
+                              <option value="Government Organizations">Government Organizations</option>
+                              <option value="NGO / nonprofit">NGO / nonprofit</option>
+                              <option value="Academia / Education">Academia / Education</option>
+                              <option value="All">All</option>
+                              <option value="Migrants ">Migrants</option>
 
+                            </select>
+                            <label for="tar1">Target Group</label>
+                            <button class="btn-save btn btn-purple btn-sm">Save</button>
+                          </div>
+                          <div class="col">
 
-
-                      <!--Created Post confirm delete post starts-->
-                      <div class="modal fade" id="deletePost2" tabindex="-1" role="dialog" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title text-secondary" id="exampleModalLabel">Delete Networking Post</h5>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                            </div>
-                            <div class="modal-body">
-                              <p>Are you sure you want to delete this networking post?</p>
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-sm btn-outline-purple"
-                                data-dismiss="modal">Close</button>
-                              <button type="button" class="btn btn-sm btn-purple">Delete</button>
+                            <div class="md-form md-outline Employer my-2">
+                              <input type="text" id="link" class="form-control" name="link" />
+                              <label for="link">Insert Link</label>
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <!--Created Post confirm delete post ends-->
+
+                        <div class="row text-right">
+                          <input type="text" id="link" class="form-control" name="employer_id"
+                            value="<?php echo $employerinfo['employer_id'] ?>" hidden="" />
 
 
+                          <input class="btn btn-purple" type="submit" name="eventadd" value="Create">
+
+
+
+                        </div>
+                      </form>
                     </div>
                     <!-- CREATE SVEPT POSTS  ENDS-->
 
@@ -1579,170 +1055,31 @@
             <!-- Panel 222-Networking Starts-->
 
 
-            <!-- Panel 333-TALENTS START-->
+            <!-- Panel 333-SEARCH FOR TALENTS START-->
             <div class="tab-pane fade in show" id="panel333" role="tabpanel">
               <div class="container py-5 z-depth-1">
                 <!--Section: Content-->
                 <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
                   <h3 class="font-weight-bold">Search for Talents</h3>
                   <hr>
-                  <!-- Filter IN ALL talents STARTS-->
-                  <div class="row mb-4">
-                    <!-- by  sector-->
-                    <div class="col-3 select-outline">
-                      <select class="mdb-select md-form md-outline Employer my-2" multiple id="filterSector">
-                        <option disabled selected></option>
-                        <?php
-                              $sectorcheck=$db->prepare("SELECT sectors_name FROM sectors");
-                              $sectorcheck->execute();
-
-                              while($sectorinfo=$sectorcheck->fetch(PDO::FETCH_ASSOC)) { ?>
-
-                        <option value="<?php echo $sectorinfo['sectors_name'] ?>">
-                          <?php echo $sectorinfo['sectors_name'] ?></option>
-
-                        <?php } ?>
-                      </select>
-                      <label for="filterSector">Filter by Sector</label>
-                    </div>
-                    <!-- by type-->
-                    <div class="col-3 select-outline">
-                      <select class="mdb-select md-form md-outline Employer my-2" multiple id="filterLan">
-                        <option disabled select></option>
-                        <option value="study">English</option>
-                        <option value="Vacancy">Dutch</option>
-                        <option value="Event">French</option>
-                        <option value="Project">Other</option>
-
-                      </select>
-                      <label for="filterLan">Filter by Language</label>
-                    </div>
-                    <!-- by target group-->
-                    <div class="col-3 select-outline">
-                      <select class="mdb-select md-form md-outline Employer my-2" multiple id="filterHard">
-                        <option disabled selected></option>
-                        <option value="Refugees">Refugees</option>
-                        <option value="Job seekers">Job seekers</option>
-                        <option value="Employers">Employers</option>
-                        <option value="Mentors">Mentors</option>
-                        <option value="Study seekers">Study seekers</option>
-                        <option value="Government Organizations">Government Organizations</option>
-                        <option value="NGO / nonprofit">NGO / nonprofit</option>
-                        <option value="Academia / Education">Academia / Education</option>
-                        <option value="All">All</option>
-                        <option value="Migrants ">Migrants</option>
-                      </select>
-                      <label for="filterHard">Filter by Hard Skills</label>
-                    </div>
-                    <div class="col-3 select-outline">
-                      <select class="mdb-select md-form md-outline Employer my-2" multiple id="filterSoft">
-                        <option disabled selected></option>
-                        <option value="Refugees">Refugees</option>
-                        <option value="Job seekers">Job seekers</option>
-                        <option value="Employers">Employers</option>
-                        <option value="Mentors">Mentors</option>
-                        <option value="Study seekers">Study seekers</option>
-                        <option value="Government Organizations">Government Organizations</option>
-                        <option value="NGO / nonprofit">NGO / nonprofit</option>
-                        <option value="Academia / Education">Academia / Education</option>
-                        <option value="All">All</option>
-                        <option value="Migrants ">Migrants</option>
-                      </select>
-                      <label for="filterSoft">Filter by Soft Skills</label>
-                    </div>
-
-                  </div>
-                  <!-- Filter IN ALL talents ends-->
-
-
-                  <!--Talent Card starts-->
-                  <div class="col-12 mb-4">
-                    <div class="card z-depth-0 bordered border-light">
-                      <div class="card-body p-0">
-                        <div class="row mx-0 grey lighten-4 rounded-left d-flex align-items-center">
-                          <div class="col-1 text-center pt-1">
-                            <i class="far fa-id-badge text-secondary fa-3x"></i>
-                          </div>
-                          <div class="col-11 px-0 pt-3">
-                            <table class="table m-0">
-
-                              <tr>
-                                <td class="p-0 font-weight-light"><small>Name</small></td>
-                                <td class="p-0 font-weight-light"><small>Gender</small></td>
-                                <td class="p-0 font-weight-light"><small>Age</small></td>
-                                <td class="p-0 font-weight-light"><small>Highest Study Level</small></td>
-                                <td class="p-0 font-weight-light"><small>Sector</small></td>
-                                <td class="p-0 font-weight-light"><small>Language</small></td>
-                                <td class="p-0 font-weight-light"><small>Check</small></td>
-                              </tr>
-
-
-                              <tr>
-                                <td class="px-0 py-3">Jane Doe</td>
-                                <td class="px-0 py-3">Female</td>
-                                <td class="px-0 py-3">34</td>
-                                <td class="px-0 py-3">Master</td>
-                                <td class="px-0 py-3">IT</td>
-                                <td class="px-0 py-3">English, Dutch</td>
-                                <td class="px-0 py-0"><button class="btn btn-sm btn-purple mt-1 mx-0">CV</button></td>
-                              </tr>
-
-
-                            </table>
-                          </div>
-
-                        </div>
-                      </div>
+                  <!-- SEARCH IN ALL EVENTS STARTS-->
+                  <div class="input-group md-form form-sm form-2 pl-0 mx-3 mb-4">
+                    <input class="form-control my-0 py-1 purple-border" type="text"
+                      placeholder="Search in all talents by Name" aria-label="Search">
+                    <div class="input-group-append">
+                      <span class="input-group-text purple lighten-3" id="basic-text1"><i
+                          class="fas fa-search text-grey" aria-hidden="true"></i></span>
                     </div>
                   </div>
+                  <!-- SEARCH IN ALL EVENTS ENDS-->
 
-                  <div class="col-12 mb-4">
-                    <div class="card z-depth-0 bordered border-light">
-                      <div class="card-body p-0">
-                        <div class="row mx-0 grey lighten-4 rounded-left d-flex align-items-center">
-                          <div class="col-1 text-center pt-1">
-                            <i class="far fa-id-badge text-secondary fa-3x"></i>
-                          </div>
-                          <div class="col-11 px-0 pt-3">
-                            <table class="table m-0">
-
-                              <tr>
-                                <td class="p-0 font-weight-light"><small>Name</small></td>
-                                <td class="p-0 font-weight-light"><small>Gender</small></td>
-                                <td class="p-0 font-weight-light"><small>Age</small></td>
-                                <td class="p-0 font-weight-light"><small>Highest Study Level</small></td>
-                                <td class="p-0 font-weight-light"><small>Sector</small></td>
-                                <td class="p-0 font-weight-light"><small>Language</small></td>
-                                <td class="p-0 font-weight-light"><small>Check</small></td>
-                              </tr>
-
-
-                              <tr>
-                                <td class="px-0 py-3">Joe Black</td>
-                                <td class="px-0 py-3">Male</td>
-                                <td class="px-0 py-3">29</td>
-                                <td class="px-0 py-3">Bachelor </td>
-                                <td class="px-0 py-3">Medicine</td>
-                                <td class="px-0 py-3">English, French</td>
-                                <td class="px-0 py-0"><button class="btn btn-sm btn-purple mt-1 mx-0">CV</button></td>
-                              </tr>
-
-
-                            </table>
-                          </div>
-
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!--Talent Card Ends-->
 
 
 
                 </section>
               </div>
             </div>
-            <!-- Panel 333-TALENTS ENDS-->
+            <!-- Panel 333-SEARCH FOR TALENTS ENDS-->
           </div>
           <!-- Grid column -->
         </div>
@@ -1762,6 +1099,7 @@
     data-fg="#333333" data-link="#4CC4EA" data-cookie="CookieInfoScript" data-text-align="center"
     data-divlinkbg="#4CC4EA" data-close-text="Got it!" data-moreinfo="./terms_of_use.html">
     </script>
+  <!-- JQuery -->
   <script src="../js/jquery.min.js"></script>
   <!-- Bootstrap tooltips -->
   <script type="text/javascript" src="../js/popper.min.js"></script>

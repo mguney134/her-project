@@ -39,7 +39,7 @@ include 'settings/connect-db.php';
         <!-- Navbar -->
     </header>
 
-    <div class="edge-header purple-gradient"></div>
+    <div class="edge-header aqua-gradient"></div>
     <div class="container free-bird">
         <div class="row">
             <div class="col-md-8 col-lg-10 mx-auto float-none white z-depth-1 py-2 px-2 mb-4">
@@ -48,26 +48,26 @@ include 'settings/connect-db.php';
                     <div class="media">
                         <div class="media-body">
                             <h2 class="h2-responsive">
-                                <strong>Sign-up as an Employer </strong>
+                                <strong>Sign-up as an Organization </strong>
                             </h2>
                         </div>
-                        <img class="d-flex mr-3" src="./images/icons/employer.png" alt="Her Icon" />
+                        <img class="d-flex mr-3" src="./images/icons/organization.png" alt="Her Icon" />
                     </div>
 
                     <form action="settings/action.php" method="POST">
-                        <ul class="stepper linear Employer">
-                            <li class="step active Employer">
+                        <ul class="stepper linear Org">
+                            <li class="step active Org">
                                 <div class="step-title waves-effect waves-dark">Step 1- Insert your e-mail</div>
                                 <div class="step-new-content">
                                     <div class="row">
-                                    <div class="md-form md-outline Employer col-12 my-3">
+                                    <div class="md-form md-outline Org col-12 my-3">
                                         <input name="email" id="email-linear" type="email" class="form-control validate" required>
                                         <label for="email-linear">Your e-mail</label>
                                                 
                                         
                                     </div>
                                     <div class=" ml-2 mt-2 step-actions">
-                                        <button class="waves-effect waves-dark btn btn-sm btn-secondary next-step">Continue</button>
+                                        <button class="waves-effect waves-dark btn btn-sm btn-info next-step">Continue</button>
                                     </div>
                                 </div>
                             </li>
@@ -79,13 +79,13 @@ include 'settings/connect-db.php';
                                             <div class="col-12 ml-auto">
                                                 <div class="row">
                                                     <div class="col">
-                                                        <div class="md-form md-outline  Employer my-3">
+                                                        <div class="md-form md-outline  Org my-3">
                                                             <input name="all_password" id="password" type="password" class="form-control validate" required>
                                                             <label for="password" style="padding-left:0px;">Create a password</label>
                                                         </div>
                                                     </div>
                                                     <div class="col">
-                                                        <div class="md-form md-outline  Employer  my-3">
+                                                        <div class="md-form md-outline  Org  my-3">
                                                             <input name="confirmpassword" id="password2" type="password" class="form-control" required>
                                                             <label for="password2" style="padding-left:0px;">Confirm your password</label>
                                                         </div>
@@ -95,8 +95,8 @@ include 'settings/connect-db.php';
                                             
                                         </div>
                                         <div class="step-actions mt-3">
-                                            <button class="waves-effect waves-dark btn btn-sm btn-secondary next-step">Continue</button>
-                                            <button class="waves-effect waves-dark btn btn-sm btn-outline-secondary previous-step">Back</button>
+                                            <button class="waves-effect waves-dark btn btn-sm btn-info next-step">Continue</button>
+                                            <button class="waves-effect waves-dark btn btn-sm btn-outline-info previous-step">Back</button>
                                         </div>
                                     </div>
 
@@ -105,79 +105,83 @@ include 'settings/connect-db.php';
                             <li class="step">
                                 <div class="step-title waves-effect waves-dark">Step 3 - Fill in your information</div>
                                 <div class="step-new-content">
-                                    <div class="form-row mb-2">
+                                    <div class="form-row mb-1">
                                    
                                         <div class="col">
-                                            <div class="md-form md-outline Employer">
+                                            <div class="md-form md-outline Org">
                                                 <input name="firstname" type="text" id="materialRegisterFormFirstName" class="form-control" required />
                                                 <label for="materialRegisterFormFirstName">First name </label>
                                             </div>
                                         </div>
                                         <div class="col">
                                             <!-- Last name -->
-                                            <div class="md-form md-outline Employer">
+                                            <div class="md-form md-outline Org">
                                                 <input name="lastname" type="text" id="materialRegisterFormLastName" class="form-control" required />
                                                 <label for="materialRegisterFormLastName">Last name</label>
                                             </div>
                                         </div>
 
                                     </div>
-                                    <div class="form-row mb-2">
+                                    <div class="form-row mb-1">
                                    
                                         <div class="col">
-                                            <div class="md-form md-outline Employer">
+                                            <div class="md-form md-outline Org">
                                                 <input name="position" type="text" id="position" class="form-control" required />
                                                 <label for="position">Position</label>
                                             </div>
                                         </div>
+                                        
+                                    </div>
+                                    <div class="form-row mb-1">
+                                   
+                                        
                                         <div class="col">
                                        
-                                            <div class="md-form md-outline Employer">
-                                                <input name="company" type="text" id="nameCompany" class="form-control" required />
-                                                <label for="nameCompany">Name of the Company</label>
+                                            <div class="md-form md-outline Org">
+                                                <input name="organization_name" type="text" id="organization_name" class="form-control" required />
+                                                <label for="organization_name">Name of the Organization</label>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="form-row mb-2">
-                                        <div class="col select-outline Employer">
-                                            <select name="sector"  class="mdb-select md-form md-outline Employer" multiple id="sector" required>
-                                                <option disabled selected value=""></option>
-                                                <?php 
-                                                $sectorcheck=$db->prepare("SELECT sectors_name FROM sectors");
-                                                $sectorcheck->execute();
-                                                            $countsector=0;
-                                                            while($sectorinfo=$sectorcheck->fetch(PDO::FETCH_ASSOC)) { $countsector++?>
+                                        <div class="col select-outline Org">
 
-                                                            <option value="<?php echo $sectorinfo['sectors_name'] ?>"><?php echo $sectorinfo['sectors_name'] ?></option>
-                                                            <?php } ?>
+                                            <select class="mdb-select md-form md-outline Org" id="org1" name="organization_type">
+                                                <option value="" disabled selected></option>
+                                                <?php
+                                                    $orgtypecheck = $db->prepare("SELECT organization_type FROM orgtype");
+                                                    $orgtypecheck->execute();
+                                                    while ($orgtypeinfo = $orgtypecheck->fetch(PDO::FETCH_ASSOC)) { ?>
+                                                    <option  value="<?php echo $orgtypeinfo['organization_type'] ?>"><?php echo $orgtypeinfo['organization_type'] ?></option>
+                                                <?php } ?>
+
                                             </select>
-                                            <label for="sector">Sector</label>
-                                            
-                                        </div>
-                                        <div class="col">
-                                            <div class="md-form md-outline Employer">
-                                                <select class="mdb-select md-form md-outline Employer  my-2" id="num1" name="employees">
-                                                <option disabled selected></option>
-                                                <option value="1-10 employees">1-10 employees</option>
-                                                <option value="11-50 employees">11-50 employees</option>
-                                                <option value="51-200 employees">51-200 employees</option>
-                                                <option value="201-500 employees">201-500 employees</option>
-                                                <option value="501-1.000 employees">501-1.000 employees</option>
-                                                <option value="1.001-5.000 employees">1.001-5.000 employees</option>
-                                                <option value="5001-10.000 employees">5001-10.000 employees</option>
-                                                <option value="10.001+ employees">10.001+ employees</option>
-                                                </select>
-                                                <label for="num1" class="">Number of employees</label>
-                                            </div>
-                                        </div>
+                                            <label for="org1">Organization Type</label>
 
+                                        </div>
                                     </div>
+                                    <div class="form-row mb-1">
+                                        <div class="col select-outline Org">
+                                            <select class="mdb-select md-form md-outline Org" name="region" id="region" searchable="Search here..">
+                                                <option disabled selected></option>
+                                                <?php
+                                                $citycheck=$db->prepare("SELECT city FROM cities");
+                                                $citycheck->execute();
+
+                                                while($cityinfo=$citycheck->fetch(PDO::FETCH_ASSOC)) { ?>
+
+                                                    <option value="<?php echo $cityinfo['city'] ?>"><?php echo $cityinfo['city'] ?></option>
+
+                                                <?php } ?>
+                                            </select>
+                                            <label for="region">Resident City/Town</label>
+                                        </div>
+                                    </div>
+                                    
                                     
                                     
                                     
                                     <div class="step-actions mb-5">
-                                        <button class="waves-effect waves-dark btn btn-sm btn-secondary next-step">Continue</button>
-                                        <button class="waves-effect waves-dark btn btn-sm btn-outline-secondary previous-step">Back</button>
+                                        <button class="waves-effect waves-dark btn btn-sm btn-info next-step">Continue</button>
+                                        <button class="waves-effect waves-dark btn btn-sm btn-outline-info previous-step">Back</button>
                                     </div>
                                 </div>
                             </li>
@@ -187,14 +191,14 @@ include 'settings/connect-db.php';
                                     <div class="form-check mt-3 mb-5">
                                         <input type="checkbox" class="form-check-input" id="materialUnchecked">
                                         <label class="form-check-label" for="materialUnchecked">
-                                            I agree with <a href="terms_of_use.html" class="deep-purple-text" style="padding: 0;">the terms
+                                            I agree with <a href="terms_of_use.html" class="deep-blue-text" style="padding: 0;">the terms
                                                 and conditions,
                                                 privacy and GDPR policies. </a>Your personal
                                             information will not be shared with any third party
                                         </label>
                                     </div>
                                     <div class="step-actions mb-5">
-                                        <input class="btn btn-secondary" type="submit" name="employersignup" value="Submit">
+                                        <input class="btn btn-info" type="submit" name="organizationsignup" value="Submit">
                                     </div>
                                 </div>
                             </li>

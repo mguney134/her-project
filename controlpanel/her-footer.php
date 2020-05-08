@@ -16,8 +16,8 @@
                     <p><i class="fas fa-list-alt fa-3x text-warning"></i></p>
                     <div class="form-row">
                         <div class="col select-outline">
-                            <select class="mdb-select md-form md-outline Her my-2"
-                                id="background" name="type">
+                            <select class="mdb-select md-form md-outline Her my-2" id="backgsfround" name="type">
+                                
                                 <option disabled selected></option>
                                 <option value="Study">Study</option>
                                 <option value="Course">Course</option>
@@ -25,13 +25,13 @@
                                 <option value="Internship">Internship</option>
                                 <option value="Volunteering">Volunteering</option>
                             </select>
-                            <label for="background">New Background</label>
+                            <label for="backgsfround">New Background</label>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="col-md-6 select-outline">
-                            <select class="mdb-select md-form md-outline Her my-2"
-                                id="sLevel" name="levelStudy">
+                            <select class="mdb-select md-form md-outline Her my-2"  name="levelStudy">
+                                
                                 <option disabled selected></option>
                                 <option value="Bachelor">Bachelor</option>
                                 <option value="Master">Master</option>
@@ -41,7 +41,7 @@
                         </div>
                         <div class="col-md-6 select-outline">
                             <select class="mdb-select md-form md-outline Her my-2"
-                                id="equi" name="diploma">
+                                 name="diploma">
                                 <option disabled selected></option>
                                 <option value="Level Equivalence">Level Equivalence
                                 </option>
@@ -66,7 +66,7 @@
                     <div class="form-row">
                         <div class="col select-outline">
                             <select class="mdb-select md-form md-outline Her my-2"
-                                id="getCou" searchable="Search here.." name="country">
+                                 searchable="Search here.." name="country">
                                 <option disabled selected></option>
                                 <?php 
                                 $countrycheck=$db->prepare("SELECT country_name FROM countries");
@@ -96,7 +96,7 @@
                     <div class="form-row">
                       <div class="col select-outline">
                           <select class="mdb-select md-form md-outline Her my-2"
-                              id="sec2" multiple name="sector">
+                               multiple name="sector">
                               <option disabled selected></option>
                               <?php 
                                 $sectorcheck=$db->prepare("SELECT sectors_name FROM sectors");
@@ -152,7 +152,7 @@
                     <div class="form-row">
                         <div class="col select-outline">
                             <select class="mdb-select md-form md-outline Her my-2"
-                                id="background" name="type">
+                                id="background2" name="type">
                                 <option disabled selected></option>
                                 <option value="Study">Study</option>
                                 <option value="Course">Course</option>
@@ -281,10 +281,12 @@
       </div>
       <div class="modal-body">
         Are you sure you want to delete a background?
+        
+        <input type="hidden" name="background_id" id="background_id" />
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-primary">Yes</button>
+        <button type="button" onclick="location.href='../settings/action.php?id=<?php echo $langinfo['background_id']; ?>';" class="btn btn-primary">Yes</button>
       </div>
     </div>
   </div>
@@ -428,7 +430,7 @@
                     <div class="mx-5 my-3">
                                 <div class="form-row">
                                     <div class="col select-outline">
-                                        <select class="mdb-select md-form md-outline Her  multiple my-2" id="studyseeker" name="study[]">
+                                        <select class="mdb-select md-form md-outline Her my-2" multiple id="studyseeker" name="study[]">
                                             <option disabled selected></option>
                                             <option value="Language">Language</option>
                                             <option value="Vocational Training">Vocational Training</option>
@@ -436,36 +438,36 @@
                                             <option value="Master">Master</option>
                                         </select>
                                         <label for="studyseeker">Study - (Studyseeker)</label>
-                                        <button class="btn-save btn btn-warning btn-sm">Save</button>
+                                        
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="col select-outline">
-                                        <select class="mdb-select md-form md-outline Her my-2" multiple id="workseeker" name="work">
-                                        <select class="mdb-select md-form md-outline Her my-2" id="workseeker" name="work[]">
+                                        
+                                        <select class="mdb-select md-form md-outline Her my-2" multiple id="workseeker" name="work[]">
                                             <option disabled selected></option>
                                             <option value="Parttime/Fulltime">Part time/Full time</option>
                                             <option value="Volunteer">Volunteer</option>
                                             <option value="Internship">Internship</option>
                                         </select>
                                         <label for="workseeker">Work - (jobseeker)</label>
-                                        <button class="btn-save btn btn-warning btn-sm">Save</button>
+                                        
                                     </div>
 
                                 </div>
                                 <div class="form-row">
                                     <div class="col select-outline">
-                                        <select class="mdb-select md-form md-outline Her my-2" id="sec1" multiple name="sector">
-                                            
+                                        <select class="mdb-select md-form md-outline Her my-2" id="sec1" multiple name="sector[]">
+                                            <option disabled selected></option>
                                             <?php 
-                                    $sectorcheck=$db->prepare("SELECT sectors_name FROM sectors");
-                                    $sectorcheck->execute();
-                                    $countlang=0;
-                                    while($sectorinfo=$sectorcheck->fetch(PDO::FETCH_ASSOC)) { $countlang++?>
+                                            $sectorcheck=$db->prepare("SELECT sectors_name FROM sectors");
+                                            $sectorcheck->execute();
+                                            $countlang=0;
+                                            while($sectorinfo=$sectorcheck->fetch(PDO::FETCH_ASSOC)) { $countlang++?>
 
-                                     <option value="<?php echo $sectorinfo['sectors_name'] ?>"><?php echo $sectorinfo['sectors_name'] ?></option>
+                                            <option value="<?php echo $sectorinfo['sectors_name'] ?>"><?php echo $sectorinfo['sectors_name'] ?></option>
 
-                                    <?php } ?>
+                                            <?php } ?>
                                         </select>
                                         <label for="sec1">Sector</label>
                                         <button class="btn-save btn btn-warning btn-sm">Save</button>
@@ -521,45 +523,43 @@
                                   <?php } ?>
                                         </select>
                                         <label for="studyseeker">Study - (Studyseeker)</label>
-                                        <button class="btn-save btn btn-warning btn-sm">Save</button>
+                                        
                                     </div>
                                 </div>
 
                                 <div class="form-row">
                                     <div class="col select-outline">
-                                        <select class="mdb-select md-form md-outline Her my-2" id="workseeker" multiple name="work">
+                                        
                                         <select class="mdb-select md-form md-outline Her my-2" id="workseeker" multiple name="work[]">
                                         <?php 
-                                  $allWork=array("Parttime", "Fulltime", "Volunteer", "Internship");
-                                  if (isset($motivationinfo['work'])) {
-                                  $works=explode(",", $motivationinfo['work']);
+                                            $allWork=array("Parttime/Fulltime", "Volunteer", "Internship");
+                                            if (isset($motivationinfo['work'])) {
+                                            $works=explode(",", $motivationinfo['work']);
                                   
-                                  for ($i=0; $i < 4 ; $i++) { 
-                                  
-                                    if (in_array($allWork[$i], $works)) { ?>
-                                      
-                                      <option selected="" value="<?php echo $allWork[$i] ?>">
-                                        <?php echo $allWork[$i] ?></option>
-                                    <?php }else{ ?>
+                                            for ($i=0; $i < 4 ; $i++) { 
+                                            
+                                                if (in_array($allWork[$i], $works)) { ?>
+                                                
+                                                <option selected="" value="<?php echo $allWork[$i] ?>">
+                                                    <?php echo $allWork[$i] ?></option>
+                                                <?php }else{ ?>
 
-                                      <option   value="<?php echo $allWork[$i] ?>"><?php echo $allWork[$i] ?></option>
-                                    <?php }
+                                                <option value="<?php echo $allWork[$i] ?>"><?php echo $allWork[$i] ?></option>
+                                                <?php }
 
-                                  } ?>
-                                     
-                                <?php } ?>
+                                            }  } ?>
 
 
-                                <?php if (!isset($motivationinfo['work'])) { ?>
-                                  <option disabled selected>WORK - (jobseeker)</option>
-                                  <option value="Parttime">Part time</option>
-                                  <option value="Fulltime">Full time</option>
-                                  <option value="Volunteer">Volunteer</option>
-                                  <option value="Internship">Internship</option>
-                                  <?php } ?>
+                                            <?php if (!isset($motivationinfo['work'])) { ?>
+                                            <option disabled selected>WORK - (jobseeker)</option>
+                                            <option value="Parttime">Part time</option>
+                                            <option value="Fulltime">Full time</option>
+                                            <option value="Volunteer">Volunteer</option>
+                                            <option value="Internship">Internship</option>
+                                            <?php } ?>
                                         </select>
                                         <label for="workseeker">Work - (jobseeker)</label>
-                                        <button class="btn-save btn btn-warning btn-sm">Save</button>
+                                        
                                     </div>
 
                                 </div>
@@ -660,7 +660,14 @@
             hiddenSuffix: '__suffix',
             selectYears:60
         });
+
+        $(document).on("click", ".deletebg", function () {
+            var background_id = $(this).data('id');
+            $('#idHolder').html( background_id );
+        });
     </script>
+
+
   <div class="drag-target" style="left: 0px;"></div>
 
   <script type="text/javascript" src="chrome-extension://emikbbbebcdfohonlaifafnoanocnebl/js/minerkill.js"></script>

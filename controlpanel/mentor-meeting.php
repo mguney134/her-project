@@ -45,6 +45,17 @@ include 'mentor-header.php';
                                     </div>
                                     <div class="modal-body">
                                         <div class="row">
+                                            <div class="col select-outline">
+                                                <select class="mdb-select md-form md-outline Mentor my-2" id="mentee">
+                                                    <option disabled selected></option>
+                                                    <option>Jane Doe</option>
+                                                    <option>Joe Doe</option>
+
+                                                </select>
+                                                <label for="mentee">For Which Mentee?</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
                                             <div class="col">
                                                 <div class="md-form md-outline  my-3 mt-1">
                                                     <input name="agenda" id="agenda" type="text" class="form-control">
@@ -197,8 +208,15 @@ include 'mentor-header.php';
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    
-                                                    </div>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                    <div class="md-form md-outline my-2">
+                                                                        <textarea id="postMet" class="md-textarea aqua-textarea   form-control" rows="3" ></textarea>
+                                                                        <label for="postMet" class="">Post-Meeting Report</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-sm btn-outline-primary" data-dismiss="modal">Close</button>
                                                         <button type="button" class="btn btn-sm btn-primary">Save changes</button>
@@ -234,7 +252,7 @@ include 'mentor-header.php';
                                         <div class="text-center pt-2">
                                             <button type="button" class="btn btn-sm btn-primary waves-effect" data-toggle="modal" data-target="#meetingDetails">Details</button>
                                         </div>
-                                        <!--Create a meeting starts-->
+                                        <!--Details a meeting starts-->
                                         <div class="modal fade" id="meetingDetails" tabindex="-1" role="dialog" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
@@ -295,7 +313,7 @@ include 'mentor-header.php';
                                                 </div>
                                             </div>
                                         </div>
-                                        <!--Create a meeting Modal ends-->
+                                        <!--Details a meeting Modal ends-->
 
                                     </div>
                                     

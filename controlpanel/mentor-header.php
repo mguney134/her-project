@@ -67,12 +67,12 @@ $count1=$mentorcheck->rowCount();
     <header>
         <!-- Navbar -->
         <nav class="mb-1 navbar navbar-expand-lg navbar-dark blue-gradient">
-            <a class="navbar-brand" href="../index">
+            <a class="navbar-brand" href="../index.php">
                 <img src="../images/logos/logo.png" height="30" alt="all-in-one-4-her logo" />
             </a>
             <ul class="navbar-nav ml-auto nav-flex-icons">
                 <i class="nav-item fas fa-user mr-3 text-white pt-1"></i>
-                <a class="nav-item text-white" href="../logout">Log Out</a>
+                <a class="nav-item text-white" href="../logout.php">Log Out</a>
             </ul>
 
         </nav>
@@ -131,7 +131,7 @@ $count1=$mentorcheck->rowCount();
 
                                 <h5 class="font-weight-bold">
                     You are mentoring
-                    <a href="mentor-herinfo?her_id=<?php echo $herinfo['her_id'] ?>"><span class="badge badge-primary"><?php echo $herinfo['firstname'] ?></span></a>
+                    <a href="mentor-herinfo.php?her_id=<?php echo $herinfo['her_id'] ?>"><span class="badge badge-primary"><?php echo $herinfo['firstname'] ?></span></a>
                                 </h5>
                                 <?php } 
                                 }else{ ?>
