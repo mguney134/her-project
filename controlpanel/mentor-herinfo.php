@@ -56,7 +56,7 @@ $herinfo=$hercheck->fetch(PDO::FETCH_ASSOC);
         <div class="tab-content">
         <!-- Panel 111-Information Starts-->
             <div class="tab-pane fade in show active" >
-                <div class="container py-5 z-depth-1">
+                <div class=" py-5 z-depth-1">
                 <!--Section: Content-->
                     <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
                         <h3 class="font-weight-bold"><?php echo $herinfo['firstname']." ".$herinfo['lastname'] ?> Information</h3>

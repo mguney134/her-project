@@ -34,7 +34,7 @@
     <div class="tab-content">
         
         <div class="tab-pane fade in show active" >
-            <div class="container py-5 z-depth-1">
+            <div class="py-5 z-depth-1">
             <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
                 <div class="d-flex flex-row  justify-content-between">
                     <h3 class="font-weight-bold text-left">Meetings with Your Mentor / Coach</h3>
