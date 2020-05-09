@@ -136,29 +136,7 @@
                                 </div>
                               
                                
-                              <div class="text-left">
-                                <div class="form-check">
-                                  <input type="hidden" value="0" name="mentoring" >
-                                  <input type="checkbox" class="form-check-input" id="mentoringsupport" value="1" name="mentoring" <?php echo $moppinfo['mentoring'] ? 'checked' : ''?>>
-                                  <label class="form-check-label" for="mentoringsupport">I want mentoring support. </label>
-                                  <small id="mentoringsupport" class="form-text text-muted">
-                                    You are matched with a mentor in your sector for 3-6 months
-                                  </small>
-                              </div>
-                              <div class="form-check">
-                                <input type="hidden" value="0" name="coaching" >
-                                <input type="checkbox" class="form-check-input" id="career-coaching" value="1" name="coaching" <?php echo $moppinfo['coaching'] ? 'checked' : ''?>>
-                                <label class="form-check-label" for="career-coaching">I want career coaching support. </label>
-                                <small id="career-coaching" class="form-text text-muted">
-                                  You have 4 sessions of professional career coaching within 2-3 months
-                                </small>
-                            </div>
-                              </div>
-                              <input type="text" name="her_id" hidden="" value="<?php echo $herinfo['her_id'] ?>">
-                              <input type="text" name="org_id" hidden="" value="0">
-                              <div class="text-right">
-                                   <input class="btn btn-warning" type="submit" name="addMopp" value="Add">
-                              </div>
+                              
                           </div>
                 </form>
 <?php }?>
@@ -201,22 +179,7 @@
                                <small id="passwordHelpBlockMD" class="form-text text-muted">
                                 If you are part of a pilot practice(s) and registered through these organizations, please tick one or more of them. Then you give your consent that your data is visible to the responsible person from those organizations and they can validate your data. This will strengthen your CV for employers.
                               </small>
-                              <div class="text-left">
-                                <div class="form-check">
-                                  <input type="checkbox" class="form-check-input" id="mentoringsupport" value="1" name="mentoring" <?php echo $moppinfo['mentoring'] ? 'checked' : ''?>>
-                                  <label class="form-check-label" for="mentoringsupport">I want mentoring support. </label>
-                                  <small id="mentoringsupport" class="form-text text-muted">
-                                    You are matched with a mentor in your sector for 3-6 months
-                                  </small>
-                              </div>
-                              <div class="form-check">
-
-                                <input type="checkbox" class="form-check-input" id="career-coaching" value="1" name="coaching" <?php echo $moppinfo['coaching'] ? 'checked' : ''?>>
-                                <label class="form-check-label" for="career-coaching">I want career coaching support. </label>
-                                <small id="career-coaching" class="form-text text-muted">
-                                  You have 4 sessions of professional career coaching within 2-3 months
-                                </small>
-                            </div>
+                              
                               </div>
                               <input type="text" name="her_id" hidden="" value="<?php echo $herinfo['her_id'] ?>">
                               <div class="text-right">
