@@ -225,73 +225,66 @@ $moppinfo=$moppcheck->fetch(PDO::FETCH_ASSOC);
                                 <a ><i class="fas fa-edit white-text d-inline float-right " data-toggle="modal" data-target="#editMopp"></i></a>
                             </div>
 
-                          
-                          <div class="mx-3 my-2">
-                            <img src="../images/logos/motivation/vdab-limburg.png" width="100%">
-                          </div>
-                          <?php
-                            $mentorcheck=$db->prepare("SELECT * FROM mentor where mentor_id=:mentor_id");
-                            $mentorcheck->execute(array(
-                                'mentor_id' => $herinfo['mentor_id']
-                                ));
-                            $mentorinfo=$mentorcheck->fetch(PDO::FETCH_ASSOC);
-                          ?>
-                           
-                           
-                          <div class=" mx-5 mt-3">
+                            <?php
+                                $mentorcheck=$db->prepare("SELECT * FROM mentor where mentor_id=:mentor_id");
+                                $mentorcheck->execute(array(
+                                    'mentor_id' => $herinfo['mentor_id']
+                                    ));
+                                $mentorinfo=$mentorcheck->fetch(PDO::FETCH_ASSOC);
+                              ?>
+
+
+                          <!-- If there is organization added --->
+                          <div class="row mx-2 my-2">
+                            <div class="col-6">
+                              <img src="../images/logos/motivation/vdab-limburg.png" width="100%">
+                            </div>
+                            <div class="col-6 text-center d-flex align-items-center">
+                            <?php 
+
+                              $moppcheck1=$db->prepare("SELECT * FROM mopp where her_id=:her_id");
+                              $moppcheck1->execute(array(
+                                  'her_id' => $herinfo['her_id']
+                                  ));
+
+                              $moppcheck2=$db->prepare("SELECT * FROM mopp where her_id=:her_id");
+                              $moppcheck2->execute(array(
+                                  'her_id' => $herinfo['her_id']
+                                  ));
+
+                              if (!empty($moppinfo1=$moppcheck1->fetch(PDO::FETCH_ASSOC))) { 
+
+                              while($moppinfo2=$moppcheck2->fetch(PDO::FETCH_ASSOC)) { ?>
+
                               
-                              <thead>
-                                  <tr>
-                                      <th scope="row" class="text-right th-sm" style="width: 25%">
+                                <?php 
 
-                                      </th>
-                                      <th colspan="4" class="border-bottom th-lg">
-                                          <thead>
-                                              <tr>
-                                                <?php 
-
-                                                  $moppcheck1=$db->prepare("SELECT * FROM mopp where her_id=:her_id");
-                                                  $moppcheck1->execute(array(
-                                                      'her_id' => $herinfo['her_id']
-                                                      ));
-                                                  
-                                                  $moppcheck2=$db->prepare("SELECT * FROM mopp where her_id=:her_id");
-                                                  $moppcheck2->execute(array(
-                                                      'her_id' => $herinfo['her_id']
-                                                      ));
-                                                
-                                                if (!empty($moppinfo1=$moppcheck1->fetch(PDO::FETCH_ASSOC))) { 
-                                                  
-                                                  while($moppinfo2=$moppcheck2->fetch(PDO::FETCH_ASSOC)) { ?>
-                                                  
-                                                  <td scope="row" class="text-right th-sm" style="width: 25%">
-                                                     <?php 
-
-                                                       $mopporg = explode(",", $moppinfo2['organisation_name']);
-                                                       for ($i = 0; $i <  count($mopporg); $i++) {
-                                                            $key1=key($mopporg);
-                                                            $val1=$mopporg[$key1];
-                                                            if ($val1<> ' ') { ?>
-                                                      
-                                                      <span class=""><?php echo $val1 ?></span><br>
-                                                              <?php }
-                                                             next($mopporg);
-                                                            }
-                                                       ?>
-                                                      
-                                                  </td><br>
-                                                  <?php } 
+                                  $mopporg = explode(",", $moppinfo2['organisation_name']);
+                                  for ($i = 0; $i <  count($mopporg); $i++) {
+                                        $key1=key($mopporg);
+                                        $val1=$mopporg[$key1];
+                                        if ($val1<> ' ') { ?>
+                                  
+                                  <span class="h4-responsive font-weight-light"><?php echo $val1 ?></span>
+                                          <?php }
+                                        next($mopporg);
+                                        }
+                                  ?>
+                                  <?php } 
                                                    }else{ ?>
-                                                  <td scope="row" class="text-right th-sm" style="width: 25%">
-                                                      You haven't added an organisation yet.
-                                                  </td>
-                                                  <?php } ?>
-
                                                   
+                                                  <span class="">You haven't added an organisation yet.</span>
+                                                  
+                                                  <?php } ?>
+                            </div>
 
-                                              </tr>
-                                              <hr />
-                                              <tr>
+                          </div>
+                          
+                          <!-- If there is organization NOT added --->
+                          
+                           
+                           
+                         
                                                   <?php if ($moppinfo['mentoring']==1) { ?>
                                                     
                                                   <h5 class="font-weight-bold">I want mentoring support.</h5>
@@ -301,15 +294,8 @@ $moppinfo=$moppcheck->fetch(PDO::FETCH_ASSOC);
                                                   <h5 class="font-weight-bold">I want coaching support.</h5>
                                                  <?php } ?>
 
-                                                  
-                                              </tr>
-                                          </thead>
-                                      </th>
-                                  </tr>
-                                     
-                                   
-                              </thead>
-                          </div>
+                                             
+                       
                           <div class="card-header white-text deep-orange lighten-2 text-center mt-3 py-2">
                               <h6 class="font-weight-normal mb-0">
                                 Matched Mentor / Coach
