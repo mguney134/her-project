@@ -60,6 +60,15 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="md-form md-outline Her my-3">
+                                            <input id="with" type="text" class="form-control">
+                                            <label for="with">With Whom?</label>
+                                        </div>
+                                    </div>
+                                </div>
                             
                                 <div class="row">
                                         <div class="col">
@@ -121,20 +130,29 @@
                                         </p>
                                     </div>
                                     <div class="col-lg-3 col-md-6 mb-2">
+                                        <div class="row">
+                                            <p class="text-muted mb-1">
+                                            <i class="fas fa-calendar-day deep-orange-text pr-2"></i> 
+                                            25 May 2010 Friday
+                                            </p>
+                                        </div>
+                                        <div class="row">
+                                            <p class="text-muted">
+                                            <i class="far fa-clock deep-orange-text pr-2"></i> 
+                                            18.30
+                                            </p>
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 mb-2">
                                         
                                         <p class="text-muted">
-                                        <i class="fas fa-calendar-day deep-orange-text pr-2"></i> 
-                                        25 May 2010 Friday
+                                        <i class="fas fa-user-friends deep-orange-text pr-2"></i> 
+                                            <span class="font-weight-bold">With:</span><br> Joe Doe
                                         </p>
                                     </div>
-                                    <div class="col-lg-2 col-md-6 mb-2">
-                                        
-                                        <p class="text-muted">
-                                        <i class="far fa-clock deep-orange-text pr-2"></i> 
-                                        18.30
-                                        </p>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 mb-2">
+                                    <div class="col-lg-3 col-md-6 mb-2">
                                         
                                         <p class="text-muted">
                                         <i class="fas fa-map-marker-alt deep-orange-text pr-2"></i> 
@@ -169,6 +187,15 @@
                                                         <div class="md-form md-outline Her my-3 mt-1">
                                                             <input name="agenda" id="agenda" type="text" class="form-control " value="Cv review">
                                                             <label for="agenda">Meeting's Agenda</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="md-form md-outline Her my-3">
+                                                            <input id="with2" type="text" class="form-control">
+                                                            <label for="with2">With</label>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -250,7 +277,9 @@
                                 <div class="text-center pt-2">
                                     <button type="button" class="btn btn-sm btn-warning waves-effect" data-toggle="modal" data-target="#meetingDetails">Details</button>
                                 </div>
-                                <!--Create a meeting starts-->
+
+
+                                <!--details a meeting starts-->
                                 <div class="modal fade" id="meetingDetails" tabindex="-1" role="dialog" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
@@ -267,6 +296,14 @@
                                                         <div class="md-form md-outline Her my-3 mt-1">
                                                             <input name="agenda" id="agenda" type="text" class="form-control disabled" value="Cv review">
                                                             <label for="agenda">Meeting's Agenda</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="md-form md-outline Her my-3">
+                                                            <input id="with3" type="text" class="form-control disabled" value="Joe Doe">
+                                                            <label for="with3">With</label>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -303,6 +340,14 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="md-form md-outline Her my-2">
+                                                            <textarea id="postMet" class="md-textarea aqua-textarea   form-control" disabled rows="3" placeholder="dvdsv sdvdsv sevdsvd sdvdsvd sdvsdvc"></textarea>
+                                                            <label for="postMet" class="">Post-Meeting Report</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             
                                             </div>
                                             <div class="modal-footer">
@@ -312,7 +357,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!--Create a meeting Modal ends-->
+                                <!--details a meeting Modal ends-->
 
                             </div>
                             

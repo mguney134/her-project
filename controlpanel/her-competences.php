@@ -135,7 +135,7 @@
                             <div class="col-3  ">
                                 <span class="m-0 pb-1 ">Hard working&nbsp</span>
                             </div>
-                            <div class="col-4 ">
+                            <div class="col-2 ">
                                 <span class="m-0 pb-1 ">Hard working&nbsp</span><span class="m-0 pb-1 ">Hard working&nbsp</span>
                             </div>
                             
@@ -151,10 +151,10 @@
                             <div class="col-3 border-bottom ">
                                 <p class="m-0 pb-1 font-weight-bold">Adaptability and Learnability &nbsp</p>
                             </div>
-                            <div class="col-2 border-bottom ">
+                            <div class="col-3 border-bottom ">
                                 <p class="m-0 pb-1 font-weight-bold">Analytical Skills &nbsp</p>
                             </div>
-                            <div class="col-3 border-bottom ">
+                            <div class="col-2 border-bottom ">
                                 <p class="m-0 pb-1 font-weight-bold">Leadership Skills &nbsp</p>
                             </div>
                             <div class="col-2 border-bottom ">
@@ -170,7 +170,7 @@
                                 <span class="m-0 pb-1 ">Hard working&nbsp</span>
                                 <span class="m-0 pb-1 ">Hard working&nbsp</span>
                             </div>
-                            <div class="col-2  ">
+                            <div class="col-3  ">
                                 <span class="m-0 pb-1 ">Hard working&nbsp</span>
                             </div>
                             <div class="col-2  ">
