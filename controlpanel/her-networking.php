@@ -110,13 +110,13 @@ $eventscheck->execute( );
                                                 <ul class="list-unstyled list-inline font-small mb-1">
                                                     <!-- Date -->
                                                     <li class="list-inline-item pr-2 white-text">
-                                                        <i
-                                                            class="fas fa-calendar-alt pr-1"></i>05-07/04/2020
+                                                        <i class="fas fa-calendar-alt pr-1"></i>
+                                                        <small><span>07/04/2020</span> - <span>07/04/2020</span></small>
                                                     </li>
                                                     <!-- Location -->
                                                     <li class="list-inline-item">
-                                                        <a href="#" class="white-text"><i
-                                                                class="fas fa-map-marker-alt pr-1"></i>Antwerpen</a>
+                                                        <a href="#" class="white-text">
+                                                            <i class="fas fa-map-marker-alt pr-1"></i><small>Antwerpen</small></a>
                                                     </li>
                                                 </ul>
                                             </div>
