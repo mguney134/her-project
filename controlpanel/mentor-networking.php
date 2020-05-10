@@ -617,6 +617,7 @@ $eventsinfo=$eventscheck->fetch(PDO::FETCH_ASSOC);
                             </div>
                             
 
+                            
 
                             <!-- CREATE SVEPT POSTS  STARTS-->
                             <div class="tab-pane fade" id="create" role="tabpanel">
@@ -685,8 +686,83 @@ $eventsinfo=$eventscheck->fetch(PDO::FETCH_ASSOC);
                                             <button type="button" data-toggle="modal" data-target="#createPost" class="btn btn-md btn-primary ">Create a Networking Post</button>
                                         </div>
                                     </div>
+
+
+                                    <h5>Your Networking Posts</h5>
+                                <hr>
+                                <div class="row">
+                                    <!-- Created Post-STUDY Sample with default image starts-->
+                                    <div class="col-lg-4 col-md-12 col-xs-12">
+                                        <div class="card testimonial-card" style="cursor: pointer;">
+                                            <div class="card-up">
+                                                <!-- Event Type -->
+                                                <div class="row green darken-4 d-flex justify-content-between m-0" style="height:20px;">
+                                                    <div>&nbsp;&nbsp;&nbsp;</div>
+                                                    <p class="font-weight-bold white-text" style="font-size:14px">&nbsp;STUDY</p>
+                                                    <div style="margin: 0;" class="row pb-2">
+                                                        <a data-toggle="modal" style="font-size:12px" data-target="#editPost"><i
+                                                                class="fas fa-pen white-text mr-1"></i></a>
+                                                        <a data-toggle="modal" style="font-size:12px" data-target="#deletePost"><i
+                                                                class="fas fa-times white-text mr-1"></i></a>
+                                                    </div>
+                                                </div>
+
+
+                                                <!-- Background image -->
+                                                <img src="../images/icons/events/study-back.png" width="100%">
+                                                <!--  icons fas-full far-empty -->
+
+                                                <i class="far fa-bookmark icon icon-bookmark fa-2x yellow-text mt-2"></i>
+                                            </div>
+                                            <!-- Middle Ribbon -->
+                                            <div class="green darken-4" style="height:10px;">&nbsp;</div>
+
+                                            <!-- Circle Icon -->
+                                            <div class="avatar mx-auto white" style="z-index: 100;">
+                                                <img src="../images/icons/events/study-icon.png" class="rounded-circle">
+                                            </div>
+
+                                            <!-- Card content -->
+                                            <div class="card-body pt-1">
+                                                <!-- Title -->
+                                                <h6 class="font-weight-bold mb-1" style="letter-spacing: 1px;">
+                                                    How To Identify Your Career Potential</h6>
+                                                <!-- Organized By -->
+                                                <!-- Sector -->
+                                                <p class="grey-text text-center mb-0">by MEERDERE DATA /
+                                                    Business</p>
+                                                <!-- External Link -->
+                                                <a
+                                                    href="https://www.eventbrite.be/e/how-to-identify-your-career-potential-english-class-tickets-90292726977"></a>
+                                            </div>
+
+                                            <!-- Card footer -->
+                                            <div class="rounded-bottom green darken-4 text-center pt-1">
+                                                <ul class="list-unstyled list-inline font-small mb-1">
+                                                    <!-- Date -->
+                                                    <li class="list-inline-item pr-2 white-text">
+                                                        <i class="fas fa-calendar-alt pr-1"></i>05-07/04/2020
+                                                    </li>
+                                                    <!-- Location -->
+                                                    <li class="list-inline-item">
+                                                        <a href="#" class="white-text"><i class="fas fa-map-marker-alt pr-1"></i>Antwerpen</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                        <br>
+                                    </div>
+                                    <!-- Created Post-STUDY Sample with default image ends-->
+                                </div>
                                     
                                 </section>
+
+                                
+
+
+
+
                                 <!--Create Post Modal starts-->
                                 <div class="modal fade" id="createPost" tabindex="-1" role="dialog"
                                         aria-labelledby="createPost" aria-hidden="true">
@@ -883,69 +959,10 @@ $eventsinfo=$eventscheck->fetch(PDO::FETCH_ASSOC);
                                 </div>
                                 <!--Create Post Modal ends-->
 
-                                <!-- Created Post-STUDY Sample with default image starts-->
-                                <div class="col-lg-4 col-md-12 col-xs-12">
-                                    <div class="card testimonial-card" style="cursor: pointer;">
-                                        <div class="card-up">
-                                            <!-- Event Type -->
-                                            <div class="row green darken-4 d-flex justify-content-between m-0" style="height:20px;">
-                                                <div>&nbsp;&nbsp;&nbsp;</div>
-                                                <p class="font-weight-bold white-text" style="font-size:14px">&nbsp;STUDY</p>
-                                                <div style="margin: 0;" class="row pb-2">
-                                                    <a data-toggle="modal" style="font-size:12px" data-target="#editPost"><i
-                                                            class="fas fa-pen white-text mr-1"></i></a>
-                                                    <a data-toggle="modal" style="font-size:12px" data-target="#deletePost"><i
-                                                            class="fas fa-times white-text mr-1"></i></a>
-                                                </div>
-                                            </div>
+                                
+                                
 
-
-                                            <!-- Background image -->
-                                            <img src="../images/icons/events/study-back.png" width="100%">
-                                            <!--  icons fas-full far-empty -->
-
-                                            <i class="far fa-bookmark icon icon-bookmark fa-2x yellow-text mt-2"></i>
-                                        </div>
-                                        <!-- Middle Ribbon -->
-                                        <div class="green darken-4" style="height:10px;">&nbsp;</div>
-
-                                        <!-- Circle Icon -->
-                                        <div class="avatar mx-auto white" style="z-index: 100;">
-                                            <img src="../images/icons/events/study-icon.png" class="rounded-circle">
-                                        </div>
-
-                                        <!-- Card content -->
-                                        <div class="card-body pt-1">
-                                            <!-- Title -->
-                                            <h6 class="font-weight-bold mb-1" style="letter-spacing: 1px;">
-                                                How To Identify Your Career Potential</h6>
-                                            <!-- Organized By -->
-                                            <!-- Sector -->
-                                            <p class="grey-text text-center mb-0">by MEERDERE DATA /
-                                                Business</p>
-                                            <!-- External Link -->
-                                            <a
-                                                href="https://www.eventbrite.be/e/how-to-identify-your-career-potential-english-class-tickets-90292726977"></a>
-                                        </div>
-
-                                        <!-- Card footer -->
-                                        <div class="rounded-bottom green darken-4 text-center pt-1">
-                                            <ul class="list-unstyled list-inline font-small mb-1">
-                                                <!-- Date -->
-                                                <li class="list-inline-item pr-2 white-text">
-                                                    <i class="fas fa-calendar-alt pr-1"></i>05-07/04/2020
-                                                </li>
-                                                <!-- Location -->
-                                                <li class="list-inline-item">
-                                                    <a href="#" class="white-text"><i class="fas fa-map-marker-alt pr-1"></i>Antwerpen</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-
-                                    </div>
-                                    <br>
-                                </div>
-                                <!-- Created Post-STUDY Sample with default image ends-->
+                                
 
 
                                 <!--Created Post edit post starts-->
