@@ -26,7 +26,7 @@ include 'mentor-header.php';
       <div class="tab-content">
           <!-- Panel Meeting Starts-->
           <div class="tab-pane fade in show active" id="panel111" role="tabpanel">
-              <div class="container py-5 z-depth-1">
+              <div class="py-5 z-depth-1">
                   <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
                         <div class="d-flex flex-row  justify-content-between">
                             <h3 class="font-weight-bold text-left">Meetings with Your Mentees</h3>
@@ -45,14 +45,11 @@ include 'mentor-header.php';
                                     </div>
                                     <div class="modal-body">
                                         <div class="row">
-                                            <div class="col select-outline">
-                                                <select class="mdb-select md-form md-outline Mentor my-2" id="mentee">
-                                                    <option disabled selected></option>
-                                                    <option>Jane Doe</option>
-                                                    <option>Joe Doe</option>
-
-                                                </select>
-                                                <label for="mentee">For Which Mentee?</label>
+                                            <div class="col">
+                                                <div class="md-form md-outline my-3">
+                                                    <input id="with" type="text" class="form-control">
+                                                    <label for="with">With Whom?</label>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -116,36 +113,45 @@ include 'mentor-header.php';
                                 <div class="row mx-0">
                                     <div class="col-md-10 grey lighten-4 rounded-left pt-4">
 
-                                        <div class="row">
-                                            <div class="col-lg-3 col-md-6 mb-2">
-                                                
-                                                <p class="text-muted">
-                                                <i class="far fa-comment-dots indigo-text pr-2"></i><span class="font-weight-bold">Agenda:</span><br> Cv Review
-                                                </p>
-                                            </div>
-                                            <div class="col-lg-3 col-md-6 mb-2">
-                                                
-                                                <p class="text-muted">
-                                                <i class="fas fa-calendar-day indigo-text pr-2"></i> 
-                                                25 May 2010 Friday
-                                                </p>
-                                            </div>
-                                            <div class="col-lg-2 col-md-6 mb-2">
-                                                
-                                                <p class="text-muted">
-                                                <i class="far fa-clock indigo-text pr-2"></i> 
-                                                18.30
-                                                </p>
-                                            </div>
-                                            <div class="col-lg-4 col-md-6 mb-2">
-                                                
-                                                <p class="text-muted">
-                                                <i class="fas fa-map-marker-alt indigo-text pr-2"></i> 
-                                                Brussels, Central Starbucks
-                                                </p>
-                                            </div>
+                                    <div class="row">
+                                    <div class="col-lg-3 col-md-6 mb-2">
                                         
+                                        <p class="text-muted">
+                                        <i class="far fa-comment-dots text-primary pr-2"></i><span class="font-weight-bold">Agenda:</span><br> Cv Review
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 mb-2">
+                                        <div class="row">
+                                            <p class="text-muted mb-1">
+                                            <i class="fas fa-calendar-day text-primary  pr-2"></i> 
+                                            25 May 2010 Friday
+                                            </p>
                                         </div>
+                                        <div class="row">
+                                            <p class="text-muted">
+                                            <i class="far fa-clock text-primary  pr-2"></i> 
+                                            18.30
+                                            </p>
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 mb-2">
+                                        
+                                        <p class="text-muted">
+                                        <i class="fas fa-user-friends text-primary  pr-2"></i> 
+                                            <span class="font-weight-bold">With:</span><br> Joe Doe
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 mb-2">
+                                        
+                                        <p class="text-muted">
+                                        <i class="fas fa-map-marker-alt text-primary  pr-2"></i> 
+                                        Brussels, Central Starbucks
+                                        </p>
+                                    </div>
+                                
+                                </div>
                                 
                                         
                                     </div>
@@ -172,6 +178,14 @@ include 'mentor-header.php';
                                                                 <div class="md-form md-outline  my-3 mt-1">
                                                                     <input name="agenda" id="agenda" type="text" class="form-control " value="Cv review">
                                                                     <label for="agenda">Meeting's Agenda</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <div class="md-form md-outline my-3">
+                                                                    <input id="with2" type="text" class="form-control">
+                                                                    <label for="with2">With</label>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -271,6 +285,14 @@ include 'mentor-header.php';
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <div class="md-form md-outline  my-3">
+                                                                    <input id="with3" type="text" class="form-control disabled" value="Joe Doe">
+                                                                    <label for="with3">With</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     
                                                         <div class="row">
                                                                 <div class="col">
@@ -301,6 +323,14 @@ include 'mentor-header.php';
                                                                 <div class="md-form md-outline my-3">
                                                                     <textarea id="todo" class="md-textarea aqua-textarea disabled  form-control" rows="4" placeholder="•vfvfvf&#10;•fvfvf&#10;•vfvfvf&#10;•dvfvfsd"></textarea>
                                                                     <label for="todo" class="">What to discuss?</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <div class="md-form md-outline  my-2">
+                                                                    <textarea id="postMet" class="md-textarea aqua-textarea   form-control" disabled rows="3" placeholder="dvdsv sdvdsv sevdsvd sdvdsvd sdvsdvc"></textarea>
+                                                                    <label for="postMet" class="">Post-Meeting Report</label>
                                                                 </div>
                                                             </div>
                                                         </div>

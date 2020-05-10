@@ -324,21 +324,7 @@
                                     </div>
                                 </div>
                                
-                              <div class="text-left">
-                                <div class="form-check" data-toggle="popover-hover"
-                                    data-content="You are matched with a mentor in your sector for 3-6 months">
-                                  <input type="hidden" value="0" name="mentoring" >
-                                  <input type="checkbox" class="form-check-input" id="mentoringsupport" value="1" name="mentoring" <?php echo $moppinfo['mentoring'] ? 'checked' : ''?>>
-                                  <label class="form-check-label" for="mentoringsupport">I want mentoring support. </label>
-                                  
-                              </div>
-                              <div class="form-check" data-toggle="popover-hover"
-                                    data-content="You have 4 sessions of professional career coaching within 2-3 months">
-                                <input type="hidden" value="0" name="coaching" >
-                                <input type="checkbox" class="form-check-input" id="career-coaching" value="1" name="coaching" <?php echo $moppinfo['coaching'] ? 'checked' : ''?>>
-                                <label class="form-check-label" for="career-coaching">I want career coaching support. </label>
-                                
-                            </div>
+                              
                               </div>
                               <input type="text" name="her_id" hidden="" value="<?php echo $herinfo['her_id'] ?>">
                               <input type="text" name="org_id" hidden="" value="0">
@@ -387,20 +373,7 @@
                             </div>
                         </div>
                               
-                              <div class="text-left">
-                                <div class="form-check my-1" data-toggle="popover-hover"
-                                    data-content="You have 4 sessions of professional career coaching within 2-3 months">
-                                  <input type="checkbox" class="form-check-input" id="mentoringsupport" value="1" name="mentoring" <?php echo $moppinfo['mentoring'] ? 'checked' : ''?>>
-                                  <label class="form-check-label" for="mentoringsupport">I want mentoring support. </label>
-                                  
-                              </div>
-                              <div class="form-check my-1" data-toggle="popover-hover"
-                                    data-content="You have 4 sessions of professional career coaching within 2-3 months">
-
-                                <input type="checkbox" class="form-check-input" id="career-coaching" value="1" name="coaching" <?php echo $moppinfo['coaching'] ? 'checked' : ''?>>
-                                <label class="form-check-label" for="career-coaching">I want career coaching support. </label>
-                                
-                            </div>
+                              
                               </div>
                               <input type="text" name="her_id" hidden="" value="<?php echo $herinfo['her_id'] ?>">
                               <div class="text-right">

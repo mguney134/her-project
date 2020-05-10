@@ -39,7 +39,7 @@ $eventscheck->execute( );
         <div class="tab-content">
             <!-- Panel 444-Networking Starts-->
             <div class="tab-pane fade in show active" >
-                <div class="container py-5 z-depth-1">
+                <div class="py-5 z-depth-1">
                     <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                             <li class="nav-item">
@@ -48,7 +48,7 @@ $eventscheck->execute( );
                             </li>
                             <li class="nav-item Her">
                                 <a class="nav-link" id="all-tab" data-toggle="tab" href="#purposed" role="tab"
-                                    aria-selected="false">Purposed</a>
+                                    aria-selected="false">Proposed</a>
                             </li>
                             <li class="nav-item Her">
                                 <a class="nav-link" id="all-tab" data-toggle="tab" href="#all" role="tab"
@@ -110,13 +110,13 @@ $eventscheck->execute( );
                                                 <ul class="list-unstyled list-inline font-small mb-1">
                                                     <!-- Date -->
                                                     <li class="list-inline-item pr-2 white-text">
-                                                        <i
-                                                            class="fas fa-calendar-alt pr-1"></i>05-07/04/2020
+                                                        <i class="fas fa-calendar-alt pr-1"></i>
+                                                        <small><span>07/04/2020</span> - <span>07/04/2020</span></small>
                                                     </li>
                                                     <!-- Location -->
                                                     <li class="list-inline-item">
-                                                        <a href="#" class="white-text"><i
-                                                                class="fas fa-map-marker-alt pr-1"></i>Antwerpen</a>
+                                                        <a href="#" class="white-text">
+                                                            <i class="fas fa-map-marker-alt pr-1"></i><small>Antwerpen</small></a>
                                                     </li>
                                                 </ul>
                                             </div>

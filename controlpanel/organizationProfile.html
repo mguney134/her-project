@@ -60,12 +60,23 @@
                             </h3>
                             <h5 class="mb-3">-NGO / nonprofit-</h5>
                             <hr>
-                            <div class="row">
-                                <h5 class="mx-5 text-default">
-                                    Which type of talents are you looking for?
-                                </h5>
+                            <div class="row mx-2">
+                                <div class="col-2">
 
+                                </div>
+                                <div class="col-8">
+                                    <h5 class="text-default font-weight-normal">
+                                        Which type of talents are you looking for?
+                                    </h5>
+                                </div>
+                                <div class="col-2">
+                                    <button class="btn-floating btn-sm btn-info" type="button" data-toggle="modal"
+                                        data-target="#talent">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                </div>
                             </div>
+                            <br>
 
                             <div class="row">
                                 <div class="col">
@@ -76,12 +87,7 @@
 
                             </div>
 
-                            <div class="text-right">
-                                <button class="btn-floating btn-sm btn-info" type="button" data-toggle="modal"
-                                    data-target="#talent">
-                                    <i class="fas fa-edit"></i>
-                                </button>
-                            </div>
+
                             <div class="modal fade" id="talent" tabindex="-1" role="dialog"
                                 aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
@@ -156,45 +162,49 @@
                                 Matched Talents
                             </div>
 
-                            <section class="p-md-3 mx-md-3 text-center text-lg-left">
+                            <section class="p-md-3 mx-md-3 text-center">
+                                <p class="h4-responsive">You have <a class="badge badge-info"
+                                        href="org-talents.php">2</a>
+                                    talent(s) matched</p>
 
-                                <div class="row mt-2">
 
-                                    <!--    matched talent 1 starts -->
 
-                                    <a class="col-lg-6 mb-4" href="org-talent.php">
-                                        <div class="card text-center">
 
-                                            <div>
-                                                <i class="fas fa-user-check fa-2x text-info px-4 py-2"></i>
+                                <!--matched her starts-->
 
-                                            </div>
-                                            <div class="card-body pt-1">
-                                                <h5 style="font-size: 1.1rem;" class="card-text">Micheal Gate
-                                                </h5>
-                                            </div>
+                                <div class="card text-center mb-2 ">
+                                    <div class="row">
+                                        <div class="col-4 px-0 text-center ">
+                                            <img src="../images/icons/her.png" width="50px" />
+
 
                                         </div>
-                                    </a>
-                                    <!--    matched talent 1 Ends -->
-
-                                    <!--    matched talent 2 starts -->
-                                    <a class="col-lg-6 mb-4" href="org-talent.php">
-                                        <div class="card text-center">
-
-                                            <div>
-                                                <i class="fas fa-user-check fa-2x text-info px-4 py-2"></i>
-
-                                            </div>
-                                            <div class="card-body pt-1">
-                                                <h5 style="font-size: 1.1rem;" class="card-text">Jane Doe
-                                                </h5>
-                                            </div>
+                                        <div class="col-8 px-0 text-left d-flex align-items-center">
+                                            <h5 class="mb-1 pt-1">
+                                                Jane Doe
+                                            </h5>
 
                                         </div>
-                                    </a>
-                                    <!--    matched talent 2 Ends -->
+                                    </div>
                                 </div>
+                                <div class="card text-center mb-2 ">
+                                    <div class="row">
+                                        <div class="col-4 px-0 text-center ">
+                                            <img src="../images/icons/her.png" width="50px" />
+
+
+                                        </div>
+                                        <div class="col-8 px-0 text-left d-flex align-items-center">
+                                            <h5 class="mb-1 pt-1">
+                                                Micheal Gate
+                                            </h5>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
                             </section>
                         </div>
                         <!-- Panel -->
@@ -251,7 +261,7 @@
                     <div class="tab-content">
                         <!-- Panel 111-Information Starts-->
                         <div class="tab-pane fade in show active" id="panel111" role="tabpanel">
-                            <div class="container py-5 z-depth-1">
+                            <div class=" py-5 z-depth-1">
                                 <!--Section: Content-->
                                 <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
                                     <div class="d-flex flex-row  justify-content-between">
@@ -697,7 +707,7 @@
 
                         <!-- Panel 222-Networking Starts-->
                         <div class="tab-pane fade in show" id="panel222" role="tabpanel">
-                            <div class="container py-5 z-depth-1 ">
+                            <div class="py-5 z-depth-1 ">
                                 <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
                                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                                         <li class="nav-item">
@@ -1384,6 +1394,84 @@
                                                             Post</button>
                                                     </div>
                                                 </div>
+                                                <h5>Your Networking Posts</h5>
+                                                <hr>
+                                                <div class="row">
+                                                    <!-- Created Post-STUDY Sample with default image starts-->
+                                                    <div class="col-lg-4 col-md-12 col-xs-12">
+                                                        <div class="card testimonial-card" style="cursor: pointer;">
+                                                            <div class="card-up">
+                                                                <!-- Event Type -->
+                                                                <div class="row green darken-4 d-flex justify-content-between m-0"
+                                                                    style="height:20px;">
+                                                                    <div>&nbsp;&nbsp;&nbsp;</div>
+                                                                    <p class="font-weight-bold white-text"
+                                                                        style="font-size:14px">&nbsp;STUDY</p>
+                                                                    <div style="margin: 0;" class="row pb-2">
+                                                                        <a data-toggle="modal" style="font-size:12px"
+                                                                            data-target="#editPost"><i
+                                                                                class="fas fa-pen white-text mr-1"></i></a>
+                                                                        <a data-toggle="modal" style="font-size:12px"
+                                                                            data-target="#deletePost"><i
+                                                                                class="fas fa-times white-text mr-1"></i></a>
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <!-- Background image -->
+                                                                <img src="../images/icons/events/study-back.png"
+                                                                    width="100%">
+                                                                <!--  icons fas-full far-empty -->
+
+                                                                <i
+                                                                    class="far fa-bookmark icon icon-bookmark fa-2x yellow-text mt-2"></i>
+                                                            </div>
+                                                            <!-- Middle Ribbon -->
+                                                            <div class="green darken-4" style="height:10px;">&nbsp;
+                                                            </div>
+
+                                                            <!-- Circle Icon -->
+                                                            <div class="avatar mx-auto white" style="z-index: 100;">
+                                                                <img src="../images/icons/events/study-icon.png"
+                                                                    class="rounded-circle">
+                                                            </div>
+
+                                                            <!-- Card content -->
+                                                            <div class="card-body pt-1">
+                                                                <!-- Title -->
+                                                                <h6 class="font-weight-bold mb-1"
+                                                                    style="letter-spacing: 1px;">
+                                                                    How To Identify Your Career Potential</h6>
+                                                                <!-- Organized By -->
+                                                                <!-- Sector -->
+                                                                <p class="grey-text text-center mb-0">by MEERDERE DATA /
+                                                                    Business</p>
+                                                                <!-- External Link -->
+                                                                <a
+                                                                    href="https://www.eventbrite.be/e/how-to-identify-your-career-potential-english-class-tickets-90292726977"></a>
+                                                            </div>
+
+                                                            <!-- Card footer -->
+                                                            <div class="rounded-bottom green darken-4 text-center pt-1">
+                                                                <ul class="list-unstyled list-inline font-small mb-1">
+                                                                    <!-- Date -->
+                                                                    <li class="list-inline-item pr-2 white-text">
+                                                                        <i
+                                                                            class="fas fa-calendar-alt pr-1"></i>05-07/04/2020
+                                                                    </li>
+                                                                    <!-- Location -->
+                                                                    <li class="list-inline-item">
+                                                                        <a href="#" class="white-text"><i
+                                                                                class="fas fa-map-marker-alt pr-1"></i>Antwerpen</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+
+                                                        </div>
+                                                        <br>
+                                                    </div>
+                                                    <!-- Created Post-STUDY Sample with default image ends-->
+                                                </div>
                                             </section>
 
                                             <!--Create Post Modal starts-->
@@ -1593,76 +1681,7 @@
                                             <!--Create Post Modal ends-->
 
 
-                                            <!-- Created Post-STUDY Sample with default image starts-->
-                                            <div class="col-lg-4 col-md-12 col-xs-12">
-                                                <div class="card testimonial-card" style="cursor: pointer;">
-                                                    <div class="card-up">
-                                                        <!-- Event Type -->
-                                                        <div class="row green darken-4 d-flex justify-content-between m-0"
-                                                            style="height:20px;">
-                                                            <div>&nbsp;&nbsp;&nbsp;</div>
-                                                            <p class="font-weight-bold white-text"
-                                                                style="font-size:14px">&nbsp;STUDY</p>
-                                                            <div style="margin: 0;" class="row pb-2">
-                                                                <a data-toggle="modal" style="font-size:12px"
-                                                                    data-target="#editPost"><i
-                                                                        class="fas fa-pen white-text mr-1"></i></a>
-                                                                <a data-toggle="modal" style="font-size:12px"
-                                                                    data-target="#deletePost"><i
-                                                                        class="fas fa-times white-text mr-1"></i></a>
-                                                            </div>
-                                                        </div>
 
-
-                                                        <!-- Background image -->
-                                                        <img src="../images/icons/events/study-back.png" width="100%">
-                                                        <!--  icons fas-full far-empty -->
-
-                                                        <i
-                                                            class="far fa-bookmark icon icon-bookmark fa-2x yellow-text mt-2"></i>
-                                                    </div>
-                                                    <!-- Middle Ribbon -->
-                                                    <div class="green darken-4" style="height:10px;">&nbsp;</div>
-
-                                                    <!-- Circle Icon -->
-                                                    <div class="avatar mx-auto white" style="z-index: 100;">
-                                                        <img src="../images/icons/events/study-icon.png"
-                                                            class="rounded-circle">
-                                                    </div>
-
-                                                    <!-- Card content -->
-                                                    <div class="card-body pt-1">
-                                                        <!-- Title -->
-                                                        <h6 class="font-weight-bold mb-1" style="letter-spacing: 1px;">
-                                                            How To Identify Your Career Potential</h6>
-                                                        <!-- Organized By -->
-                                                        <!-- Sector -->
-                                                        <p class="grey-text text-center mb-0">by MEERDERE DATA /
-                                                            Business</p>
-                                                        <!-- External Link -->
-                                                        <a
-                                                            href="https://www.eventbrite.be/e/how-to-identify-your-career-potential-english-class-tickets-90292726977"></a>
-                                                    </div>
-
-                                                    <!-- Card footer -->
-                                                    <div class="rounded-bottom green darken-4 text-center pt-1">
-                                                        <ul class="list-unstyled list-inline font-small mb-1">
-                                                            <!-- Date -->
-                                                            <li class="list-inline-item pr-2 white-text">
-                                                                <i class="fas fa-calendar-alt pr-1"></i>05-07/04/2020
-                                                            </li>
-                                                            <!-- Location -->
-                                                            <li class="list-inline-item">
-                                                                <a href="#" class="white-text"><i
-                                                                        class="fas fa-map-marker-alt pr-1"></i>Antwerpen</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-
-                                                </div>
-                                                <br>
-                                            </div>
-                                            <!-- Created Post-STUDY Sample with default image ends-->
 
                                             <!--Created Post edit post starts-->
                                             <div class="modal fade" id="editPost" tabindex="-1" role="dialog"
@@ -1867,7 +1886,7 @@
 
                         <!-- Panel 333-TALENTS START-->
                         <div class="tab-pane fade in show" id="panel333" role="tabpanel">
-                            <div class="container py-5 z-depth-1">
+                            <div class="py-5 z-depth-1">
                                 <!--Section: Content-->
                                 <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
                                     <h3 class="font-weight-bold">Search for Talents</h3>
@@ -1925,6 +1944,10 @@
                                     <!-- Filter IN ALL talents ends-->
 
 
+
+                                    <br><br>
+                                    <h5>Matched Talents</h5>
+                                    <hr>
                                     <!--Talent Card starts-->
                                     <div class="col-12 mb-4">
                                         <div class="card z-depth-0 bordered border-light">
@@ -1952,6 +1975,8 @@
                                                                     <small>Language</small></td>
                                                                 <td class="p-0 font-weight-light"><small>Check</small>
                                                                 </td>
+                                                                <td class="p-0 font-weight-light"><small>Reach</small>
+                                                                </td>
                                                             </tr>
 
 
@@ -1964,6 +1989,10 @@
                                                                 <td class="px-0 py-3">English, Dutch</td>
                                                                 <td class="px-0 py-0"><button
                                                                         class="btn btn-sm btn-info mt-1 mx-0">Profile</button>
+                                                                </td>
+                                                                <td class="px-0 py-0 font-weight-light"><a
+                                                                        class="btn btn-sm mt-1 mx-0 btn-outline-info"
+                                                                        href="mailto:someone@example.com">Contact</a>
                                                                 </td>
                                                             </tr>
 
@@ -2002,6 +2031,8 @@
                                                                     <small>Language</small></td>
                                                                 <td class="p-0 font-weight-light"><small>Check</small>
                                                                 </td>
+                                                                <td class="p-0 font-weight-light"><small>Reach</small>
+                                                                </td>
                                                             </tr>
 
 
@@ -2014,6 +2045,10 @@
                                                                 <td class="px-0 py-3">English, French</td>
                                                                 <td class="px-0 py-0"><button
                                                                         class="btn btn-sm btn-info mt-1 mx-0">Profile</button>
+                                                                </td>
+                                                                <td class="px-0 py-0 font-weight-light"><a
+                                                                        class="btn btn-sm mt-1 mx-0 btn-outline-info"
+                                                                        href="mailto:someone@example.com">Contact</a>
                                                                 </td>
                                                             </tr>
 
