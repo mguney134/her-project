@@ -150,45 +150,16 @@
                 Matched Talents
               </div>
 
-              <section class="p-md-3 mx-md-3 text-center text-lg-left">
+              <section class="p-md-3 mx-md-3 text-center ">
 
-                <div class="row mt-2">
 
-                  <!--    matched talent 1 starts -->
 
-                  <a class="col-lg-6 mb-4" href="employer-talent.php">
-                    <div class="card text-center">
+                <p class="h4-responsive">You have <a class="badge badge-secondary" href="employer-talents.php">3</a>
+                  talent(s) matched</p>
 
-                      <div>
-                        <i class="fas fa-user-check fa-2x text-secondary px-4 py-2"></i>
 
-                      </div>
-                      <div class="card-body pt-1">
-                        <h5 style="font-size: 1.1rem;" class="card-text">Joe Black
-                        </h5>
-                      </div>
 
-                    </div>
-                  </a>
-                  <!--    matched talent 1 Ends -->
 
-                  <!--    matched talent 2 starts -->
-                  <a class="col-lg-6 mb-4" href="org-talent.php">
-                    <div class="card text-center">
-
-                      <div>
-                        <i class="fas fa-user-check fa-2x text-secondary px-4 py-2"></i>
-
-                      </div>
-                      <div class="card-body pt-1">
-                        <h5 style="font-size: 1.1rem;" class="card-text">Jane Doe
-                        </h5>
-                      </div>
-
-                    </div>
-                  </a>
-                  <!--    matched talent 2 Ends -->
-                </div>
               </section>
             </div>
             <!-- Panel -->
@@ -1561,7 +1532,7 @@
                   <!-- Filter IN ALL talents STARTS-->
                   <div class="row mb-4">
                     <!-- by  sector-->
-                    <div class="col-3 select-outline">
+                    <div class="col-6 select-outline">
                       <select class="mdb-select md-form md-outline Employer my-2" multiple id="filterSector">
                         <option disabled selected></option>
                         <?php
@@ -1578,7 +1549,7 @@
                       <label for="filterSector">Filter by Sector</label>
                     </div>
                     <!-- by type-->
-                    <div class="col-3 select-outline">
+                    <div class="col-6 select-outline">
                       <select class="mdb-select md-form md-outline Employer my-2" multiple id="filterLan">
                         <option disabled select></option>
                         <option value="study">English</option>
@@ -1589,44 +1560,15 @@
                       </select>
                       <label for="filterLan">Filter by Language</label>
                     </div>
-                    <!-- by target group-->
-                    <div class="col-3 select-outline">
-                      <select class="mdb-select md-form md-outline Employer my-2" multiple id="filterHard">
-                        <option disabled selected></option>
-                        <option value="Refugees">Refugees</option>
-                        <option value="Job seekers">Job seekers</option>
-                        <option value="Employers">Employers</option>
-                        <option value="Mentors">Mentors</option>
-                        <option value="Study seekers">Study seekers</option>
-                        <option value="Government Organizations">Government Organizations</option>
-                        <option value="NGO / nonprofit">NGO / nonprofit</option>
-                        <option value="Academia / Education">Academia / Education</option>
-                        <option value="All">All</option>
-                        <option value="Migrants ">Migrants</option>
-                      </select>
-                      <label for="filterHard">Filter by Hard Skills</label>
-                    </div>
-                    <div class="col-3 select-outline">
-                      <select class="mdb-select md-form md-outline Employer my-2" multiple id="filterSoft">
-                        <option disabled selected></option>
-                        <option value="Refugees">Refugees</option>
-                        <option value="Job seekers">Job seekers</option>
-                        <option value="Employers">Employers</option>
-                        <option value="Mentors">Mentors</option>
-                        <option value="Study seekers">Study seekers</option>
-                        <option value="Government Organizations">Government Organizations</option>
-                        <option value="NGO / nonprofit">NGO / nonprofit</option>
-                        <option value="Academia / Education">Academia / Education</option>
-                        <option value="All">All</option>
-                        <option value="Migrants ">Migrants</option>
-                      </select>
-                      <label for="filterSoft">Filter by Soft Skills</label>
-                    </div>
+
+
 
                   </div>
                   <!-- Filter IN ALL talents ends-->
 
-
+                  <br><br>
+                  <h5>Matched Talents</h5>
+                  <hr>
                   <!--Talent Card starts-->
                   <div class="col-12 mb-4">
                     <div class="card z-depth-0 bordered border-light">
@@ -1646,6 +1588,7 @@
                                 <td class="p-0 font-weight-light"><small>Sector</small></td>
                                 <td class="p-0 font-weight-light"><small>Language</small></td>
                                 <td class="p-0 font-weight-light"><small>Check</small></td>
+                                <td class="p-0 font-weight-light"><small>Reach</small></td>
                               </tr>
 
 
@@ -1656,7 +1599,11 @@
                                 <td class="px-0 py-3">Master</td>
                                 <td class="px-0 py-3">IT</td>
                                 <td class="px-0 py-3">English, Dutch</td>
-                                <td class="px-0 py-0"><button class="btn btn-sm btn-purple mt-1 mx-0">CV</button></td>
+                                <td class="px-0 py-0"><button
+                                    class="btn btn-sm btn-outline-purple mt-1 mx-0">CV</button></td>
+                                <td class="px-0 py-0 font-weight-light"><a
+                                    class="btn btn-sm mt-1 mx-0 btn-outline-purple"
+                                    href="mailto:someone@example.com">Contact</a></td>
                               </tr>
 
 
@@ -1685,7 +1632,9 @@
                                 <td class="p-0 font-weight-light"><small>Highest Study Level</small></td>
                                 <td class="p-0 font-weight-light"><small>Sector</small></td>
                                 <td class="p-0 font-weight-light"><small>Language</small></td>
+
                                 <td class="p-0 font-weight-light"><small>Check</small></td>
+                                <td class="p-0 font-weight-light"><small>Reach</small></td>
                               </tr>
 
 
@@ -1696,7 +1645,11 @@
                                 <td class="px-0 py-3">Bachelor </td>
                                 <td class="px-0 py-3">Medicine</td>
                                 <td class="px-0 py-3">English, French</td>
-                                <td class="px-0 py-0"><button class="btn btn-sm btn-purple mt-1 mx-0">CV</button></td>
+                                <td class="px-0 py-0"><button
+                                    class="btn btn-sm btn-outline-purple mt-1 mx-0">CV</button></td>
+                                <td class="px-0 py-0 font-weight-light"><a
+                                    class="btn btn-sm mt-1 mx-0 btn-outline-purple"
+                                    href="mailto:someone@example.com">Contact</a></td>
                               </tr>
 
 
