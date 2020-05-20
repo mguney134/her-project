@@ -114,17 +114,19 @@ if (isset($_SESSION['user_id'])) {
                         <li class="nav-item">
                             <a class="nav-link border border-white rounded mb-0" href="logout.php" >Logout</a>
                         </li>
-                        <li class="nav-item">
-
+                        <li class="nav-item dropdown ml-3">
+                            <a class="nav-link dropdown-toggle" id="langu" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">Nl</a>
+                            <div class="dropdown-menu dropdown-default" aria-labelledby="langu">
+                                <a class="dropdown-item" href="./events_nl.html">En</a>
+                                <a class="dropdown-item" href="./events_ar.html">Ar</a>
+                            </div>
                         </li>
                         <?php } ?>
 
 
                     </ul>
-                     <div class="ml-2" style="margin-right: -100px;">
-                        <a class="ml-auto" href="https://all-in-one4her.eu/"><img src="images/en.png"></a>
-                        <a href="aboutus_nl.php"><img src="images/nd.png"></a>
-                    </div>
+                     
                 </div>
 
             </div>

@@ -16,53 +16,8 @@
     <!-- Material Design Bootstrap -->
     <link href="css/mdb.min.css" rel="stylesheet" />
     <link href="css/style-main.min.css" rel="stylesheet" />
-    <!-- Your custom styles (optional) -->
-    <style type="text/css">
-        header {
-            height: 80%;
-        }
+    <link href="css/sidemenu.css" rel="stylesheet" />
 
-        @media (max-width: 740px) {
-            header {
-                height: 90%;
-            }
-
-            .nav {
-                display: block;
-            }
-
-            .esf {
-                width: 30%;
-            }
-
-            #yazi {
-                font-size: 50px;
-            }
-        }
-
-        #sidemenu.affix-bottom {
-            position: relative;
-        }
-
-        @media (min-width: 768px) {
-            #sidemenu.affix {
-                position: fixed;
-                top: 40px;
-            }
-        }
-
-        #sidemenu .nav-link.active,
-        #sidemenu .nav-link:hover,
-        #sidemenu .nav-link:focus {
-            color: #111;
-            border-left: 1px #4DB6E5 dashed;
-        }
-
-        #content .nav-link {
-            color: #555;
-            transition: all 0.2 ease;
-        }
-    </style>
 </head>
 
 <body data-spy="scroll" data-target="#sidemenu" data-offset="15">
@@ -122,15 +77,17 @@
                             <a class="nav-link border border-white rounded mb-0" href="" data-toggle="modal"
                                 data-target="#modalSubscriptionForm">Sign Up</a>
                         </li>
-                        <li class="nav-item">
-
+                        <li class="nav-item dropdown ml-3">
+                            <a class="nav-link dropdown-toggle" id="langu" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">En</a>
+                            <div class="dropdown-menu dropdown-default" aria-labelledby="langu">
+                                <a class="dropdown-item" href="./work_nl.html">Nl</a>
+                                <a class="dropdown-item" href="./work_ar.html">Ar</a>
+                            </div>
                         </li>
 
                     </ul>
-                    <div class="ml-2" style="margin-right: -100px;">
 
-                        <a href="./aboutus_nl.html"><img src="./images/nd.png"></a>
-                    </div>
                 </div>
 
             </div>
