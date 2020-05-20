@@ -66,6 +66,22 @@
         $(function () {
         $('[data-toggle="tooltip"]').tooltip()
         });
+
+        $('#deleteMeeting').on('show.bs.modal', function (event) {
+        var meeting_id = $(event.relatedTarget).data('val');
+        $(this).find("#meeting_id").val(meeting_id);
+        });
+
+        $('#editMeeting').on('show.bs.modal', function (event) {
+        var meeting_id = $(event.relatedTarget).data('val');
+        $(this).find("#meeting_id").val(meeting_id);
+        });
+        
+        $('#deletePost').on('show.bs.modal', function (event) {
+        var event_id = $(event.relatedTarget).data('val');
+        $(this).find("#event_id").val(event_id);
+        });
+        
     </script>
     
 

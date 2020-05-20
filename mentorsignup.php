@@ -85,13 +85,13 @@ include 'settings/connect-db.php';
                                                 <div class="row">
                                                     <div class="col">
                                                         <div class="md-form md-outline my-3">
-                                                            <input name="all_password" id="password" type="password" class="form-control validate" required>
+                                                            <input name="all_password" id="password" type="password" class="form-control validate" minlength="6" required>
                                                             <label for="password" style="padding-left:0px;">Create a password</label>
                                                         </div>
                                                     </div>
                                                     <div class="col">
                                                         <div class="md-form md-outline  my-3">
-                                                            <input name="confirmpassword" id="password2" type="password" class="form-control" required>
+                                                            <input name="confirmpassword" id="password2" type="password" class="form-control" minlength="6" required>
                                                             <label for="password2" style="padding-left:0px;">Confirm your password</label>
                                                         </div>
                                                     </div>
@@ -130,7 +130,7 @@ include 'settings/connect-db.php';
 
                                 </div>
                                 <div class="form-row mb-2">
-                                    <div class="col">
+                                <div class="col">
                                         <div class="md-form md-outline">
                                             <input name="age" type="number" id="age" class="form-control" max="90"
                                                        min="17"  required>
@@ -144,7 +144,7 @@ include 'settings/connect-db.php';
                                             <option value="Master">Master</option>
                                             <option value="PHD">PHD</option>
                                         </select>
-                                        <label for="LevelStudy">Level Study</label>
+                                        <label for="LevelStudy">Level of Study</label>
                                     </div>
                                 </div>
                                 <div class="form-row mb-2">

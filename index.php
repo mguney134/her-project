@@ -158,7 +158,7 @@
                                 
                                 <li class="list-group-item">
                                     <div class="md-v-line"></div><i class="fas fa-check pr-1"></i><span
-                                        class="listim">Be a certified mentor2work</span>
+                                        class="listim">Learn how to use our platform</span>
                                 </li>
                                 <li class="list-group-item">
                                     <div class="md-v-line"></div><i class="fas fa-check pr-1"></i><span
