@@ -2,7 +2,6 @@
 session_start();
 ob_start();
 
-
 include '../settings/connect-db.php';
 
 if (!isset($_SESSION['email'])) {
@@ -29,9 +28,19 @@ if ($count1 == 0) {
     exit;
 }
 
+$talentcheck = $db->prepare("SELECT * FROM emptalent where employer_id=:employer_id");
+$talentcheck->execute(array(
+    'employer_id' => $employerinfo['employer_id']
+));
 
+//$hercheck=$db->prepare("SELECT * FROM her where talent_match=:talent_match");
+//$hercheck->execute(array(
+ //   'talent_match' => $employerinfo['employer_id']
+  //  ));
 
-
+$hercheck=$db->prepare("SELECT * FROM her");
+$hercheck->execute();
+$talentcount = $hercheck->rowCount();   
 
 ?>
 
@@ -97,129 +106,131 @@ if ($count1 == 0) {
                             </h3>
                             <h5 class="mb-3">-<?php echo $employerinfo['company'] ?>-</h5>
                             <hr>
-                            <div class="row">
-                                <h5 class="mx-5 deep-purple-text">
-                                    Which type of talents are you looking for?
-                                </h5>
+                            <div class="row mx-2">
+                                <div class="col-2">
 
+                                </div>
+                                <div class="col-8">
+                                    <h5 class="text-secondary font-weight-normal">
+                                        Which type of talents are you looking for?
+                                    </h5>
+                                </div>
+                                <div class="col-2">
+                                    <button class="btn-floating btn-sm btn-purple" type="button" data-toggle="modal" data-target="#talent">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                </div>
                             </div>
-
+                            <br>
                             <div class="row">
                                 <div class="col">
                                     <?php
-                                    $talentcheck = $db->prepare("SELECT * FROM emptalent where employer_id=:employer_id");
-                                    $talentcheck->execute(array(
-                                        'employer_id' => $employerinfo['employer_id']
-                                    ));
-
-
-                                    if (!empty($talentinfo = $talentcheck->fetch(PDO::FETCH_ASSOC))) {
-                                        while ($talentinfo = $talentcheck->fetch(PDO::FETCH_ASSOC)) { ?>
+                                    while ($talentinfo = $talentcheck->fetch(PDO::FETCH_ASSOC)) {?>
                                             <h6 class="text-center">
                                                 <span><?php echo $talentinfo['sector'] ?></span>-<span><?php echo $talentinfo['job'] ?></span>
                                             </h6>
-                                        <?php }
-                                    } else { ?>
+                                    <?php }
+                                    if (!empty($talentinfo = $talentcheck->fetch(PDO::FETCH_ASSOC))) { ?>
                                         <h6 class="text-center">
-                                            No one yet!
+                                            Not one yet!
                                         </h6>
                                     <?php } ?>
-
-                                </div>
-
-                            </div>
-
-                            <div class="text-right">
-                                <button class="btn-floating btn-sm btn-purple" type="button" data-toggle="modal" data-target="#talent">
-                                    <i class="fas fa-edit"></i>
-                                </button>
-                            </div>
-                            <div class="modal fade" id="talent" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title text-secondary" id="exampleModalLabel">
-                                                Which type of talents are you looking for?
-                                            </h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body  mx-4">
-                                            <form>
-                                                <div class="row">
-                                                    <div class="col-md-12 select-outline Employer">
-
-                                                        <select class="mdb-select md-form md-outline Employer " id="sector1">
-                                                            <option selected="" disabled value="Sector">Choose Sector</option>
-                                                            <?php
-                                                            $sectorcheck = $db->prepare("SELECT sectors_name FROM sectors");
-                                                            $sectorcheck->execute();
-                                                            while ($sectorinfo = $sectorcheck->fetch(PDO::FETCH_ASSOC)) { ?>
-                                                                <option  value="<?php echo $sectorinfo['sectors_name'] ?>"><?php echo $sectorinfo['sectors_name'] ?></option>
-                                                            <?php } ?>
-                                                        </select>
-                                                        <label for="sector1">Sector</label>
-
-                                                    </div>
-                                                </div>
-
-
-                                                <div class="form-row my-2">
-                                                    <div class="col">
-                                                        <div class="md-form md-outline  Employer my-1">
-                                                            <input type="text" id="jobTitle" class="form-control" name="job" />
-                                                            <label for="jobTitle" class="font-weight-normal">Job Title</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-outline-purple btn-sm" data-dismiss="modal">
-                                                        Close
-                                                    </button>
-                                                    <button type="submit" name="talentadd" class="btn btn-sm btn-purple">
-                                                        Save
-                                                    </button>
-                                                </div>
-
-
-                                            </form>
-                                        </div>
-
-                                    </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
-                    <!-- Search for Talent card starts -->
-                    <!-- <div class="card profile-card mt-4">
-            <div class="card-body pt-0 mt-0">
-              
-              <h4 class="mb-4 mt-4 font-weight-bold">
-                <strong>Matched Talents</strong>
-              </h4>
-              <h5 class="mb-3">Joe Doe</h5>
-              <hr>
-              <div class="row text-center">
-                <div class="col text-center">
-                  <h5 class="mt-5 deep-purple-text mx-4">
-                    Search for talents
-                  </h5>
-                </div>
-              </div>
-              <div class="row mx-4">
-                <div class="input-group md-form form-sm form-1 pl-0">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text purple lighten-3" id="basic-text1"><i class="fas fa-search text-white"
-                        aria-hidden="true"></i></span>
-                  </div>
-                  <input class="form-control my-0 py-1" type="text" placeholder="Search" aria-label="Search">
-                </div>
-
-              </div>
-            </div>
-          </div> -->
-                    <!-- Search for Talent card ends -->
+                    <div class="card profile-card mt-4">
+                        <!-- Panel -->
+                        <div class="card">
+                            <div class="card-header white-text purple lighten-2">
+                                Matched Talents
+                            </div>
+                            <section class="p-md-3 mx-md-3 text-center ">
+                                <p class="h4-responsive">You have <a class="badge badge-secondary" href="employer-talents.php"><?php echo $talentcount; ?></a>
+                                    talent(s) matched</p>
+                            </section>
+                            <!--matched her starts-->
+                            <!--?php 
+                                
+                                $hercheck2=$db->prepare("SELECT * FROM her where talent_match=:talent_match");
+                                $hercheck2->execute(array(
+                                    'talent_match' => $employerinfo['employer_id']
+                                    ));
+                                if (!empty($herinfo2=$hercheck->fetch(PDO::FETCH_ASSOC))) { 
+                                while($herinfo=$hercheck2->fetch(PDO::FETCH_ASSOC)) { ?>
+                                <div class="px-2">
+                                <div class="card text-center mb-2 ">
+                                    <div class="row ">
+                                        <div class="col-4 px-0 text-center ">
+                                            <img src="../images/icons/HER.png" width="50px" />
+                                        </div>
+                                        <div class="col-8 px-0 text-left d-flex align-items-center">
+                                            <h5 class="mb-1 pt-1">
+                                            <?php echo $herinfo['firstname']." ".$herinfo['lastname'] ?>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div-->
+                                <!--?php } 
+                                }else{ ?>
+                                <h5 class="font-weight-bold">
+                                    No one yet!
+                                    </h5>
+                                <!--?php } ?-->
+                        </div>
+                        <!-- Panel -->
+                    </div>
                 </div>
                 <!-- Profile Ends -->
+                <div class="modal fade" id="talent" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title text-secondary" id="exampleModalLabel">
+                                    Which type of talents are you looking for?
+                                </h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <form action="../settings/action.php" method="POST">
+                                <div class="modal-body  mx-4">
+                                    <div class="row">
+                                        <div class="col-md-12 select-outline Employer">
+                                            <select class="mdb-select md-form md-outline Employer " id="sector1" name="sector">
+                                                <option selected="" disabled value="Sector">Choose Sector</option>
+                                                <?php
+                                                $sectorcheck = $db->prepare("SELECT sectors_name FROM sectors");
+                                                $sectorcheck->execute();
+                                                while ($sectorinfo = $sectorcheck->fetch(PDO::FETCH_ASSOC)) { ?>
+                                                    <option value="<?php echo $sectorinfo['sectors_name'] ?>"><?php echo $sectorinfo['sectors_name'] ?></option>
+                                                <?php } ?>
+                                            </select>
+                                            <label for="sector1">Sector</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-row my-2">
+                                        <div class="col">
+                                            <div class="md-form md-outline  Employer my-1">
+                                                <input type="text" id="jobTitle" class="form-control" name="job"/>
+                                                <label for="jobTitle" class="font-weight-normal">Job Title</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input hidden type="text" class="form-control" value="<?php echo $employerinfo['employer_id'] ?>" name="employer_id" />
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-purple btn-sm" data-dismiss="modal">
+                                        Close
+                                    </button>
+                                    <button type="submit" name="talentadd" class="btn btn-sm btn-purple">
+                                        Save
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+               

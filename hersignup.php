@@ -81,13 +81,13 @@ include 'settings/connect-db.php';
                                                 <div class="row">
                                                     <div class="col">
                                                         <div class="md-form md-outline  Her my-3">
-                                                            <input name="all_password" id="password" type="password" class="form-control validate" required>
+                                                            <input name="all_password" id="password" type="password" class="form-control validate" minlength="6" required>
                                                             <label for="password" style="padding-left:0px;">Create a password</label>
                                                         </div>
                                                     </div>
                                                     <div class="col">
                                                         <div class="md-form md-outline  Her  my-3">
-                                                            <input name="confirmpassword" id="password2" type="password" class="form-control" required>
+                                                            <input name="confirmpassword" id="password2" type="password" class="form-control" minlength="6" required>
                                                             <label for="password2" style="padding-left:0px;">Confirm your password</label>
                                                         </div>
                                                     </div>
@@ -137,8 +137,8 @@ include 'settings/connect-db.php';
                                         </div>
                                         <div class="col">
                                             <div class="md-form md-outline Her">
-                                                <input name="birth" type="text" id="birth" class="form-control" required />
-                                                <label for="birth">Birth Year</label>
+                                                <input name="birth" type="text" id="birth" class="form-control" required minlength="4" maxlength="4" min="1940"/>
+                                                <label for="birth">Year of Birth</label>
                                             </div>
                                         </div>
                                     </div>

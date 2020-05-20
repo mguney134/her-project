@@ -1,469 +1,297 @@
-<?php 
+<?php
 
-include 'her-header.php'; 
+include 'her-header.php';
 
-$eventscheck=$db->prepare("SELECT * FROM events");
-$eventscheck->execute( );
+$eventscheck = $db->prepare("SELECT * FROM events");
+$eventscheck->execute();
 
+?>
+<!-- Tabbed Nav starts -->
+<div class="col-md-9 mb-4">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs md-tabs nav-justified deep-orange lighten-2" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link" href="her-info.php" role="tab">
+                <i class="fas fa-user pr-2"></i>Info</a>
+        </li>
 
-?>   
- <!-- Tabbed Nav starts -->
-    <div class="col-md-9 mb-4">
-        <!-- Nav tabs -->
-        <ul class="nav nav-tabs md-tabs nav-justified deep-orange lighten-2" role="tablist">
-            <li class="nav-item">
-                <a class="nav-link" href="her-info.php" role="tab">
-                    <i class="fas fa-user pr-2"></i>Info</a>
-            </li>
+        <li class="nav-item ">
+            <a class="nav-link" href="her-background.php" role="tab">
+                <i class="fas fa-file-alt pr-2"></i>Background</a>
+        </li>
 
-            <li class="nav-item ">
-                <a class="nav-link"  href="her-background.php" role="tab">
-                    <i class="fas fa-file-alt pr-2"></i>Background</a>
-            </li>
+        <li class="nav-item">
+            <a class="nav-link" href="her-competences.php" role="tab">
+                <i class="fas fa-cogs pr-2"></i>Competences</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="her-networking.php" role="tab">
+                <i class="fas fa-project-diagram pr-2"></i>Networking</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="her-meeting.php" role="tab">
+                <i class="fas fa-user-friends pr-2"></i>Meet</a>
+        </li>
+    </ul>
+    <!-- Nav tabs -->
+    <!-- Tab panels -->
+    <div class="tab-content">
+        <!-- Panel 444-Networking Starts-->
+        <div class="tab-pane fade in show active">
+            <div class="py-5 z-depth-1">
+                <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item  Her">
+                            <a class="nav-link active Her" id="all-tab" data-toggle="tab" href="#all" role="tab">All</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="saved-tab" data-toggle="tab" href="#saved" role="tab" aria-selected="false">Saved</a>
+                        </li>
+                        <li class="nav-item Her">
+                            <a class="nav-link" id="all-tab" data-toggle="tab" href="#purposed" role="tab" aria-selected="false">Proposed</a>
+                        </li>
 
-            <li class="nav-item">
-                <a class="nav-link"  href="her-competences.php" role="tab">
-                    <i class="fas fa-cogs pr-2"></i>Competences</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active"  href="her-networking.php" role="tab">
-                    <i class="fas fa-project-diagram pr-2"></i>Networking</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link"  href="her-meeting.php" role="tab">
-                    <i class="fas fa-user-friends pr-2"></i>Meet</a>
-            </li>
-        </ul>
-        <!-- Nav tabs -->
-        <!-- Tab panels -->
-        <div class="tab-content">
-            <!-- Panel 444-Networking Starts-->
-            <div class="tab-pane fade in show active" >
-                <div class="py-5 z-depth-1">
-                    <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
-                        <ul class="nav nav-tabs" id="myTab" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active Her" id="saved-tab" data-toggle="tab"
-                                    href="#saved" role="tab">Saved</a>
-                            </li>
-                            <li class="nav-item Her">
-                                <a class="nav-link" id="all-tab" data-toggle="tab" href="#purposed" role="tab"
-                                    aria-selected="false">Proposed</a>
-                            </li>
-                            <li class="nav-item Her">
-                                <a class="nav-link" id="all-tab" data-toggle="tab" href="#all" role="tab"
-                                    aria-selected="false">All</a>
-                            </li>
-                        </ul>
+                    </ul>
 
-                        <div class="tab-content" id="myTabContent">
-                            <!-- SAVED SVEPT POSTS STARTS-->
-                            <div class="tab-pane fade show active" id="saved" role="tabpanel">
-                                <div class="row">
-                                    <!-- Event-EVENT Sample with given image starts-->
-                                    <div class="col-lg-4 col-md-12 col-xs-12">
-                                        <div class="card testimonial-card" style="cursor: pointer;">
-                                            <div class="card-up">
-                                                <!-- Event Type -->
-                                                <div class="orange darken-4 text-center"
-                                                    style="height:16px;">
-                                                    <p class="font-weight-bold white-text"
-                                                        style="font-size:12px">EVENT</p>
-                                                </div>
-                                                <!-- Background image -->
-                                                <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F91095599%2F353720857161%2F1%2Foriginal.20200205-194936?w=1080&auto=format%2Ccompress&q=75&sharp=10&rect=135%2C0%2C1520%2C760&s=d0e85e99d24e170ffdc215e6e22b67a8"
-                                                    width="100%" height="100%">
-                                                <!-- icons-->
+                    <div class="tab-content" id="myTabContent">
 
-                                                <i
-                                                    class="fas fa-star icon icon-star fa-2x yellow-text mt-2"></i>
-                                                <i
-                                                    class="fas fa-bookmark icon icon-bookmark fa-2x yellow-text mt-2"></i>
-                                            </div>
-                                            <!-- Middle Ribbon -->
-                                            <div class="orange darken-4" style="height:10px;">&nbsp;</div>
+                        <!-- ALL SVEPT POSTS  STARTS-->
+                        <div class="tab-pane fade show active" id="all" role="tabpanel">
 
-                                            <!-- Circle Icon -->
-                                            <div class="avatar mx-auto white" style="z-index: 100;">
-                                                <img src="../images/icons/events/event-icon.png"
-                                                    class="rounded-circle">
-                                            </div>
-
-                                            <!-- Card content -->
-                                            <div class="card-body pt-1">
-                                                
-                                                <!-- Title -->
-                                                <h6 class="font-weight-bold mb-1 crop-text-2"
-                                                    style="letter-spacing: 1px;">
-                                                    How To Identify Your Career Potential scsdcds scsdcsd scdscd cdscsdc</h6>
-                                                <!-- Organized By -->
-                                                <!-- Sector -->
-                                                <p class="grey-text text-center mb-0">by MEERDERE DATA /
-                                                    Business</p>
-                                                <!-- External Link -->
-                                                <a
-                                                    href="https://www.eventbrite.be/e/how-to-identify-your-career-potential-english-class-tickets-90292726977"></a>
-                                            </div>
-
-                                            <!-- Card footer -->
-                                            <div class="rounded-bottom orange darken-4 text-center pt-1">
-                                                <ul class="list-unstyled list-inline font-small mb-1">
-                                                    <!-- Date -->
-                                                    <li class="list-inline-item pr-2 white-text">
-                                                        <i class="fas fa-calendar-alt pr-1"></i>
-                                                        <small><span>07/04/2020</span> - <span>07/04/2020</span></small>
-                                                    </li>
-                                                    <!-- Location -->
-                                                    <li class="list-inline-item">
-                                                        <a href="#" class="white-text">
-                                                            <i class="fas fa-map-marker-alt pr-1"></i><small>Antwerpen</small></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-                                        </div>
-                                        <br>
+                            <!-- SEARCH IN ALL EVENTS STARTS-->
+                            <div class="row">
+                                <div class="input-group md-form form-sm form-2 pl-0 mx-3 mb-4">
+                                    <input class="form-control my-0 py-1 border-danger" type="text" placeholder="Search networking post by name" aria-label="Search">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text orange accent-4" id="basic-text1"><i class="fas fa-search white-text" aria-hidden="true"></i></span>
                                     </div>
-                                    <!-- Event-EVENT Sample with given image ends-->
-
-                                    <!-- Event-EVENT Sample with default image starts-->
-                                    <div class="col-lg-4 col-md-12 col-xs-12">
-                                        <div class="card testimonial-card" style="cursor: pointer;">
-                                            <div class="card-up">
-                                                <!-- Event Type -->
-                                                <div class="orange darken-4 text-center"
-                                                    style="height:16px;">
-                                                    <p class="font-weight-bold white-text"
-                                                        style="font-size:12px">EVENT</p>
-                                                </div>
-                                                <!-- Background image -->
-                                                <img src="../images/icons/events/event-back.png"
-                                                    width="100%">
-                                                <!-- Bookmark icon -->
-                                                <i
-                                                    class="fas fa-star icon icon-star fa-2x yellow-text mt-2"></i>
-                                                <i
-                                                    class="fas fa-bookmark icon icon-bookmark fa-2x yellow-text mt-2"></i>
-                                            </div>
-                                            <!-- Middle Ribbon -->
-                                            <div class="orange darken-4" style="height:10px;">&nbsp;</div>
-
-                                            <!-- Circle Icon -->
-                                            <div class="avatar mx-auto white" style="z-index: 100;">
-                                                <img src="../images/icons/events/event-icon.png"
-                                                    class="rounded-circle">
-                                            </div>
-
-                                            <!-- Card content -->
-                                            <div class="card-body pt-1">
-                                                <!-- Title -->
-                                                <h6 class="font-weight-bold mb-1 crop-text-2"
-                                                    style="letter-spacing: 1px;">
-                                                    How To Identify Your Career Potential</h6>
-                                                <!-- Organized By -->
-                                                <!-- Sector -->
-                                                <p class="grey-text text-center mb-0">by MEERDERE DATA /
-                                                    Business</p>
-                                                <!-- External Link -->
-                                                <a
-                                                    href="https://www.eventbrite.be/e/how-to-identify-your-career-potential-english-class-tickets-90292726977"></a>
-                                            </div>
-
-                                            <!-- Card footer -->
-                                            <div class="rounded-bottom orange darken-4 text-center pt-1">
-                                                <ul class="list-unstyled list-inline font-small mb-1">
-                                                    <!-- Date -->
-                                                    <li class="list-inline-item pr-2 white-text">
-                                                        <i
-                                                            class="fas fa-calendar-alt pr-1"></i>05-07/04/2020
-                                                    </li>
-                                                    <!-- Location -->
-                                                    <li class="list-inline-item">
-                                                        <a href="#" class="white-text"><i
-                                                                class="fas fa-map-marker-alt pr-1"></i>Antwerpen</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-                                        </div>
-                                        <br>
-                                    </div>
-                                    <!-- Event-EVENT Sample with default image ends-->
                                 </div>
                             </div>
-                            <!-- SAVED SVEPT POSTS  ENDS-->
+                            <!-- SEARCH IN ALL EVENTS ENDS-->
 
 
 
-                            <!-- PURPOSED SVEPT POSTS  STARTS-->
-                            <div class="tab-pane fade" id="purposed" role="tabpanel">
-                                <div class="row">
-                                    
-
-                                    <!-- Event-EVENT Sample with given image starts-->
-                                    <div class="col-lg-4 col-md-12 col-xs-12">
-                                        <div class="card testimonial-card" style="cursor: pointer;">
-                                            <div class="card-up">
-                                                <!-- Event Type -->
-                                                <div class="orange darken-4 text-center"
-                                                    style="height:16px;">
-                                                    <p class="font-weight-bold white-text"
-                                                        style="font-size:12px">EVENT</p>
-                                                </div>
-                                                <!-- Background image -->
-                                                <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F91095599%2F353720857161%2F1%2Foriginal.20200205-194936?w=1080&auto=format%2Ccompress&q=75&sharp=10&rect=135%2C0%2C1520%2C760&s=d0e85e99d24e170ffdc215e6e22b67a8"
-                                                    width="100%" height="100%">
-                                                <!-- Bookmark icon -->
-                                                <i
-                                                    class="fas fa-star icon icon-star fa-2x yellow-text mt-2"></i>
-                                                <i
-                                                    class="fas fa-bookmark icon icon-bookmark fa-2x yellow-text mt-2"></i>
-                                            </div>
-                                            <!-- Middle Ribbon -->
-                                            <div class="orange darken-4" style="height:10px;">&nbsp;</div>
-
-                                            <!-- Circle Icon -->
-                                            <div class="avatar mx-auto white" style="z-index: 100;">
-                                                <img src="../images/icons/events/event-icon.png"
-                                                    class="rounded-circle">
-                                            </div>
-
-                                            <!-- Card content -->
-                                            <div class="card-body pt-1">
-                                                <!-- Title -->
-                                                <h6 class="font-weight-bold mb-1 crop-text-2"
-                                                    style="letter-spacing: 1px;" >
-                                                    How To Identify Your Career Potential</h6>
-                                                <!-- Organized By -->
-                                                <!-- Sector -->
-                                                <p class="grey-text text-center mb-0">by MEERDERE DATA /
-                                                    Business</p>
-                                                <!-- External Link -->
-                                                <a
-                                                    href="https://www.eventbrite.be/e/how-to-identify-your-career-potential-english-class-tickets-90292726977"></a>
-                                            </div>
-
-                                            <!-- Card footer -->
-                                            <div class="rounded-bottom orange darken-4 text-center pt-1">
-                                                <ul class="list-unstyled list-inline font-small mb-1">
-                                                    <!-- Date -->
-                                                    <li class="list-inline-item pr-2 white-text">
-                                                        <i
-                                                            class="fas fa-calendar-alt pr-1"></i>05-07/04/2020
-                                                    </li>
-                                                    <!-- Location -->
-                                                    <li class="list-inline-item">
-                                                        <a href="#" class="white-text"><i
-                                                                class="fas fa-map-marker-alt pr-1"></i>Antwerpen</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-                                        </div>
-                                        <br>
-                                    </div>
-                                    <!-- Event-EVENT Sample with given image ends-->
-
-                                    <!-- Event-EVENT Sample with default image starts-->
-                                    <div class="col-lg-4 col-md-12 col-xs-12">
-                                        <div class="card testimonial-card" style="cursor: pointer;">
-                                            <div class="card-up">
-                                                <!-- Event Type -->
-                                                <div class="orange darken-4 text-center"
-                                                    style="height:16px;">
-                                                    <p class="font-weight-bold white-text"
-                                                        style="font-size:12px">EVENT</p>
-                                                </div>
-                                                <!-- Background image -->
-                                                <img src="../images/icons/events/event-back.png"
-                                                    width="100%">
-                                                <!-- Bookmark icon -->
-                                                <i
-                                                    class="fas fa-star icon icon-star fa-2x yellow-text mt-2"></i>
-                                                <i
-                                                    class="fas fa-bookmark icon icon-bookmark fa-2x yellow-text mt-2"></i>
-                                            </div>
-                                            <!-- Middle Ribbon -->
-                                            <div class="orange darken-4" style="height:10px;">&nbsp;</div>
-
-                                            <!-- Circle Icon -->
-                                            <div class="avatar mx-auto white" style="z-index: 100;">
-                                                <img src="../images/icons/events/event-icon.png"
-                                                    class="rounded-circle">
-                                            </div>
-
-                                            <!-- Card content -->
-                                            <div class="card-body pt-1">
-                                                <!-- Title -->
-                                                <h6 class="font-weight-bold mb-1 crop-text-2"
-                                                    style="letter-spacing: 1px;">
-                                                    How To Identify Your Career Potential</h6>
-                                                <!-- Organized By -->
-                                                <!-- Sector -->
-                                                <p class="grey-text text-center mb-0">by MEERDERE DATA /
-                                                    Business</p>
-                                                <!-- External Link -->
-                                                <a
-                                                    href="https://www.eventbrite.be/e/how-to-identify-your-career-potential-english-class-tickets-90292726977"></a>
-                                            </div>
-
-                                            <!-- Card footer -->
-                                            <div class="rounded-bottom orange darken-4 text-center pt-1">
-                                                <ul class="list-unstyled list-inline font-small mb-1">
-                                                    <!-- Date -->
-                                                    <li class="list-inline-item pr-2 white-text">
-                                                        <i
-                                                            class="fas fa-calendar-alt pr-1"></i>05-07/04/2020
-                                                    </li>
-                                                    <!-- Location -->
-                                                    <li class="list-inline-item">
-                                                        <a href="#" class="white-text"><i
-                                                                class="fas fa-map-marker-alt pr-1"></i>Antwerpen</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-                                        </div>
-                                        <br>
-                                    </div>
-                                    <!-- Event-EVENT Sample with default image ends-->
-
-
-
+                            <!-- Filter IN ALL post STARTS-->
+                            <div class="row mb-4">
+                                <!-- by type-->
+                                <div class="col-4 select-outline">
+                                    <select class="mdb-select md-form md-outline Her my-2" multiple id="filterPosts">
+                                        <option disabled select></option>
+                                        <option value="study">Study</option>
+                                        <option value="Vacancy">Vacancy</option>
+                                        <option value="Event">Event</option>
+                                        <option value="Project">Project</option>
+                                        <option value="Tool">Tool</option>
+                                    </select>
+                                    <label for="filterPosts">Filter by Type</label>
                                 </div>
-                            </div>
-                            <!-- PURPOSED SVEPT POSTS  ENDS-->
-
-                            <!-- ALL SVEPT POSTS  STARTS-->
-                            <div class="tab-pane fade" id="all" role="tabpanel">
-                                
-                                <!-- SEARCH IN ALL EVENTS STARTS-->
-                                <div class="row">
-                                    <div class="input-group md-form form-sm form-2 pl-0 mx-3 mb-4">
-                                        <input class="form-control my-0 py-1 border-danger" type="text"
-                                        placeholder="Search networking post by name" aria-label="Search">
-                                        <div class="input-group-append">
-                                            <span class="input-group-text orange accent-4" id="basic-text1"><i
-                                        class="fas fa-search white-text" aria-hidden="true"></i></span>
-                                        </div>
-                                    </div>
-                                 </div>
-                                <!-- SEARCH IN ALL EVENTS ENDS-->
-
-
-
-                                <!-- Filter IN ALL post STARTS-->
-                                <div class="row mb-4">
-                                    <!-- by type-->
-                                    <div class="col-4 select-outline">
-                                        <select class="mdb-select md-form md-outline Her my-2" multiple
-                                            id="filterPosts">
-                                            <option disabled select></option>
-                                            <option value="study">Study</option>
-                                            <option value="Vacancy">Vacancy</option>
-                                            <option value="Event">Event</option>
-                                            <option value="Project">Project</option>
-                                            <option value="Tool">Tool</option>
-                                        </select>
-                                        <label for="filterPosts">Filter by Type</label>
-                                    </div>
-                                    <!-- by target group-->
-                                    <div class="col-4 select-outline">
-                                        <select class="mdb-select md-form md-outline Her my-2" multiple
-                                            id="filterTarget">
-                                            <option disabled selected></option>
-                                            <option value="Refugees">Refugees</option>
-                                            <option value="Job seekers">Job seekers</option>
-                                            <option value="Employers">Employers</option>
-                                            <option value="Mentors">Mentors</option>
-                                            <option value="Study seekers">Study seekers</option>
-                                            <option value="Government Organizations">Government
-                                                Organizations</option>
-                                            <option value="NGO / nonprofit">NGO / nonprofit</option>
-                                            <option value="Academia / Education">Academia / Education
-                                            </option>
-                                            <option value="All">All</option>
-                                            <option value="Migrants ">Migrants</option>
-                                        </select>
-                                        <label for="filterTarget">Filter by Target Group</label>
-                                    </div>
-                                    <!-- by target sector-->
-                                    <div class="col-4 select-outline">
-                                        <select class="mdb-select md-form md-outline Her my-2" multiple
-                                            id="filterSector">
-                                            <option disabled selected></option>
-                                            <?php
-                                        $sectorcheck=$db->prepare("SELECT sectors_name FROM sectors");
+                                <!-- by target group-->
+                                <div class="col-4 select-outline">
+                                    <select class="mdb-select md-form md-outline Her my-2" multiple id="filterTarget">
+                                        <option disabled selected></option>
+                                        <option value="Refugees">Refugees</option>
+                                        <option value="Job seekers">Job seekers</option>
+                                        <option value="Employers">Employers</option>
+                                        <option value="Mentors">Mentors</option>
+                                        <option value="Study seekers">Study seekers</option>
+                                        <option value="Government Organizations">Government
+                                            Organizations</option>
+                                        <option value="NGO / nonprofit">NGO / nonprofit</option>
+                                        <option value="Academia / Education">Academia / Education
+                                        </option>
+                                        <option value="All">All</option>
+                                        <option value="Migrants ">Migrants</option>
+                                    </select>
+                                    <label for="filterTarget">Filter by Target Group</label>
+                                </div>
+                                <!-- by target sector-->
+                                <div class="col-4 select-outline">
+                                    <select class="mdb-select md-form md-outline Her my-2" multiple id="filterSector">
+                                        <option disabled selected></option>
+                                        <?php
+                                        $sectorcheck = $db->prepare("SELECT sectors_name FROM sectors");
                                         $sectorcheck->execute();
 
-                                        while($sectorinfo=$sectorcheck->fetch(PDO::FETCH_ASSOC)) { ?>
+                                        while ($sectorinfo = $sectorcheck->fetch(PDO::FETCH_ASSOC)) { ?>
 
                                             <option value="<?php echo $sectorinfo['sectors_name'] ?>">
                                                 <?php echo $sectorinfo['sectors_name'] ?></option>
 
-                                            <?php } ?>
-                                        </select>
-                                        <label for="filterSector">Filter by Sector</label>
-                                    </div>
+                                        <?php } ?>
+                                    </select>
+                                    <label for="filterSector">Filter by Sector</label>
                                 </div>
-                                <!-- Filter IN ALL post ends-->
+                            </div>
+                            <!-- Filter IN ALL post ends-->
 
-                                    <div class="row">
-                                        <!-- Event-EVENT Sample with given image starts-->
+                            <div class="row">
+                                <?php while ($eventsinfo = $eventscheck->fetch(PDO::FETCH_ASSOC)) { ?>
+                                    <!-- Event-EVENT Sample with given image starts-->
                                     <div class="col-lg-4 col-md-12 col-xs-12">
-                                        <div class="card testimonial-card" style="cursor: pointer;">
+                                        <div class="card testimonial-card">
                                             <div class="card-up">
                                                 <!-- Event Type -->
-                                                <div class="orange darken-4 text-center"
-                                                    style="height:16px;">
-                                                    <p class="font-weight-bold white-text"
-                                                        style="font-size:12px">EVENT</p>
+                                                <div class="<?php
+                                                            switch ($eventsinfo['type']) {
+                                                                case "Event":
+                                                                    echo "orange";
+                                                                    break;
+                                                                case "Study":
+                                                                    echo "green";
+                                                                    break;
+                                                                case "Project":
+                                                                    echo "purple";
+                                                                    break;
+                                                                case "Vacancy":
+                                                                    echo "red";
+                                                                    break;
+                                                                case "Tool":
+                                                                    echo "blue";
+                                                                    break;
+                                                            }
+
+                                                            ?> darken-4 text-center" style="height:16px;">
+                                                    <p class="font-weight-bold white-text" style="font-size:12px"><?php echo $eventsinfo['type'] ?></p>
                                                 </div>
                                                 <!-- Background image -->
-                                                <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F91095599%2F353720857161%2F1%2Foriginal.20200205-194936?w=1080&auto=format%2Ccompress&q=75&sharp=10&rect=135%2C0%2C1520%2C760&s=d0e85e99d24e170ffdc215e6e22b67a8"
-                                                    width="100%" height="100%">
+                                                <?php
+                                                if (!empty($eventsinfo['img_link'])) { ?>
+                                                    <img src="<?php echo $eventsinfo['img_link'] ?>" width="100%" height="auto">
+                                                <?php } else {
+                                                    switch ($eventsinfo['type']) {
+                                                        case "Event":
+                                                            echo '<img src="../images/icons/events/event-back.png" width="100%" height="auto">';
+                                                            break;
+                                                        case "Study":
+                                                            echo '<img src="../images/icons/events/study-back.png" width="100%" height="auto" >';
+                                                            break;
+                                                        case "Project":
+                                                            echo '<img src="../images/icons/events/project-back.png" width="100%" height="auto">';
+                                                            break;
+                                                        case "Vacancy":
+                                                            echo '<img src="../images/icons/events/vacancy-back.png" width="100%" height="auto">';
+                                                            break;
+                                                        case "Tool":
+                                                            echo '<img src="../images/icons/events/tool-back.png" width="100%" height="auto">';
+                                                            break;
+                                                    }
+                                                }
+                                                ?>
                                                 <!-- Bookmark icon -->
-                                                <i
-                                                    class="fas fa-star icon icon-star fa-2x yellow-text mt-2"></i>
-                                                <i
-                                                    class="fas fa-bookmark icon icon-bookmark fa-2x yellow-text mt-2"></i>
+                                                <?php
+                                                $proposedpostcheck = $db->prepare("SELECT * FROM proposed_post where her_id=:her_id and event_id=:event_id");
+                                                $proposedpostcheck->execute(array(
+                                                    'her_id' => $herinfo['her_id'],
+                                                    'event_id' => $eventsinfo['event_id']
+                                                ));
+                                                if ($proposedpostinfo = $proposedpostcheck->fetch(PDO::FETCH_ASSOC)) {
+                                                ?>
+                                                    <i class="fas fa-star icon icon-star fa-2x yellow-text mt-2"></i>
+                                                <?php }
+                                                $savedpostcheck = $db->prepare("SELECT * FROM savedpost where user_id=:user_id and event_id=:event_id");
+                                                $savedpostcheck->execute(array(
+                                                    'user_id' => $_SESSION['user_id'],
+                                                    'event_id' => $eventsinfo['event_id']
+                                                ));
+                                                if ($savedpostinfo = $savedpostcheck->fetch(PDO::FETCH_ASSOC)) {
+                                                ?>
+                                                    <a href="../settings/action.php?eventid=<?php echo $eventsinfo['event_id'] ?>&delsavepost=ok"><i class="fas fa-bookmark icon icon-bookmark fa-2x yellow-text mt-2"></i></a>
+                                                <?php } else { ?>
+                                                    <a href="../settings/action.php?eventid=<?php echo $eventsinfo['event_id'] ?>&savepost=ok"><i class="far fa-bookmark icon icon-bookmark fa-2x yellow-text mt-2"></i></a>
+                                                <?php } ?>
                                             </div>
                                             <!-- Middle Ribbon -->
-                                            <div class="orange darken-4" style="height:10px;">&nbsp;</div>
+                                            <div class="<?php
+                                                        switch ($eventsinfo['type']) {
+                                                            case "Event":
+                                                                echo "orange";
+                                                                break;
+                                                            case "Study":
+                                                                echo "green";
+                                                                break;
+                                                            case "Project":
+                                                                echo "purple";
+                                                                break;
+                                                            case "Vacancy":
+                                                                echo "red";
+                                                                break;
+                                                            case "Tool":
+                                                                echo "blue";
+                                                                break;
+                                                        }
+
+                                                        ?> darken-4" style="height:10px;">&nbsp;</div>
 
                                             <!-- Circle Icon -->
                                             <div class="avatar mx-auto white" style="z-index: 100;">
-                                                <img src="../images/icons/events/event-icon.png"
-                                                    class="rounded-circle">
+
+                                                <?php
+                                                switch ($eventsinfo['type']) {
+                                                    case "Event":
+                                                        echo '<img src="../images/icons/events/event-icon.png" class="rounded-circle">';
+                                                        break;
+                                                    case "Study":
+                                                        echo '<img src="../images/icons/events/study-icon.png" class="rounded-circle">';
+                                                        break;
+                                                    case "Project":
+                                                        echo '<img src="../images/icons/events/project-icon.png" class="rounded-circle">';
+                                                        break;
+                                                    case "Vacancy":
+                                                        echo '<img src="../images/icons/events/vacancy-icon.png" class="rounded-circle">';
+                                                        break;
+                                                    case "Tool":
+                                                        echo '<img src="../images/icons/events/tool-icon.png" class="rounded-circle">';
+                                                        break;
+                                                }
+
+                                                ?>
                                             </div>
 
                                             <!-- Card content -->
-                                            <div class="card-body pt-1">
+                                            <div class="card-body pt-1" style="cursor: pointer;" onclick="window.open('<?php echo $eventsinfo['link'] ?>')">
                                                 <!-- Title -->
-                                                <h6 class="font-weight-bold mb-1 crop-text-2"
-                                                    style="letter-spacing: 1px;">
-                                                    How To Identify Your Career Potential</h6>
+                                                <a href="<?php echo $eventsinfo['link'] ?>" target="_blank">
+                                                    <h6 class="font-weight-bold mb-1 crop-text-2" style="letter-spacing: 1px;">
+                                                        <?php echo $eventsinfo['title'] ?></h6>
+                                                </a>
                                                 <!-- Organized By -->
                                                 <!-- Sector -->
-                                                <p class="grey-text text-center mb-0">by MEERDERE DATA /
-                                                    Business</p>
+                                                <p class="grey-text text-center mb-0"><?php echo $eventsinfo['organizer'] ?> /
+                                                    <?php echo $eventsinfo['info'] ?></p>
                                                 <!-- External Link -->
-                                                <a
-                                                    href="https://www.eventbrite.be/e/how-to-identify-your-career-potential-english-class-tickets-90292726977"></a>
+
                                             </div>
 
                                             <!-- Card footer -->
-                                            <div class="rounded-bottom orange darken-4 text-center pt-1">
+                                            <div class="rounded-bottom 
+                                                <?php
+                                                switch ($eventsinfo['type']) {
+                                                    case "Event":
+                                                        echo "orange";
+                                                        break;
+                                                    case "Study":
+                                                        echo "green";
+                                                        break;
+                                                    case "Project":
+                                                        echo "purple";
+                                                        break;
+                                                    case "Vacancy":
+                                                        echo "red";
+                                                        break;
+                                                    case "Tool":
+                                                        echo "blue";
+                                                        break;
+                                                }
+
+                                                ?> darken-4 text-center pt-1">
                                                 <ul class="list-unstyled list-inline font-small mb-1">
                                                     <!-- Date -->
                                                     <li class="list-inline-item pr-2 white-text">
-                                                        <i
-                                                            class="fas fa-calendar-alt pr-1"></i>05-07/04/2020
+                                                        <i class="fas fa-calendar-alt pr-1"></i><?php echo $eventsinfo['start_date'] ?>-<?php echo $eventsinfo['end_date'] ?>
                                                     </li>
                                                     <!-- Location -->
                                                     <li class="list-inline-item">
-                                                        <a href="#" class="white-text"><i
-                                                                class="fas fa-map-marker-alt pr-1"></i>Antwerpen</a>
+                                                        <a href="#" class="white-text"><i class="fas fa-map-marker-alt pr-1"></i><?php echo $eventsinfo['location'] ?></a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -472,344 +300,399 @@ $eventscheck->execute( );
                                         <br>
                                     </div>
                                     <!-- Event-EVENT Sample with given image ends-->
-
-                                    <!-- Event-EVENT Sample with default image starts-->
-                                    <div class="col-lg-4 col-md-12 col-xs-12">
-                                        <div class="card testimonial-card" style="cursor: pointer;">
-                                            <div class="card-up">
-                                                <!-- Event Type -->
-                                                <div class="orange darken-4 text-center"
-                                                    style="height:16px;">
-                                                    <p class="font-weight-bold white-text"
-                                                        style="font-size:12px">EVENT</p>
-                                                </div>
-                                                <!-- Background image -->
-                                                <img src="../images/icons/events/event-back.png"
-                                                    width="100%">
-                                                <!-- Bookmark icon -->
-                                                <i
-                                                    class="fas fa-star icon icon-star fa-2x yellow-text mt-2"></i>
-                                                <i
-                                                    class="fas fa-bookmark icon icon-bookmark fa-2x yellow-text mt-2"></i>
-                                            </div>
-                                            <!-- Middle Ribbon -->
-                                            <div class="orange darken-4" style="height:10px;">&nbsp;</div>
-
-                                            <!-- Circle Icon -->
-                                            <div class="avatar mx-auto white" style="z-index: 100;">
-                                                <img src="../images/icons/events/event-icon.png"
-                                                    class="rounded-circle">
-                                            </div>
-
-                                            <!-- Card content -->
-                                            <div class="card-body pt-1">
-                                                <!-- Title -->
-                                                <h6 class="font-weight-bold mb-1 crop-text-2"
-                                                    style="letter-spacing: 1px;">
-                                                    How To Identify Your Career Potential</h6>
-                                                <!-- Organized By -->
-                                                <!-- Sector -->
-                                                <p class="grey-text text-center mb-0">by MEERDERE DATA /
-                                                    Business</p>
-                                                <!-- External Link -->
-                                                <a
-                                                    href="https://www.eventbrite.be/e/how-to-identify-your-career-potential-english-class-tickets-90292726977"></a>
-                                            </div>
-
-                                            <!-- Card footer -->
-                                            <div class="rounded-bottom orange darken-4 text-center pt-1">
-                                                <ul class="list-unstyled list-inline font-small mb-1">
-                                                    <!-- Date -->
-                                                    <li class="list-inline-item pr-2 white-text">
-                                                        <i
-                                                            class="fas fa-calendar-alt pr-1"></i>05-07/04/2020
-                                                    </li>
-                                                    <!-- Location -->
-                                                    <li class="list-inline-item">
-                                                        <a href="#" class="white-text"><i
-                                                                class="fas fa-map-marker-alt pr-1"></i>Antwerpen</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-                                        </div>
-                                        <br>
-                                    </div>
-                                    <!-- Event-EVENT Sample with default image ends-->
-
-
-                                    <!-- Event-PROJECT Sample with default image starts-->
-                                    <div class="col-lg-4 col-md-12 col-xs-12">
-                                        <div class="card testimonial-card" style="cursor: pointer;">
-                                            <div class="card-up">
-                                                <!-- Event Type -->
-                                                <div class="purple darken-4 text-center"
-                                                    style="height:16px;">
-                                                    <p class="font-weight-bold white-text"
-                                                        style="font-size:12px">PROJECT</p>
-                                                </div>
-
-                                                <!-- Background image -->
-                                                <img src="../images/icons/events/project-back.png"
-                                                    width="100%">
-                                                <!--  icons fas-full far-empty -->
-                                                <i
-                                                    class="far fa-star icon icon-star fa-2x yellow-text mt-2"></i>
-                                                <i
-                                                    class="far fa-bookmark icon icon-bookmark fa-2x yellow-text mt-2"></i>
-                                            </div>
-                                            <!-- Middle Ribbon -->
-                                            <div class="purple darken-4" style="height:10px;">&nbsp;</div>
-
-                                            <!-- Circle Icon -->
-                                            <div class="avatar mx-auto white" style="z-index: 100;">
-                                                <img src="../images/icons/events/project-icon.png"
-                                                    class="rounded-circle">
-                                            </div>
-
-                                            <!-- Card content -->
-                                            <div class="card-body pt-1">
-                                                <!-- Title -->
-                                                <h6 class="font-weight-bold mb-1 crop-text-2"
-                                                    style="letter-spacing: 1px;">
-                                                    How To Identify Your Career Potential</h6>
-                                                <!-- Organized By -->
-                                                <!-- Sector -->
-                                                <p class="grey-text text-center mb-0">by MEERDERE DATA /
-                                                    Business</p>
-                                                <!-- External Link -->
-                                                <a
-                                                    href="https://www.eventbrite.be/e/how-to-identify-your-career-potential-english-class-tickets-90292726977"></a>
-                                            </div>
-
-                                            <!-- Card footer -->
-                                            <div class="rounded-bottom purple darken-4 text-center pt-1">
-                                                <ul class="list-unstyled list-inline font-small mb-1">
-                                                    <!-- Date -->
-                                                    <li class="list-inline-item pr-2 white-text">
-                                                        <i
-                                                            class="fas fa-calendar-alt pr-1"></i>05-07/04/2020
-                                                    </li>
-                                                    <!-- Location -->
-                                                    <li class="list-inline-item">
-                                                        <a href="#" class="white-text"><i
-                                                                class="fas fa-map-marker-alt pr-1"></i>Antwerpen</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-                                        </div>
-                                        <br>
-                                    </div>
-                                    <!-- Event-PROJECT Sample with default image ends-->
-
-                                    <!-- Event-STUDY Sample with default image starts-->
-                                    <div class="col-lg-4 col-md-12 col-xs-12">
-                                        <div class="card testimonial-card" style="cursor: pointer;">
-                                            <div class="card-up">
-                                                <!-- Event Type -->
-                                                <div class="green darken-4 text-center"
-                                                    style="height:16px;">
-                                                    <p class="font-weight-bold white-text"
-                                                        style="font-size:12px">STUDY</p>
-                                                </div>
-
-                                                <!-- Background image -->
-                                                <img src="../images/icons/events/study-back.png"
-                                                    width="100%">
-                                                <!--  icons fas-full far-empty -->
-                                                <i
-                                                    class="far fa-star icon icon-star fa-2x yellow-text mt-2"></i>
-                                                <i
-                                                    class="far fa-bookmark icon icon-bookmark fa-2x yellow-text mt-2"></i>
-                                            </div>
-                                            <!-- Middle Ribbon -->
-                                            <div class="green darken-4" style="height:10px;">&nbsp;</div>
-
-                                            <!-- Circle Icon -->
-                                            <div class="avatar mx-auto white" style="z-index: 100;">
-                                                <img src="../images/icons/events/study-icon.png"
-                                                    class="rounded-circle">
-                                            </div>
-
-                                            <!-- Card content -->
-                                            <div class="card-body pt-1">
-                                                <!-- Title -->
-                                                <h6 class="font-weight-bold mb-1 crop-text-2"
-                                                    style="letter-spacing: 1px;">
-                                                    How To Identify Your Career Potential</h6>
-                                                <!-- Organized By -->
-                                                <!-- Sector -->
-                                                <p class="grey-text text-center mb-0">by MEERDERE DATA /
-                                                    Business</p>
-                                                <!-- External Link -->
-                                                <a
-                                                    href="https://www.eventbrite.be/e/how-to-identify-your-career-potential-english-class-tickets-90292726977"></a>
-                                            </div>
-
-                                            <!-- Card footer -->
-                                            <div class="rounded-bottom green darken-4 text-center pt-1">
-                                                <ul class="list-unstyled list-inline font-small mb-1">
-                                                    <!-- Date -->
-                                                    <li class="list-inline-item pr-2 white-text">
-                                                        <i
-                                                            class="fas fa-calendar-alt pr-1"></i>05-07/04/2020
-                                                    </li>
-                                                    <!-- Location -->
-                                                    <li class="list-inline-item">
-                                                        <a href="#" class="white-text"><i
-                                                                class="fas fa-map-marker-alt pr-1"></i>Antwerpen</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-                                        </div>
-                                        <br>
-                                    </div>
-                                    <!-- Event-STUDY Sample with default image ends-->
-
-
-                                    <!-- Event-VACANCY Sample with default image starts-->
-                                    <div class="col-lg-4 col-md-12 col-xs-12">
-                                        <div class="card testimonial-card" style="cursor: pointer;">
-                                            <div class="card-up">
-                                                <!-- Event Type -->
-                                                <div class="red darken-4 text-center" style="height:16px;">
-                                                    <p class="font-weight-bold white-text"
-                                                        style="font-size:12px">VACANCY</p>
-                                                </div>
-
-                                                <!-- Background image -->
-                                                <img src="../images/icons/events/vacancy-back.png"
-                                                    width="100%">
-                                                <!--  icons fas-full far-empty -->
-                                                <i
-                                                    class="far fa-star icon icon-star fa-2x yellow-text mt-2"></i>
-                                                <i
-                                                    class="far fa-bookmark icon icon-bookmark fa-2x yellow-text mt-2"></i>
-                                            </div>
-                                            <!-- Middle Ribbon -->
-                                            <div class="red darken-4" style="height:10px;">&nbsp;</div>
-
-                                            <!-- Circle Icon -->
-                                            <div class="avatar mx-auto white" style="z-index: 100;">
-                                                <img src="../images/icons/events/vacancy-icon.png"
-                                                    class="rounded-circle">
-                                            </div>
-
-                                            <!-- Card content -->
-                                            <div class="card-body pt-1">
-                                                <!-- Title -->
-                                                <h6 class="font-weight-bold mb-1 crop-text-2"
-                                                    style="letter-spacing: 1px;">
-                                                    How To Identify Your Career Potential</h6>
-                                                <!-- Organized By -->
-                                                <!-- Sector -->
-                                                <p class="grey-text text-center mb-0">by MEERDERE DATA /
-                                                    Business</p>
-                                                <!-- External Link -->
-                                                <a
-                                                    href="https://www.eventbrite.be/e/how-to-identify-your-career-potential-english-class-tickets-90292726977"></a>
-                                            </div>
-
-                                            <!-- Card footer -->
-                                            <div class="rounded-bottom red darken-4 text-center pt-1">
-                                                <ul class="list-unstyled list-inline font-small mb-1">
-                                                    <!-- Date -->
-                                                    <li class="list-inline-item pr-2 white-text">
-                                                        <i
-                                                            class="fas fa-calendar-alt pr-1"></i>05-07/04/2020
-                                                    </li>
-                                                    <!-- Location -->
-                                                    <li class="list-inline-item">
-                                                        <a href="#" class="white-text"><i
-                                                                class="fas fa-map-marker-alt pr-1"></i>Antwerpen</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-                                        </div>
-                                        <br>
-                                    </div>
-                                    <!-- Event-VACANCY Sample with default image ends-->
-
-                                    <!-- Event-TOOL Sample with default image starts-->
-                                    <div class="col-lg-4 col-md-12 col-xs-12">
-                                        <div class="card testimonial-card" style="cursor: pointer;">
-                                            <div class="card-up">
-                                                <!-- Event Type -->
-                                                <div class="blue darken-4 text-center" style="height:16px;">
-                                                    <p class="font-weight-bold white-text"
-                                                        style="font-size:12px">TOOL</p>
-                                                </div>
-
-                                                <!-- Background image -->
-                                                <img src="../images/icons/events/tool-back.png"
-                                                    width="100%">
-                                                <!--  icons fas-full far-empty -->
-                                                <i
-                                                    class="far fa-star icon icon-star fa-2x yellow-text mt-2"></i>
-                                                <i
-                                                    class="far fa-bookmark icon icon-bookmark fa-2x yellow-text mt-2"></i>
-                                            </div>
-                                            <!-- Middle Ribbon -->
-                                            <div class="blue darken-4" style="height:10px;">&nbsp;</div>
-
-                                            <!-- Circle Icon -->
-                                            <div class="avatar mx-auto white" style="z-index: 100;">
-                                                <img src="../images/icons/events/tool-icon.png"
-                                                    class="rounded-circle">
-                                            </div>
-
-                                            <!-- Card content -->
-                                            <div class="card-body pt-1">
-                                                <!-- Title -->
-                                                <h6 class="font-weight-bold mb-1 crop-text-2"
-                                                    style="letter-spacing: 1px;">
-                                                    How To Identify Your Career Potential</h6>
-                                                <!-- Organized By -->
-                                                <!-- Sector -->
-                                                <p class="grey-text text-center mb-0">by MEERDERE DATA /
-                                                    Business</p>
-                                                <!-- External Link -->
-                                                <a
-                                                    href="https://www.eventbrite.be/e/how-to-identify-your-career-potential-english-class-tickets-90292726977"></a>
-                                            </div>
-
-                                            <!-- Card footer -->
-                                            <div class="rounded-bottom blue darken-4 text-center pt-1">
-                                                <ul class="list-unstyled list-inline font-small mb-1">
-                                                    <!-- Date -->
-                                                    <li class="list-inline-item pr-2 white-text">
-                                                        <i
-                                                            class="fas fa-calendar-alt pr-1"></i>05-07/04/2020
-                                                    </li>
-                                                    <!-- Location -->
-                                                    <li class="list-inline-item">
-                                                        <a href="#" class="white-text"><i
-                                                                class="fas fa-map-marker-alt pr-1"></i>Antwerpen</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-                                        </div>
-                                        <br>
-                                    </div>
-                                    <!-- Event-TOOL Sample with default image ends-->
-                                    </div>
-                                    
-
-                                </div>
+                                <?php } ?>
                             </div>
-                            <!-- ALL SVEPT POSTS  ENDS-->
-
-
                         </div>
 
-                    </section>
-                </div>
+                        <!-- SAVED SVEPT POSTS STARTS-->
+                        <div class="tab-pane fade" id="saved" role="tabpanel">
+                            <div class="row">
+
+                                <?php
+                                $savedidcheck = $db->prepare("SELECT event_id FROM savedpost WHERE user_id =:user_id");
+                                $savedidcheck->execute(array(
+                                    'user_id' => $_SESSION['user_id']
+                                ));
+
+                                while ($savedidinfo = $savedidcheck->fetch(PDO::FETCH_ASSOC)) {
+
+                                    $savedeventscheck = $db->prepare("SELECT * FROM events WHERE event_id=:event_id");
+                                    $savedeventscheck->execute(array(
+                                        'event_id' => $savedidinfo['event_id']
+                                    ));
+                                    $savedeventsinfo = $savedeventscheck->fetch(PDO::FETCH_ASSOC);
+
+                                ?>
+
+                                    <!-- Event-EVENT Sample with given image starts-->
+                                    <div class="col-lg-4 col-md-12 col-xs-12">
+                                        <div class="card testimonial-card">
+                                            <div class="card-up">
+                                                <!-- Event Type -->
+                                                <div class="<?php
+                                                            switch ($savedeventsinfo['type']) {
+                                                                case "Event":
+                                                                    echo "orange";
+                                                                    break;
+                                                                case "Study":
+                                                                    echo "green";
+                                                                    break;
+                                                                case "Project":
+                                                                    echo "purple";
+                                                                    break;
+                                                                case "Vacancy":
+                                                                    echo "red";
+                                                                    break;
+                                                                case "Tool":
+                                                                    echo "blue";
+                                                                    break;
+                                                            }
+
+                                                            ?> darken-4 text-center" style="height:16px;">
+                                                    <p class="font-weight-bold white-text" style="font-size:12px"><?php echo $savedeventsinfo['type'] ?></p>
+                                                </div>
+                                                <!-- Background image -->
+                                                <?php
+                                                if (!empty($savedeventsinfo['img_link'])) { ?>
+                                                    <img src="<?php echo $savedeventsinfo['img_link'] ?>" width="100%" height="auto">
+                                                <?php } else {
+                                                    switch ($savedeventsinfo['type']) {
+                                                        case "Event":
+                                                            echo '<img src="../images/icons/events/event-back.png" width="100%" height="auto">';
+                                                            break;
+                                                        case "Study":
+                                                            echo '<img src="../images/icons/events/study-back.png" width="100%" height="auto" >';
+                                                            break;
+                                                        case "Project":
+                                                            echo '<img src="../images/icons/events/project-back.png" width="100%" height="auto">';
+                                                            break;
+                                                        case "Vacancy":
+                                                            echo '<img src="../images/icons/events/vacancy-back.png" width="100%" height="auto">';
+                                                            break;
+                                                        case "Tool":
+                                                            echo '<img src="../images/icons/events/tool-back.png" width="100%" height="auto">';
+                                                            break;
+                                                    }
+                                                }
+                                                ?>
+                                                <!-- Bookmark icon -->
+                                                <?php
+                                                $proposedpostcheck = $db->prepare("SELECT * FROM proposed_post where her_id=:her_id and event_id=:event_id");
+                                                $proposedpostcheck->execute(array(
+                                                    'her_id' => $herinfo['her_id'],
+                                                    'event_id' => $savedeventsinfo['event_id']
+                                                ));
+                                                if ($proposedpostinfo = $proposedpostcheck->fetch(PDO::FETCH_ASSOC)) {
+                                                ?>
+                                                    <i class="fas fa-star icon icon-star fa-2x yellow-text mt-2"></i>
+                                                <?php } ?>
+
+                                                <a href="../settings/action.php?eventid=<?php echo $savedeventsinfo['event_id'] ?>&delsavepost=ok"><i class="fas fa-bookmark icon icon-bookmark fa-2x yellow-text mt-2"></i></a>
+
+                                            </div>
+                                            <!-- Middle Ribbon -->
+                                            <div class="<?php
+                                                        switch ($savedeventsinfo['type']) {
+                                                            case "Event":
+                                                                echo "orange";
+                                                                break;
+                                                            case "Study":
+                                                                echo "green";
+                                                                break;
+                                                            case "Project":
+                                                                echo "purple";
+                                                                break;
+                                                            case "Vacancy":
+                                                                echo "red";
+                                                                break;
+                                                            case "Tool":
+                                                                echo "blue";
+                                                                break;
+                                                        }
+
+                                                        ?> darken-4" style="height:10px;">&nbsp;</div>
+
+                                            <!-- Circle Icon -->
+                                            <div class="avatar mx-auto white" style="z-index: 100;">
+
+                                                <?php
+                                                switch ($savedeventsinfo['type']) {
+                                                    case "Event":
+                                                        echo '<img src="../images/icons/events/event-icon.png" class="rounded-circle">';
+                                                        break;
+                                                    case "Study":
+                                                        echo '<img src="../images/icons/events/study-icon.png" class="rounded-circle">';
+                                                        break;
+                                                    case "Project":
+                                                        echo '<img src="../images/icons/events/project-icon.png" class="rounded-circle">';
+                                                        break;
+                                                    case "Vacancy":
+                                                        echo '<img src="../images/icons/events/vacancy-icon.png" class="rounded-circle">';
+                                                        break;
+                                                    case "Tool":
+                                                        echo '<img src="../images/icons/events/tool-icon.png" class="rounded-circle">';
+                                                        break;
+                                                }
+
+                                                ?>
+                                            </div>
+
+                                            <!-- Card content -->
+                                            <div class="card-body pt-1" style="cursor: pointer;" onclick="window.open('<?php echo $savedeventsinfo['link'] ?>')">
+                                                <!-- Title -->
+                                                <a href="<?php echo $savedeventsinfo['link'] ?>" target="_blank">
+                                                    <h6 class="font-weight-bold mb-1 crop-text-2" style="letter-spacing: 1px;">
+                                                        <?php echo $savedeventsinfo['title'] ?></h6>
+                                                </a>
+                                                <!-- Organized By -->
+                                                <!-- Sector -->
+                                                <p class="grey-text text-center mb-0"><?php echo $savedeventsinfo['organizer'] ?> /
+                                                    <?php echo $savedeventsinfo['info'] ?></p>
+                                                <!-- External Link -->
+
+                                            </div>
+
+                                            <!-- Card footer -->
+                                            <div class="rounded-bottom 
+                                                <?php
+                                                switch ($savedeventsinfo['type']) {
+                                                    case "Event":
+                                                        echo "orange";
+                                                        break;
+                                                    case "Study":
+                                                        echo "green";
+                                                        break;
+                                                    case "Project":
+                                                        echo "purple";
+                                                        break;
+                                                    case "Vacancy":
+                                                        echo "red";
+                                                        break;
+                                                    case "Tool":
+                                                        echo "blue";
+                                                        break;
+                                                }
+
+                                                ?> darken-4 text-center pt-1">
+                                                <ul class="list-unstyled list-inline font-small mb-1">
+                                                    <!-- Date -->
+                                                    <li class="list-inline-item pr-2 white-text">
+                                                        <i class="fas fa-calendar-alt pr-1"></i><?php echo $savedeventsinfo['start_date'] ?>-<?php echo $savedeventsinfo['end_date'] ?>
+                                                    </li>
+                                                    <!-- Location -->
+                                                    <li class="list-inline-item">
+                                                        <a href="#" class="white-text"><i class="fas fa-map-marker-alt pr-1"></i><?php echo $savedeventsinfo['location'] ?></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                        <br>
+                                    </div>
+                                    <!-- Event-EVENT Sample with given image ends-->
+                                <?php }
+                                ?>
+
+
+                            </div>
+                        </div>
+                        <!-- SAVED SVEPT POSTS  ENDS-->
+
+                        <!-- PURPOSED SVEPT POSTS  STARTS-->
+                        <div class="tab-pane fade" id="purposed" role="tabpanel">
+                            <div class="row">
+
+                                <?php
+                                $proposedidcheck = $db->prepare("SELECT event_id FROM proposed_post WHERE her_id =:her_id");
+                                $proposedidcheck->execute(array(
+                                    'her_id' => $herinfo['her_id']
+                                ));
+
+                                while ($proposedidinfo = $proposedidcheck->fetch(PDO::FETCH_ASSOC)) {
+
+                                    $proposedeventscheck = $db->prepare("SELECT * FROM events WHERE event_id=:event_id");
+                                    $proposedeventscheck->execute(array(
+                                        'event_id' => $proposedidinfo['event_id']
+                                    ));
+                                    $proposedeventsinfo = $proposedeventscheck->fetch(PDO::FETCH_ASSOC);
+
+                                ?>
+
+                                    <!-- Event-EVENT Sample with given image starts-->
+                                    <div class="col-lg-4 col-md-12 col-xs-12">
+                                        <div class="card testimonial-card">
+                                            <div class="card-up">
+                                                <!-- Event Type -->
+                                                <div class="<?php
+                                                            switch ($proposedeventsinfo['type']) {
+                                                                case "Event":
+                                                                    echo "orange";
+                                                                    break;
+                                                                case "Study":
+                                                                    echo "green";
+                                                                    break;
+                                                                case "Project":
+                                                                    echo "purple";
+                                                                    break;
+                                                                case "Vacancy":
+                                                                    echo "red";
+                                                                    break;
+                                                                case "Tool":
+                                                                    echo "blue";
+                                                                    break;
+                                                            }
+
+                                                            ?> darken-4 text-center" style="height:16px;">
+                                                    <p class="font-weight-bold white-text" style="font-size:12px"><?php echo $proposedeventsinfo['type'] ?></p>
+                                                </div>
+                                                <!-- Background image -->
+                                                <?php
+                                                if (!empty($proposedeventsinfo['img_link'])) { ?>
+                                                    <img src="<?php echo $proposedeventsinfo['img_link'] ?>" width="100%" height="auto">
+                                                <?php } else {
+                                                    switch ($proposedeventsinfo['type']) {
+                                                        case "Event":
+                                                            echo '<img src="../images/icons/events/event-back.png" width="100%" height="auto">';
+                                                            break;
+                                                        case "Study":
+                                                            echo '<img src="../images/icons/events/study-back.png" width="100%" height="auto" >';
+                                                            break;
+                                                        case "Project":
+                                                            echo '<img src="../images/icons/events/project-back.png" width="100%" height="auto">';
+                                                            break;
+                                                        case "Vacancy":
+                                                            echo '<img src="../images/icons/events/vacancy-back.png" width="100%" height="auto">';
+                                                            break;
+                                                        case "Tool":
+                                                            echo '<img src="../images/icons/events/tool-back.png" width="100%" height="auto">';
+                                                            break;
+                                                    }
+                                                }
+                                                ?>
+                                                <!-- Bookmark icon -->
+                                                <!--i class="far fa-star icon icon-star fa-2x  mt-2"></i-->
+                                                <!--a href="../settings/action.php?eventid=<?php echo $proposedeventsinfo['event_id'] ?>&delsavepost=ok"><i class="fas fa-star icon icon-star fa-2x yellow-text mt-2"></i></a-->
+                                                <i class="fas fa-star icon icon-star fa-2x yellow-text mt-2"></i></a>
+
+                                            </div>
+                                            <!-- Middle Ribbon -->
+                                            <div class="<?php
+                                                        switch ($proposedeventsinfo['type']) {
+                                                            case "Event":
+                                                                echo "orange";
+                                                                break;
+                                                            case "Study":
+                                                                echo "green";
+                                                                break;
+                                                            case "Project":
+                                                                echo "purple";
+                                                                break;
+                                                            case "Vacancy":
+                                                                echo "red";
+                                                                break;
+                                                            case "Tool":
+                                                                echo "blue";
+                                                                break;
+                                                        }
+
+                                                        ?> darken-4" style="height:10px;">&nbsp;</div>
+
+                                            <!-- Circle Icon -->
+                                            <div class="avatar mx-auto white" style="z-index: 100;">
+
+                                                <?php
+                                                switch ($proposedeventsinfo['type']) {
+                                                    case "Event":
+                                                        echo '<img src="../images/icons/events/event-icon.png" class="rounded-circle">';
+                                                        break;
+                                                    case "Study":
+                                                        echo '<img src="../images/icons/events/study-icon.png" class="rounded-circle">';
+                                                        break;
+                                                    case "Project":
+                                                        echo '<img src="../images/icons/events/project-icon.png" class="rounded-circle">';
+                                                        break;
+                                                    case "Vacancy":
+                                                        echo '<img src="../images/icons/events/vacancy-icon.png" class="rounded-circle">';
+                                                        break;
+                                                    case "Tool":
+                                                        echo '<img src="../images/icons/events/tool-icon.png" class="rounded-circle">';
+                                                        break;
+                                                }
+
+                                                ?>
+                                            </div>
+
+                                            <!-- Card content -->
+                                            <div class="card-body pt-1" style="cursor: pointer;" onclick="window.open('<?php echo $proposedeventsinfo['link'] ?>')">
+                                                <!-- Title -->
+                                                <a href="<?php echo $proposedeventsinfo['link'] ?>" target="_blank">
+                                                    <h6 class="font-weight-bold mb-1 crop-text-2" style="letter-spacing: 1px;">
+                                                        <?php echo $proposedeventsinfo['title'] ?></h6>
+                                                </a>
+                                                <!-- Organized By -->
+                                                <!-- Sector -->
+                                                <p class="grey-text text-center mb-0"><?php echo $proposedeventsinfo['organizer'] ?> /
+                                                    <?php echo $proposedeventsinfo['info'] ?></p>
+                                                <!-- External Link -->
+
+                                            </div>
+
+                                            <!-- Card footer -->
+                                            <div class="rounded-bottom 
+                                                <?php
+                                                switch ($proposedeventsinfo['type']) {
+                                                    case "Event":
+                                                        echo "orange";
+                                                        break;
+                                                    case "Study":
+                                                        echo "green";
+                                                        break;
+                                                    case "Project":
+                                                        echo "purple";
+                                                        break;
+                                                    case "Vacancy":
+                                                        echo "red";
+                                                        break;
+                                                    case "Tool":
+                                                        echo "blue";
+                                                        break;
+                                                }
+
+                                                ?> darken-4 text-center pt-1">
+                                                <ul class="list-unstyled list-inline font-small mb-1">
+                                                    <!-- Date -->
+                                                    <li class="list-inline-item pr-2 white-text">
+                                                        <i class="fas fa-calendar-alt pr-1"></i><?php echo $proposedeventsinfo['start_date'] ?>-<?php echo $proposedeventsinfo['end_date'] ?>
+                                                    </li>
+                                                    <!-- Location -->
+                                                    <li class="list-inline-item">
+                                                        <a href="#" class="white-text"><i class="fas fa-map-marker-alt pr-1"></i><?php echo $proposedeventsinfo['location'] ?></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                        <br>
+                                    </div>
+                                    <!-- Event-EVENT Sample with given image ends-->
+                                <?php }
+                                ?>
+
+
+                            </div>
+                        </div>
+                        <!-- PURPOSED SVEPT POSTS  ENDS-->
+
+                    </div>
+                    <!-- ALL SVEPT POSTS  ENDS-->
+
+
             </div>
-            <!-- Panel 444-Networking Ends-->
+
+            </section>
         </div>
     </div>
+    <!-- Panel 444-Networking Ends-->
+</div>
+</div>
 <?php include 'her-footer.php'; ?>
