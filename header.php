@@ -102,8 +102,13 @@ if (isset($_SESSION['user_id'])) {
                             <a class="nav-link border border-white rounded mb-0" href="" data-toggle="modal"
                                 data-target="#modalSubscriptionForm">Sign Up</a>
                         </li>
-                        <li class="nav-item">
-
+                        <li class="nav-item dropdown ml-3">
+                            <a class="nav-link dropdown-toggle" id="langu" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">En</a>
+                            <div class="dropdown-menu dropdown-default" aria-labelledby="langu">
+                                <a class="dropdown-item" href="./aboutus_nl.html">Nl</a>
+                                <a class="dropdown-item" href="./under_construction.html">Ar</a>
+                            </div>
                         </li>
 
                         <?php } else { ?>
@@ -114,17 +119,22 @@ if (isset($_SESSION['user_id'])) {
                         <li class="nav-item">
                             <a class="nav-link border border-white rounded mb-0" href="logout.php" >Logout</a>
                         </li>
-                        <li class="nav-item">
-
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="langu" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">En</a>
+                            <div class="dropdown-menu dropdown-default" aria-labelledby="langu">
+                                <a class="dropdown-item" href="./aboutus_nl.html">Nl</a>
+                                <a class="dropdown-item" href="./under_construction.html">Ar</a>
+                            </div>
                         </li>
                         <?php } ?>
 
 
                     </ul>
-                    <div class="ml-2" style="margin-right: -100px;">
+                    <!-- <div class="ml-2" style="margin-right: -100px;">
                         <a class="ml-auto" href="https://all-in-one4her.eu/"><img src="images/en.png"></a>
                         <a href="aboutus_nl.html"><img src="images/nd.png"></a>
-                    </div>
+                    </div> -->
                 </div>
 
             </div>

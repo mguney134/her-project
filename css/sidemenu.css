@@ -1,0 +1,50 @@
+header {
+  height: 80%;
+}
+
+@media (max-width: 740px) {
+  header {
+    height: 90%;
+  }
+
+  .nav {
+    display: block;
+  }
+
+  .esf {
+    width: 30%;
+  }
+
+  #yazi {
+    font-size: 50px;
+  }
+}
+
+#sidemenu.affix-bottom {
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  #sidemenu.affix {
+    position: fixed;
+    top: 40px;
+  }
+}
+
+#sidemenu .nav-link.active,
+#sidemenu .nav-link:hover,
+#sidemenu .nav-link:focus {
+  color: #111;
+  border-left: 1px #4db6e5 dashed;
+}
+
+#sidemenu .nav-link.ar.active,
+#sidemenu .nav-link.ar:hover,
+#sidemenu .nav-link.ar:focus {
+  color: #111;
+  border-right: 1px #4db6e5 dashed;
+}
+#content .nav-link {
+  color: #555;
+  transition: all 0.2 ease;
+}
