@@ -302,7 +302,7 @@
                                     <select class="browser-default custom-select Her" id="lanLevell" name="level">
                                         <option disabled selected>Level</option>
                                         <option value="Native">Native</option>
-                                        <option value="Fluent">Fluent</option>
+                                     
                                         <option value="A1">A1 / Basic user - Beginner</option>
                                         <option value="A2">A2 / Basic user - Elementary</option>
                                         <option value="B1">B1 / Independent User - Intermediate</option>
