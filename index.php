@@ -349,7 +349,7 @@
                 <!-- Grid column -->
                 <div class="col-md-4 mb-4">
 
-                    <img src="./images/icons/events/study-icon.png" alt="" width="120px">
+                    <img src="./images/icons/events/study.png" alt="" width="120px">
                     <h5 class="font-weight-bold mt-2">S-TUDY</h5>
                     <p class="mb-4">Organisations</p>
                     <p class="grey-text mb-md-0">Share your study programmes, vocational trainings, language courses, online courses on the platform and reach out to the target group.
@@ -361,7 +361,7 @@
                 <!-- Grid column -->
                 <div class="col-md-4 mb-4">
 
-                    <img src="./images/icons/events/vacancy-icon.png" alt="" width="120px">
+                    <img src="./images/icons/events/vacancy.png" alt="" width="120px">
                     <h5 class="font-weight-bold mt-2">V-ACANCY</h5>
                     <p class="mb-4">Employers / Organisations</p>
                     <p class="grey-text mb-md-0">Share your vacancy links, websites with the job seekers
@@ -373,7 +373,7 @@
                 <!-- Grid column -->
                 <div class="col-md-4 mb-4">
 
-                     <img src="./images/icons/events/event-icon.png" alt="" width="120px">
+                     <img src="./images/icons/events/event.png" alt="" width="120px">
                     <h5 class="font-weight-bold mt-2">E-VENT</h5>
                     <p class="mb-4">Organisations</p>
                     <p class="grey-text mb-md-0">Promote your events like job fairs, matchmaking events, conferences, workshops, etc.
@@ -382,7 +382,7 @@
                 </div>
                 <div class="col-md-4 mb-4">
 
-                    <img src="./images/icons/events/project-icon.png" alt="" width="120px">
+                    <img src="./images/icons/events/project.png" alt="" width="120px">
                     <h5 class="font-weight-bold mt-2">P-ROJECT</h5>
                     <p class="mb-4">Organisations</p>
                     <p class="grey-text mb-md-0">Reach out to your target group of your project like mentoring, buddying, coaching, etc.
@@ -391,7 +391,7 @@
                 </div>
                 <div class="col-md-4 mb-4">
 
-                    <img src="./images/icons/events/tool-icon.png" alt="" width="120px">
+                    <img src="./images/icons/events/tool.png" alt="" width="120px">
                     <h5 class="font-weight-bold mt-2">T-OOL </h5>
                     <p class="mb-4">Organisations</p>
                     <p class="grey-text mb-md-0">Share your supporting tools like a handbook, manual, digital platform, survey, etc.
