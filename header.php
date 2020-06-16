@@ -75,7 +75,7 @@ if (isset($_SESSION['user_id'])) {
                         </li>
                         <li class="nav-item dropdown pr-4">
                             <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" 
-                                aria-haspopup="true" aria-expanded="false">Study</a>
+                                aria-haspopup="true" aria-expanded="false" href="./study.html">Study</a>
                             <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
                                 <a class="dropdown-item" href="language.html">Language Learning</a>
                                 <a class="dropdown-item" href="diploma_recognition.html">Diploma Recognition</a>
