@@ -2,7 +2,7 @@
   include 'header.php';
 ?>
 
- <div class="view"
+    <div class="view"
             style="background-image: url('./images/headers/header.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
 
             <!-- Mask & flexbox options-->
@@ -21,16 +21,17 @@
                         </div>
                         <div class="col-md-6 d-flex align-items-center">
                             <div>
-                                <h4 class="display-3 font-weight-bold white-text mb-0 pt-md-5 pt-5" >All-in-one 4 <br>HER / HOA
+                                <br><br>
+                                <h4 id="mainheading" class="display-3 font-weight-bold white-text mb-0 pt-md-5 pt-5" >All-in-one 4 <br>HER / HOA
                                 </h4>
 
                                 <hr class="hr-light my-4 wow fadeInDown d-flex justify-content-start"
                                     data-wow-delay="0.4s">
 
-                                <h4 class="display-5 mt-2 mb-2 white-text pr-2"><span
+                                <h4 id="altt" class="display-5 mt-2 mb-2 white-text pr-2"><span
                                         style="background-color: rgba(255, 152, 0, 0.3); line-height: 1.6;">Fast-track Integration of <br>Highly Educated Refugees (HER) &<br> Other Language Speakers (HOA) into Flemish Labour Market</span></h4>
 
-                                <button type="button" class="btn btn-orange btn-rounded mx-0" href=""
+                                <button id="signup" type="button" class="btn btn-orange btn-rounded mx-0" href=""
                                     data-toggle="modal" data-target="#modalSubscriptionForm">Sign Up</button>
 
                             </div>
@@ -48,7 +49,7 @@
 
                 <!-- Content -->
             </div>
-            <img class="align-bottom" style="position:absolute; bottom: 0;" src="images/logo-esf.png">
+            <img id="esf" class="align-bottom" style="position:absolute; bottom: 0;" src="images/logo-esf.png">
 
             <!-- Mask & flexbox options-->
         </div>

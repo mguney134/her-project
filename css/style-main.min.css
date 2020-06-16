@@ -1,77 +1,89 @@
 .view,
 body,
-html, header {
-	height: 100%
+html,
+header {
+  height: 100%;
 }
 
-.page-footer{
-	background-color:#ECEFF1;
+.page-footer {
+  background-color: #eceff1;
 }
 .top-nav-collapse {
-	width: 100%;
-	background-color:#4EB9E9 !important;
-	
+  width: 100%;
+  background-color: #4eb9e9 !important;
 }
 html {
-	overflow-x: hidden; 
+  overflow-x: hidden;
 }
-@media only screen and (max-width:768px) {
-	.navbar {
-		background-color:#4EB9E9;
-		width: 100%;
-	}
-	.top-nav-collapse{
-		width: 100%;
-	}
-	iframe {
-		width: 100%;
-	}
-	header {
-		width: 100%;
-	}
-	html {
-		overflow-x: hidden; 
-	}
-	body {
-		width: 100%;
-		height: 100%;
-		margin: 0;
-		padding: 0;
-		overflow-x: hidden; 
-	}
+@media only screen and (max-width: 768px) {
+  .navbar {
+    background-color: #4eb9e9;
+    width: 100%;
+  }
+  .top-nav-collapse {
+    width: 100%;
+  }
+  iframe {
+    width: 100%;
+  }
+  header {
+    width: 100%;
+  }
+  html {
+    overflow-x: hidden;
+  }
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
 }
 @media (max-width: 740px) {
-
-	html,
-	body,
-	header {
-		height: 100vh;
-	}
+  html,
+  body,
+  header {
+    height: 100vh;
+  }
 }
 @media (min-width: 800px) and (max-width: 850px) {
-
-	html,
-	body,
-	header {
-		height: 100vh;
-	}
+  html,
+  body,
+  header {
+    height: 100vh;
+  }
 }
 
 @media (min-width: 800px) and (max-width: 850px) {
-	.navbar:not(.top-nav-collapse) {
-		background: #929FBA !important;
-	}
+  .navbar:not(.top-nav-collapse) {
+    background: #929fba !important;
+  }
 }
 .listim {
-	font-size: 13px;
+  font-size: 13px;
 }
 
 .fa-check {
-	font-size: 12px;
+  font-size: 12px;
 }
 h5 {
-    letter-spacing: 3px;
+  letter-spacing: 3px;
 }
 .dropdown .dropdown-menu.dropdown-default .dropdown-item:hover {
-	background-color: #F57C01 !important;
+  background-color: #f57c01 !important;
+}
+@media (max-width: 450px) {
+  #mainheading {
+    font-size: 2.5rem !important;
+  }
+  #altt {
+    font-size: 0.8rem !important;
+  }
+  #esf {
+    height: 70px;
+  }
+  #signup {
+    padding: 7px;
+  }
 }
