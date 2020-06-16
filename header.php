@@ -78,7 +78,7 @@ if (isset($_SESSION['user_id'])) {
                                 aria-haspopup="true" aria-expanded="false">Study</a>
                             <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
                                 <a class="dropdown-item" href="language.html">Language Learning</a>
-                                <a class="dropdown-item" href="under_construction.html">Diploma Recognition</a>
+                                <a class="dropdown-item" href="diploma_recognition.html">Diploma Recognition</a>
                             </div>
                         </li>
                         <li class="nav-item pr-4">
