@@ -328,7 +328,7 @@
         <!-- CALL TO ACTION- REGISTER ENDS-->
 
         <!-- TYPE OF EVENTS STARTS-->
-        <div class="container my-5 p-5">
+        <div class="container mt-5 mb-1 p-5">
 
 
             <!--Section: Content-->
@@ -338,10 +338,10 @@
                 <h2 class="font-weight-bold mb-4 pb-2">Widen your network by SVEEPING on our platform!</h2>
                 <!-- Section description -->
                 <p class="lead grey-text mx-auto mb-5">•	Create & share your S-V-E-P-T posts for all users
-•	See shared posts on the platform
-•	Our platform brings all matched posts to you
-•	Reach out to your target group
-</p>
+                    •	See shared posts on the platform
+                    •	Our platform brings all matched posts to you
+                    •	Reach out to your target group
+                </p>
 
                 <!-- Grid row -->
                 <div class="row text-center d-flex justify-content-center">
@@ -410,6 +410,8 @@
             </div>
         <!-- TYPE OF EVENTS ENDS-->
 
+        
+        <br><br>
 
         <!-- PUBLICATIONS STARTS-->
         <section class="container magazine-section mx-md-10 dark-grey-text text-center mt-5 wow fadeIn">
