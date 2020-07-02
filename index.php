@@ -420,87 +420,94 @@
             <!-- Section heading -->
             <h3 class="display-4 mb-4 pb-2">Publications</h3>
 
-            <!-- Grid row -->
-            <div class="row">
+                <!-- Grid row -->
+                <div class="row">
 
-                <!-- Grid column -->
-                <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
-                    <!--Featured image-->
-                    <div class="view overlay rounded z-depth-1">
-                        <img src="./images/pub4.jpg" class="img-fluid" alt="Sample project image">
-                        <a>
-                            <div class="mask rgba-white-slight"></div>
-                        </a>
-                        <div class="card-body pb-0">
-                            <p class="text-info">Publication | Research</p>
-                            <h5 class="font-weight-bold mt-1 mb-3" style="letter-spacing: 1px;">Mentoring to work for highly
-                                skilled immigrants</h5>
-                            <p class="grey-text">by Hanne Vandermeerschen & Peter De Cuyper HIVA | University of Leuven,</p>
-                            <p class="grey-text">June 2019</p>
+                    <!-- Grid column Determinants -->
+                    <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
+                        <!--Featured image-->
+                        <div class="view overlay rounded z-depth-1">
+                            <img src="./images/pub1.jpg" class="img-fluid" alt="Sample project image">
+                            <a>
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                            <div class="card-body pb-0">
+                                <p class="text-info">Publication | Research</p>
+                                <h5 class="font-weight-bold mt-1 mb-3" style="letter-spacing: 1px;">Determinants of the Recognition of Foreign Certificates in Flanders
+                                </h5>
+                                <p class="grey-text">by Karen Stoffelen, Mohammad Salman | Vrije Universiteit Brussel (VUB)</p>
+                                <p class="grey-text">June 2020</p>
+                                <br>
+                                <br>
+                                <a href="https://academic.oup.com/rsq/article/39/2/207/5864825?guestAccessKey=dec75489-38e0-49d7-ae04-8f542575dbc8&fbclid=IwAR0hFi-tSQBhL35uJFyXG93Jg-SobGv6MMozFtOCbCAPhY0P0xZK_ZsJuOQ#205102883"
+                                    class="btn btn-info btn-sm btn-rounded"><i
+                                        class="fas fa-clone left"></i> Read More</a>
+                            </div>
                             <br>
-                            
-                            <a href="https://limo.libis.be/primo-explore/fulldisplay?docid=LIRIAS2820031&context=L&vid=Lirias&search_scope=Lirias&tab=default_tab&lang=en_US&fromSitemap=1" class="btn btn-info btn-sm btn-rounded"><i class="fas fa-clone left"></i> Read More</a>
                         </div>
-                        <br>
+                        <!--Excerpt-->
+
                     </div>
-                    <!--Excerpt-->
+                    <!-- Grid column -->
 
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-lg-4 col-md-6 mb-md-0 mb-4">
-                    <!--Featured image-->
-                    <div class="view overlay rounded z-depth-1">
-                        <img src="./images/pub2.jpg" class="img-fluid" alt="Sample project image">
-                        <a>
-                            <div class="mask rgba-white-slight"></div>
-                        </a>
-                        <div class="card-body pb-0">
-                            <p class="text-info">Publication | Report</p>
-                            <h5 class="font-weight-bold mt-1 mb-3" style="letter-spacing: 0.5px;">@level2work: Towards a
-                                job for highly educated newcomers at their level. Lessons from the AMIF testing grounds.
-                            </h5>
-                            <p class="grey-text">by Peter De Cuyper & et al. | HIVA KU Leuven</p>
-                            <p class="grey-text">May 2019</p>
-
-                            <a href="https://limo.libis.be/primo-explore/fulldisplay?docid=LIRIAS2802634&context=L&vid=Lirias&search_scope=Lirias&tab=default_tab&lang=en_US&fromSitemap=1"
-                                class="btn btn-info btn-sm btn-rounded"><i class="fas fa-clone left"></i> Read More</a>
-                        </div>
-                        <br>
-                    </div>
-
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-lg-4 col-md-6">
-                    <!--Featured image-->
-                    <div class="view overlay rounded z-depth-1">
-                        <img src="./images/pub3.jpg" class="img-fluid" alt="Sample project image">
-                        <a>
-                            <div class="mask rgba-white-slight"></div>
-                        </a>
-                        <div class="card-body pb-0">
-                            <p class="text-info">Publication | Research</p>
-                            <h5 class="font-weight-bold mt-1 mb-3" style="letter-spacing: 1px;">Working with refugees.
-                                Are Flemish companies ready for it?</h5>
-                            <p class="grey-text">by Nathan Van Camp | ETION</p>
-                            <p class="grey-text">20 May 2019</p>
-
+                    <!-- Grid column Analysis -->
+                    <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
+                        <!--Featured image-->
+                        <div class="view overlay rounded z-depth-1">
+                            <img src="./images/pub1.jpg" class="img-fluid" alt="Sample project image">
+                            <a>
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                            <div class="card-body pb-0">
+                                <p class="text-info">Publication | Research</p>
+                                <h5 class="font-weight-bold mt-1 mb-3" style="letter-spacing: 1px;">Analysis
+                                    of Projects related to the Integration of Migrants </h5>
+                                <p class="grey-text">by Erdem TASKIN | Beyond the Horizon ISSG</p>
+                                <p class="grey-text">June 2019</p>
+                                <br>
+                                <br>
+                                <a href="https://www.behorizon.org/wp-content/uploads/2019/06/Horizon-Insights-2019-2-online.pdf"
+                                    class="btn btn-info btn-sm btn-rounded"><i
+                                        class="fas fa-clone left"></i> Read More</a>
+                            </div>
                             <br>
-                            <a href="https://www.etion.be/kennisbank/werken-met-vluchtelingen-zijn-onze-ondernemingen-er-klaar-voor"
-                                class="btn btn-info btn-sm btn-rounded"><i class="fas fa-clone left"></i> Read More</a>
                         </div>
-                        <br>
+                        <!--Excerpt-->
+
                     </div>
-                    <!--Excerpt-->
+                    <!-- Grid column -->
 
-                </div>
-                <!-- Grid column -->
+                    <!-- Grid column Mentoring-->
+                    <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
+                        <!--Featured image-->
+                        <div class="view overlay rounded z-depth-1">
+                            <img src="./images/pub4.jpg" class="img-fluid" alt="Sample project image">
+                            <a>
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                            <div class="card-body pb-0">
+                                <p class="text-info">Publication | Research</p>
+                                <h5 class="font-weight-bold mt-1 mb-3" style="letter-spacing: 1px;">
+                                    Mentoring to work for highly
+                                    skilled immigrants</h5>
+                                <p class="grey-text">by Hanne Vandermeerschen & Peter De Cuyper HIVA |
+                                    University of Leuven,</p>
+                                <p class="grey-text">June 2019</p>
+                                <br>
+                                <br>
+                                <a href="https://limo.libis.be/primo-explore/fulldisplay?docid=LIRIAS2820031&context=L&vid=Lirias&search_scope=Lirias&tab=default_tab&lang=en_US&fromSitemap=1"
+                                    class="btn btn-info btn-sm btn-rounded"><i
+                                        class="fas fa-clone left"></i> Read More</a>
+                            </div>
+                            <br>
+                        </div>
+                        <!--Excerpt-->
 
-            </div>
-            <!-- Grid row -->
+                    </div>
+                    <!-- Grid column -->
+
+                    </div>
+                    <!-- Grid row -->
 
         </section>
         <!-- PUBLICATIONS ENDS-->
