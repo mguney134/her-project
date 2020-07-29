@@ -834,6 +834,15 @@
                                                             vocational trainings</span> in many different sectors to
                                                         find a job.
                                                     </li>
+                                                    <li class="orgTitles4">
+                                                        Check VDAB page for highly educated other language speakers (HOA) 
+                                                
+                                                        <a
+                                                            href="https://www.vdab.be/anderstalig-hoogopgeleid"
+                                                            target="_blank" rel="">"Hoogopgeleid en anderstalig"</a>
+                                                            for info in Dutch. 
+                                                    </li>
+
                                                 </ul>
                                                 <br>
                                                 <br>
