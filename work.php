@@ -844,8 +844,7 @@
                                                     </li>
 
                                                 </ul>
-                                                <br>
-                                                <br>
+                                                
                                                 <p class="text-right mb-0 font-small font-weight-bold"><a href="https://www.vdab.be/english/vdab.shtml">read more <i class="fas fa-angle-right"></i></a></p>
                                             </div>
 
