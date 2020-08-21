@@ -135,10 +135,10 @@
                             
                             <li class="nav-item"><a href="#sectors" class="nav-link">Sectors</a></li>
                             <ul class="nav flex-md-column ml-2 hidden-sm-down">
-                                <li class="nav-item"><a href="" class="nav-link ml-2" style="padding-bottom: 1px; padding-top: 1px;"><i class="fas fa-angle-right text-info"></i> IT &amp; technology</a></li>
+                                <li class="nav-item"><a href="" class="nav-link ml-2" style="padding-bottom: 1px; padding-top: 1px;"><i class="fas fa-angle-right text-info"></i> ICT</a></li>
                                 <li class="nav-item"><a href="" class="nav-link ml-2" style="padding-bottom: 1px; padding-top: 1px;"><i class="fas fa-angle-right text-info"></i> Logistics</a></li>
-                                <li class="nav-item"><a href="" class="nav-link ml-2" style="padding-bottom: 1px; padding-top: 1px;"><i class="fas fa-angle-right text-info"></i> Health</a></li>
-                                <li class="nav-item"><a href="" class="nav-link ml-2" style="padding-bottom: 1px; padding-top: 1px;"><i class="fas fa-angle-right text-info"></i> Accountancy</a></li>
+                                <li class="nav-item"><a href="" class="nav-link ml-2" style="padding-bottom: 1px; padding-top: 1px;"><i class="fas fa-angle-right text-info"></i> Healthcare</a></li>
+                                <li class="nav-item"><a href="" class="nav-link ml-2" style="padding-bottom: 1px; padding-top: 1px;"><i class="fas fa-angle-right text-info"></i> Administrative &amp; Finance</a></li>
                                 <li class="nav-item"><a href="./research_education.html" class="nav-link ml-2" style="padding-bottom: 1px; padding-top: 1px;"><i class="fas fa-angle-right text-info"></i> Research &amp; education</a></li>
                                 <li class="nav-item"><a href="" class="nav-link ml-2" style="padding-bottom: 1px; padding-top: 1px;"><i class="fas fa-angle-right text-info"></i> Construction &amp; Industry</a></li>
                                 <li class="nav-item"><a href="" class="nav-link ml-2" style="padding-bottom: 1px; padding-top: 1px;"><i class="fas fa-angle-right text-info"></i> Social profit</a></li>
@@ -169,8 +169,7 @@
                                     <div class="deneme card text-center bg-info text-white" style="cursor: pointer;">
                                         <div class="card-body">
                                             <img src="./images/work-img/circuit.png" alt="">
-                                            <h5 class="font-weight-normal my-3 ">IT &amp;
-                                                Technology</h5>
+                                            <h5 class="font-weight-normal my-3 ">ICT</h5>
 
                                         </div>
                                     </div>
@@ -190,7 +189,7 @@
                                     <div class="deneme card text-center bg-info lighten-1 text-white" style="cursor: pointer;">
                                         <div class="card-body">
                                             <img src="./images/work-img/heartbeat.png" alt="">
-                                            <h5 class="font-weight-normal my-3 ">Health</h5>
+                                            <h5 class="font-weight-normal my-3 ">Healthcare</h5>
 
                                         </div>
                                     </div>
@@ -200,7 +199,7 @@
                                     <div class="deneme card text-center bg-info" style="cursor: pointer;">
                                         <div class="card-body">
                                             <img src="./images/work-img/calculations.png" alt="">
-                                            <h5 class="font-weight-normal my-3 ">Accountancy</h5>
+                                            <h5 class="font-weight-normal my-3 ">Administrative &amp; Finance</h5>
 
                                         </div>
                                     </div>
