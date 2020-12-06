@@ -39,10 +39,11 @@ if (isset($_SESSION['user_id'])) {
     <link href="css/mdb.min.css" rel="stylesheet" />
     <!-- Your custom styles (optional) -->
     <link href="css/style-main.min.css" rel="stylesheet" />
+    <link href="css/sidemenu.css" rel="stylesheet" />
 
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#sidemenu" data-offset="15">
     <header>
         <!-- NAVBAR STARTS-->
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar"
@@ -68,7 +69,7 @@ if (isset($_SESSION['user_id'])) {
                     <ul class="navbar-nav mx-auto" id="navbar1">
 
                         <li class="nav-item pr-4">
-                            <a href="aboutus.html" class="nav-link">About Us</a>
+                            <a href="aboutus.php" class="nav-link">About Us</a>
                         </li>
                         <li class="nav-item pr-4">
                             <a class="nav-link" href="under_construction.html">Roadmap</a>
@@ -78,15 +79,20 @@ if (isset($_SESSION['user_id'])) {
                                 aria-haspopup="true" aria-expanded="false"
                                 data-toggle="dropdown">Study</a>
                             <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-                                <a class="dropdown-item" href="./university_education.html">University
+                                <a class="dropdown-item" href="./university_education.php">University
                                     Education</a>
-                                <a class="dropdown-item" href="./language.html">Language Learning</a>
-                                <a class="dropdown-item " href="./diploma_recognition.html">Diploma
+                                <a class="dropdown-item" href="./language.php">Language Learning</a>
+                                <a class="dropdown-item " href="./diploma_recognition.php">Diploma
                                     Recognition</a>
                             </div>
                         </li>
-                        <li class="nav-item pr-4">
-                            <a class="nav-link" href="work.html">Work</a>
+                        <li class="nav-item dropdown pr-4">
+                            <a class="nav-link dropdown-toggle  waves-effect waves-light" id="navbarDropdownMenuLink-333" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Work</a>
+                            <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+                                <a class="dropdown-item waves-effect waves-light" href="./work_roadmap_to_a_job.php">Roadmap to a job</a>
+                                <a class="dropdown-item waves-effect waves-light" href="./work_sectors.php">Sectors</a>
+                                <a class="dropdown-item  waves-effect waves-light" href="./work_organizatios.php">Organizations</a>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="under_construction.html">Mentoring</a>
@@ -106,14 +112,6 @@ if (isset($_SESSION['user_id'])) {
                             <a class="nav-link border border-white rounded mb-0" href="" data-toggle="modal"
                                 data-target="#modalSubscriptionForm">Sign Up</a>
                         </li>
-                        <li class="nav-item dropdown ml-3">
-                            <a class="nav-link dropdown-toggle" id="langu" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false">En</a>
-                            <div class="dropdown-menu dropdown-default" aria-labelledby="langu">
-                                <a class="dropdown-item" href="./aboutus_nl.html">Nl</a>
-                                <a class="dropdown-item" href="./under_construction.html">Ar</a>
-                            </div>
-                        </li>
 
                         <?php } else { ?>
 
@@ -123,16 +121,16 @@ if (isset($_SESSION['user_id'])) {
                         <li class="nav-item">
                             <a class="nav-link border border-white rounded mb-0" href="logout.php" >Logout</a>
                         </li>
+                        
+                        <?php } ?>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="langu" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">En</a>
                             <div class="dropdown-menu dropdown-default" aria-labelledby="langu">
-                                <a class="dropdown-item" href="./aboutus_nl.html">Nl</a>
-                                <a class="dropdown-item" href="./under_construction.html">Ar</a>
+                                <a class="dropdown-item" href="nl/aboutus_nl.php">Nl</a>
+                                <a class="dropdown-item" href="ar/aboutus_ar.php">Ar</a>
                             </div>
                         </li>
-                        <?php } ?>
-
 
                     </ul>
                     <!-- <div class="ml-2" style="margin-right: -100px;">
